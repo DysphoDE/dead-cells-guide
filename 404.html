@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><title>Weiterleitung …</title>
+<script>
+  // GitHub-Pages-Projektseite: /<repo>/irgendwas → /<repo>/#/
+  var base = location.hostname.endsWith('github.io') ? '/' + location.pathname.split('/')[1] + '/' : '/';
+  location.replace(base + '#/');
+</script></head><body style="background:#0a0d13;color:#ece6da;font-family:sans-serif">Weiterleitung zur Startseite …</body></html>

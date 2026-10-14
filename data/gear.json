@@ -1,0 +1,6787 @@
+{
+ "meta": {
+  "source": "https://deadcells.wiki.gg/wiki/Gear (Cargo-Tabelle 'Items', Item-Infoboxen und Gegner-Infoboxen via MediaWiki-API)",
+  "researchedAt": "2026-10-14",
+  "gameVersion": "3.5 – The End is Near (inkl. aller DLCs)",
+  "notes": [
+   "Namen exakt wie im englischen Wiki. nameDe stammt aus data/names-de.json (deutsche Lokalisierung des Spiels, per tools/names_de.py extrahiert); null, wo dort kein Eintrag existiert.",
+   "Beschreibungen/Krit-Bedingungen sind eigene deutsche Kurzfassungen der Wiki-Angaben.",
+   "Nicht enthalten: entfernte Items (Temporal Distortion), Hilfs-/Unterformen (Blueprint Extractor der Hunter's Grenade, Transformation des Whip Sword, die vier Karten des Diverse Deck), Health Flask und Map Part.",
+   "baseDps/dps2: Basis-DPS ohne Krit aus der Wiki-Basiswerttabelle (Gear-Level I, ohne Stats). null, wenn der Wert eine Spanne/mehrdeutig ist – Rohwert dann in notes.",
+   "cooldown: Abklingzeit in Sekunden (nur Skills/Schilde), null wenn nicht vorhanden oder mehrdeutig.",
+   "twoHanded: laut Wiki-Tag DualWeaponBase (belegt beide Waffenslots).",
+   "blueprint.dropChance: Prozent (0.4 = 0,4 %). blueprint.minBC: niedrigste Boss-Cell-Stufe, auf der der Entwurf erreichbar ist (aus Item- und Gegner-Infobox; Astrolab/Observatory = 5).",
+   "blueprint.biomes: Biome, in denen der Entwurfsträger bzw. Fundort vorkommt (beschworene Gegner ausgenommen; BSC-Einschränkungen einzelner Biome siehe Wiki-Gegnerseite).",
+   "blueprint.cells: Zellen-Kosten beim Collector; null, wenn das Item beim Aufheben sofort freigeschaltet wird oder von Anfang an verfügbar ist.",
+   "blueprint.sourceType 'start' = von Anfang an freigeschaltet; die eigentliche Startausrüstung (Rusty Sword, Beginner's Bow, Old Wooden Shield) ist in notes vermerkt.",
+   "Rise of the Giant ist kostenlos, wird aber als DLC-Inhalt geführt."
+  ]
+ },
+ "items": [
+  {
+   "id": "abyssal-trident",
+   "name": "Abyssal Trident",
+   "nameDe": "Abyssischer Dreizack",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": "The Queen and the Sea",
+   "twoHanded": false,
+   "description": "Dreizack, dessen zweiter Angriff ein Ladestoß ist; der dritte Angriff kann ihn abbrechen.",
+   "crit": "Der Ladestoß (zweiter Angriff) nach kurzer Ladezeit sowie der letzte Angriff, wenn er den Ladestoß unterbricht.",
+   "baseDps": 106,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "charge",
+    "combo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "lore",
+    "from": null,
+    "biomes": [
+     "Infested Shipwreck"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Lore-Raum im Infested Shipwreck: 4 Kartenteile von Gegnern sammeln, am markierten X den Boden durchbrechen und mit dem Forked Key öffnen; Aufheben schaltet sofort frei."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Abyssal_Trident",
+   "icon": "assets/items/abyssal-trident.png"
+  },
+  {
+   "id": "alucards-sword",
+   "name": "Alucard's Sword",
+   "nameDe": "Alucards Schwert",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "survival"
+   ],
+   "dlc": "Return to Castlevania",
+   "twoHanded": false,
+   "description": "Steht ein Gegner in mittlerer Entfernung vor dir, teleportiert dich der Angriff direkt zu ihm.",
+   "crit": "Der Teleport-Angriff auf ein Ziel in mittlerer Distanz.",
+   "baseDps": 122,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "quest",
+    "from": "Alucard",
+    "biomes": [
+     "Dracula's Castle"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 50,
+    "text": "Im Richter-Modus von Dracula's Castle Alucard finden."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Alucard%27s_Sword",
+   "icon": "assets/items/alucards-sword.png"
+  },
+  {
+   "id": "assassins-dagger",
+   "name": "Assassin's Dagger",
+   "nameDe": "Assassinendolch",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Schneller Dolch mit kurzer Zweier-Kombo.",
+   "crit": "Treffer in den Rücken des Gegners.",
+   "baseDps": 134,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "backstab"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "secret",
+    "from": null,
+    "biomes": [
+     "Promenade of the Condemned"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 5,
+    "text": "Geheimbereich links oberhalb des Startpunkts der Promenade of the Condemned."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Assassin%27s_Dagger",
+   "icon": "assets/items/assassins-dagger.png"
+  },
+  {
+   "id": "balanced-blade",
+   "name": "Balanced Blade",
+   "nameDe": "Ausbalancierte Klinge",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Schwert, dessen Schaden mit jedem Treffer in Folge um bis zu +90 % steigt.",
+   "crit": "Ab dem 10. Treffer in ununterbrochener Folge.",
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "combo"
+   ],
+   "blueprint": {
+    "default": true,
+    "sourceType": "start",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Von Anfang an freigeschaltet, kein Entwurf nötig."
+   },
+   "notes": "Basis-DPS laut Wiki: 147-279 (230-437).",
+   "wiki": "https://deadcells.wiki.gg/wiki/Balanced_Blade",
+   "icon": "assets/items/balanced-blade.png"
+  },
+  {
+   "id": "baseball-bat",
+   "name": "Baseball Bat",
+   "nameDe": "Baseballschläger",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Schläger, der gegen betäubte oder festgewurzelte Gegner in einen rasenden Schlaghagel übergeht.",
+   "crit": "Angriffe auf betäubte oder festgewurzelte Gegner.",
+   "baseDps": 156,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "stun",
+    "root"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "lore",
+    "from": null,
+    "biomes": [
+     "Prisoners' Quarters"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Zufälliger Crossover-Lore-Raum in den Prisoners' Quarters; das Objekt untersuchen, die Waffe wird beim Aufheben sofort freigeschaltet."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Baseball_Bat",
+   "icon": "assets/items/baseball-bat.png"
+  },
+  {
+   "id": "bible",
+   "name": "Bible",
+   "nameDe": "Bibel",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "survival",
+    "tactics"
+   ],
+   "dlc": "Return to Castlevania",
+   "twoHanded": false,
+   "description": "Trifft der zweite Angriff, schleudert das Buch ein kreisendes Geschoss, dessen kritischer Schaden mit jedem Treffer wächst.",
+   "crit": "Das kreisende Geschoss nach einem Treffer mit dem zweiten Angriff.",
+   "baseDps": 127,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "combo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Werewolf, Dire Werewolf",
+    "biomes": [
+     "Castle's Outskirts",
+     "Dracula's Castle"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 50,
+    "text": "Fällt mit 1,7 % Chance von Werewolf, Dire Werewolf – vorkommend in Castle's Outskirts, Dracula's Castle."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Bible",
+   "icon": "assets/items/bible.png"
+  },
+  {
+   "id": "bladed-tonfas",
+   "name": "Bladed Tonfas",
+   "nameDe": "Klingenbesetzte Tonfas",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": "The Queen and the Sea",
+   "twoHanded": false,
+   "description": "Der erste Angriff ist ein Vorwärtssprung; trifft er, wird die folgende Kombo kritisch.",
+   "crit": "Die nächste Kombo nach einem Treffer mit dem Eröffnungssprung.",
+   "baseDps": 105,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "combo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "boss",
+    "from": "Kleio",
+    "biomes": [
+     "Lighthouse"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 100,
+    "text": "Fällt von Kleio, wenn sie als letzte der drei Dienerinnen (The Servants) im Lighthouse besiegt wird."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Bladed_Tonfas",
+   "icon": "assets/items/bladed-tonfas.png"
+  },
+  {
+   "id": "blood-sword",
+   "name": "Blood Sword",
+   "nameDe": "Blutschwert",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Schwert, das bei jedem Treffer Blutung verursacht (3,5 DPS für 12 s).",
+   "crit": null,
+   "baseDps": 122,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "bleed"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Zombie",
+    "biomes": [
+     "Prisoners' Quarters",
+     "Ancient Sewers",
+     "Toxic Sewers",
+     "Dilapidated Arboretum",
+     "Prison Depths",
+     "Ramparts",
+     "Ossuary",
+     "Slumbering Sanctuary",
+     "Stilt Village",
+     "Fractured Shrines",
+     "Promenade of the Condemned",
+     "Corrupted Prison",
+     "Castle's Outskirts"
+    ],
+    "dropChance": 100,
+    "minBC": 0,
+    "cells": 5,
+    "text": "Fällt mit 100 % Chance von Zombie – vorkommend in Prisoners' Quarters, Ancient Sewers, Toxic Sewers, Dilapidated Arboretum, Prison Depths, Ramparts, Ossuary, Slumbering Sanctuary, Stilt Village, Fractured Shrines, Promenade of the Condemned, Corrupted Prison, Castle's Outskirts."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Blood_Sword",
+   "icon": "assets/items/blood-sword.png"
+  },
+  {
+   "id": "bone",
+   "name": "Bone",
+   "nameDe": "Knochen",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Knochenkeule: Trifft der zweite Schlag, wird ein Wirbelangriff freigeschaltet.",
+   "crit": "Der Wirbelangriff nach einem Treffer mit dem zweiten Schlag.",
+   "baseDps": 164,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "combo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "lore",
+    "from": null,
+    "biomes": [
+     "Prisoners' Quarters"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Zufälliger Lore-Raum mit Schädelhaufen in den Prisoners' Quarters; untersuchen, Aufheben schaltet sofort frei."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Bone",
+   "icon": "assets/items/bone.png"
+  },
+  {
+   "id": "broadsword",
+   "name": "Broadsword",
+   "nameDe": "Breitschwert",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Langsames, schweres Schwert mit weitem Schwung; der dritte Hieb reicht etwas weiter.",
+   "crit": "Der zweite und dritte Schlag der Kombo (immer).",
+   "baseDps": 176,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "combo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "other",
+    "from": "Tutorial Knight",
+    "biomes": [
+     "Prisoners' Quarters"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 5,
+    "text": "An der Leiche des Tutorial Knight kurz vor dem Ausgang der Prisoners' Quarters – erst nach mindestens 4 Läufen oder einem geschafften Lauf."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Broadsword",
+   "icon": "assets/items/broadsword.png"
+  },
+  {
+   "id": "crowbar",
+   "name": "Crowbar",
+   "nameDe": "Brechstange",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Brechstange, die gut zu Tür-Synergien passt.",
+   "crit": "Gegen tierische Gegner sowie 15 s lang nach dem Zerstören einer Tür.",
+   "baseDps": 179,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "lore",
+    "from": null,
+    "biomes": [
+     "Prisoners' Quarters"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 5,
+    "text": "Geheimbereich hinter dem Lore-Raum mit Wissenschaftlerleiche und Headcrab in den Prisoners' Quarters."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Crowbar",
+   "icon": "assets/items/crowbar.png"
+  },
+  {
+   "id": "cursed-sword",
+   "name": "Cursed Sword",
+   "nameDe": "Verfluchtes Schwert",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Enorm hoher Schaden, aber jeder erlittene Treffer tötet dich sofort.",
+   "crit": null,
+   "baseDps": 618,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [],
+   "blueprint": {
+    "default": false,
+    "sourceType": "boss",
+    "from": "Conjunctivius",
+    "biomes": [
+     "Insufferable Crypt"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 150,
+    "text": "Fällt beim 3. Sieg über Conjunctivius (Insufferable Crypt)."
+   },
+   "notes": "Ein einziger Treffer beendet den Lauf, auch ohne Fluch.",
+   "wiki": "https://deadcells.wiki.gg/wiki/Cursed_Sword",
+   "icon": "assets/items/cursed-sword.png"
+  },
+  {
+   "id": "dagger-of-profit",
+   "name": "Dagger of Profit",
+   "nameDe": "Dolch des Profits",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Dolch für Gold-Builds.",
+   "crit": "3 s lang nach dem Aufsammeln von Gold.",
+   "baseDps": 105,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Agitated Pickpocket",
+    "biomes": [
+     "The Bank",
+     "Undying Shores"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 80,
+    "text": "Fällt mit 1,7 % Chance von Agitated Pickpocket – vorkommend in The Bank, Undying Shores."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Dagger_of_Profit",
+   "icon": "assets/items/dagger-of-profit.png"
+  },
+  {
+   "id": "deaths-scythe",
+   "name": "Death's Scythe",
+   "nameDe": "Sense des Todes",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "survival"
+   ],
+   "dlc": "Return to Castlevania",
+   "twoHanded": false,
+   "description": "Getötete Gegner kehren als Geister zurück, die auf nahe Ziele zufliegen und explodieren.",
+   "crit": "Die Geister-Explosionen; ihr Schaden richtet sich nach dem Maximalleben des getöteten Gegners.",
+   "baseDps": 230,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "summon",
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "boss",
+    "from": "Death",
+    "biomes": [
+     "Defiled Necropolis"
+    ],
+    "dropChance": 100,
+    "minBC": 0,
+    "cells": 50,
+    "text": "Fällt beim 1. Sieg über Death (Defiled Necropolis)."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Death%27s_Scythe",
+   "icon": "assets/items/deaths-scythe.png"
+  },
+  {
+   "id": "ferrymans-lantern",
+   "name": "Ferryman's Lantern",
+   "nameDe": "Laterne des Fährmanns",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": "Fatal Falls",
+   "twoHanded": true,
+   "description": "Zweihändig: Kills sammeln Seelen (der letzte Kombotreffer entreißt Bossen eine), die Zweitfunktion Soul Shot verschießt sie aufgeladen.",
+   "crit": "Soul Shot, wenn mehr als 3 Seelen gleichzeitig abgefeuert werden.",
+   "baseDps": 164,
+   "dps2": 107,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "ammo",
+    "charge"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Apostate",
+    "biomes": [
+     "Undying Shores"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 100,
+    "text": "Fällt mit 0,4 % Chance von Apostate – vorkommend in Undying Shores."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Ferryman%27s_Lantern",
+   "icon": "assets/items/ferrymans-lantern.png"
+  },
+  {
+   "id": "flashing-fans",
+   "name": "Flashing Fans",
+   "nameDe": "Wirbelfächer",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": "The Bad Seed",
+   "twoHanded": false,
+   "description": "Fächer, mit denen du gegnerische Projektile zurückschlagen kannst.",
+   "crit": "8 s lang nach dem Zurückschlagen eines Projektils.",
+   "baseDps": 145,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Yeeter",
+    "biomes": [
+     "Dilapidated Arboretum",
+     "Prisoners' Quarters"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 80,
+    "text": "Fällt mit 0,4 % Chance von Yeeter – vorkommend in Dilapidated Arboretum, Prisoners' Quarters."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Flashing_Fans",
+   "icon": "assets/items/flashing-fans.png"
+  },
+  {
+   "id": "flawless",
+   "name": "Flawless",
+   "nameDe": "Makellos",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Waffe für fehlerfreies Spiel.",
+   "crit": "Wenn du seit mindestens 15 s keinen Schaden erlitten hast.",
+   "baseDps": 115,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Slammer",
+    "biomes": [
+     "Corrupted Prison",
+     "Cavern",
+     "Undying Shores",
+     "Astrolab"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 100,
+    "text": "Fällt mit 0,4 % Chance von Slammer – vorkommend in Corrupted Prison, Cavern, Undying Shores, Astrolab."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Flawless",
+   "icon": "assets/items/flawless.png"
+  },
+  {
+   "id": "flint",
+   "name": "Flint",
+   "nameDe": "Feuerstein",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Schwerer Hammer; gedrückt halten lädt einen Schlag auf, der eine Feuerspur hinterlässt.",
+   "crit": "Der aufgeladene (gehaltene) Schlag.",
+   "baseDps": 224,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "charge",
+    "fire"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "boss",
+    "from": "Concierge",
+    "biomes": [
+     "Black Bridge"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 20,
+    "text": "Fällt beim 1. Sieg über Concierge (Black Bridge)."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Flint",
+   "icon": "assets/items/flint.png"
+  },
+  {
+   "id": "frantic-sword",
+   "name": "Frantic Sword",
+   "nameDe": "Hektische Klinge",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Schwert für riskantes Spiel am Limit.",
+   "crit": "Bei weniger als 50 % Leben oder mehr als 50 % Malaise.",
+   "baseDps": 137,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Kamikaze",
+    "biomes": [
+     "Toxic Sewers",
+     "Ancient Sewers",
+     "Prison Depths",
+     "Stilt Village",
+     "Slumbering Sanctuary",
+     "Graveyard",
+     "Forgotten Sepulcher",
+     "Derelict Distillery",
+     "Infested Shipwreck",
+     "Promenade of the Condemned"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 25,
+    "text": "Fällt mit 0,4 % Chance von Kamikaze – vorkommend in Toxic Sewers, Ancient Sewers, Prison Depths, Stilt Village, Slumbering Sanctuary, Graveyard, Forgotten Sepulcher, Derelict Distillery, Infested Shipwreck, Promenade of the Condemned."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Frantic_Sword",
+   "icon": "assets/items/frantic-sword.png"
+  },
+  {
+   "id": "giant-comb",
+   "name": "Giant Comb",
+   "nameDe": "Riesenkamm",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Riesiger Kamm: Der erste Treffer schleudert Gegner in die Luft.",
+   "crit": "Gegen Ziele, die nicht am Boden stehen.",
+   "baseDps": 187,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "quest",
+    "from": "The Tailor",
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 150,
+    "text": "Mit 51 verfügbaren Outfits beim Tailor sprechen."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Giant_Comb",
+   "icon": "assets/items/giant-comb.png"
+  },
+  {
+   "id": "giantkiller",
+   "name": "Giantkiller",
+   "nameDe": "Riesentöter",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "survival"
+   ],
+   "dlc": "Rise of the Giant",
+   "twoHanded": false,
+   "description": "Riesenschwert; kann nicht im Rucksack verstaut werden.",
+   "crit": "Gegen Elite-Gegner und Bosse.",
+   "baseDps": 127,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "boss",
+    "from": "Giant",
+    "biomes": [
+     "Guardian's Haven"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 100,
+    "text": "Fällt beim 1. Sieg über Giant (Guardian's Haven)."
+   },
+   "notes": "Kann nicht im Rucksack verstaut werden.",
+   "wiki": "https://deadcells.wiki.gg/wiki/Giantkiller",
+   "icon": "assets/items/giantkiller.png"
+  },
+  {
+   "id": "gold-digger",
+   "name": "Gold Digger",
+   "nameDe": "Goldgräber",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Treffer lassen Gold fallen (10, in verbesserter Form 15).",
+   "crit": "Wenn du mehr als 12.000 Gold besitzt.",
+   "baseDps": 118,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Gold Gorger",
+    "biomes": [
+     "The Bank"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 80,
+    "text": "Fällt mit 1,7 % Chance von Gold Gorger – vorkommend in The Bank."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Gold_Digger",
+   "icon": "assets/items/gold-digger.png"
+  },
+  {
+   "id": "hand-hook",
+   "name": "Hand Hook",
+   "nameDe": "Hakenhand",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": "The Queen and the Sea",
+   "twoHanded": false,
+   "description": "Der letzte Angriff wirft das Ziel hinter dich, wobei es andere Gegner rammt.",
+   "crit": "Gegner, die dabei gegen eine Wand geschleudert werden.",
+   "baseDps": 106,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "combo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Armored Shrimp",
+    "biomes": [
+     "Infested Shipwreck"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 60,
+    "text": "Fällt mit 1,7 % Chance von Armored Shrimp – vorkommend in Infested Shipwreck."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Hand_Hook",
+   "icon": "assets/items/hand-hook.png"
+  },
+  {
+   "id": "hard-light-sword",
+   "name": "Hard Light Sword",
+   "nameDe": "Hartlichtschwert",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": true,
+   "description": "Zweihändig: Die Zweitwaffe Hard Light Gun markiert Gegner, Schwerttreffer laden ihre Munition wieder auf.",
+   "crit": "Schwerttreffer gegen markierte Ziele; stärker je mehr Markierungen.",
+   "baseDps": null,
+   "dps2": 78,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "ammo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "lore",
+    "from": null,
+    "biomes": [
+     "Prisoners' Quarters"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Zufälliger Lore-Raum mit Monolith in den Prisoners' Quarters; untersuchen, Aufheben schaltet sofort frei."
+   },
+   "notes": "Basis-DPS laut Wiki: 117 (129 - 280).",
+   "wiki": "https://deadcells.wiki.gg/wiki/Hard_Light_Sword",
+   "icon": "assets/items/hard-light-sword.png"
+  },
+  {
+   "id": "hattoris-katana",
+   "name": "Hattori's Katana",
+   "nameDe": "Hattoris Katana",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Katana mit Dreier-Kombo; gedrückt halten löst einen Sprint durch die Gegner vor dir aus.",
+   "crit": "Der aufgeladene Durchsprint-Angriff.",
+   "baseDps": 183,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "charge"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Weirded Warrior",
+    "biomes": [
+     "Stilt Village",
+     "Corrupted Prison",
+     "Forgotten Sepulcher"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 60,
+    "text": "Fällt mit 1,7 % Chance von Weirded Warrior – vorkommend in Stilt Village, Corrupted Prison, Forgotten Sepulcher."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Hattori%27s_Katana",
+   "icon": "assets/items/hattoris-katana.png"
+  },
+  {
+   "id": "hayabusa-boots",
+   "name": "Hayabusa Boots",
+   "nameDe": "Hayabusa-Stiefel",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Schnelle Tritte; der letzte Kombotreffer verursacht Flächenschaden und stößt Gegner zurück.",
+   "crit": null,
+   "baseDps": 161,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "combo",
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Dark Tracker",
+    "biomes": [
+     "Forgotten Sepulcher",
+     "Clock Tower",
+     "Morass of the Banished",
+     "Promenade of the Condemned",
+     "Castle's Outskirts",
+     "Ossuary",
+     "High Peak Castle"
+    ],
+    "dropChance": 1.7,
+    "minBC": 1,
+    "cells": 50,
+    "text": "Fällt mit 1,7 % Chance von Dark Tracker – vorkommend in Forgotten Sepulcher, Clock Tower, Morass of the Banished, Promenade of the Condemned, Castle's Outskirts, Ossuary, High Peak Castle (ab 1 BC)."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Hayabusa_Boots",
+   "icon": "assets/items/hayabusa-boots.png"
+  },
+  {
+   "id": "hayabusa-gauntlets",
+   "name": "Hayabusa Gauntlets",
+   "nameDe": "Hayabusa-Handschuh",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Sehr schnelle Faustschläge.",
+   "crit": "Gegen Ziele mit weniger als 40 % Leben.",
+   "baseDps": 124,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Lancer",
+    "biomes": [
+     "High Peak Castle"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 30,
+    "text": "Fällt mit 0,4 % Chance von Lancer – vorkommend in High Peak Castle."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Hayabusa_Gauntlets",
+   "icon": "assets/items/hayabusa-gauntlets.png"
+  },
+  {
+   "id": "impaler",
+   "name": "Impaler",
+   "nameDe": "Pfähler",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Speer zum Festnageln von Gegnern.",
+   "crit": "Wenn das Ziel direkt an einer Wand steht.",
+   "baseDps": 175,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "boss",
+    "from": "Concierge",
+    "biomes": [
+     "Black Bridge"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 40,
+    "text": "Fällt beim 4. Sieg über Concierge (Black Bridge)."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Impaler_(Weapon)",
+   "icon": "assets/items/impaler.png"
+  },
+  {
+   "id": "iron-staff",
+   "name": "Iron Staff",
+   "nameDe": "Eisenstab",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "survival"
+   ],
+   "dlc": "Fatal Falls",
+   "twoHanded": false,
+   "description": "Kampfstab: Der erste Schlag kann gegnerische Nahkampfangriffe parieren.",
+   "crit": "Die Kombo nach einer erfolgreichen Parade mit dem ersten Schlag.",
+   "baseDps": 135,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "parry"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Stone Warden",
+    "biomes": [
+     "Fractured Shrines"
+    ],
+    "dropChance": 100,
+    "minBC": 0,
+    "cells": 50,
+    "text": "Fällt mit 100 % Chance von Stone Warden – vorkommend in Fractured Shrines."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Iron_Staff",
+   "icon": "assets/items/iron-staff.png"
+  },
+  {
+   "id": "king-scepter",
+   "name": "King Scepter",
+   "nameDe": "Zepter des Königs",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Du stürmst vorwärts und prallst beim Treffer drehend in die Luft ab; danach kannst du erneut stürmen.",
+   "crit": "Das Abprallen auf einem Gegner.",
+   "baseDps": 75,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "lore",
+    "from": null,
+    "biomes": [
+     "Prisoners' Quarters"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Zufälliger Crossover-Lore-Raum in den Prisoners' Quarters; das Objekt untersuchen, Aufheben schaltet sofort frei."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/King_Scepter",
+   "icon": "assets/items/king-scepter.png"
+  },
+  {
+   "id": "machete-and-pistol",
+   "name": "Machete and Pistol",
+   "nameDe": "Machete und Pistole",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Zwei Machetenhiebe, dann ein Pistolenschuss, der nahe Gegner zurückstößt.",
+   "crit": "Der dritte Angriff (Pistolenschuss).",
+   "baseDps": 117,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "combo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "lore",
+    "from": null,
+    "biomes": [
+     "Prisoners' Quarters"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Zufälliger Lore-Raum mit Altar in den Prisoners' Quarters; Untersuchen bringt einen 1-Kill-Fluch, Aufheben schaltet sofort frei."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Machete_and_Pistol",
+   "icon": "assets/items/machete-and-pistol.png"
+  },
+  {
+   "id": "maw-of-the-deep",
+   "name": "Maw of the Deep",
+   "nameDe": "Schlund der Tiefe",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "survival"
+   ],
+   "dlc": "The Queen and the Sea",
+   "twoHanded": false,
+   "description": "Der dritte Angriff wirft den Hai, der das Ziel festwurzelt und bluten lässt.",
+   "crit": "Gegen festgewurzelte Ziele.",
+   "baseDps": 158,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "root",
+    "bleed"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Mutineer",
+    "biomes": [
+     "Infested Shipwreck"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 80,
+    "text": "Fällt mit 1,7 % Chance von Mutineer – vorkommend in Infested Shipwreck."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Maw_of_the_Deep",
+   "icon": "assets/items/maw-of-the-deep.png"
+  },
+  {
+   "id": "meat-skewer",
+   "name": "Meat Skewer",
+   "nameDe": "Durchstecher",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Der erste Angriff durchbohrt den Gegner und setzt dich hinter ihn.",
+   "crit": "Der nächste Angriff nach dem Durchstoß.",
+   "baseDps": 181,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "challenge",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 50,
+    "text": "Belohnung für den 10. abgeschlossenen Daily Run."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Meat_Skewer",
+   "icon": "assets/items/meat-skewer.png"
+  },
+  {
+   "id": "misericorde",
+   "name": "Misericorde",
+   "nameDe": "Misericordia",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Gnadendolch; ein Angriff, der sein Ziel nicht tötet, verflucht dich.",
+   "crit": "Gegen Ziele mit weniger als 50 % Leben.",
+   "baseDps": 86,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "curse"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Doom Bringer",
+    "biomes": [],
+    "dropChance": 10,
+    "minBC": 2,
+    "cells": 100,
+    "text": "Fällt mit 10 % Chance von Doom Bringer, der nur in verfluchten Biomen ab 2 BC auftaucht."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Misericorde",
+   "icon": "assets/items/misericorde.png"
+  },
+  {
+   "id": "morning-star",
+   "name": "Morning Star",
+   "nameDe": "Morgenstern",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": "Return to Castlevania",
+   "twoHanded": false,
+   "description": "Peitsche mit Stachelkugel; gedrückt halten lässt sie mit deiner Bewegung kreisen.",
+   "crit": "Treffer mit der kreisenden Stachelkugel.",
+   "baseDps": 100,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "secret",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Im laufenden Spiel den Konami-Code eingeben (einmal pro Lauf möglich)."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Morning_Star",
+   "icon": "assets/items/morning-star.png"
+  },
+  {
+   "id": "nutcracker",
+   "name": "Nutcracker",
+   "nameDe": "Nussknacker",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Schwerer Hammer für Kontroll-Builds.",
+   "crit": "Gegen betäubte, eingefrorene oder festgewurzelte Ziele.",
+   "baseDps": 155,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "stun",
+    "freeze",
+    "root"
+   ],
+   "blueprint": {
+    "default": true,
+    "sourceType": "start",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Von Anfang an freigeschaltet, kein Entwurf nötig."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Nutcracker",
+   "icon": "assets/items/nutcracker.png"
+  },
+  {
+   "id": "oiled-sword",
+   "name": "Oiled Sword",
+   "nameDe": "Geöltes Schwert",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Überzieht getroffene Gegner mit brennbarem Öl.",
+   "crit": "10 s lang, nachdem du einen brennenden Gegner getroffen hast.",
+   "baseDps": 127,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "oil",
+    "fire"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Bat",
+    "biomes": [
+     "Promenade of the Condemned",
+     "Graveyard",
+     "Undying Shores",
+     "Dilapidated Arboretum"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 25,
+    "text": "Fällt mit 1,7 % Chance von Bat – vorkommend in Promenade of the Condemned, Graveyard, Undying Shores, Dilapidated Arboretum."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Oiled_Sword",
+   "icon": "assets/items/oiled-sword.png"
+  },
+  {
+   "id": "oven-axe",
+   "name": "Oven Axe",
+   "nameDe": "Kesselaxt",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Schwere Axt mit langsamer Kombo.",
+   "crit": "Wiederholung des letzten Kombo-Schlags.",
+   "baseDps": 215,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "combo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Oven Knight",
+    "biomes": [
+     "Prisoners' Quarters",
+     "Clock Tower",
+     "Cavern",
+     "Derelict Distillery",
+     "Ramparts"
+    ],
+    "dropChance": 1.7,
+    "minBC": 2,
+    "cells": 50,
+    "text": "Fällt mit 1,7 % Chance von Oven Knight – vorkommend in Prisoners' Quarters, Clock Tower, Cavern, Derelict Distillery, Ramparts (ab 2 BC)."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Oven_Axe",
+   "icon": "assets/items/oven-axe.png"
+  },
+  {
+   "id": "panchaku",
+   "name": "Panchaku",
+   "nameDe": "Pfannchaku",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Pfannen-Nunchaku mit langer, sehr schneller Kombo; späte Schläge treffen mehrfach und beidseitig.",
+   "crit": "Wenn der Gegner dir zugewandt ist.",
+   "baseDps": 245,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "combo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "lore",
+    "from": null,
+    "biomes": [
+     "Prisoners' Quarters"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Zufälliger Crossover-Lore-Raum in den Prisoners' Quarters; das Objekt untersuchen, Aufheben schaltet frei."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Panchaku",
+   "icon": "assets/items/panchaku.png"
+  },
+  {
+   "id": "pure-nail",
+   "name": "Pure Nail",
+   "nameDe": "Reiner Nagel",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Angriffe sind im Laufen und nach oben möglich.",
+   "crit": "Abwärtsangriffe in der Luft, mit denen du auf Gegnern abprallst.",
+   "baseDps": 155,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "lore",
+    "from": null,
+    "biomes": [
+     "Prisoners' Quarters"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Zufälliger Lore-Raum mit Bank in den Prisoners' Quarters; Bank untersuchen (heilt voll), Aufheben schaltet sofort frei."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Pure_Nail",
+   "icon": "assets/items/pure-nail.png"
+  },
+  {
+   "id": "queens-rapier",
+   "name": "Queen's Rapier",
+   "nameDe": "Rapier der Königin",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": "The Queen and the Sea",
+   "twoHanded": false,
+   "description": "Jeder Treffer hinterlässt einen Riss in der Realität, der alles auf seinem Weg erneut trifft (auch durch Schilde).",
+   "crit": "Der Realitätsriss nach einem Treffer.",
+   "baseDps": 57,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "boss",
+    "from": "Queen",
+    "biomes": [
+     "The Crown"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 150,
+    "text": "Fällt beim 1. Sieg über Queen (The Crown)."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Queen%27s_Rapier",
+   "icon": "assets/items/queens-rapier.png"
+  },
+  {
+   "id": "rapier",
+   "name": "Rapier",
+   "nameDe": "Rapier",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Schnelles Rapier für Ausweich- und Paradespiel.",
+   "crit": "Direkt nach einer Rolle oder Parade.",
+   "baseDps": 156,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "parry"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Scorpion",
+    "biomes": [
+     "Toxic Sewers"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 5,
+    "text": "Fällt mit 0,4 % Chance von Scorpion – vorkommend in Toxic Sewers."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Rapier",
+   "icon": "assets/items/rapier.png"
+  },
+  {
+   "id": "rhythm-n-bouzouki",
+   "name": "Rhythm n' Bouzouki",
+   "nameDe": "Busukiklinge",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "survival"
+   ],
+   "dlc": "The Bad Seed",
+   "twoHanded": false,
+   "description": "Saiteninstrument: Wer im Takt angreift, kann den letzten Schlag endlos wiederholen.",
+   "crit": "Angriffe im richtigen Rhythmus.",
+   "baseDps": 133,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "combo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Giant Tick",
+    "biomes": [
+     "Morass of the Banished"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 60,
+    "text": "Fällt mit 0,4 % Chance von Giant Tick – vorkommend in Morass of the Banished."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Rhythm_n%27_Bouzouki",
+   "icon": "assets/items/rhythm-n-bouzouki.png"
+  },
+  {
+   "id": "rusty-sword",
+   "name": "Rusty Sword",
+   "nameDe": "Rostiges Schwert",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Einfaches Startschwert ohne Spezialeffekt.",
+   "crit": null,
+   "baseDps": 138,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [],
+   "blueprint": {
+    "default": true,
+    "sourceType": "start",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Startausrüstung – von Anfang an verfügbar."
+   },
+   "notes": "Teil der Startausrüstung (Startwaffe).",
+   "wiki": "https://deadcells.wiki.gg/wiki/Rusty_Sword",
+   "icon": "assets/items/rusty-sword.png"
+  },
+  {
+   "id": "sadists-stiletto",
+   "name": "Sadist's Stiletto",
+   "nameDe": "Sadistenstilett",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Schnelles Stilett für Blutungs- und Gift-Builds.",
+   "crit": "Gegen blutende oder vergiftete Ziele.",
+   "baseDps": 109,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "bleed",
+    "poison"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Impaler",
+    "biomes": [
+     "Ancient Sewers",
+     "Dilapidated Arboretum"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 25,
+    "text": "Fällt mit 1,7 % Chance von Impaler – vorkommend in Ancient Sewers, Dilapidated Arboretum."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Sadist%27s_Stiletto",
+   "icon": "assets/items/sadists-stiletto.png"
+  },
+  {
+   "id": "scythe-claw",
+   "name": "Scythe Claw",
+   "nameDe": "Sensenklaue",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "survival"
+   ],
+   "dlc": "The Bad Seed",
+   "twoHanded": true,
+   "description": "Zweihändig: zwei Sensenklauen, eine auf jeder Angriffstaste.",
+   "crit": "Wenn du zuvor mit der jeweils anderen Klaue angegriffen hast.",
+   "baseDps": 85,
+   "dps2": 165,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "combo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "boss",
+    "from": "Mama Tick",
+    "biomes": [
+     "Nest"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 100,
+    "text": "Fällt beim 1. Sieg über Mama Tick (Nest)."
+   },
+   "notes": "Die Legendary-Variante (Combined Scythe Claws) ist ebenfalls einzigartig.",
+   "wiki": "https://deadcells.wiki.gg/wiki/Scythe_Claw",
+   "icon": "assets/items/scythe-claw.png"
+  },
+  {
+   "id": "seismic-strike",
+   "name": "Seismic Strike",
+   "nameDe": "Seismischer Schlag",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Faustschläge erzeugen Schockwellen am Boden, die Gegner festwurzeln.",
+   "crit": null,
+   "baseDps": 131,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "root",
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Bomber",
+    "biomes": [
+     "Ossuary",
+     "Fractured Shrines",
+     "Astrolab"
+    ],
+    "dropChance": 0.4,
+    "minBC": 2,
+    "cells": 60,
+    "text": "Fällt mit 0,4 % Chance von Bomber – vorkommend in Ossuary, Fractured Shrines, Astrolab (ab 2 BC)."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Seismic_Strike",
+   "icon": "assets/items/seismic-strike.png"
+  },
+  {
+   "id": "sewing-scissors",
+   "name": "Sewing Scissors",
+   "nameDe": "Nähschere",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Tötet ein Hieb einen Gegner, sterben auch alle anderen gleichzeitig getroffenen Ziele.",
+   "crit": null,
+   "baseDps": 183,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [],
+   "blueprint": {
+    "default": false,
+    "sourceType": "quest",
+    "from": "The Tailor",
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 50,
+    "text": "Mit 16 verfügbaren Outfits beim Tailor sprechen."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Sewing_Scissors",
+   "icon": "assets/items/sewing-scissors.png"
+  },
+  {
+   "id": "shovel",
+   "name": "Shovel",
+   "nameDe": "Schaufel",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Schaufel, die Gegner und Bomben zurückschlägt.",
+   "crit": null,
+   "baseDps": 158,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Swarm Zombie",
+    "biomes": [
+     "Graveyard"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 15,
+    "text": "Fällt mit 0,4 % Chance von Swarm Zombie – vorkommend in Graveyard."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Shovel",
+   "icon": "assets/items/shovel.png"
+  },
+  {
+   "id": "shrapnel-axes",
+   "name": "Shrapnel Axes",
+   "nameDe": "Schrapnelläxte",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Bei Treffern sprühen Metallsplitter (ca. 130 Schaden) aus den Äxten.",
+   "crit": null,
+   "baseDps": 187,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "ammo",
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Demon",
+    "biomes": [
+     "Cavern",
+     "Slumbering Sanctuary",
+     "High Peak Castle",
+     "Dracula's Castle"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 100,
+    "text": "Fällt mit 0,4 % Chance von Demon – vorkommend in Cavern, Slumbering Sanctuary, High Peak Castle, Dracula's Castle."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Shrapnel_Axes",
+   "icon": "assets/items/shrapnel-axes.png"
+  },
+  {
+   "id": "snake-fangs",
+   "name": "Snake Fangs",
+   "nameDe": "Schlangenzähne",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": "Fatal Falls",
+   "twoHanded": false,
+   "description": "Teleportiert dich zum nächsten Ziel und vergiftet es (4 DPS für 15 s).",
+   "crit": "Gegen Ziele mit mehr als 5 Giftstapeln.",
+   "baseDps": 94,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "poison"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Cold Blooded Guardian",
+    "biomes": [
+     "Fractured Shrines",
+     "Undying Shores"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 80,
+    "text": "Fällt mit 1,7 % Chance von Cold Blooded Guardian – vorkommend in Fractured Shrines, Undying Shores."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Snake_Fangs",
+   "icon": "assets/items/snake-fangs.png"
+  },
+  {
+   "id": "spartan-sandals",
+   "name": "Spartan Sandals",
+   "nameDe": "Spartanersandalen",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Tritte schleudern Gegner davon; prallen sie gegen eine Wand, erleiden sie 90 Zusatzschaden.",
+   "crit": null,
+   "baseDps": 32,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Runner",
+    "biomes": [
+     "Promenade of the Condemned",
+     "Undying Shores"
+    ],
+    "dropChance": 100,
+    "minBC": 0,
+    "cells": 50,
+    "text": "Fällt mit 100 % Chance von Runner – vorkommend in Promenade of the Condemned, Undying Shores."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Spartan_Sandals",
+   "icon": "assets/items/spartan-sandals.png"
+  },
+  {
+   "id": "spiked-boots",
+   "name": "Spiked Boots",
+   "nameDe": "Stachelstiefel",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Tritte zum Unterbrechen gegnerischer Angriffe.",
+   "crit": "Wenn der Tritt einen gegnerischen Angriff unterbricht.",
+   "baseDps": 105,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Thorny",
+    "biomes": [
+     "Dilapidated Arboretum",
+     "Ossuary",
+     "High Peak Castle"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 35,
+    "text": "Fällt mit 0,4 % Chance von Thorny – vorkommend in Dilapidated Arboretum, Ossuary, High Peak Castle."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Spiked_Boots",
+   "icon": "assets/items/spiked-boots.png"
+  },
+  {
+   "id": "spite-sword",
+   "name": "Spite Sword",
+   "nameDe": "Schwert der Tücke",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Schwert, das aus erlittenem Schaden Kraft zieht.",
+   "crit": "Wenn du in den letzten 8 s Schaden erlitten hast oder verflucht bist.",
+   "baseDps": 144,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "curse"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Buzzcutter",
+    "biomes": [
+     "Ramparts",
+     "Toxic Sewers",
+     "Dilapidated Arboretum",
+     "Undying Shores"
+    ],
+    "dropChance": 0.03,
+    "minBC": 0,
+    "cells": 30,
+    "text": "Fällt mit 0,03 % Chance von Buzzcutter – vorkommend in Ramparts, Toxic Sewers, Dilapidated Arboretum, Undying Shores."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Spite_Sword",
+   "icon": "assets/items/spite-sword.png"
+  },
+  {
+   "id": "starfury",
+   "name": "Starfury",
+   "nameDe": "Sternengroll",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Treffer lassen zusätzlich zwei Sterne herabfallen, die nach Möglichkeit ein weiteres Ziel treffen.",
+   "crit": "Die herabfallenden Sterne.",
+   "baseDps": 57,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "lore",
+    "from": null,
+    "biomes": [
+     "Prisoners' Quarters"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Zufälliger Crossover-Lore-Raum in den Prisoners' Quarters; das Objekt untersuchen, Aufheben schaltet sofort frei."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Starfury",
+   "icon": "assets/items/starfury.png"
+  },
+  {
+   "id": "swift-sword",
+   "name": "Swift Sword",
+   "nameDe": "Schnelles Schwert",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Leichtes Schwert für Tempo-Builds.",
+   "crit": "Solange ein Geschwindigkeitsbonus aktiv ist.",
+   "baseDps": 137,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "challenge",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 50,
+    "text": "Belohnung für den ersten abgeschlossenen Daily Run."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Swift_Sword",
+   "icon": "assets/items/swift-sword.png"
+  },
+  {
+   "id": "symmetrical-lance",
+   "name": "Symmetrical Lance",
+   "nameDe": "Symmetrische Lanze",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Lanze des Hand of the King; das vom Boss erhaltene Exemplar passt nicht in den Rucksack.",
+   "crit": "6 s lang, nachdem du schnell hintereinander 2 Gegner mit ihr getötet hast.",
+   "baseDps": 192,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "boss",
+    "from": "Hand of the King",
+    "biomes": [
+     "Throne Room"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Fällt beim 1. Sieg über Hand of the King (Throne Room)."
+   },
+   "notes": "Das vom Hand of the King erhaltene Exemplar kann nicht im Rucksack verstaut werden.",
+   "wiki": "https://deadcells.wiki.gg/wiki/Symmetrical_Lance",
+   "icon": "assets/items/symmetrical-lance.png"
+  },
+  {
+   "id": "tentacle",
+   "name": "Tentacle",
+   "nameDe": "Tentakel",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Ignoriert Schilde und zieht dich zum Gegner heran.",
+   "crit": "Ein erneuter Angriff, während du zum Gegner gezogen wirst.",
+   "baseDps": 78,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "boss",
+    "from": "Conjunctivius",
+    "biomes": [
+     "Insufferable Crypt"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 100,
+    "text": "Fällt beim 1. Sieg über Conjunctivius (Insufferable Crypt)."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Tentacle",
+   "icon": "assets/items/tentacle.png"
+  },
+  {
+   "id": "tombstone",
+   "name": "Tombstone",
+   "nameDe": "Grabstein",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Tötet der letzte Kombotreffer einen Gegner, wird er unter einem Grabstein begraben, der nahe Gegner trifft.",
+   "crit": null,
+   "baseDps": 250,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "combo",
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Swarm Zombie",
+    "biomes": [
+     "Graveyard"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 80,
+    "text": "Fällt mit 1,7 % Chance von Swarm Zombie – vorkommend in Graveyard."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Tombstone",
+   "icon": "assets/items/tombstone.png"
+  },
+  {
+   "id": "toothpick",
+   "name": "Toothpick",
+   "nameDe": "Zahnstocher",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "survival"
+   ],
+   "dlc": "Rise of the Giant",
+   "twoHanded": false,
+   "description": "Riesiger Zahnstocher, der Gegner zurückstößt und betäubt; nach einem aufgeladenen Treffer ist er 6 s lang zerbrochen (schneller, aber schwächer).",
+   "crit": "Der aufgeladene Schlag (ca. 1,3 s halten).",
+   "baseDps": 195,
+   "dps2": 82,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "charge",
+    "stun"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Ground Shaker",
+    "biomes": [
+     "Cavern"
+    ],
+    "dropChance": 10,
+    "minBC": 0,
+    "cells": 60,
+    "text": "Fällt mit 10 % Chance von Ground Shaker – vorkommend in Cavern."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Toothpick",
+   "icon": "assets/items/toothpick.png"
+  },
+  {
+   "id": "torch",
+   "name": "Torch",
+   "nameDe": "Fackel",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Fackel, die Gegner in Brand setzt (15 DPS für 2,7 s).",
+   "crit": null,
+   "baseDps": 107,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "fire"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Spawner",
+    "biomes": [
+     "Ossuary",
+     "Derelict Distillery",
+     "Undying Shores"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 15,
+    "text": "Fällt mit 1,7 % Chance von Spawner – vorkommend in Ossuary, Derelict Distillery, Undying Shores."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Torch",
+   "icon": "assets/items/torch.png"
+  },
+  {
+   "id": "twin-daggers",
+   "name": "Twin Daggers",
+   "nameDe": "Doppeldolche",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Schnelle Zwillingsdolche.",
+   "crit": "Der dritte Treffer einer ununterbrochenen Kombo.",
+   "baseDps": 173,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "combo"
+   ],
+   "blueprint": {
+    "default": true,
+    "sourceType": "start",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Von Anfang an freigeschaltet, kein Entwurf nötig."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Twin_Daggers",
+   "icon": "assets/items/twin-daggers.png"
+  },
+  {
+   "id": "valmonts-whip",
+   "name": "Valmont's Whip",
+   "nameDe": "Valmonts Peitsche",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Peitsche mit großer Reichweite, die Schilde ignoriert.",
+   "crit": "Treffer mit der Peitschenspitze.",
+   "baseDps": 109,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Disgusting Worm",
+    "biomes": [
+     "Toxic Sewers",
+     "Ancient Sewers",
+     "Undying Shores"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 20,
+    "text": "Fällt mit 0,4 % Chance von Disgusting Worm – vorkommend in Toxic Sewers, Ancient Sewers, Undying Shores."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Valmont%27s_Whip",
+   "icon": "assets/items/valmonts-whip.png"
+  },
+  {
+   "id": "vampire-killer",
+   "name": "Vampire Killer",
+   "nameDe": "Vampir-Killer",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": "Return to Castlevania",
+   "twoHanded": false,
+   "description": "Peitsche der Belmonts: ignoriert Schilde, damit getötete Gegner setzen den Boden in Brand.",
+   "crit": "Gegen brennende Gegner.",
+   "baseDps": 141,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "fire"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "boss",
+    "from": "Dracula - Final Form",
+    "biomes": [
+     "Master's Keep"
+    ],
+    "dropChance": 100,
+    "minBC": 0,
+    "cells": 50,
+    "text": "Fällt beim 1. Sieg über Dracula - Final Form (Master's Keep)."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Vampire_Killer",
+   "icon": "assets/items/vampire-killer.png"
+  },
+  {
+   "id": "vorpan",
+   "name": "Vorpan",
+   "nameDe": "Grillpfanne",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Bratpfanne für Frontal-Kämpfe.",
+   "crit": "Wenn der Gegner dir zugewandt ist.",
+   "baseDps": 161,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "shop",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Ab dem 4. Lauf bietet ein Händler die Vorpan in einem beliebigen Shop kostenlos an."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Vorpan",
+   "icon": "assets/items/vorpan.png"
+  },
+  {
+   "id": "war-spear",
+   "name": "War Spear",
+   "nameDe": "Kriegsspeer",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Speer mit großer Reichweite.",
+   "crit": "Wenn ein Angriff mehrere Gegner gleichzeitig trifft.",
+   "baseDps": 256,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Hammer",
+    "biomes": [
+     "Prison Depths",
+     "Derelict Distillery"
+    ],
+    "dropChance": 10,
+    "minBC": 0,
+    "cells": 15,
+    "text": "Fällt mit 10 % Chance von Hammer – vorkommend in Prison Depths, Derelict Distillery."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/War_Spear",
+   "icon": "assets/items/war-spear.png"
+  },
+  {
+   "id": "whip-sword",
+   "name": "Whip Sword",
+   "nameDe": "Peitschenschwert",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": "Return to Castlevania",
+   "twoHanded": true,
+   "description": "Zweihändig mit Schwert- und Peitschenform; zwischen zwei Angriffen lässt sich die Form wechseln.",
+   "crit": "1,5 s lang nach einem Formwechsel zwischen zwei Angriffen.",
+   "baseDps": 217,
+   "dps2": 164,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "combo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Harpy",
+    "biomes": [
+     "Castle's Outskirts",
+     "Dracula's Castle",
+     "Undying Shores"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 100,
+    "text": "Fällt mit 1,7 % Chance von Harpy – vorkommend in Castle's Outskirts, Dracula's Castle, Undying Shores."
+   },
+   "notes": "Formwechsel über die Zweitfunktion (Transformation).",
+   "wiki": "https://deadcells.wiki.gg/wiki/Whip_Sword",
+   "icon": "assets/items/whip-sword.png"
+  },
+  {
+   "id": "wrecking-ball",
+   "name": "Wrecking Ball",
+   "nameDe": "Abrissbirne",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "survival"
+   ],
+   "dlc": "The Queen and the Sea",
+   "twoHanded": false,
+   "description": "Abrissbirne mit langsamer Vierer-Kombo: Der dritte Angriff wirft die Kugel, der vierte holt sie zurück.",
+   "crit": "Das Zurückholen der Kugel (vierter Angriff).",
+   "baseDps": 291,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "combo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "boss",
+    "from": "Calliope",
+    "biomes": [
+     "Lighthouse"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 100,
+    "text": "Fällt von Calliope, wenn sie als letzte der drei Dienerinnen (The Servants) im Lighthouse besiegt wird."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Wrecking_Ball",
+   "icon": "assets/items/wrecking-ball.png"
+  },
+  {
+   "id": "wrenching-whip",
+   "name": "Wrenching Whip",
+   "nameDe": "Reißender Riemen",
+   "type": "melee",
+   "slot": "weapon",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Peitsche, die Schilde ignoriert und Gegner zu dir heranzieht.",
+   "crit": "Der dritte Schlag der Kombo.",
+   "baseDps": 129,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "combo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Pirate Captain",
+    "biomes": [
+     "Stilt Village",
+     "Infested Shipwreck"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 40,
+    "text": "Fällt mit 0,4 % Chance von Pirate Captain – vorkommend in Stilt Village, Infested Shipwreck."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Wrenching_Whip",
+   "icon": "assets/items/wrenching-whip.png"
+  },
+  {
+   "id": "alchemic-carbine",
+   "name": "Alchemic Carbine",
+   "nameDe": "Alchemistenkarabiner",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Dauerfeuer-Waffe mit geringem Direktschaden, die Ziele vergiftet (13 DPS für 4 s).",
+   "crit": null,
+   "baseDps": 9,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "poison"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "secret",
+    "from": null,
+    "biomes": [
+     "Ancient Sewers"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 50,
+    "text": "Geheimbereich über einem großen Giftwasserbecken in den Ancient Sewers (erscheint nicht in jedem Lauf)."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Alchemic_Carbine",
+   "icon": "assets/items/alchemic-carbine.png"
+  },
+  {
+   "id": "anathema",
+   "name": "Anathema",
+   "nameDe": "Anathem",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Feuert ein Geschoss im Bogen mit Flächenschaden; trifft es mindestens einen Gegner, wirst du einmal verflucht.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "curse",
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Curser",
+    "biomes": [],
+    "dropChance": 10,
+    "minBC": 2,
+    "cells": 100,
+    "text": "Fällt mit 10 % Chance von Curser, der nur in verfluchten Biomen ab 2 BC auftaucht."
+   },
+   "notes": "Basis-DPS laut Wiki: 229 (Direkttreffer) + 157 (Fläche).",
+   "wiki": "https://deadcells.wiki.gg/wiki/Anathema",
+   "icon": "assets/items/anathema.png"
+  },
+  {
+   "id": "barrel-launcher",
+   "name": "Barrel Launcher",
+   "nameDe": "Fasswerfer",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Verschießt explosive Fässer.",
+   "crit": "Wenn das Fass vor der Explosion von einer Wand abprallt oder hin- und hergeschlagen wurde.",
+   "baseDps": 171,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "explosive"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Infected Worker",
+    "biomes": [
+     "Derelict Distillery"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 80,
+    "text": "Fällt mit 0,4 % Chance von Infected Worker – vorkommend in Derelict Distillery."
+   },
+   "notes": "Die farblose Version aus der Derelict Distillery kann nicht im Rucksack verstaut werden.",
+   "wiki": "https://deadcells.wiki.gg/wiki/Barrel_Launcher",
+   "icon": "assets/items/barrel-launcher.png"
+  },
+  {
+   "id": "beginners-bow",
+   "name": "Beginner's Bow",
+   "nameDe": "Anfängerbogen",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Einfacher Startbogen; Pfeile kehren zurück, wenn das Ziel stirbt.",
+   "crit": null,
+   "baseDps": 113,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "ammo"
+   ],
+   "blueprint": {
+    "default": true,
+    "sourceType": "start",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Startausrüstung – von Anfang an verfügbar."
+   },
+   "notes": "Teil der Startausrüstung (Alternative zur Startwaffe).",
+   "wiki": "https://deadcells.wiki.gg/wiki/Beginner%27s_Bow",
+   "icon": "assets/items/beginners-bow.png"
+  },
+  {
+   "id": "blowgun",
+   "name": "Blowgun",
+   "nameDe": "Blasrohr",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": "The Bad Seed",
+   "twoHanded": false,
+   "description": "Blasrohr, das Ziele vergiftet (15 DPS für 2 s).",
+   "crit": "Treffer in den Rücken.",
+   "baseDps": 57,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "ammo",
+    "poison",
+    "backstab"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Blowgunner",
+    "biomes": [
+     "Morass of the Banished",
+     "Undying Shores"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 40,
+    "text": "Fällt mit 1,7 % Chance von Blowgunner – vorkommend in Morass of the Banished, Undying Shores."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Blowgun",
+   "icon": "assets/items/blowgun.png"
+  },
+  {
+   "id": "boomerang",
+   "name": "Boomerang",
+   "nameDe": "Bumerang",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Bumerang, der automatisch zu dir zurückkehrt.",
+   "crit": null,
+   "baseDps": 156,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "ammo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "secret",
+    "from": null,
+    "biomes": [
+     "High Peak Castle"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 100,
+    "text": "Hindernisparcours neben dem Ausgang zum Throne Room in High Peak Castle; benötigt alle drei Castle Keys."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Boomerang",
+   "icon": "assets/items/boomerang.png"
+  },
+  {
+   "id": "bow-and-endless-quiver",
+   "name": "Bow and Endless Quiver",
+   "nameDe": "Bogen und immervoller Köcher",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Bogen mit unbegrenzter Munition.",
+   "crit": "Der letzte Schuss der Kombo.",
+   "baseDps": 137,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "combo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Undead Archer",
+    "biomes": [
+     "Clock Tower",
+     "Fractured Shrines",
+     "Prisoners' Quarters",
+     "Toxic Sewers",
+     "Prison Depths",
+     "Ramparts",
+     "High Peak Castle",
+     "Promenade of the Condemned"
+    ],
+    "dropChance": 0.03,
+    "minBC": 0,
+    "cells": 35,
+    "text": "Fällt mit 0,03 % Chance von Undead Archer – vorkommend in Clock Tower, Fractured Shrines, Prisoners' Quarters, Toxic Sewers, Prison Depths, Ramparts, High Peak Castle, Promenade of the Condemned."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Bow_and_Endless_Quiver",
+   "icon": "assets/items/bow-and-endless-quiver.png"
+  },
+  {
+   "id": "cross",
+   "name": "Cross",
+   "nameDe": "Kreuz",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": "Return to Castlevania",
+   "twoHanded": false,
+   "description": "Wirft ein Kreuz nach vorn, das nach einigen Sekunden zurückkehrt.",
+   "crit": "Während es an Ort und Stelle rotiert und auf dem Rückweg.",
+   "baseDps": 317,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "ammo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Throw Master",
+    "biomes": [
+     "Castle's Outskirts"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 50,
+    "text": "Fällt mit 1,7 % Chance von Throw Master – vorkommend in Castle's Outskirts."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Cross",
+   "icon": "assets/items/cross.png"
+  },
+  {
+   "id": "electric-whip",
+   "name": "Electric Whip",
+   "nameDe": "Elektrische Peitsche",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Peitsche, die Schilde ignoriert, nahe Gegner mit 50 % Schaden mittrifft und Schock verursacht (25 DPS für 3 s).",
+   "crit": null,
+   "baseDps": 112,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "electric",
+    "aoe"
+   ],
+   "blueprint": {
+    "default": true,
+    "sourceType": "start",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Von Anfang an freigeschaltet, kein Entwurf nötig."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Electric_Whip",
+   "icon": "assets/items/electric-whip.png"
+  },
+  {
+   "id": "explosive-crossbow",
+   "name": "Explosive Crossbow",
+   "nameDe": "Explosive Armbrust",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": true,
+   "description": "Zweihändige Armbrust mit explodierenden Bolzen; die Zweitfunktion Cross Hit ist ein Nahkampfschlag.",
+   "crit": "Gegner, die direkt von einem Bolzen getroffen werden.",
+   "baseDps": 143,
+   "dps2": 55,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "explosive",
+    "ammo",
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "secret",
+    "from": null,
+    "biomes": [
+     "Promenade of the Condemned"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 80,
+    "text": "Rätselturm in der Promenade of the Condemned; benötigt drei Gardener's Keys (Ramme, Spinnen-Rune bzw. Homunkulus, Rose dreimal anstampfen)."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Explosive_Crossbow",
+   "icon": "assets/items/explosive-crossbow.png"
+  },
+  {
+   "id": "fire-blast",
+   "name": "Fire Blast",
+   "nameDe": "Feuerschlag",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Flammenzauber, der Gegner und Boden in Brand setzt.",
+   "crit": "Wenn Öl im Spiel ist (geölte Gegner).",
+   "baseDps": 169,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "fire",
+    "oil"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Masker",
+    "biomes": [
+     "Prison Depths",
+     "Graveyard",
+     "Slumbering Sanctuary",
+     "Morass of the Banished"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 20,
+    "text": "Fällt mit 1,7 % Chance von Masker – vorkommend in Prison Depths, Graveyard, Slumbering Sanctuary, Morass of the Banished."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Fire_Blast",
+   "icon": "assets/items/fire-blast.png"
+  },
+  {
+   "id": "firebrands",
+   "name": "Firebrands",
+   "nameDe": "Wurffackeln",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Wirft Brandsätze, die Gegner und Boden entzünden (19 DPS für 3 s).",
+   "crit": null,
+   "baseDps": 31,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "fire",
+    "ammo"
+   ],
+   "blueprint": {
+    "default": true,
+    "sourceType": "start",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Von Anfang an freigeschaltet, kein Entwurf nötig."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Firebrands",
+   "icon": "assets/items/firebrands.png"
+  },
+  {
+   "id": "frost-blast",
+   "name": "Frost Blast",
+   "nameDe": "Frostschlag",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Friert Gegner vor dir ein; bereits gefrorene Ziele erleiden keinen Schaden.",
+   "crit": null,
+   "baseDps": 48,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "freeze"
+   ],
+   "blueprint": {
+    "default": true,
+    "sourceType": "start",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Von Anfang an freigeschaltet, kein Entwurf nötig."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Frost_Blast",
+   "icon": "assets/items/frost-blast.png"
+  },
+  {
+   "id": "gilded-yumi",
+   "name": "Gilded Yumi",
+   "nameDe": "Vergoldeter Yumi",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": "The Queen and the Sea",
+   "twoHanded": false,
+   "description": "Große Pfeile stoßen Gegner zurück.",
+   "crit": "Wenn das Ziel gegen eine Wand oder einen anderen Gegner prallt (betäubt dabei auch).",
+   "baseDps": 69,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "ammo",
+    "stun"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "boss",
+    "from": "Euterpe",
+    "biomes": [
+     "Lighthouse"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 100,
+    "text": "Fällt von Euterpe, wenn sie als letzte der drei Dienerinnen (The Servants) im Lighthouse besiegt wird."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Gilded_Yumi",
+   "icon": "assets/items/gilded-yumi.png"
+  },
+  {
+   "id": "heavy-crossbow",
+   "name": "Heavy Crossbow",
+   "nameDe": "Schwere Armbrust",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": true,
+   "description": "Zweihändige Armbrust, die mehrere Bolzen auf kurze Distanz verschießt; Zweitfunktion Reload lädt nach.",
+   "crit": "Der nächste Schuss nach dem Nachladen.",
+   "baseDps": 280,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "ammo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "boss",
+    "from": "Concierge",
+    "biomes": [
+     "Black Bridge"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 80,
+    "text": "Fällt beim 3. Sieg über Concierge (Black Bridge)."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Heavy_Crossbow",
+   "icon": "assets/items/heavy-crossbow.png"
+  },
+  {
+   "id": "hemorrhage",
+   "name": "Hemorrhage",
+   "nameDe": "Ausbluten",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": "Rise of the Giant",
+   "twoHanded": false,
+   "description": "Verursacht Blutung (25 DPS für 3 s).",
+   "crit": "Gegen blutende oder vergiftete Ziele.",
+   "baseDps": 47,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "bleed",
+    "ammo",
+    "poison"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Magistrate of Death",
+    "biomes": [
+     "Astrolab"
+    ],
+    "dropChance": 10,
+    "minBC": 5,
+    "cells": 100,
+    "text": "Fällt mit 10 % Chance von Magistrate of Death – vorkommend in Astrolab (ab 5 BC)."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Hemorrhage",
+   "icon": "assets/items/hemorrhage.png"
+  },
+  {
+   "id": "hokutos-bow",
+   "name": "Hokuto's Bow",
+   "nameDe": "Hokutos Bogen",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Markiert Gegner, die 15 s lang +52 DPS erleiden; stirbt das Ziel, springt die Markierung über.",
+   "crit": null,
+   "baseDps": 25,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "ammo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Cannibal",
+    "biomes": [
+     "Clock Tower",
+     "Graveyard"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 50,
+    "text": "Fällt mit 1,7 % Chance von Cannibal – vorkommend in Clock Tower, Graveyard."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Hokuto%27s_Bow",
+   "icon": "assets/items/hokutos-bow.png"
+  },
+  {
+   "id": "ice-bow",
+   "name": "Ice Bow",
+   "nameDe": "Eisbogen",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Friert getroffene Gegner kurz ein.",
+   "crit": null,
+   "baseDps": 46,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "freeze",
+    "ammo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Undead Archer",
+    "biomes": [
+     "Clock Tower",
+     "Fractured Shrines",
+     "Prisoners' Quarters",
+     "Toxic Sewers",
+     "Prison Depths",
+     "Ramparts",
+     "High Peak Castle",
+     "Promenade of the Condemned"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 20,
+    "text": "Fällt mit 0,4 % Chance von Undead Archer – vorkommend in Clock Tower, Fractured Shrines, Prisoners' Quarters, Toxic Sewers, Prison Depths, Ramparts, High Peak Castle, Promenade of the Condemned."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Ice_Bow",
+   "icon": "assets/items/ice-bow.png"
+  },
+  {
+   "id": "ice-crossbow",
+   "name": "Ice Crossbow",
+   "nameDe": "Eisarmbrust",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": true,
+   "description": "Zweihändige Armbrust, die einfriert; die Zweitfunktion Piercing Shot durchdringt Gegner und holt in gefrorenen Zielen steckende Bolzen zurück.",
+   "crit": "Piercing Shot (Zweitfunktion).",
+   "baseDps": 60,
+   "dps2": 47,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "freeze",
+    "ammo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "boss",
+    "from": "Time Keeper",
+    "biomes": [
+     "Clock Room"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 80,
+    "text": "Fällt beim 4. Sieg über Time Keeper (Clock Room)."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Ice_Crossbow",
+   "icon": "assets/items/ice-crossbow.png"
+  },
+  {
+   "id": "ice-shards",
+   "name": "Ice Shards",
+   "nameDe": "Eissplitter",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Verlangsamt Gegner 3 s lang.",
+   "crit": "Gegen Ziele im Wasser oder mit Öl bedeckt.",
+   "baseDps": 53,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "freeze",
+    "oil"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "boss",
+    "from": "Time Keeper",
+    "biomes": [
+     "Clock Room"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 40,
+    "text": "Fällt beim 3. Sieg über Time Keeper (Clock Room)."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Ice_Shards",
+   "icon": "assets/items/ice-shards.png"
+  },
+  {
+   "id": "infantry-bow",
+   "name": "Infantry Bow",
+   "nameDe": "Infanteriebogen",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Bogen für den Nahbereich.",
+   "crit": "Auf kurze Distanz.",
+   "baseDps": 78,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "ammo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Undead Archer",
+    "biomes": [
+     "Clock Tower",
+     "Fractured Shrines",
+     "Prisoners' Quarters",
+     "Toxic Sewers",
+     "Prison Depths",
+     "Ramparts",
+     "High Peak Castle",
+     "Promenade of the Condemned"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 5,
+    "text": "Fällt mit 1,7 % Chance von Undead Archer – vorkommend in Clock Tower, Fractured Shrines, Prisoners' Quarters, Toxic Sewers, Prison Depths, Ramparts, High Peak Castle, Promenade of the Condemned."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Infantry_Bow",
+   "icon": "assets/items/infantry-bow.png"
+  },
+  {
+   "id": "killing-deck",
+   "name": "Killing Deck",
+   "nameDe": "Killerkarten",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": "The Queen and the Sea",
+   "twoHanded": false,
+   "description": "Verschießt Karten in wechselnden Mustern; der vierte Treffer ruft alle Karten zurück.",
+   "crit": "Das Zurückrufen der Karten beim vierten Treffer.",
+   "baseDps": 411,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "combo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Armored Shrimp",
+    "biomes": [
+     "Infested Shipwreck"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 100,
+    "text": "Fällt mit 1,7 % Chance von Armored Shrimp – vorkommend in Infested Shipwreck."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Killing_Deck",
+   "icon": "assets/items/killing-deck.png"
+  },
+  {
+   "id": "laser-glaive",
+   "name": "Laser Glaive",
+   "nameDe": "Lasergleve",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Springt zwischen nahen Zielen hin und her und wird mit jedem Sprung stärker.",
+   "crit": "Nach 2 Abprallern.",
+   "baseDps": 70,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "ammo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "lore",
+    "from": null,
+    "biomes": [
+     "Prisoners' Quarters"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Zufälliger Crossover-Lore-Raum in den Prisoners' Quarters; das Objekt untersuchen, Aufheben schaltet sofort frei."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Laser_Glaive",
+   "icon": "assets/items/laser-glaive.png"
+  },
+  {
+   "id": "lightning-bolt",
+   "name": "Lightning Bolt",
+   "nameDe": "Blitzschlag",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Blitzzauber mit Schock im Umkreis des Ziels (20 DPS für 3 s).",
+   "crit": "Bei gehaltenem Dauerstrahl.",
+   "baseDps": 111,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "electric",
+    "charge"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Inquisitor",
+    "biomes": [
+     "Ramparts",
+     "Graveyard",
+     "Forgotten Sepulcher",
+     "Slumbering Sanctuary",
+     "Fractured Shrines",
+     "Ossuary",
+     "Prisoners' Quarters",
+     "Corrupted Prison",
+     "Clock Tower"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 30,
+    "text": "Fällt mit 1,7 % Chance von Inquisitor – vorkommend in Ramparts, Graveyard, Forgotten Sepulcher, Slumbering Sanctuary, Fractured Shrines, Ossuary, Prisoners' Quarters, Corrupted Prison, Clock Tower."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Lightning_Bolt",
+   "icon": "assets/items/lightning-bolt.png"
+  },
+  {
+   "id": "magic-bow",
+   "name": "Magic Bow",
+   "nameDe": "Magischer Bogen",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Verschießt Salven aus 5 zielsuchenden Pfeilen; jeder weitere Treffer auf dasselbe Ziel erhöht den Schaden (bis +35 %).",
+   "crit": null,
+   "baseDps": 139,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "ammo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "lore",
+    "from": null,
+    "biomes": [
+     "Prisoners' Quarters"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 100,
+    "text": "Zufälliger Crossover-Lore-Raum in den Prisoners' Quarters."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Magic_Bow",
+   "icon": "assets/items/magic-bow.png"
+  },
+  {
+   "id": "magic-missiles",
+   "name": "Magic Missiles",
+   "nameDe": "Zaubergeschosse",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": "Rise of the Giant",
+   "twoHanded": false,
+   "description": "Geschosse zielen automatisch auf den nächsten Gegner.",
+   "crit": null,
+   "baseDps": 164,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Arbiter",
+    "biomes": [
+     "Cavern"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 40,
+    "text": "Fällt mit 0,4 % Chance von Arbiter – vorkommend in Cavern."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Magic_Missiles",
+   "icon": "assets/items/magic-missiles.png"
+  },
+  {
+   "id": "marksmans-bow",
+   "name": "Marksman's Bow",
+   "nameDe": "Scharfschützenbogen",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Präzisionsbogen für Fernschüsse.",
+   "crit": "Auf große Distanz.",
+   "baseDps": 58,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "ammo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "secret",
+    "from": null,
+    "biomes": [
+     "Promenade of the Condemned"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 5,
+    "text": "Zeittür in der Passage zwischen Promenade of the Condemned und Ossuary – rechtzeitig erreichen."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Marksman%27s_Bow",
+   "icon": "assets/items/marksmans-bow.png"
+  },
+  {
+   "id": "medusas-head",
+   "name": "Medusa's Head",
+   "nameDe": "Kopf der Medusa",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics",
+    "survival"
+   ],
+   "dlc": "Return to Castlevania",
+   "twoHanded": false,
+   "description": "Rollt Medusas Kopf über den Boden und versteinert getroffene Gegner; bleibt er liegen oder wird reaktiviert, schreit er und schleudert nahe Gegner hoch.",
+   "crit": null,
+   "baseDps": 100,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "ammo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Medusa",
+    "biomes": [
+     "Dracula's Castle"
+    ],
+    "dropChance": 10,
+    "minBC": 0,
+    "cells": 100,
+    "text": "Fällt mit 10 % Chance von Medusa – vorkommend in Dracula's Castle."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Medusa%27s_Head",
+   "icon": "assets/items/medusas-head.png"
+  },
+  {
+   "id": "money-shooter",
+   "name": "Money Shooter",
+   "nameDe": "Geldschießer",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Feuert pro Schuss 150 Gold aus deiner Tasche; ohne genug Gold feuert sie nicht.",
+   "crit": "Immer (jeder bezahlte Schuss ist kritisch).",
+   "baseDps": 667,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Golden Kamikaze",
+    "biomes": [
+     "The Bank"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 80,
+    "text": "Fällt mit 1,7 % Chance von Golden Kamikaze – vorkommend in The Bank."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Money_Shooter",
+   "icon": "assets/items/money-shooter.png"
+  },
+  {
+   "id": "multiple-nocks-bow",
+   "name": "Multiple-nocks Bow",
+   "nameDe": "Multibogen",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Verschießt drei Pfeile gleichzeitig.",
+   "crit": null,
+   "baseDps": 228,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "ammo"
+   ],
+   "blueprint": {
+    "default": true,
+    "sourceType": "start",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Von Anfang an freigeschaltet, kein Entwurf nötig."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Multiple-nocks_Bow",
+   "icon": "assets/items/multiple-nocks-bow.png"
+  },
+  {
+   "id": "nerves-of-steel",
+   "name": "Nerves of Steel",
+   "nameDe": "Nerven wie Drahtseile",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Bogen mit Timing-Mechanik.",
+   "crit": "Wenn der Pfeil im richtigen Moment losgelassen wird.",
+   "baseDps": 80,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "ammo",
+    "charge"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "secret",
+    "from": null,
+    "biomes": [
+     "Ramparts"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 60,
+    "text": "Turm am Ende der Ramparts, über eine unsichtbare Plattform erreichbar (nicht in jedem Lauf; nie zusammen mit dem Stun-Grenade-Entwurf)."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Nerves_of_Steel",
+   "icon": "assets/items/nerves-of-steel.png"
+  },
+  {
+   "id": "peril-glyphs",
+   "name": "Peril Glyphs",
+   "nameDe": "Gefahrenglyphen",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Die Kombo wird umso länger, je mehr Leben dir fehlt.",
+   "crit": "Ab dem dritten Treffer der Kombo.",
+   "baseDps": 157,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "combo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "challenge",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 50,
+    "text": "Belohnung für das Bestehen der 1. Stufe im Boss Rush."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Peril_Glyphs",
+   "icon": "assets/items/peril-glyphs.png"
+  },
+  {
+   "id": "pyrotechnics",
+   "name": "Pyrotechnics",
+   "nameDe": "Pyrotechnik",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Verschießt mehrere Feuergeschosse.",
+   "crit": "Gegen mit Öl bedeckte Ziele.",
+   "baseDps": 102,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "fire",
+    "oil"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Caster",
+    "biomes": [
+     "Slumbering Sanctuary"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 30,
+    "text": "Fällt mit 1,7 % Chance von Caster – vorkommend in Slumbering Sanctuary."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Pyrotechnics",
+   "icon": "assets/items/pyrotechnics.png"
+  },
+  {
+   "id": "quick-bow",
+   "name": "Quick Bow",
+   "nameDe": "Schnellfeuerbogen",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Sehr schnell feuernder Bogen.",
+   "crit": "Wenn mindestens 3 Pfeile im Ziel stecken.",
+   "baseDps": 75,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "ammo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "secret",
+    "from": null,
+    "biomes": [
+     "Prisoners' Quarters"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 5,
+    "text": "Geheimtunnel links im Startraum der Prisoners' Quarters – erst ab dem 3. Lauf vorhanden."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Quick_Bow",
+   "icon": "assets/items/quick-bow.png"
+  },
+  {
+   "id": "repeater-crossbow",
+   "name": "Repeater Crossbow",
+   "nameDe": "Repetierarmbrust",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": true,
+   "description": "Zweihändige Schnellfeuer-Armbrust; die Zweitfunktion Quiver of Bolts verschießt eine Salve, die festwurzelt (15 DPS für 3 s).",
+   "crit": "Gegen festgewurzelte Ziele.",
+   "baseDps": 115,
+   "dps2": 73,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "ammo",
+    "root"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Dark Tracker",
+    "biomes": [
+     "Forgotten Sepulcher",
+     "Clock Tower",
+     "Morass of the Banished",
+     "Promenade of the Condemned",
+     "Castle's Outskirts",
+     "Ossuary",
+     "High Peak Castle"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 80,
+    "text": "Fällt mit 0,4 % Chance von Dark Tracker – vorkommend in Forgotten Sepulcher, Clock Tower, Morass of the Banished, Promenade of the Condemned, Castle's Outskirts, Ossuary, High Peak Castle."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Repeater_Crossbow",
+   "icon": "assets/items/repeater-crossbow.png"
+  },
+  {
+   "id": "sonic-carbine",
+   "name": "Sonic Carbine",
+   "nameDe": "Schallkarabiner",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": "Rise of the Giant",
+   "twoHanded": false,
+   "description": "Schüsse durchdringen Gegner; gedrückt halten feuert dauerhaft weiter.",
+   "crit": "Gegen Ziele hinter dem ersten getroffenen Gegner.",
+   "baseDps": 227,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "ammo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "secret",
+    "from": null,
+    "biomes": [
+     "Astrolab"
+    ],
+    "dropChance": null,
+    "minBC": 5,
+    "cells": 100,
+    "text": "Oben im Ausgangsturm des Astrolab (5-BC-Biom); benötigt den Apex Key."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Sonic_Carbine",
+   "icon": "assets/items/sonic-carbine.png"
+  },
+  {
+   "id": "the-boys-axe",
+   "name": "The Boy's Axe",
+   "nameDe": "Axt des Jungen",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics",
+    "survival"
+   ],
+   "dlc": "Rise of the Giant",
+   "twoHanded": false,
+   "description": "Wurfaxt, die Ziele festwurzelt und beim Zurückrufen 80 Schaden verursacht.",
+   "crit": null,
+   "baseDps": 159,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "ammo",
+    "root"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Ground Shaker",
+    "biomes": [
+     "Cavern"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 40,
+    "text": "Fällt mit 1,7 % Chance von Ground Shaker – vorkommend in Cavern."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/The_Boy%27s_Axe",
+   "icon": "assets/items/the-boys-axe.png"
+  },
+  {
+   "id": "throwable-objects",
+   "name": "Throwable Objects",
+   "nameDe": "Werfbare Objekte",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Wirft Gegenstände, die getroffene Gegner betäuben; jeder Kill lädt 1 Munition nach.",
+   "crit": null,
+   "baseDps": 382,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "ammo",
+    "stun"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "lore",
+    "from": null,
+    "biomes": [
+     "Prisoners' Quarters"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Zufälliger Crossover-Lore-Raum in den Prisoners' Quarters; das Objekt untersuchen, Aufheben schaltet sofort frei."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Throwable_Objects",
+   "icon": "assets/items/throwable-objects.png"
+  },
+  {
+   "id": "throwing-axe",
+   "name": "Throwing Axe",
+   "nameDe": "Wurfaxt",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics",
+    "survival"
+   ],
+   "dlc": "Return to Castlevania",
+   "twoHanded": false,
+   "description": "Wurfaxt mit Parabelflugbahn.",
+   "crit": "Während des Fallens (absteigender Teil der Flugbahn).",
+   "baseDps": 90,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "ammo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Axe Armor",
+    "biomes": [
+     "Dracula's Castle"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 50,
+    "text": "Fällt mit 1,7 % Chance von Axe Armor – vorkommend in Dracula's Castle."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Throwing_Axe",
+   "icon": "assets/items/throwing-axe.png"
+  },
+  {
+   "id": "throwing-knife",
+   "name": "Throwing Knife",
+   "nameDe": "Wurfmesser",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Zielsuchendes Wurfmesser, das Blutung verursacht (22 DPS für 3 s).",
+   "crit": null,
+   "baseDps": 14,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "bleed",
+    "ammo"
+   ],
+   "blueprint": {
+    "default": true,
+    "sourceType": "start",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Von Anfang an freigeschaltet, kein Entwurf nötig."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Throwing_Knife",
+   "icon": "assets/items/throwing-knife.png"
+  },
+  {
+   "id": "war-javelin",
+   "name": "War Javelin",
+   "nameDe": "Kriegslanze",
+   "type": "ranged",
+   "slot": "weapon",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": "Rise of the Giant",
+   "twoHanded": false,
+   "description": "Durchbohrt alle Gegner auf seinem Weg (+90 Schaden nahe einer Wand); Reaktivieren teleportiert dich zum Speer.",
+   "crit": null,
+   "baseDps": 110,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "ammo"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "secret",
+    "from": null,
+    "biomes": [
+     "Cavern"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 100,
+    "text": "Am Ende eines Hindernisparcours im Cavern, neben dem Ausgang zum Guardian's Haven."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/War_Javelin",
+   "icon": "assets/items/war-javelin.png"
+  },
+  {
+   "id": "alucards-shield",
+   "name": "Alucard's Shield",
+   "nameDe": "Alucards Schild",
+   "type": "shield",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "survival"
+   ],
+   "dlc": "Return to Castlevania",
+   "twoHanded": false,
+   "description": "Schild, mit dem du auch im Nahkampf angreifen kannst.",
+   "crit": "Angriffe nach einer erfolgreichen Parade.",
+   "baseDps": 110,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "parry"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "lore",
+    "from": null,
+    "biomes": [
+     "Castle's Outskirts"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Lore-Raum in Castle's Outskirts."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Alucard%27s_Shield",
+   "icon": "assets/items/alucards-shield.png"
+  },
+  {
+   "id": "assault-shield",
+   "name": "Assault Shield",
+   "nameDe": "Sturmschild",
+   "type": "shield",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Blockt Angriffe, während du nach vorn stürmst.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "parry"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "secret",
+    "from": null,
+    "biomes": [
+     "Prisoners' Quarters"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 40,
+    "text": "Zeittür in der Passage zwischen Prisoners' Quarters und Promenade of the Condemned – rechtzeitig erreichen."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Assault_Shield",
+   "icon": "assets/items/assault-shield.png"
+  },
+  {
+   "id": "bloodthirsty-shield",
+   "name": "Bloodthirsty Shield",
+   "nameDe": "Blutrünstiger Schild",
+   "type": "shield",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Geblockte Angriffe verursachen Blutung (15 DPS für 3 s); eine Parade überträgt sie auf nahe Gegner.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "bleed",
+    "parry"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Shieldbearer",
+    "biomes": [
+     "Ancient Sewers",
+     "Prisoners' Quarters",
+     "Ramparts",
+     "Derelict Distillery"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 30,
+    "text": "Fällt mit 0,4 % Chance von Shieldbearer – vorkommend in Ancient Sewers, Prisoners' Quarters, Ramparts, Derelict Distillery."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Bloodthirsty_Shield",
+   "icon": "assets/items/bloodthirsty-shield.png"
+  },
+  {
+   "id": "cudgel",
+   "name": "Cudgel",
+   "nameDe": "Knüppel",
+   "type": "shield",
+   "slot": "weapon",
+   "colors": [
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Betäubt geblockte Gegner; nach einer Parade hält die Betäubung länger (3,5 s bzw. 5,5 s).",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "parry",
+    "stun"
+   ],
+   "blueprint": {
+    "default": true,
+    "sourceType": "start",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Von Anfang an freigeschaltet, kein Entwurf nötig."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Cudgel",
+   "icon": "assets/items/cudgel.png"
+  },
+  {
+   "id": "force-shield",
+   "name": "Force Shield",
+   "nameDe": "Energieschild",
+   "type": "shield",
+   "slot": "weapon",
+   "colors": [
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Erzeugt beim Hochhalten ein Kraftfeld, das sich langsam wieder auflädt; Paraden beschleunigen das.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 35,
+   "tags": [
+    "ammo",
+    "parry"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Festering Zombie",
+    "biomes": [
+     "Ancient Sewers",
+     "Stilt Village",
+     "Toxic Sewers",
+     "Undying Shores"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 40,
+    "text": "Fällt mit 0,4 % Chance von Festering Zombie – vorkommend in Ancient Sewers, Stilt Village, Toxic Sewers, Undying Shores."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Force_Shield",
+   "icon": "assets/items/force-shield.png"
+  },
+  {
+   "id": "front-line-shield",
+   "name": "Front Line Shield",
+   "nameDe": "Frontkämpferschild",
+   "type": "shield",
+   "slot": "weapon",
+   "colors": [
+    "brutality",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Nach einer erfolgreichen Parade verursachen Nahkampfangriffe 6 s lang +50 % Schaden.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "parry"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "secret",
+    "from": null,
+    "biomes": [
+     "Ancient Sewers"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 5,
+    "text": "Unter einem tiefen Giftwasserbecken mit falschem Boden in den Ancient Sewers."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Front_Line_Shield",
+   "icon": "assets/items/front-line-shield.png"
+  },
+  {
+   "id": "greed-shield",
+   "name": "Greed Shield",
+   "nameDe": "Gieriger Schild",
+   "type": "shield",
+   "slot": "weapon",
+   "colors": [
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Paraden schlagen Gegnern Goldzähne aus (1 pro Gegner alle 10 s) und verwandeln Pfeile in Gold.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "parry"
+   ],
+   "blueprint": {
+    "default": true,
+    "sourceType": "start",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Von Anfang an freigeschaltet, kein Entwurf nötig."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Greed_Shield",
+   "icon": "assets/items/greed-shield.png"
+  },
+  {
+   "id": "ice-shield",
+   "name": "Ice Shield",
+   "nameDe": "Eisschild",
+   "type": "shield",
+   "slot": "weapon",
+   "colors": [
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Paraden frieren nahe Gegner ein, zurückgeworfene Geschosse frieren ihre Ziele ein.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "freeze",
+    "parry"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Shieldbearer",
+    "biomes": [
+     "Ancient Sewers",
+     "Prisoners' Quarters",
+     "Ramparts",
+     "Derelict Distillery"
+    ],
+    "dropChance": 10,
+    "minBC": 0,
+    "cells": 20,
+    "text": "Fällt mit 10 % Chance von Shieldbearer – vorkommend in Ancient Sewers, Prisoners' Quarters, Ramparts, Derelict Distillery."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Ice_Shield",
+   "icon": "assets/items/ice-shield.png"
+  },
+  {
+   "id": "knockback-shield",
+   "name": "Knockback Shield",
+   "nameDe": "Rückstoßschild",
+   "type": "shield",
+   "slot": "weapon",
+   "colors": [
+    "tactics",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Geblockte Gegner werden zurückgestoßen und erleiden +80 Schaden an Wänden (bei Parade doppelt).",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "parry"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Catcher",
+    "biomes": [
+     "Graveyard",
+     "Fractured Shrines",
+     "Undying Shores"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 15,
+    "text": "Fällt mit 0,4 % Chance von Catcher – vorkommend in Graveyard, Fractured Shrines, Undying Shores."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Knockback_Shield",
+   "icon": "assets/items/knockback-shield.png"
+  },
+  {
+   "id": "old-wooden-shield",
+   "name": "Old Wooden Shield",
+   "nameDe": "Alter Holzschild",
+   "type": "shield",
+   "slot": "weapon",
+   "colors": [
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Startschild: Halten verringert Schaden, kurzes Antippen pariert und blockt den Treffer vollständig.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "parry"
+   ],
+   "blueprint": {
+    "default": true,
+    "sourceType": "start",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Startausrüstung – von Anfang an verfügbar."
+   },
+   "notes": "Teil der Startausrüstung (Alternative zur Startwaffe).",
+   "wiki": "https://deadcells.wiki.gg/wiki/Old_Wooden_Shield",
+   "icon": "assets/items/old-wooden-shield.png"
+  },
+  {
+   "id": "parry-shield",
+   "name": "Parry Shield",
+   "nameDe": "Parierschild",
+   "type": "shield",
+   "slot": "weapon",
+   "colors": [
+    "tactics",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Kann nicht gehalten werden, nur parieren; zurückgeworfene Granaten und Geschosse werden verstärkt.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "parry"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "secret",
+    "from": null,
+    "biomes": [
+     "Stilt Village"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 5,
+    "text": "Geheimweg im Stilt Village; benötigt Ramm- und Spinnen-Rune (oder Mehrfachsprung) sowie einen zweiten Village Key."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Parry_Shield",
+   "icon": "assets/items/parry-shield.png"
+  },
+  {
+   "id": "punishment",
+   "name": "Punishment",
+   "nameDe": "Bestrafung",
+   "type": "shield",
+   "slot": "weapon",
+   "colors": [
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Geblockte Angriffe fügen nahen Gegnern Schaden zu.",
+   "crit": "Bei einer erfolgreichen Parade.",
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "crit",
+    "parry",
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "secret",
+    "from": null,
+    "biomes": [
+     "Clock Tower"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 50,
+    "text": "Rätseltür im Clock Tower; den Bell Tower Key erhält man, indem man vier Glocken von tief nach hoch anschlägt."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Punishment",
+   "icon": "assets/items/punishment.png"
+  },
+  {
+   "id": "rampart",
+   "name": "Rampart",
+   "nameDe": "Bollwerk",
+   "type": "shield",
+   "slot": "weapon",
+   "colors": [
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Absorbiert mehr Schaden; eine Nahkampf-Parade erzeugt 2 s lang ein Kraftfeld.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 1,
+   "tags": [
+    "parry"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Shieldbearer",
+    "biomes": [
+     "Ancient Sewers",
+     "Prisoners' Quarters",
+     "Ramparts",
+     "Derelict Distillery"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 30,
+    "text": "Fällt mit 0,4 % Chance von Shieldbearer – vorkommend in Ancient Sewers, Prisoners' Quarters, Ramparts, Derelict Distillery."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Rampart",
+   "icon": "assets/items/rampart.png"
+  },
+  {
+   "id": "spiked-shield",
+   "name": "Spiked Shield",
+   "nameDe": "Stachelschild",
+   "type": "shield",
+   "slot": "weapon",
+   "colors": [
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Fügt geblockten Gegnern hohen Schaden zu.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "parry"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Cleaver",
+    "biomes": [
+     "Forgotten Sepulcher",
+     "Morass of the Banished"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 5,
+    "text": "Fällt mit 1,7 % Chance von Cleaver – vorkommend in Forgotten Sepulcher, Morass of the Banished."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Spiked_Shield",
+   "icon": "assets/items/spiked-shield.png"
+  },
+  {
+   "id": "thunder-shield",
+   "name": "Thunder Shield",
+   "nameDe": "Donnerschild",
+   "type": "shield",
+   "slot": "weapon",
+   "colors": [
+    "tactics",
+    "survival"
+   ],
+   "dlc": "Rise of the Giant",
+   "twoHanded": false,
+   "description": "Blocken erzeugt 8 s lang elektrischen Schaden vor dir (nach Parade rundum); erneutes Benutzen betäubt nahe Gegner.",
+   "crit": null,
+   "baseDps": 32,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "electric",
+    "parry",
+    "stun"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Defender",
+    "biomes": [
+     "Astrolab"
+    ],
+    "dropChance": 100,
+    "minBC": 5,
+    "cells": 50,
+    "text": "Fällt mit 100 % Chance von Defender – vorkommend in Astrolab (ab 5 BC)."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Thunder_Shield",
+   "icon": "assets/items/thunder-shield.png"
+  },
+  {
+   "id": "barnacle",
+   "name": "Barnacle",
+   "nameDe": null,
+   "type": "trap",
+   "slot": "skill",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Haftet an der Decke und beschießt Gegner, die darunter laufen.",
+   "crit": "Gegen vergiftete Gegner.",
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 10,
+   "tags": [
+    "crit",
+    "turret",
+    "poison"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Thorny",
+    "biomes": [
+     "Dilapidated Arboretum",
+     "Ossuary",
+     "High Peak Castle"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 40,
+    "text": "Fällt mit 1,7 % Chance von Thorny – vorkommend in Dilapidated Arboretum, Ossuary, High Peak Castle."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Barnacle",
+   "icon": "assets/items/barnacle.png"
+  },
+  {
+   "id": "cleaver",
+   "name": "Cleaver",
+   "nameDe": null,
+   "type": "trap",
+   "slot": "skill",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Bodenfalle: Gegner, die darüberlaufen, bluten (6 DPS für 1,8 s).",
+   "crit": null,
+   "baseDps": 50,
+   "dps2": null,
+   "cooldown": 8,
+   "tags": [
+    "bleed"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Runner",
+    "biomes": [
+     "Promenade of the Condemned",
+     "Undying Shores"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 30,
+    "text": "Fällt mit 1,7 % Chance von Runner – vorkommend in Promenade of the Condemned, Undying Shores."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Cleaver_(Skill)",
+   "icon": "assets/items/cleaver.png"
+  },
+  {
+   "id": "crusher",
+   "name": "Crusher",
+   "nameDe": null,
+   "type": "trap",
+   "slot": "skill",
+   "colors": [
+    "tactics",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Verlangsamt Gegner in seinem Bereich und zerquetscht sie dann (135 Schaden).",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 14,
+   "tags": [
+    "explosive",
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Lacerator",
+    "biomes": [
+     "Prison Depths",
+     "Derelict Distillery",
+     "Graveyard",
+     "Slumbering Sanctuary"
+    ],
+    "dropChance": 10,
+    "minBC": 0,
+    "cells": 30,
+    "text": "Fällt mit 10 % Chance von Lacerator – vorkommend in Prison Depths, Derelict Distillery, Graveyard, Slumbering Sanctuary."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Crusher",
+   "icon": "assets/items/crusher.png"
+  },
+  {
+   "id": "double-crossb-o-matic",
+   "name": "Double Crossb-o-matic",
+   "nameDe": null,
+   "type": "trap",
+   "slot": "skill",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Geschütz, das gleichzeitig auf 2 nahe Gegner schießt (je 41 DPS).",
+   "crit": null,
+   "baseDps": 82,
+   "dps2": null,
+   "cooldown": 10,
+   "tags": [
+    "turret"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Zombie",
+    "biomes": [
+     "Prisoners' Quarters",
+     "Ancient Sewers",
+     "Toxic Sewers",
+     "Dilapidated Arboretum",
+     "Prison Depths",
+     "Ramparts",
+     "Ossuary",
+     "Slumbering Sanctuary",
+     "Stilt Village",
+     "Fractured Shrines",
+     "Promenade of the Condemned",
+     "Corrupted Prison",
+     "Castle's Outskirts"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 5,
+    "text": "Fällt mit 0,4 % Chance von Zombie – vorkommend in Prisoners' Quarters, Ancient Sewers, Toxic Sewers, Dilapidated Arboretum, Prison Depths, Ramparts, Ossuary, Slumbering Sanctuary, Stilt Village, Fractured Shrines, Promenade of the Condemned, Corrupted Prison, Castle's Outskirts."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Double_Crossb-o-matic",
+   "icon": "assets/items/double-crossb-o-matic.png"
+  },
+  {
+   "id": "emergency-door",
+   "name": "Emergency Door",
+   "nameDe": null,
+   "type": "trap",
+   "slot": "skill",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Erschafft eine ätherische Tür – nützlich für Tür-Synergien wie Crowbar.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 10,
+   "tags": [],
+   "blueprint": {
+    "default": false,
+    "sourceType": "lore",
+    "from": null,
+    "biomes": [
+     "Slumbering Sanctuary"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 42,
+    "text": "Lore-Raum im Slumbering Sanctuary: das Türen-Labyrinth durchqueren, ohne eine Tür zu zerstören."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Emergency_Door",
+   "icon": "assets/items/emergency-door.png"
+  },
+  {
+   "id": "explosive-decoy",
+   "name": "Explosive Decoy",
+   "nameDe": null,
+   "type": "trap",
+   "slot": "skill",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Macht dich 13 s unsichtbar und lockt Gegner an einen Köder, der danach (oder bei Reaktivierung) explodiert.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 20,
+   "tags": [
+    "explosive"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Protector",
+    "biomes": [
+     "Promenade of the Condemned",
+     "Slumbering Sanctuary",
+     "Corrupted Prison"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 40,
+    "text": "Fällt mit 0,4 % Chance von Protector – vorkommend in Promenade of the Condemned, Slumbering Sanctuary, Corrupted Prison."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Explosive_Decoy",
+   "icon": "assets/items/explosive-decoy.png"
+  },
+  {
+   "id": "flamethrower-turret",
+   "name": "Flamethrower Turret",
+   "nameDe": null,
+   "type": "trap",
+   "slot": "skill",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Geschütz, das nahe Gegner in Brand setzt (8 DPS für 1,7 s).",
+   "crit": null,
+   "baseDps": 8,
+   "dps2": null,
+   "cooldown": 12,
+   "tags": [
+    "fire",
+    "turret"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Shocker",
+    "biomes": [
+     "Ossuary",
+     "Corrupted Prison",
+     "Forgotten Sepulcher",
+     "Fractured Shrines"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 30,
+    "text": "Fällt mit 0,4 % Chance von Shocker – vorkommend in Ossuary, Corrupted Prison, Forgotten Sepulcher, Fractured Shrines."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Flamethrower_Turret",
+   "icon": "assets/items/flamethrower-turret.png"
+  },
+  {
+   "id": "heavy-turret",
+   "name": "Heavy Turret",
+   "nameDe": null,
+   "type": "trap",
+   "slot": "skill",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Geschütz; in seiner Nähe verursachst du +15 % Schaden.",
+   "crit": null,
+   "baseDps": 55,
+   "dps2": null,
+   "cooldown": 10,
+   "tags": [
+    "turret"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Slasher",
+    "biomes": [
+     "Prison Depths",
+     "Ossuary",
+     "Morass of the Banished",
+     "Fractured Shrines",
+     "Ramparts",
+     "Graveyard",
+     "Undying Shores",
+     "Toxic Sewers",
+     "High Peak Castle"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 5,
+    "text": "Fällt mit 0,4 % Chance von Slasher – vorkommend in Prison Depths, Ossuary, Morass of the Banished, Fractured Shrines, Ramparts, Graveyard, Undying Shores, Toxic Sewers, High Peak Castle."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Heavy_Turret",
+   "icon": "assets/items/heavy-turret.png"
+  },
+  {
+   "id": "night-light",
+   "name": "Night Light",
+   "nameDe": null,
+   "type": "trap",
+   "slot": "skill",
+   "colors": [
+    "colorless"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Erzeugt eine temporäre Lichtquelle gegen die Dunkelheit der Forgotten Sepulcher; kein Kampfnutzen.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 120,
+   "tags": [],
+   "blueprint": {
+    "default": true,
+    "sourceType": "start",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Von Anfang an freigeschaltet, kein Entwurf nötig."
+   },
+   "notes": "Erscheint nur in der Forgotten Sepulcher.",
+   "wiki": "https://deadcells.wiki.gg/wiki/Night_Light",
+   "icon": "assets/items/night-light.png"
+  },
+  {
+   "id": "scavenged-bombard",
+   "name": "Scavenged Bombard",
+   "nameDe": null,
+   "type": "trap",
+   "slot": "skill",
+   "colors": [
+    "tactics",
+    "survival"
+   ],
+   "dlc": "The Queen and the Sea",
+   "twoHanded": false,
+   "description": "Langsames Geschütz mit schweren Kanonenkugeln und kurzer Aktivierungsreichweite.",
+   "crit": null,
+   "baseDps": 90,
+   "dps2": null,
+   "cooldown": 14,
+   "tags": [
+    "turret",
+    "explosive"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Pirate Captain",
+    "biomes": [
+     "Stilt Village",
+     "Infested Shipwreck"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 50,
+    "text": "Fällt mit 1,7 % Chance von Pirate Captain – vorkommend in Stilt Village, Infested Shipwreck."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Scavenged_Bombard",
+   "icon": "assets/items/scavenged-bombard.png"
+  },
+  {
+   "id": "sinew-slicer",
+   "name": "Sinew Slicer",
+   "nameDe": null,
+   "type": "trap",
+   "slot": "skill",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Verschießt rotierende Klingen, die Blutung verursachen (10 DPS für 1,5 s).",
+   "crit": null,
+   "baseDps": 20,
+   "dps2": null,
+   "cooldown": 10,
+   "tags": [
+    "bleed",
+    "turret"
+   ],
+   "blueprint": {
+    "default": true,
+    "sourceType": "start",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Von Anfang an freigeschaltet, kein Entwurf nötig."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Sinew_Slicer",
+   "icon": "assets/items/sinew-slicer.png"
+  },
+  {
+   "id": "tesla-coil",
+   "name": "Tesla Coil",
+   "nameDe": null,
+   "type": "trap",
+   "slot": "skill",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Schießt Blitze auf nahe Gegner und verursacht Schock.",
+   "crit": null,
+   "baseDps": 69,
+   "dps2": null,
+   "cooldown": 10,
+   "tags": [
+    "electric",
+    "turret"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Living Barrel",
+    "biomes": [
+     "Derelict Distillery"
+    ],
+    "dropChance": 10,
+    "minBC": 0,
+    "cells": 40,
+    "text": "Fällt mit 10 % Chance von Living Barrel – vorkommend in Derelict Distillery."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Tesla_Coil",
+   "icon": "assets/items/tesla-coil.png"
+  },
+  {
+   "id": "wolf-trap",
+   "name": "Wolf Trap",
+   "nameDe": null,
+   "type": "trap",
+   "slot": "skill",
+   "colors": [
+    "tactics",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Wirft 2 Fallen, die Gegner 5 s festwurzeln; festgehaltene Gegner erleiden +34 DPS.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 14,
+   "tags": [
+    "root"
+   ],
+   "blueprint": {
+    "default": true,
+    "sourceType": "start",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Von Anfang an freigeschaltet, kein Entwurf nötig."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Wolf_Trap",
+   "icon": "assets/items/wolf-trap.png"
+  },
+  {
+   "id": "cluster-grenade",
+   "name": "Cluster Grenade",
+   "nameDe": "Streugranate",
+   "type": "grenade",
+   "slot": "skill",
+   "colors": [
+    "brutality",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Zerfällt in 6 Bomben mit je 50 Schaden.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 20,
+   "tags": [
+    "explosive",
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Slasher",
+    "biomes": [
+     "Prison Depths",
+     "Ossuary",
+     "Morass of the Banished",
+     "Fractured Shrines",
+     "Ramparts",
+     "Graveyard",
+     "Undying Shores",
+     "Toxic Sewers",
+     "High Peak Castle"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 20,
+    "text": "Fällt mit 1,7 % Chance von Slasher – vorkommend in Prison Depths, Ossuary, Morass of the Banished, Fractured Shrines, Ramparts, Graveyard, Undying Shores, Toxic Sewers, High Peak Castle."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Cluster_Grenade",
+   "icon": "assets/items/cluster-grenade.png"
+  },
+  {
+   "id": "fire-grenade",
+   "name": "Fire Grenade",
+   "nameDe": "Brandgranate",
+   "type": "grenade",
+   "slot": "skill",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Setzt Gegner im Wirkungsbereich in Brand (25 DPS für 3 s).",
+   "crit": null,
+   "baseDps": 25,
+   "dps2": null,
+   "cooldown": 13,
+   "tags": [
+    "explosive",
+    "fire",
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Grenadier",
+    "biomes": [
+     "Undying Shores",
+     "Promenade of the Condemned",
+     "Corrupted Prison",
+     "Toxic Sewers",
+     "Prisoners' Quarters",
+     "Ossuary",
+     "Slumbering Sanctuary",
+     "Fractured Shrines"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 5,
+    "text": "Fällt mit 1,7 % Chance von Grenadier – vorkommend in Undying Shores, Promenade of the Condemned, Corrupted Prison, Toxic Sewers, Prisoners' Quarters, Ossuary, Slumbering Sanctuary, Fractured Shrines."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Fire_Grenade",
+   "icon": "assets/items/fire-grenade.png"
+  },
+  {
+   "id": "holy-water",
+   "name": "Holy Water",
+   "nameDe": "Weihwasser",
+   "type": "grenade",
+   "slot": "skill",
+   "colors": [
+    "brutality",
+    "survival"
+   ],
+   "dlc": "Return to Castlevania",
+   "twoHanded": false,
+   "description": "Erzeugt am Boden eine Feuersäule, die schnell Schaden verursacht und Gegner entzündet.",
+   "crit": null,
+   "baseDps": 55,
+   "dps2": null,
+   "cooldown": 12,
+   "tags": [
+    "fire",
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Merman",
+    "biomes": [
+     "Castle's Outskirts"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 50,
+    "text": "Fällt mit 1,7 % Chance von Merman – vorkommend in Castle's Outskirts."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Holy_Water",
+   "icon": "assets/items/holy-water.png"
+  },
+  {
+   "id": "hunters-grenade",
+   "name": "Hunter's Grenade",
+   "nameDe": "Jägergranate",
+   "type": "grenade",
+   "slot": "skill",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Einmal nutzbar: verwandelt einen Gegner in eine Elite; fällt sein Leben unter 40 %, entreißt ihm der Blueprint Extractor garantiert einen Entwurf.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [],
+   "blueprint": {
+    "default": false,
+    "sourceType": "collector",
+    "from": null,
+    "biomes": [
+     "Prisoners' Quarters"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 150,
+    "text": "Collector-Upgrade „Specialist's Showroom“ freischalten; danach im Spezialisten-Shop der Prisoners' Quarters hinter einer Goldtür (3000 Gold oder 50-Kill-Fluch)."
+   },
+   "notes": "Einmal nutzbar; erzeugt beim Einsatz den Hilfsgegenstand Blueprint Extractor (nicht separat erfasst).",
+   "wiki": "https://deadcells.wiki.gg/wiki/Hunter%27s_Grenade",
+   "icon": "assets/items/hunters-grenade.png"
+  },
+  {
+   "id": "ice-grenade",
+   "name": "Ice Grenade",
+   "nameDe": "Eisgranate",
+   "type": "grenade",
+   "slot": "skill",
+   "colors": [
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Friert Gegner im Wirkungsbereich ein.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 18,
+   "tags": [
+    "explosive",
+    "freeze",
+    "aoe"
+   ],
+   "blueprint": {
+    "default": true,
+    "sourceType": "start",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Von Anfang an freigeschaltet, kein Entwurf nötig."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Ice_Grenade",
+   "icon": "assets/items/ice-grenade.png"
+  },
+  {
+   "id": "infantry-grenade",
+   "name": "Infantry Grenade",
+   "nameDe": "Infanteriegranate",
+   "type": "grenade",
+   "slot": "skill",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Granate mit sehr kurzer Abklingzeit, aber mittlerem Schaden.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 4,
+   "tags": [
+    "explosive",
+    "aoe"
+   ],
+   "blueprint": {
+    "default": true,
+    "sourceType": "start",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Von Anfang an freigeschaltet, kein Entwurf nötig."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Infantry_Grenade",
+   "icon": "assets/items/infantry-grenade.png"
+  },
+  {
+   "id": "magnetic-grenade",
+   "name": "Magnetic Grenade",
+   "nameDe": "Magnetgranate",
+   "type": "grenade",
+   "slot": "skill",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Zieht Gegner in großem Umkreis an und explodiert dann mit elektrischem Schaden.",
+   "crit": null,
+   "baseDps": 20,
+   "dps2": null,
+   "cooldown": 16,
+   "tags": [
+    "electric",
+    "explosive",
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Grenadier",
+    "biomes": [
+     "Undying Shores",
+     "Promenade of the Condemned",
+     "Corrupted Prison",
+     "Toxic Sewers",
+     "Prisoners' Quarters",
+     "Ossuary",
+     "Slumbering Sanctuary",
+     "Fractured Shrines"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 60,
+    "text": "Fällt mit 0,4 % Chance von Grenadier – vorkommend in Undying Shores, Promenade of the Condemned, Corrupted Prison, Toxic Sewers, Prisoners' Quarters, Ossuary, Slumbering Sanctuary, Fractured Shrines."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Magnetic_Grenade",
+   "icon": "assets/items/magnetic-grenade.png"
+  },
+  {
+   "id": "oil-grenade",
+   "name": "Oil Grenade",
+   "nameDe": "Ölgranate",
+   "type": "grenade",
+   "slot": "skill",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Verteilt brennbares Öl im Wirkungsbereich.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 10,
+   "tags": [
+    "explosive",
+    "oil",
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Hammer",
+    "biomes": [
+     "Prison Depths",
+     "Derelict Distillery"
+    ],
+    "dropChance": 10,
+    "minBC": 0,
+    "cells": 20,
+    "text": "Fällt mit 10 % Chance von Hammer – vorkommend in Prison Depths, Derelict Distillery."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Oil_Grenade",
+   "icon": "assets/items/oil-grenade.png"
+  },
+  {
+   "id": "powerful-grenade",
+   "name": "Powerful Grenade",
+   "nameDe": "Gewaltige Granate",
+   "type": "grenade",
+   "slot": "skill",
+   "colors": [
+    "brutality",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Große Explosion mit hohem Schaden (200).",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 13,
+   "tags": [
+    "explosive",
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Bombardier",
+    "biomes": [
+     "Clock Tower",
+     "High Peak Castle",
+     "Infested Shipwreck",
+     "Slumbering Sanctuary",
+     "Fractured Shrines",
+     "Promenade of the Condemned",
+     "Ossuary"
+    ],
+    "dropChance": 10,
+    "minBC": 0,
+    "cells": 20,
+    "text": "Fällt mit 10 % Chance von Bombardier – vorkommend in Clock Tower, High Peak Castle, Infested Shipwreck, Slumbering Sanctuary, Fractured Shrines, Promenade of the Condemned, Ossuary."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Powerful_Grenade",
+   "icon": "assets/items/powerful-grenade.png"
+  },
+  {
+   "id": "root-grenade",
+   "name": "Root Grenade",
+   "nameDe": "Wurzelgranate",
+   "type": "grenade",
+   "slot": "skill",
+   "colors": [
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Wurzelt nahe Gegner fest und verursacht 4 s lang 50 DPS.",
+   "crit": null,
+   "baseDps": 50,
+   "dps2": null,
+   "cooldown": 16,
+   "tags": [
+    "explosive",
+    "root",
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "secret",
+    "from": null,
+    "biomes": [
+     "Black Bridge"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 20,
+    "text": "Zeittür in der Passage hinter der Black Bridge – rechtzeitig erreichen."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Root_Grenade",
+   "icon": "assets/items/root-grenade.png"
+  },
+  {
+   "id": "stun-grenade",
+   "name": "Stun Grenade",
+   "nameDe": "Betäubungsgranate",
+   "type": "grenade",
+   "slot": "skill",
+   "colors": [
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Betäubt Gegner im Wirkungsbereich für 4,5 s.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 12,
+   "tags": [
+    "explosive",
+    "stun",
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "secret",
+    "from": null,
+    "biomes": [
+     "Ramparts"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 30,
+    "text": "Geheimbereich im letzten Turm ganz rechts in den Ramparts (Turm erscheint nicht in jedem Lauf)."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Stun_Grenade",
+   "icon": "assets/items/stun-grenade.png"
+  },
+  {
+   "id": "swarm",
+   "name": "Swarm",
+   "nameDe": "Schwarm",
+   "type": "grenade",
+   "slot": "skill",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Beschwört 8 Beißer, die für dich kämpfen.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 10,
+   "tags": [
+    "turret",
+    "summon"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Disgusting Worm",
+    "biomes": [
+     "Toxic Sewers",
+     "Ancient Sewers",
+     "Undying Shores"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 30,
+    "text": "Fällt mit 0,4 % Chance von Disgusting Worm – vorkommend in Toxic Sewers, Ancient Sewers, Undying Shores."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Swarm",
+   "icon": "assets/items/swarm.png"
+  },
+  {
+   "id": "bat-volley",
+   "name": "Bat Volley",
+   "nameDe": "Fledermaus-Salve",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": "Return to Castlevania",
+   "twoHanded": false,
+   "description": "Wirft 10 Fledermäuse, die Gegner durchdringen.",
+   "crit": "Sobald eine Fledermaus mindestens einen Gegner durchflogen hat.",
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 12,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Vampire Bat",
+    "biomes": [
+     "Castle's Outskirts"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 100,
+    "text": "Fällt mit 1,7 % Chance von Vampire Bat – vorkommend in Castle's Outskirts."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Bat_Volley",
+   "icon": "assets/items/bat-volley.png"
+  },
+  {
+   "id": "cocoon",
+   "name": "Cocoon",
+   "nameDe": "Kokon",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "tactics",
+    "survival"
+   ],
+   "dlc": "Fatal Falls",
+   "twoHanded": false,
+   "description": "Pariert rundum und verursacht 30 Schaden; eine erfolgreiche Parade setzt die Abklingzeit sofort zurück.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 12,
+   "tags": [
+    "parry"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "secret",
+    "from": null,
+    "biomes": [
+     "Undying Shores"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 50,
+    "text": "Hinter der richtigen von drei Runentüren in den Undying Shores; die Runenkombination steht auf violetten Wandteppichen im Biom."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Cocoon",
+   "icon": "assets/items/cocoon.png"
+  },
+  {
+   "id": "collectors-syringe",
+   "name": "Collector's Syringe",
+   "nameDe": "Spritze des Sammlers",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "brutality",
+    "survival"
+   ],
+   "dlc": "Rise of the Giant",
+   "twoHanded": false,
+   "description": "Lässt die Spritze um dich kreisen; Reaktivieren verlängert und verstärkt sie (bis zu 5×) gegen ein paar Zellen.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 20,
+   "tags": [
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "boss",
+    "from": "The Collector",
+    "biomes": [
+     "Observatory"
+    ],
+    "dropChance": null,
+    "minBC": 5,
+    "cells": 200,
+    "text": "Fällt beim 1. Sieg über The Collector (Observatory) (ab 5 BC)."
+   },
+   "notes": "Taucht nicht in Daily Runs auf.",
+   "wiki": "https://deadcells.wiki.gg/wiki/Collector%27s_Syringe",
+   "icon": "assets/items/collectors-syringe.png"
+  },
+  {
+   "id": "corrosive-cloud",
+   "name": "Corrosive Cloud",
+   "nameDe": "Ätzende Wolke",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Erzeugt für 15 s eine giftige Wolke, die Blutung und Gift verursacht.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 20,
+   "tags": [
+    "bleed",
+    "poison",
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Swarm Zombie",
+    "biomes": [
+     "Graveyard"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 40,
+    "text": "Fällt mit 0,4 % Chance von Swarm Zombie – vorkommend in Graveyard."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Corrosive_Cloud",
+   "icon": "assets/items/corrosive-cloud.png"
+  },
+  {
+   "id": "corrupted-power",
+   "name": "Corrupted Power",
+   "nameDe": "Korrumpierte Macht",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "8 s lang +50 % Schaden, dafür erleidest du +30 % Schaden.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 16,
+   "tags": [],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Protector",
+    "biomes": [
+     "Promenade of the Condemned",
+     "Slumbering Sanctuary",
+     "Corrupted Prison"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 80,
+    "text": "Fällt mit 0,4 % Chance von Protector – vorkommend in Promenade of the Condemned, Slumbering Sanctuary, Corrupted Prison."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Corrupted_Power",
+   "icon": "assets/items/corrupted-power.png"
+  },
+  {
+   "id": "death-orb",
+   "name": "Death Orb",
+   "nameDe": "Todeskugel",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Erzeugt eine langsam fliegende, aber verheerende Kugel.",
+   "crit": null,
+   "baseDps": 125,
+   "dps2": null,
+   "cooldown": 20,
+   "tags": [],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Cleaver",
+    "biomes": [
+     "Forgotten Sepulcher",
+     "Morass of the Banished"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 50,
+    "text": "Fällt mit 0,4 % Chance von Cleaver – vorkommend in Forgotten Sepulcher, Morass of the Banished."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Death_Orb",
+   "icon": "assets/items/death-orb.png"
+  },
+  {
+   "id": "diverse-deck",
+   "name": "Diverse Deck",
+   "nameDe": null,
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "colorless"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Einzigartiges Kartendeck mit vier Karten (Barricade, Catalyst, Electrodynamics, Foresight) mit Zieh-, Passiv- und Abwurfeffekt; Aktivieren wirft die aktuelle Karte ab.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "poison",
+    "electric",
+    "parry"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "lore",
+    "from": null,
+    "biomes": [
+     "Prisoners' Quarters"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Zufälliger Crossover-Lore-Raum in den Prisoners' Quarters; das Objekt untersuchen, Aufheben schaltet sofort frei."
+   },
+   "notes": "Einzigartiges Item: Auch als Legendary nicht doppelt tragbar. Abklingzeit laut Wiki: 15 s.",
+   "wiki": "https://deadcells.wiki.gg/wiki/Diverse_Deck",
+   "icon": "assets/items/diverse-deck.png"
+  },
+  {
+   "id": "face-flask",
+   "name": "Face Flask",
+   "nameDe": "Fratzengeballer",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Zerschlägt eine Flasche an deiner Stirn und fügt dir leichten Schaden zu – für Effekte, die auf erlittenen Schaden reagieren.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 10,
+   "tags": [],
+   "blueprint": {
+    "default": false,
+    "sourceType": "lore",
+    "from": null,
+    "biomes": [
+     "Prisoners' Quarters"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Zufälliger Lore-Raum mit Betbank in den Prisoners' Quarters; untersuchen, Aufheben schaltet sofort frei."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Face_Flask",
+   "icon": "assets/items/face-flask.png"
+  },
+  {
+   "id": "forgotten-map",
+   "name": "Forgotten Map",
+   "nameDe": "Vergessene Karte",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Einmal nutzbar: deckt die Umgebung auf der Karte auf.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [],
+   "blueprint": {
+    "default": false,
+    "sourceType": "collector",
+    "from": null,
+    "biomes": [
+     "Prisoners' Quarters"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 150,
+    "text": "Mit dem Collector-Upgrade „Specialist's Showroom“ neben der Hunter's Grenade erhältlich (4000 Gold oder 50-Kill-Fluch)."
+   },
+   "notes": "Einmal nutzbar.",
+   "wiki": "https://deadcells.wiki.gg/wiki/Forgotten_Map",
+   "icon": "assets/items/forgotten-map.png"
+  },
+  {
+   "id": "giant-whistle",
+   "name": "Giant Whistle",
+   "nameDe": "Pfeife des Riesen",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "survival"
+   ],
+   "dlc": "Rise of the Giant",
+   "twoHanded": false,
+   "description": "Fügt dem (laut Giant) gefährlichsten Gegner in der Nähe 500 Schaden zu.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 20,
+   "tags": [],
+   "blueprint": {
+    "default": false,
+    "sourceType": "boss",
+    "from": "Giant",
+    "biomes": [
+     "Guardian's Haven"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 100,
+    "text": "Fällt beim 3. Sieg über Giant (Guardian's Haven)."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Giant_Whistle",
+   "icon": "assets/items/giant-whistle.png"
+  },
+  {
+   "id": "grappling-hook",
+   "name": "Grappling Hook",
+   "nameDe": "Wurfhaken",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Zieht einen Gegner heran; dein nächster Angriff auf ihn verursacht +40 % Schaden und betäubt 1 s.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 3,
+   "tags": [
+    "stun"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Catcher",
+    "biomes": [
+     "Graveyard",
+     "Fractured Shrines",
+     "Undying Shores"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 40,
+    "text": "Fällt mit 0,4 % Chance von Catcher – vorkommend in Graveyard, Fractured Shrines, Undying Shores."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Grappling_Hook",
+   "icon": "assets/items/grappling-hook.png"
+  },
+  {
+   "id": "great-owl-of-war",
+   "name": "Great Owl of War",
+   "nameDe": "Große Kriegseule",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Beschwört eine Eule (32 DPS); Reaktivieren macht sie wütend (95 DPS). Sie verschwindet, sobald du Schaden nimmst.",
+   "crit": null,
+   "baseDps": 32,
+   "dps2": null,
+   "cooldown": 10,
+   "tags": [
+    "summon"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Knife Thrower",
+    "biomes": [
+     "Prisoners' Quarters",
+     "High Peak Castle",
+     "Prison Depths",
+     "Stilt Village",
+     "Forgotten Sepulcher",
+     "Undying Shores"
+    ],
+    "dropChance": 1.7,
+    "minBC": 1,
+    "cells": 100,
+    "text": "Fällt mit 1,7 % Chance von Knife Thrower – vorkommend in Prisoners' Quarters, High Peak Castle, Prison Depths, Stilt Village, Forgotten Sepulcher, Undying Shores (ab 1 BC)."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Great_Owl_of_War",
+   "icon": "assets/items/great-owl-of-war.png"
+  },
+  {
+   "id": "ice-armor",
+   "name": "Ice Armor",
+   "nameDe": "Eisrüstung",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "survival"
+   ],
+   "dlc": "Rise of the Giant",
+   "twoHanded": false,
+   "description": "Eispanzer, der einen Treffer absorbiert und dann explodiert und nahe Gegner einfriert (spätestens nach 8 s).",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "freeze"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Ground Shaker",
+    "biomes": [
+     "Cavern"
+    ],
+    "dropChance": 100,
+    "minBC": 0,
+    "cells": 50,
+    "text": "Fällt mit 100 % Chance von Ground Shaker – vorkommend in Cavern."
+   },
+   "notes": "Abklingzeit laut Wiki: 20-30 s.",
+   "wiki": "https://deadcells.wiki.gg/wiki/Ice_Armor",
+   "icon": "assets/items/ice-armor.png"
+  },
+  {
+   "id": "indulgence",
+   "name": "Indulgence",
+   "nameDe": "Ablass",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "brutality",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Ruft einen Lichtstrahl auf den nächsten Gegner herab; Kills damit entfernen 3 statt 1 Fluchstapel, pro 5 Flüche kommt ein Strahl hinzu.",
+   "crit": "Wenn du nicht verflucht bist.",
+   "baseDps": 200,
+   "dps2": null,
+   "cooldown": 10,
+   "tags": [
+    "crit",
+    "curse"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Sore Loser",
+    "biomes": [],
+    "dropChance": 10,
+    "minBC": 2,
+    "cells": 150,
+    "text": "Fällt mit 10 % Chance von Sore Loser, der nur in verfluchten Biomen ab 2 BC auftaucht."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Indulgence",
+   "icon": "assets/items/indulgence.png"
+  },
+  {
+   "id": "knife-dance",
+   "name": "Knife Dance",
+   "nameDe": "Messertanz",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Schleudert Messer rundum, die Blutung verursachen (40 DPS für 4 s).",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 16,
+   "tags": [
+    "bleed",
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Bat",
+    "biomes": [
+     "Promenade of the Condemned",
+     "Graveyard",
+     "Undying Shores",
+     "Dilapidated Arboretum"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 5,
+    "text": "Fällt mit 0,4 % Chance von Bat – vorkommend in Promenade of the Condemned, Graveyard, Undying Shores, Dilapidated Arboretum."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Knife_Dance",
+   "icon": "assets/items/knife-dance.png"
+  },
+  {
+   "id": "lacerating-aura",
+   "name": "Lacerating Aura",
+   "nameDe": "Zerfleischende Aura",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Fügt Gegnern direkt um dich herum fortlaufend Schaden zu.",
+   "crit": null,
+   "baseDps": 77,
+   "dps2": null,
+   "cooldown": 12,
+   "tags": [
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "challenge",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 30,
+    "text": "Belohnung für den 5. abgeschlossenen Daily Run."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Lacerating_Aura",
+   "icon": "assets/items/lacerating-aura.png"
+  },
+  {
+   "id": "leghugger",
+   "name": "Leghugger",
+   "nameDe": "Beingrapscher",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": "The Queen and the Sea",
+   "twoHanded": false,
+   "description": "Beschwört einen Leghugger, der durch Angriffe satt wird und zur Erwachsenenform wächst; Reaktivieren lässt ihn im Kreis zuschlagen und Blutung verursachen.",
+   "crit": "Angriffe des Leghuggers auf blutende Ziele.",
+   "baseDps": 20,
+   "dps2": 40,
+   "cooldown": 10,
+   "tags": [
+    "crit",
+    "bleed",
+    "summon"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "quest",
+    "from": "Armored Shrimp",
+    "biomes": [
+     "Stilt Village"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Fisherman-Quest: Brief in den Prisoners' Quarters finden, Fisherman in den Toxic Sewers treffen, dann im Lore-Raum des Stilt Village die Elite-Armored-Shrimp besiegen; schaltet sofort frei."
+   },
+   "notes": "Drängt sich beim Erhalt in einen Skill-Slot.",
+   "wiki": "https://deadcells.wiki.gg/wiki/Leghugger",
+   "icon": "assets/items/leghugger.png"
+  },
+  {
+   "id": "lightning-rods",
+   "name": "Lightning Rods",
+   "nameDe": "Blitzableiter",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": "Fatal Falls",
+   "twoHanded": false,
+   "description": "Platziert bis zu 2 Blitzableiter; Blitze treffen alle Gegner zwischen ihnen.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 15,
+   "tags": [
+    "electric"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Failed Homunculus",
+    "biomes": [
+     "Undying Shores"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 50,
+    "text": "Fällt mit 1,7 % Chance von Failed Homunculus – vorkommend in Undying Shores."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Lightning_Rods",
+   "icon": "assets/items/lightning-rods.png"
+  },
+  {
+   "id": "lightspeed",
+   "name": "Lightspeed",
+   "nameDe": "Sturmangriff",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Sprint nach vorn, der Gegner auf dem Weg trifft (100 Schaden); erneutes Aktivieren sprintet zurück.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [],
+   "blueprint": {
+    "default": false,
+    "sourceType": "boss",
+    "from": "Time Keeper",
+    "biomes": [
+     "Clock Room"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 75,
+    "text": "Fällt beim 1. Sieg über Time Keeper (Clock Room)."
+   },
+   "notes": "Abklingzeit laut Wiki: 7-10 s.",
+   "wiki": "https://deadcells.wiki.gg/wiki/Lightspeed",
+   "icon": "assets/items/lightspeed.png"
+  },
+  {
+   "id": "marias-cat",
+   "name": "Maria's Cat",
+   "nameDe": "Marias Katze",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "brutality",
+    "survival"
+   ],
+   "dlc": "Return to Castlevania",
+   "twoHanded": false,
+   "description": "Beschwört Marias Katze, die umherstreift und Gegner kratzt; Reaktivieren lässt sie vor dir einen Hiebhagel entfesseln.",
+   "crit": "Der Hiebhagel nach dem Reaktivieren.",
+   "baseDps": 32,
+   "dps2": 32,
+   "cooldown": 20,
+   "tags": [
+    "crit",
+    "summon"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "quest",
+    "from": null,
+    "biomes": [
+     "Castle's Outskirts"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 99,
+    "text": "In Castle's Outskirts die Katze Byakko in der Zelle von Maria Renard streicheln."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Maria%27s_Cat",
+   "icon": "assets/items/marias-cat.png"
+  },
+  {
+   "id": "mushroom-boi",
+   "name": "Mushroom Boi!",
+   "nameDe": "Pilzpimpf",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "survival"
+   ],
+   "dlc": "The Bad Seed",
+   "twoHanded": false,
+   "description": "Beschwört einen Pilz-Begleiter, der Gegner rammt und unterbricht (50 Schaden, +100 an Wänden); erneut auslösen für 300 Schaden.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": null,
+   "tags": [
+    "summon"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Jerkshroom",
+    "biomes": [
+     "Dilapidated Arboretum",
+     "Undying Shores"
+    ],
+    "dropChance": 100,
+    "minBC": 0,
+    "cells": 80,
+    "text": "Fällt mit 100 % Chance von Jerkshroom – vorkommend in Dilapidated Arboretum, Undying Shores."
+   },
+   "notes": "Abklingzeit laut Wiki: 1 s (25 s).",
+   "wiki": "https://deadcells.wiki.gg/wiki/Mushroom_Boi!",
+   "icon": "assets/items/mushroom-boi.png"
+  },
+  {
+   "id": "phaser",
+   "name": "Phaser",
+   "nameDe": "Phasenverschiebung",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Teleportiert dich hinter den Gegner; dein nächster Angriff verursacht +70 Schaden.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 2,
+   "tags": [
+    "backstab"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Runner",
+    "biomes": [
+     "Promenade of the Condemned",
+     "Undying Shores"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 50,
+    "text": "Fällt mit 0,4 % Chance von Runner – vorkommend in Promenade of the Condemned, Undying Shores."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Phaser",
+   "icon": "assets/items/phaser.png"
+  },
+  {
+   "id": "pollo-power",
+   "name": "Pollo Power",
+   "nameDe": "Pollo-Power",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Verwandelt dich kurz in ein Huhn, das explosive Eier um sich verteilt.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 10,
+   "tags": [
+    "explosive"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "lore",
+    "from": null,
+    "biomes": [
+     "Prisoners' Quarters"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Zufälliger Lore-Raum mit goldener Statue in den Prisoners' Quarters; untersuchen, Aufheben schaltet sofort frei."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Pollo_Power",
+   "icon": "assets/items/pollo-power.png"
+  },
+  {
+   "id": "rebound-stone",
+   "name": "Rebound Stone",
+   "nameDe": "Springstein",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "survival"
+   ],
+   "dlc": "Return to Castlevania",
+   "twoHanded": false,
+   "description": "Wirft einen magischen Stein, der von Flächen abprallt und dabei schneller wird.",
+   "crit": "Nachdem der Stein durch dich hindurchgeflogen ist (er beschleunigt dann stark).",
+   "baseDps": 75,
+   "dps2": null,
+   "cooldown": 11,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Buer",
+    "biomes": [
+     "Dracula's Castle",
+     "Undying Shores"
+    ],
+    "dropChance": 1.7,
+    "minBC": 0,
+    "cells": 100,
+    "text": "Fällt mit 1,7 % Chance von Buer – vorkommend in Dracula's Castle, Undying Shores."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Rebound_Stone",
+   "icon": "assets/items/rebound-stone.png"
+  },
+  {
+   "id": "scarecrows-sickles",
+   "name": "Scarecrow's Sickles",
+   "nameDe": "Sicheln der Vogelscheuche",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "tactics",
+    "survival"
+   ],
+   "dlc": "Fatal Falls",
+   "twoHanded": false,
+   "description": "Wirft zwei Sicheln, die automatisch zurückkehren; jeder Treffer erhöht ihren Schaden.",
+   "crit": "Ab dem sechsten Treffer.",
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 10,
+   "tags": [
+    "crit"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "boss",
+    "from": "Scarecrow",
+    "biomes": [
+     "Mausoleum"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 100,
+    "text": "Fällt beim 1. Sieg über Scarecrow (Mausoleum)."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Scarecrow%27s_Sickles",
+   "icon": "assets/items/scarecrows-sickles.png"
+  },
+  {
+   "id": "serenade",
+   "name": "Serenade",
+   "nameDe": "Serenade",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": "Fatal Falls",
+   "twoHanded": false,
+   "description": "Beschwört ein fliegendes Schwert, das Gegner markiert; erneut aktivieren, um es als Handwaffe zu führen – und umgekehrt.",
+   "crit": "Treffer gegen von der jeweils anderen Form markierte Gegner.",
+   "baseDps": 30,
+   "dps2": 53,
+   "cooldown": 30,
+   "tags": [
+    "crit",
+    "summon"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "secret",
+    "from": null,
+    "biomes": [
+     "Fractured Shrines"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 50,
+    "text": "Tresor in einem Tempel auf einer Insel in den Fractured Shrines (über unsichtbare Plattformen, bewacht von einem Stone Warden)."
+   },
+   "notes": "Beim Öffnen des Tresors landet Serenade zwangsweise in einem Skill-Slot; der Entwurf muss trotzdem zum Collector.",
+   "wiki": "https://deadcells.wiki.gg/wiki/Serenade",
+   "icon": "assets/items/serenade.png"
+  },
+  {
+   "id": "smoke-bomb",
+   "name": "Smoke Bomb",
+   "nameDe": "Rauchbombe",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "brutality",
+    "tactics"
+   ],
+   "dlc": "The Bad Seed",
+   "twoHanded": false,
+   "description": "Rauchwolke macht dich 8 s unsichtbar; der erste Angriff daraus verursacht +50 % Schaden.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 16,
+   "tags": [],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Banished",
+    "biomes": [
+     "Morass of the Banished"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 50,
+    "text": "Fällt mit 0,4 % Chance von Banished – vorkommend in Morass of the Banished."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Smoke_Bomb",
+   "icon": "assets/items/smoke-bomb.png"
+  },
+  {
+   "id": "taunt",
+   "name": "Taunt",
+   "nameDe": "Provozieren",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "brutality"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Verspottet einen Gegner: Er verfolgt dich 20 s lang, erleidet dabei aber +75 % Nahkampfschaden.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 15,
+   "tags": [],
+   "blueprint": {
+    "default": false,
+    "sourceType": "challenge",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 100,
+    "text": "Belohnung für das Bestehen der 2. Stufe im Boss Rush."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Taunt",
+   "icon": "assets/items/taunt.png"
+  },
+  {
+   "id": "telluric-shock",
+   "name": "Telluric Shock",
+   "nameDe": "Tellurischer Schock",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "brutality",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Sprung in die Luft mit wuchtigem Aufprall, der Gegnern im Umkreis 150 Schaden zufügt.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 10,
+   "tags": [
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "boss",
+    "from": "Hand of the King",
+    "biomes": [
+     "Throne Room"
+    ],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": 100,
+    "text": "Fällt beim 1. Sieg über Hand of the King (Throne Room)."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Telluric_Shock",
+   "icon": "assets/items/telluric-shock.png"
+  },
+  {
+   "id": "tonic",
+   "name": "Tonic",
+   "nameDe": "Tonikum",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Gibt 40 % des fehlenden Lebens als Bonusleben und senkt erlittenen Schaden 9 s lang um 20 %.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 30,
+   "tags": [
+    "heal"
+   ],
+   "blueprint": {
+    "default": true,
+    "sourceType": "start",
+    "from": null,
+    "biomes": [],
+    "dropChance": null,
+    "minBC": 0,
+    "cells": null,
+    "text": "Von Anfang an freigeschaltet, kein Entwurf nötig."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Tonic",
+   "icon": "assets/items/tonic.png"
+  },
+  {
+   "id": "tornado",
+   "name": "Tornado",
+   "nameDe": "Tornado",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Wirbelsturm, der alle Gegner darin trifft und an Wänden die Richtung ändert.",
+   "crit": null,
+   "baseDps": 100,
+   "dps2": null,
+   "cooldown": 18,
+   "tags": [
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Guardian Knight",
+    "biomes": [
+     "High Peak Castle",
+     "Dracula's Castle"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 60,
+    "text": "Fällt mit 0,4 % Chance von Guardian Knight – vorkommend in High Peak Castle, Dracula's Castle (ab 3 BC)."
+   },
+   "notes": "Guardian Knights erscheinen in High Peak Castle ab 0 BC; die Angabe 3+ BSC gilt nur für Dracula's Castle (Tiefe 3).",
+   "wiki": "https://deadcells.wiki.gg/wiki/Tornado",
+   "icon": "assets/items/tornado.png"
+  },
+  {
+   "id": "vampirism",
+   "name": "Vampirism",
+   "nameDe": "Vampirismus",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "brutality",
+    "survival"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Opfert einen Teil deines Maximallebens; 10 s lang heilt jeder Nahkampftreffer 2 % Leben und du bist schneller.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 30,
+   "tags": [
+    "heal"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Inquisitor",
+    "biomes": [
+     "Ramparts",
+     "Graveyard",
+     "Forgotten Sepulcher",
+     "Slumbering Sanctuary",
+     "Fractured Shrines",
+     "Ossuary",
+     "Prisoners' Quarters",
+     "Corrupted Prison",
+     "Clock Tower"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 80,
+    "text": "Fällt mit 0,4 % Chance von Inquisitor – vorkommend in Ramparts, Graveyard, Forgotten Sepulcher, Slumbering Sanctuary, Fractured Shrines, Ossuary, Prisoners' Quarters, Corrupted Prison, Clock Tower."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Vampirism",
+   "icon": "assets/items/vampirism.png"
+  },
+  {
+   "id": "wave-of-denial",
+   "name": "Wave of Denial",
+   "nameDe": "Welle der Verweigerung",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Stößt alle nahen Gegner zurück; prallen sie gegen eine Wand, erleiden sie +90 Schaden.",
+   "crit": null,
+   "baseDps": null,
+   "dps2": null,
+   "cooldown": 5,
+   "tags": [],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Bombardier",
+    "biomes": [
+     "Clock Tower",
+     "High Peak Castle",
+     "Infested Shipwreck",
+     "Slumbering Sanctuary",
+     "Fractured Shrines",
+     "Promenade of the Condemned",
+     "Ossuary"
+    ],
+    "dropChance": 0.4,
+    "minBC": 0,
+    "cells": 5,
+    "text": "Fällt mit 0,4 % Chance von Bombardier – vorkommend in Clock Tower, High Peak Castle, Infested Shipwreck, Slumbering Sanctuary, Fractured Shrines, Promenade of the Condemned, Ossuary."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Wave_of_Denial",
+   "icon": "assets/items/wave-of-denial.png"
+  },
+  {
+   "id": "wings-of-the-crow",
+   "name": "Wings of the Crow",
+   "nameDe": "Krähenschwingen",
+   "type": "power",
+   "slot": "skill",
+   "colors": [
+    "tactics"
+   ],
+   "dlc": null,
+   "twoHanded": false,
+   "description": "Lässt dich schweben und verursacht 3 s lang elektrischen Schaden um dich herum.",
+   "crit": null,
+   "baseDps": 75,
+   "dps2": null,
+   "cooldown": 15,
+   "tags": [
+    "electric",
+    "aoe"
+   ],
+   "blueprint": {
+    "default": false,
+    "sourceType": "enemy",
+    "from": "Golem",
+    "biomes": [
+     "Slumbering Sanctuary"
+    ],
+    "dropChance": 10,
+    "minBC": 0,
+    "cells": 70,
+    "text": "Fällt mit 10 % Chance von Golem – vorkommend in Slumbering Sanctuary."
+   },
+   "notes": null,
+   "wiki": "https://deadcells.wiki.gg/wiki/Wings_of_the_Crow",
+   "icon": "assets/items/wings-of-the-crow.png"
+  }
+ ]
+}

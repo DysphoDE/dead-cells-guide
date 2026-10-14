@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0e14">
+  <meta name="description" content="Inoffizieller deutscher Dead-Cells-Guide: Builds, Synergien, Tierlisten, Routenplaner, Entwurf-Fundorte, Mutationen, Boss Cells und ein persönlicher Freischalt-Tracker.">
+  <title>Prisoner's Guide · Dead Cells</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Zum Inhalt springen</a>
+
+  <aside id="sidebar" class="sidebar" aria-label="Navigation">
+    <a class="brand" href="#/">
+      <img src="assets/logo.png" alt="Dead Cells" width="180" height="56">
+      <span class="brand-sub">Prisoner's Guide</span>
+    </a>
+    <nav id="nav" class="nav"></nav>
+    <div class="sidebar-foot">
+      <p class="motto">Kill. Die. Learn. <span>Repeat.</span></p>
+      <p class="fine">Inoffizielles Fan-Projekt · Stand v3.5 „The End is Near“</p>
+    </div>
+  </aside>
+  <div id="scrim" class="scrim" hidden></div>
+
+  <div class="shell">
+    <header class="topbar">
+      <button id="menu-btn" class="icon-btn menu-btn" aria-label="Menü öffnen" aria-controls="sidebar" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <button id="search-btn" class="search-trigger" aria-label="Suche öffnen (Strg+K)">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span>Waffe, Mutation, Biom suchen …</span>
+        <kbd>Strg K</kbd>
+      </button>
+      <div class="bc-control" role="group" aria-labelledby="bc-label">
+        <span id="bc-label" class="bc-label">Boss Cells</span>
+        <div id="bc-select" class="bc-select"></div>
+      </div>
+      <div id="lang-select" class="lang-select" role="group" aria-label="Sprache der Spielnamen"></div>
+      <button id="profile-btn" class="icon-btn" aria-label="Profil, DLCs und Daten">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+      </button>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <div class="boot">
+        <div class="boot-flame" aria-hidden="true"></div>
+        <p>Zellen werden gesammelt …</p>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>Fan-Projekt ohne Verbindung zu Motion Twin oder Evil Empire. Spielgrafiken und Namen © Motion Twin / Evil Empire. Daten recherchiert aus dem <a href="https://deadcells.wiki.gg" target="_blank" rel="noopener">Dead Cells Wiki</a> (CC BY-SA), Patchnotes und Community-Quellen.</p>
+      <p><a href="#/about">Quellen &amp; Datenstand</a></p>
+    </footer>
+  </div>
+
+  <dialog id="dialog" class="dialog" aria-labelledby="dialog-title">
+    <div class="dialog-inner" id="dialog-body"></div>
+  </dialog>
+
+  <dialog id="search-dialog" class="search-dialog" aria-label="Suche">
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input id="search-input" type="search" placeholder="Suche nach Waffen, Skills, Mutationen, Builds, Biomen, Bossen …" autocomplete="off" spellcheck="false" aria-controls="search-results">
+      <kbd>Esc</kbd>
+    </div>
+    <ul id="search-results" class="search-results" role="listbox"></ul>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <input id="import-file" type="file" accept="application/json,.json" hidden>
+</body>
+</html>

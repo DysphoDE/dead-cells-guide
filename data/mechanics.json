@@ -1,0 +1,1347 @@
+{
+ "meta": {
+  "title": "Dead Cells – Mechaniken & Fortschritt",
+  "gameVersion": "3.5 (The End is Near) inkl. aller DLCs",
+  "language": "de",
+  "generated": "2026-10-14",
+  "sources": [
+   "https://deadcells.wiki.gg (MediaWiki-API, Seiten: Stats, Pickups, Runes and upgrades, The Blacksmith, The Blacksmith's Apprentice, Gear, Affixes, Status effects, Mechanics, Curse, Malaise, Boss Stem Cells, Custom Mode, Aspects, Assist Mode, Daily Challenge, Boss Rush, Time, killstreak and no-hit doors, Objects, Shops, Shields, Richter Mode, Outfits, Heads, Training Room, Version 2.5, Version 3.5 u. a.)",
+   "Offizielle Patchnotes 3.5 „The End is Near“ (über Wiki-Seite Version 3.5)",
+   "Ergänzend: TrueAchievements-Walkthrough, GameSpot-Tippsammlung (für Einkaufsreihenfolge/Farm-Tipps)",
+   "Deutsche Begriffe: Spiel-Lokalisierung (res.pak → lang/main.de.mo), siehe data/names-de.json"
+  ],
+  "cache": "research/cache/mechanics/pages/*.txt",
+  "namesDeSource": "data/names-de.json: aus der lokal installierten Steam-Version (3.5) extrahiert – res.pak -> lang/main.en.mo und lang/main.de.mo, verknüpft über die gemeinsamen französischen msgids (tools/pak_extract.py, tools/mo_read.py, tools/names_de.py). Englische Namen aus Wiki-Kategorien (Waffen, Schilde, Fertigkeiten, Mutationen, Biome, Bosse) plus Mechanik-Begriffe; 20 Begriffe von Hand aus Spieltexten abgeleitet (siehe MANUAL in tools/names_de.py).",
+  "notes": [
+   "Alle Erklärtexte sind eigene Zusammenfassungen.",
+   "Affix-Bewertungen (rating) und Collector-Empfehlungen (recommended) sind redaktionelle Einschätzungen, keine offiziellen Werte.",
+   "nameDe nur, wenn in der Spiel-Lokalisierung belegt; sonst null.",
+   "Basisschaden-Angaben skalieren im Spiel mit dem jeweiligen Stat."
+  ]
+ },
+ "sections": [
+  {
+   "id": "stats",
+   "title": "Stats & Schriftrollen",
+   "icon": null,
+   "summary": "Brutalität, Taktik und Überleben bestimmen Schaden und Lebenspunkte. Jede Schriftrolle erhöht einen Wert dauerhaft für den aktuellen Run.",
+   "points": [
+    "Alle drei Stats starten in jedem Run bei 1.",
+    "Schaden: Jeder Punkt im Skalierungs-Stat erhöht den Schaden passender Gegenstände um 15 % multiplikativ (Basis × 1,15^(Stat−1)). Faustregel: alle 5 Punkte verdoppelt sich der Schaden (5 Stats ≈ ×1,75, 10 ≈ ×3,52, 20 ≈ ×14,2).",
+    "Zweifarbige Gegenstände skalieren mit dem höheren der beiden Stats; die dominante Farbe im Icon zeigt das an. Farblose (colorless) Gegenstände und Sturzangriffe skalieren immer mit dem höchsten Stat (bei Gleichstand Reihenfolge Brutalität > Taktik > Überleben).",
+    "Leben: Basis 100 LP, multipliziert mit je einem Faktor pro Stat. Überleben gibt am meisten (2. Punkt ×1,7), Brutalität mittel (×1,65), Taktik am wenigsten (×1,5). Die Zuwächse sinken pro Punkt (abnehmender Ertrag); Obergrenzen: Brutalität ×12,375 ab 35, Taktik ×7,25 ab 25, Überleben ×22 ab 60 Punkten.",
+    "Pergament der Macht (Scroll of Power): +1 auf einen frei wählbaren Stat. Zweifarbige Rollen (Assassine = Brut/Takt, Minotaurus = Brut/Überl, Wächter = Takt/Überl) bieten nur zwei Farben – sie erscheinen bevorzugt mit deinen niedrigsten Stats.",
+    "Epische Pergamente (+1 auf alle drei) gibt es nur in der Täglichen Herausforderung.",
+    "Pergamentfragmente: ab 3 Boss-Zellen; je 4 Fragmente ergeben ein Pergament der Macht. Pro Run werden zusätzlich 3 Zufallsfragmente auf Biome verteilt (max. 1 pro Biom, nicht in Boss-Biomen).",
+    "Amulette können +1 bis +4 Stats geben (ab Amulett-Stufe 3, 6, 9, 12).",
+    "Strategie: fast immer alle Rollen in EINEN Haupt-Stat stecken – der Schaden wächst exponentiell, das Leben nur mit abnehmendem Ertrag. Waffen, Fertigkeiten und Mutationen sollten zur Hauptfarbe passen."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Stats"
+  },
+  {
+   "id": "healing",
+   "title": "Heilung, Medizinphiole & Erholung",
+   "icon": null,
+   "summary": "Die Medizinphiole (Health Flask) ist die wichtigste Heilquelle; dazu kommen Essen, Brunnen in den Passagen und die Erholungs-Mechanik.",
+   "points": [
+    "Phiole: heilt 60 % der max. LP über 1 Sekunde, setzt den Ein-Treffer-Schutz zurück und entfernt 150 Siechtum-Punkte (3 Balken).",
+    "Ladungen: Stufe I–IV beim Sammler für 5/50/150/300 Zellen (1 bis 4 Ladungen). III braucht 10, IV 25 freigeschaltete Gegenstände.",
+    "Gesundheitsbrunnen in den Passagen füllen alle Ladungen und die LP auf. Ab 1 BC nur noch in jeder zweiten Passage (sonst 1 Phiolen-Ladung), ab 2 BC keine Brunnen mehr, 3 BC nur noch 3 Ladungen pro Run, ab 4 BC gar keine.",
+    "Essen: kleines Essen heilt 15 %, großes 50 % (mit der Mutation Gastronomy 25 % / 83 %). Im Food-Shop kostet kleines Essen 2.000, großes 4.000, eine Phiolen-Ladung 20.000 Gold.",
+    "Erholung (Recovery): Nach einem Treffer wird 80 % des verlorenen Lebens orange. Wer schnell zurückschlägt, heilt 12 % des verursachten Schadens zurück (pro Treffer max. 20 % des Verlusts). Der orange Teil schrumpft mit 30 % max. LP pro Sekunde. Fertigkeiten lösen keine Erholung aus; ein aktives Kraftfeld (z. B. von einem Schild) senkt sie um 65 %.",
+    "Ein-Treffer-Schutz: Ein tödlicher Treffer bei über 25 % LP lässt dich mit 1 LP überleben und betäubt Gegner in der Nähe ca. 1 s. Abklingzeit 45 s, wird durch Phiole oder volle Heilung zurückgesetzt (im Custom Mode abschaltbar)."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Health_Flask"
+  },
+  {
+   "id": "cells-collector",
+   "title": "Zellen & der Sammler",
+   "icon": null,
+   "summary": "Zellen sind die permanente Fortschrittswährung. Ausgegeben werden sie beim Sammler (Collector) in den Passagen oder in der Legendären Schmiede.",
+   "points": [
+    "Zellen fallen von Gegnern, Bossen, Zellbehältern und aus Spezialtüren. Grob gibt ein Biom etwa ¼ so viele Zellen wie es Gegner hat.",
+    "Stirbst du, sind alle nicht ausgegebenen Zellen weg. Erst in der Passage beim Sammler sind sie sicher.",
+    "Blaupausen (Blueprints) müssen lebend zum Sammler gebracht werden, sonst gehen sie für diesen Run verloren. Danach schaltest du das Item mit Zellen frei; es erscheint dann in Runs.",
+    "Die erste Freischaltung ist immer Medizinphiole I (5 Zellen). Viele Upgrades setzen eine Mindestzahl freigeschalteter Gegenstände voraus.",
+    "Die Tür hinter dem Sammler lässt dich erst weiter, wenn alle Zellen ausgegeben sind – man kann sie aber zerschlagen und die Zellen mitnehmen (z. B. um sie gesammelt in der Legendären Schmiede zu investieren). Risiko: Tod = alles weg.",
+    "Zell-Multiplikator nach Boss-Zellen: ab 2 BC ×2, ab 4 BC ×3 auf Gegnerdrops.",
+    "Auf 5 BC vertritt ihn sein Praktikant (The Collector's Intern), funktional identisch."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/The_Collector"
+  },
+  {
+   "id": "forge-quality",
+   "title": "Schmieden, Item-Stufe & Qualität",
+   "icon": null,
+   "summary": "Die Stärke eines Gegenstands ergibt sich aus Item-Stufe (römische Zahl) plus Qualität (+, ++, S, L). Die Legendäre Schmiede erhöht dauerhaft die Qualitäts-Chancen, die Gewöhnliche Schmiede verbessert einzelne Items für Gold.",
+   "points": [
+    "Item-Stufe: Jedes Biom hat eine Basisstufe (Gefängnisunterkünfte 1 … Master's Keep 8). Boni: Truhe/verfluchte Truhe/Legendär-Altar/verfluchtes Biom +1, Shop +2, Mimic +4, Herausforderungs-Riss +2, Elite-Drop +2. Ab 3 BC +1, ab 4 BC +3 auf alles.",
+    "Qualität: + = +2, ++ = +4, S und L = +6 auf die verdeckte „Item-Kraft“. Item-Kraft bestimmt Schadensbonus und Affix-Slots, z. B. Kraft 8 ≈ +129 % Schaden und 3 Affix-Slots (max. 6 Slots).",
+    "Legendäre Schmiede (beim Schmied nach Boss-Biomen und am Ende des Boss Rush): + kostet insgesamt 500 Zellen (25 Zellen je +5 %), ++ 3.000 (150 je 5 %), S 10.000 (500 je 5 %). Jede Stufe erst, wenn die vorige auf 100 % ist.",
+    "Obergrenzen nach Schwierigkeit: auf 0 BC ++ max. 50 % und kein S; ab 1 BC ++ bis 100 %; S 25 % (2 BC), 50 % (3 BC), 100 % (ab 4 BC).",
+    "Gewöhnliche Schmiede (Lehrling des Schmieds in jeder Passage): Qualität +1 Stufe für 25 % / 50 % / 75 % des Item-Preises (Basis → + → ++ → S). Nur ein Upgrade pro Item, mit dem Upgrade „Advanced Forge I“ zwei. Amulette und L-Items sind nicht aufwertbar.",
+    "Neu schmieden (Affixe neu würfeln) kostet Gold; der Preisfaktor steigt mit jedem Versuch (Basis-Item: 0,41 → 0,69 → 0,92 … des Item-Werts). Seit 2.8 würfelt ein Qualitäts-Upgrade die Affixe nicht mehr neu.",
+    "Startgegenstände in den Gefängnisunterkünften sind gedeckelt: + (0 BC), ++ (1–2 BC), S (ab 3 BC).",
+    "Legendäre Items (L): farblos (skalieren mit dem höchsten Stat), +6 Item-Kraft, ein festes Legendär-Affix und du darfst zwei Items desselben Typs tragen. Quellen: 1 % Drop bei normalen Gegnern (+2 % je Biom ohne Drop), 6 % bei Elites, Legendär-Altäre und No-Hit-Türen.",
+    "Legendär-Altar: Basis 2 % pro Biom, +15 % für jedes Biom ohne Altar. Gegner in der Nähe erhalten 66 % Schadensreduktion; das Item ist erst nach deren Tod nehmbar."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Gear"
+  },
+  {
+   "id": "affixes",
+   "title": "Affixe (Modifikatoren)",
+   "icon": null,
+   "summary": "Zufällige Zusatzeigenschaften auf Waffen, Fertigkeiten und Amuletten. Die Anzahl der Slots hängt von der Item-Kraft ab.",
+   "points": [
+    "Grüne (kleine) Affixe: beliebig viele bis zur Slot-Grenze, z. B. Schaden gegen Ziele mit Statuseffekt (+40 % brennend, +60 % blutend, +80 % vergiftet, +175 % gefroren, +75 % bewegungsunfähig, +70 % betäubt).",
+    "Große (Major-)Affixe: normalerweise nur eins pro Item – z. B. More Damage (+15 %), Double Damage (+100 % Schaden, aber +100 % erlittener Schaden), Quad Damage (+300 % / +300 %), Leech (1 % LP pro Nahkampftreffer, +100 % erlittener Schaden).",
+    "Die Malus-Werte für erlittenen Schaden (Double/Quad Damage, Leech) addieren sich, wenn man mehrere solche Items trägt.",
+    "Amulett-Affixe sind passiv und wirken immer (z. B. Dreifachsprung, Unsichtbarkeit, Vergeltung, Gift-Immunität).",
+    "Legendäre Items haben ein festes, nicht neu würfelbares Legendär-Affix; beim Neu-Schmieden wird nur das zusätzliche Stern-Affix getauscht.",
+    "Mit der Gewöhnlichen Schmiede kann man Affixe gezielt neu würfeln – lohnt sich vor allem bei der Hauptwaffe."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Affixes"
+  },
+  {
+   "id": "curse",
+   "title": "Flüche & verfluchte Truhen",
+   "icon": null,
+   "summary": "Verflucht stirbst du an jedem Treffer. Dafür locken verfluchte Truhen mit Pergament, Edelstein und starkem farblosen Item.",
+   "points": [
+    "Ein Fluch hat einen Zähler: Jeder Kill eines regulären Gegners senkt ihn um 1. Mehrere Flüche addieren sich.",
+    "Verfluchte Truhe: 10 Fluch-Punkte; Inhalt: Pergament der Macht, Edelstein (Rubin) und ein farbloses Item (Item-Stufe +1, Qualität ++ auf 0–2 BC, S ab 3 BC).",
+    "Weitere Quellen: Goldtür aufbrechen (10; 50 für die Spezialhändler-Türen), Verfluchtes Artefakt (20), Curser-Geschoss (5), Sore Loser töten (3), Doom-Bringer-Nahkampf (1), Cursed Flask (20 je Phiolennutzung), Acceptance + Essen (5), Anathema/Misericorde (je 1).",
+    "Sofort tödlich: jeder Gegnertreffer (auch geblockt), Fallen, Abgründe, Giftschaden. NICHT tödlich: Dunkelheit im Forgotten Sepulcher, Face Flask, Vampirism, das Streicheln von Serenade.",
+    "Schutz: Ice Armor, Foresight und Damned Vigor verhindern den Sofort-Tod; Acceptance halbiert den Fluchzuwachs, Alienation erhöht ihn um 50 % (heilt aber beim Aufheben ab >10 Flüchen).",
+    "Verflucht kannst du die Homunkulus-Rune nicht nutzen (Ausnahme: Fluch nur durch Cursed Sword).",
+    "Chance verfluchter Truhen: 100 % (+10 % auf eine zweite) u. a. in Ossuary, Slumbering Sanctuary, Graveyard, Forgotten Sepulcher; 100 % (genau eine) in Prison Depths/Corrupted Prison; 10 % in vielen frühen Biomen; 1 % in den Gefängnisunterkünften.",
+    "Verfluchte Biome (ab 2 BC): 25 % Chance pro Ausgang, enthalten ca. 9 ± 2 Fluch-Gegner, +1 Item-Stufe und +10 % Chance auf verfluchte Truhen. Max. 2/3/5/8 verfluchte Biome bei 2/3/4/5 BC.",
+    "Seit 3.5 („The End is Near“) drehen sich viele neue Inhalte um Flüche: Gegner Sore Loser, Curser, Doom Bringer (ab 2 BC in tiefen Biomen, ab 4 BC überall), Waffen Misericorde und Anathema, Fertigkeit Indulgence, Mutationen Cursed Flask, Damned Vigor, Demonic Strength."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Curse"
+  },
+  {
+   "id": "boss-cells",
+   "title": "Boss-Stammzellen (Schwierigkeit 0–5 BC)",
+   "icon": null,
+   "summary": "Boss-Zellen erhöhen die Schwierigkeit in fünf Stufen und schalten neue Inhalte, Blaupausen und Türen frei.",
+   "points": [
+    "Erhalt: 1.–4. Zelle durch Sieg über The Hand of the King, The Queen oder Dracula - Final Form mit der jeweils vorherigen Zellenzahl. Die 5. Zelle gibt es nur von The Giant bei 4 aktiven Zellen.",
+    "Aktivieren/Deaktivieren in der Röhre im Startbereich, solange du ihn nicht verlassen hast.",
+    "1 BC (Hard): Brunnen nur in jeder 2. Passage; ++ bis 100 % in der Schmiede.",
+    "2 BC (Very Hard): keine Brunnen mehr, aber je eine Phiolen-Ladung pro Passage; Zellen ×2; S-Qualität bis 25 %; verfluchte Biome und Fluch-Gegner möglich.",
+    "3 BC (Expert): nur 3 Phiolen-Ladungen pro Run; Pergamentfragmente; Item-Stufe +1; S bis 50 %; farblose Items aus verfluchten Truhen in S-Qualität.",
+    "4 BC (Nightmare): keine Phiolen-Ladungen in Passagen; Zellen ×3; Item-Stufe +3; fast alle Gegner teleportieren sich zu dir; S bis 100 %.",
+    "5 BC (Hell): zusätzlich das Siechtum (Malaise), das Astrolab und das Observatory als finale Biome hinter dem Throne Room.",
+    "Ein aktiver Aspekt verhindert, dass du die nächste Boss-Zelle erhältst.",
+    "Türen mit Zellsymbol in Biomen öffnen sich nur mit genügend aktiven Boss-Zellen (Shops, Schatzräume, Abkürzungen)."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Boss_Stem_Cells"
+  },
+  {
+   "id": "malaise",
+   "title": "Siechtum (Malaise, 5 BC)",
+   "icon": null,
+   "summary": "Eine 10-stufige Leiste, die auf 5 BC mit der Zeit steigt und Gegner gefährlicher macht. Kills senken sie.",
+   "points": [
+    "Nur auf 5 BC aktiv (im Custom Mode für andere Stufen zuschaltbar oder auf 5 BC abschaltbar – beides sperrt Erfolge).",
+    "10 Stufen à 50 Punkte (max. 500). Bei 100 % lebenden Gegnern steigt sie um 1,3 Punkte/s (≈ 42 s pro Stufe), bei 50 % um 0,9, bei 10 % gar nicht mehr. In Shops, Passagen und Lore-Räumen pausiert der Anstieg.",
+    "Senken: normaler Kill 1,8, Elite 25, Boss 250 Punkte; Phiole 150; Hustensaft (Food-Shop, 3.000 Gold) 150. Bei 90 % getöteter Gegner gilt das Biom als gereinigt und die Leiste stoppt.",
+    "Effekte je Stufe: ab 2 Gegner-Spawns aus dem Boden und halbe Angriffsverzögerung; ab 3 schnelleres Teleportieren, Alarm-Reichweite und Elite-Verwandlung; ab 6 +20 % Gegnerschaden (40 % ab 8, 60 % ab 9) und Angriffsverzögerung nur noch ¼; Gegner bis +50 % schneller.",
+    "Infiziertes Essen (alle Drops aus Wandverstecken auf 5 BC) erhöht das Siechtum um 50 bzw. 150 Punkte statt zu heilen.",
+    "Tipp: zügig, aber gründlich spielen – Gegner töten ist zugleich Heilung gegen das Siechtum."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Malaise"
+  },
+  {
+   "id": "gold-shops",
+   "title": "Gold, Shops & Bank",
+   "icon": null,
+   "summary": "Gold ist die Run-Währung für Shops, Goldtüren, Schmiede und Mutations-Resets. Es verfällt beim Tod bis auf die Goldreserve.",
+   "points": [
+    "Shops: Waffen-, Fertigkeiten- und (in bestimmten Biomen) Food-Shops. Gegenstände im Shop haben Item-Stufe +2.",
+    "Restock (300 Zellen): Shop-Angebot bis zu 5× neu würfeln, Preise steigen jedes Mal um 40 %.",
+    "Merchandise Categories (geheime Blaupause im Graveyard, Architect's Key): Shop nach Farbe (Brut/Takt/Überl) filtern.",
+    "Goldtüren: gegen Gold öffnen oder für 10 Fluch-Punkte aufbrechen.",
+    "Verwerten (Recycling I/II): ungewollte Items/Essen für 7 % bzw. 15 % ihres Werts in Gold umwandeln.",
+    "Goldreserve I–V: behält beim Tod 500 bis 2.500 Gold (Dead Man's Bag am Start des nächsten Runs).",
+    "Edelsteine: Malachit 250, Amethyst 500, Saphir 1.000, Rubin 1.500, Verfluchtes Artefakt 10.000 (20 Flüche), Fragment des Steins der Weisen 75.000 Gold (0,2 % Drop).",
+    "Mutationen zurücksetzen kostet 1.000 Gold und verdoppelt sich bis max. 8.000.",
+    "The Bank: Eingang als Truhe in einer Passage (einmal pro Run, nach dem ersten Besuch im Throne Room oder The Crown). Viel Gold, Mimics, Kredit-Automaten (2.000 Gold Schulden pro Nutzung), Gentleman's-Outfit-Blaupause."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Currency"
+  },
+  {
+   "id": "mutations",
+   "title": "Mutationen",
+   "icon": null,
+   "summary": "Passive Boni, die du in jeder Passage bei Guillain wählst. Maximal 3 gleichzeitig (Custom Mode: bis 11).",
+   "points": [
+    "Pro abgeschlossenem Biom kommt ein Slot dazu, bis 3.",
+    "Farbige Mutationen skalieren mit ihrem Stat (×1,15 pro Punkt über 1); farblose sind fix.",
+    "Zurücksetzen: 1.000 Gold, verdoppelt sich je Reset bis 8.000.",
+    "Neue Mutationen benötigen eine Blaupause und Zellen beim Sammler."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Mutations"
+  },
+  {
+   "id": "custom-mode",
+   "title": "Custom Mode",
+   "icon": null,
+   "summary": "Frei konfigurierbare Runs: Item-Pools, Startausrüstung, Meta-Upgrades und Spaß-Modifikatoren. Viele Optionen sperren Erfolge.",
+   "points": [
+    "Freischaltung: Customization Rune von einem Elite-Zombie (bzw. Untoter Bogenschütze) kurz nach dem Eingang der Ramparts.",
+    "Fortschritt zählt: Zellen, Freischaltungen und Blaupausen aus Custom-Runs bleiben erhalten.",
+    "Erfolge sind gesperrt bei weniger als 20 aktivierten Items und bei markierten Optionen (u. a. alle Gameplay- und Siechtum-Modifikatoren).",
+    "Optionen u. a.: Startausrüstung mit Qualität, fester Seed (nach Vine-, Teleportation-, Ram- und Spider-Rune; deaktiviert Lore-Räume), Timer-Modus, Boss-Zellen-Zahl, Fluch der Truhen 0–999, Startgold bis 50.000, 4–11 Mutationsplätze, alle Items farblos oder legendär, Brunnen gehen nie kaputt, Ein-Treffer-Schutz aus.",
+    "Weitere Optionen werden durch Siege auf höheren Stufen freigeschaltet (Normal, Hard, Very Hard, Expert).",
+    "9 Vorlagen, z. B. „Speed Run“ (permanenter Timer, alles freigeschaltet), Farb-Vorlagen und „One hit, one kill“ mit dem Cursed Sword."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Custom_Mode"
+  },
+  {
+   "id": "aspects",
+   "title": "Aspekte",
+   "icon": null,
+   "summary": "Optionale, sehr starke Perks beim Doktor im Startbereich (seit 2.5, in 3.5 vorhanden). Ein Aspekt pro Run.",
+   "points": [
+    "Haken: Mit Aspekt gibt es keine neue Boss-Zelle, keine Flawless-Boss-Erfolge und keine Flawless-Outfits.",
+    "Freischaltung: 3 sind nach den Einführungs-Runs da, jeder weitere wird durch einen Tod freigeschaltet.",
+    "Liste: Toxin Lover (Gift heilt), Firestarter (Feuer +100 %, violettes +200 %), Shatter (Einfrieren brechen = 100 Basisschaden), Assassin (erster Angriff aus Unsichtbarkeit tötet Nicht-Bosse sofort), Relentless (unverwundbar, solange erholbare LP vorhanden), Blood Drinker (3 % Heilung pro Treffer gegen Blutende), Damned (doppelt so viele verfluchte Truhen; Flüche töten nicht, verdoppeln aber Schaden in beide Richtungen), Gotta Go Fast, Grenadier, Menagerie (+100 % Schaden pro Begleiter), Stomper (Sturzangriffe ×4), Superconductor, Tinker (Fallen/Türme 1 s Abklingzeit).",
+    "Nicht im Boss Rush nutzbar. Ideal zum Üben, für Blaupausen-Farming oder entspannte Runs."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Aspects"
+  },
+  {
+   "id": "assist-mode",
+   "title": "Assist Mode & Barrierefreiheit",
+   "icon": null,
+   "summary": "Seit 2.9 („Breaking Barriers“) kann man die Schwierigkeit fein anpassen – ohne Erfolge oder Boss-Zellen zu sperren.",
+   "points": [
+    "Optionen: Fortsetzen nach dem Tod (0/1/3/7 oder unbegrenzt), Auto-Treffer, leichteres Parieren, langsamere Fallen, Karte aufdecken, Gegnerleben/-schaden bis auf 20 %, Fallenschaden bis 20 %.",
+    "Einzige Einschränkung: Ergebnisse der Täglichen Herausforderung kommen nicht in die Rangliste."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Assist_Mode"
+  },
+  {
+   "id": "daily-challenge",
+   "title": "Tägliche Herausforderung",
+   "icon": null,
+   "summary": "Täglich neue, kompakte Punkte-Jagd mit 4:30 Minuten Zeitlimit und einem geschwächten Concierge als Boss.",
+   "points": [
+    "Freischaltung: Challenger's Rune vom Concierge (Black Bridge).",
+    "Reset täglich um Mitternacht (UTC+1).",
+    "Punkte: Gegner (Elites ×5), Truhen 20, verfluchte Truhe 5 (+25 beim Aufheben), Wandverstecke 20, Edelsteine; Bonus-Sterne geben 15 s lang +5 Punkte pro Kill (stapelbar).",
+    "Belohnungen (kumulativ, nicht an Folgetagen nötig, max. 1 Abschluss pro Tag zählt): 1. Abschluss Swift Sword, 5. Lacerating Aura, 10. Meat Skewer."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Daily_Challenge"
+  },
+  {
+   "id": "boss-rush",
+   "title": "Boss Rush",
+   "icon": null,
+   "summary": "Bosse direkt hintereinander, mit Items aus Altären und Shops dazwischen. Seit 3.1, DIY-Modus seit 3.4.",
+   "points": [
+    "Zugang im Startbereich nach je einem besiegten Tier-1-, Tier-2- und Tier-3-Boss; Prüfung 3/4 benötigt 2/2/1 Bosse.",
+    "4 Prüfungen: 3 Bosse, 3 modifizierte Bosse, 5 Bosse, 5 modifizierte Bosse.",
+    "Zu Beginn wählst du eine Farbe (Stat-Stein) – danach gibt es nur Items dieser Farbe.",
+    "Bosse geben doppelt so viele Zellen wie normal (× BC-Faktor 1,0 bis 1,25); Zellen müssen am Ende in der Legendären Schmiede investiert werden, der Rest verfällt.",
+    "Belohnungen: Peril Glyphs (Prüfung 1), Taunt (2), Wish (3), Boss-Knight- und Triumph-Outfits, Statuenteile.",
+    "DIY Boss Rush (nach Prüfung 3): Bosse und Varianten frei wählen; keine Truhenbelohnung.",
+    "Gesperrt im Boss Rush: u. a. Giantkiller, Wish, Gastronomy, Alienation, Acceptance, Get Rich Quick, Midas' Blood sowie Aspekte."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Boss_Rush"
+  },
+  {
+   "id": "runes",
+   "title": "Runen",
+   "icon": null,
+   "summary": "Permanente Fähigkeiten, die neue Wege und Mechaniken öffnen. Sie werden sofort wirksam, ohne Zellen.",
+   "points": [
+    "Vine Rune (Promenade of the Condemned, Elite-Bogenschütze): Ranken wachsen lassen – Pflicht für den Rest der Promenade und Zugang zu Toxic Sewers.",
+    "Teleportation Rune (Toxic Sewers): Teleport-Sarkophage, u. a. zu Ossuary, Morass, Forgotten Sepulcher.",
+    "Ram Rune (Ossuary): Böden durchbrechen (Ancient Sewers), stärkerer Sturzangriff.",
+    "Spider Rune (Slumbering Sanctuary): Wandklettern (Prison Depths, Corrupted Prison, Graveyard u. a.).",
+    "Customization Rune (Ramparts): Custom Mode. Challenger's Rune (Concierge): Tägliche Herausforderung.",
+    "Explorer's Rune (Forgotten Sepulcher, hinter zwei Elite-Räumen): Bei 80 % erkundeter Karte wird alles inkl. Pergamente angezeigt.",
+    "Homunculus Rune (nach Hand of the King): Kopf abtrennen, Gegner beißen (12 Basisschaden, 5 Treffer/s), Gegenstände heranholen; nötig für den Cavern-Schlüssel.",
+    "Richter Mode hat eigene Fähigkeiten: Dash und High Jump."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Runes_and_upgrades"
+  },
+  {
+   "id": "doors",
+   "title": "Zeit-, Killstreak- & No-Hit-Türen",
+   "icon": null,
+   "summary": "Bonusräume in den Passagen belohnen Tempo, fehlerfreies Spiel und makellose Bosskämpfe.",
+   "points": [
+    "Zeittüren: nach Gefängnisunterkünften 2 min, nach Promenade/Toxic Sewers/Arboretum 8 min, nach Black Bridge/Nest 15 min, Insufferable Crypt → Graveyard 19:30 min, vor Forgotten Sepulcher 26 min (genau auf der Zeit zählt noch).",
+    "Inhalt Zeit-/Killstreak-Tür: Edelsteine, 20 Zellen, Altar mit 3 Items (oder 2 Items + Amulett), Mindestqualität + (0–1 BC), ++ (2–3 BC), S (4–5 BC). Teils feste Blaupausen: Assault Shield (2 min), Frenzy, Marksman's Bow (Ossuary), Root Grenade (15 min).",
+    "Mit Standard-Timer läuft die Zeit in Startbereich, Passagen, Shops, Schatz- und Lore-Räumen nicht weiter.",
+    "Killstreak-Türen: 30 Kills ohne Treffer in den Gefängnisunterkünften, sonst 60. Einmal erreicht, bleibt die Tür offen, auch wenn du danach getroffen wirst. Keine Killstreak-Türen nach Prison Depths, Corrupted Prison, Infested Shipwreck, Dracula's Castle.",
+    "No-Hit-Türen: nach jedem Boss, wenn du ihn ohne Treffer besiegst – garantiert ein Legendär-Item aus freigeschalteten Gegenständen.",
+    "Tipp: In den Einstellungen (Video) lässt sich ein Killstreak-Zähler einblenden."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Time,_killstreak_and_no-hit_doors"
+  },
+  {
+   "id": "kill-streak",
+   "title": "Kill-Streak & Tempo-Buff",
+   "icon": null,
+   "summary": "Zwei verschiedene Mechaniken: die Killstreak (Kills ohne Treffer) und der Kill-Combo-Tempobonus.",
+   "points": [
+    "Killstreak: +1 pro Kill eines Gegners, der auch Flüche senken würde; jeder erlittene Schaden setzt sie auf 0. Face Flask und Vampirism zählen nicht als Treffer.",
+    "Bonusleben (blau) schützt die Killstreak nicht.",
+    "Tempo-Buff: 8 Kills in kurzer Zeit geben 10 s lang +40 % Laufgeschwindigkeit, +12 % Rollen und +50 % Klettern (Velocity-Mutation: 30 s). Jeder weitere Kill frischt ihn auf."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Mechanics"
+  },
+  {
+   "id": "parry",
+   "title": "Blocken & Parieren",
+   "icon": null,
+   "summary": "Schilde blocken im Halten und parieren beim kurzen Antippen – eine Parade negiert den Schaden komplett und betäubt den Angreifer.",
+   "points": [
+    "Halten: Schild ist nach 0,37 s oben und absorbiert frontale Treffer (meist 75 %).",
+    "Antippen = Parade. Trifft im Fenster ein Angriff (keine Schockwellen), entsteht kein Schaden; Nahkämpfer bekommen den Parade-Schaden (kritischer Wert des Schilds), Projektile werden mit 80, Bomben mit 90 Basisschaden zurückgeworfen.",
+    "Verpasste Parade: 0,6 s kein Blocken/Parieren. Auch die ersten 0,2 s des Haltens gelten als Parade.",
+    "Passiv: Jedes getragene Schild erzeugt nach erlittenem Schaden 0,65 s ein Kraftfeld (senkt aber die Erholung um 65 %).",
+    "Affix Counter Attack: +300 % Schaden für 2 s nach einer Parade.",
+    "Assist Mode bietet „leichteres Parieren“ mit größerem Zeitfenster."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Shields"
+  },
+  {
+   "id": "roll",
+   "title": "Rollen & Ausweichen",
+   "icon": null,
+   "summary": "Die Rolle weicht den meisten Angriffen aus, ist aber keine absolute Unverwundbarkeit.",
+   "points": [
+    "Dauer 0,4 s, danach 0,37 s Abklingzeit. Die Hitbox schrumpft auf ein Feld Höhe (durch 1-Feld-Lücken rollen).",
+    "Ausweichbar: Nahkampf, Projektile und Bomben, die meisten Schockangriffe, viele Fallen.",
+    "NICHT ausweichbar: Explosionen sich selbst sprengender Gegner (Kamikaze, Living Barrel), die meisten Bodenwellen, Draculas Feuersäulen, Bodenstacheln.",
+    "Rollen zerbricht Türen (betäubt Gegner dahinter) und setzt die Waffenkombo nicht zurück.",
+    "In langen Stürzen ermöglicht eine Rolle einen weiteren Sturzangriff, um den Landungs-Stun zu vermeiden."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Mechanics"
+  },
+  {
+   "id": "combat-misc",
+   "title": "Breach, Sturzangriff & Kampfdetails",
+   "icon": null,
+   "summary": "Versteckte Mechaniken, die erklären, warum manche Waffen Gegner unterbrechen und andere nicht.",
+   "points": [
+    "Breach: Genug Schaden während eines gegnerischen Angriffs unterbricht und betäubt ihn 1,4 s. Langsame, harte Waffen und Kombo-Finisher brechen besser; Bosse sind immun.",
+    "Stagger: Treffer während eines Gegnerangriffs verzögern dessen Trefferframe – besonders nützlich mit zwei sich ergänzenden Waffen.",
+    "Sturzangriff (in der Luft runter + Springen): 35/90/135 Basisschaden je nach Fallhöhe (mit Ram Rune 60/110/165, größerer Radius), skaliert mit dem höchsten Stat, zählt als Nahkampf.",
+    "Kein Fallschaden außer in Abgründe (z. B. Ramparts, Fractured Shrines, Cavern): 30 Basisschaden, max. 30 % LP. Gegner nehmen dagegen schon bei kurzen Stürzen Fallschaden.",
+    "Ab 4 BC teleportieren sich fast alle Nahkampfgegner zu dir (roter Umriss als Vorwarnung).",
+    "Elites: mehr Leben/Schaden, 20 % Widerstand gegen Kontrolleffekte, unter 50 % LP teleportieren sie sich; Drops: Item-Stufe +2 (meist Amulett), 6 % Legendär-Chance."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Mechanics"
+  },
+  {
+   "id": "crits",
+   "title": "Kritische Treffer",
+   "icon": null,
+   "summary": "Jede Waffe hat eigene Krit-Bedingungen (z. B. Treffer in den Rücken, gegen brennende Gegner, letzter Kombo-Schlag) und einen eigenen Krit-Multiplikator.",
+   "points": [
+    "Der Kritschaden steht im Tooltip in Klammern bzw. farbig hinter dem normalen Schaden.",
+    "Beispiel aus dem Wiki: Assassin's Dagger I hat 134 Basis-DPS, aber 402 Krit-DPS (×3).",
+    "Affixe: Super critical +20 %, Heavy critical +30 % (schwere Waffen), Legendär-Affix Mega critical +50 %.",
+    "Builds, die Krit-Bedingungen zuverlässig erfüllen (z. B. Wurzel + Repeater Crossbow, Feuer + Kritwaffe), sind oft stärker als reine Schadensaffixe.",
+    "Elektrische Waffen landen kritische Treffer gegen Gegner im Wasser."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Gear"
+  },
+  {
+   "id": "two-handed",
+   "title": "Zweihandwaffen & Rucksack",
+   "icon": null,
+   "summary": "Zweihandwaffen belegen beide Waffenplätze, kombinieren dafür zwei aufeinander abgestimmte Angriffe.",
+   "points": [
+    "Beispiele: Repeater Crossbow, Heavy Crossbow, Ice Crossbow, Explosive Crossbow, Ferryman's Lantern, Hard Light Sword, Scythe Claw, Whip Sword.",
+    "Typische Synergie: die Zweitfunktion bereitet Krits der Hauptfunktion vor (Repeater Crossbow: Bolzen fesseln, Primärschüsse kritten gegen gefesselte Ziele).",
+    "Wer eine Einhandwaffe in einen der Plätze legt, lässt die ganze Zweihandwaffe fallen.",
+    "Rucksack (Backpack, 100 Zellen): trägt eine Ersatzwaffe – aber keine Fertigkeiten, Zweihandwaffen, Giantkiller oder die Symmetrical Lance des Hand of the King."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Gear"
+  },
+  {
+   "id": "pets",
+   "title": "Begleiter (Pets)",
+   "icon": null,
+   "summary": "Einige Fertigkeiten beschwören Begleiter, die eigenständig kämpfen.",
+   "points": [
+    "Begleiter-Fertigkeiten: Great Owl of War, Mushroom Boi!, Leghugger, Maria's Cat, Serenade.",
+    "Seit 3.0 kannst du Begleiter in den Passagen streicheln (Interaktion gedrückt halten).",
+    "Aspekt Menagerie: +100 % Schaden pro aktivem Begleiter (+25 % pro Biter aus Swarm).",
+    "Erfolg „Herder“: zwei Begleiter gleichzeitig aktiv."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Great_Owl_of_War"
+  },
+  {
+   "id": "richter-mode",
+   "title": "Richter Mode (Return to Castlevania)",
+   "icon": null,
+   "summary": "Ein fester, handgebauter Level, in dem du Richter Belmont statt des Beheaded spielst.",
+   "points": [
+    "Zugang: In Dracula's Castle (spätere Version) Richters Käfig öffnen; in späteren Runs am Käfig starten. Einmal pro Run.",
+    "Start mit einer Version des Vampire Killer; Fertigkeiten haben keine Abklingzeit, kosten aber Herzen (max. 30) aus Kerzen und Gegnern.",
+    "Unterwegs: Dash und High Jump als Fähigkeiten, Holy Water, Cross, Rebound Stone (auch legendär versteckt). Endboss: Medusa.",
+    "Belohnungen: Richter-Outfit beim ersten Abschluss, Blaupause für Alucard's Sword in einem Geheimbereich rechts auf der Karte.",
+    "Tod als Richter beendet den Run nicht – du spielst als Beheaded weiter, die als Richter gesammelten Zellen sind aber weg."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Richter_Mode"
+  },
+  {
+   "id": "outfits",
+   "title": "Outfits & Köpfe",
+   "icon": null,
+   "summary": "Rein kosmetische Freischaltungen – mit wenigen spielerischen Ausnahmen.",
+   "points": [
+    "Outfits: Blaupausen von Gegnern, Bossen und aus Geheimbereichen; beim Sammler mit Zellen freischalten, beim Schneider (Gefängnisunterkünfte) anziehen.",
+    "Bosse droppen bis zu 6 Outfits (je eines für 0–4+ BC und eines für einen makellosen Sieg ohne Aspekt).",
+    "Ausnahmen mit Nutzen: Cultist Outfit wird für den ersten Zugang zu Undying Shores aus Fractured Shrines benötigt; 16 Outfits schalten Sewing Scissors frei, 51 Outfits die Giant Comb.",
+    "Köpfe: seit 3.4 bei der Tochter des Schneiders; 3.5 brachte 40 weitere Köpfe mit Freischaltbedingungen (z. B. Concierge 50-mal besiegen)."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Outfits"
+  },
+  {
+   "id": "training-room",
+   "title": "Trainingsraum",
+   "icon": null,
+   "summary": "Üben gegen beliebige bereits getroffene Gegner und Bosse mit frei wählbarer Ausrüstung.",
+   "points": [
+    "Schlüssel: auf der Leiche des Tutorial-Ritters in den Gefängnisunterkünften (ab dem 4. Run erreichbar).",
+    "Items, Item-Stufe und Mutationen frei einstellbar; Tod schickt dich nur zurück in die Halle.",
+    "Boss-Türen nach Tiers sortiert; Tier-4-Bosse hinter einem versteckten Durchgang rechts (durchrollen)."
+   ],
+   "wiki": "https://deadcells.wiki.gg/wiki/Training_Room"
+  }
+ ],
+ "collector": [
+  {
+   "name": "Health Flask I",
+   "nameDe": "Medizinphiole I",
+   "category": "Heilung",
+   "cells": 5,
+   "minBC": 0,
+   "effect": "Medizinphiole mit 1 Ladung (60 % Heilung).",
+   "recommended": "high",
+   "why": "Pflicht – schaltet alle anderen Collector-Freischaltungen frei.",
+   "requires": "Erste Freischaltung"
+  },
+  {
+   "name": "Health Flask II",
+   "nameDe": "Medizinphiole II",
+   "category": "Heilung",
+   "cells": 50,
+   "minBC": 0,
+   "effect": "2 Phiolen-Ladungen.",
+   "recommended": "high",
+   "why": "Doppelte Heilung pro Biom – größter Überlebensgewinn am Anfang.",
+   "requires": "Health Flask I"
+  },
+  {
+   "name": "Health Flask III",
+   "nameDe": "Medizinphiole III",
+   "category": "Heilung",
+   "cells": 150,
+   "minBC": 0,
+   "effect": "3 Phiolen-Ladungen.",
+   "recommended": "high",
+   "why": "Sobald 10 Items freigeschaltet sind, sofort kaufen.",
+   "requires": "Health Flask II, 10 freigeschaltete Items"
+  },
+  {
+   "name": "Health Flask IV",
+   "nameDe": "Medizinphiole IV",
+   "category": "Heilung",
+   "cells": 300,
+   "minBC": 0,
+   "effect": "4 Phiolen-Ladungen.",
+   "recommended": "high",
+   "why": "Maximale Heilung; auf höheren BC (wenig Nachfüllungen) noch wichtiger.",
+   "requires": "Health Flask III, 25 freigeschaltete Items"
+  },
+  {
+   "name": "Gold Reserves I",
+   "nameDe": "Goldreserve I",
+   "category": "Gold",
+   "cells": 5,
+   "minBC": 0,
+   "effect": "Behält beim Tod bis zu 500 Gold.",
+   "recommended": "medium",
+   "why": "Fast gratis; erleichtert frühe Shop-Käufe im nächsten Run.",
+   "requires": "Health Flask I"
+  },
+  {
+   "name": "Gold Reserves II",
+   "nameDe": "Goldreserve II",
+   "category": "Gold",
+   "cells": 35,
+   "minBC": 0,
+   "effect": "Behält beim Tod bis zu 1.000 Gold.",
+   "recommended": "medium",
+   "why": "Günstig, kleiner Startvorteil.",
+   "requires": "Gold Reserves I"
+  },
+  {
+   "name": "Gold Reserves III",
+   "nameDe": "Goldreserve III",
+   "category": "Gold",
+   "cells": 100,
+   "minBC": 0,
+   "effect": "Behält beim Tod bis zu 1.500 Gold.",
+   "recommended": "low",
+   "why": "Nett, aber Phiolen und Komfort-Upgrades zuerst.",
+   "requires": "Gold Reserves II, 8 freigeschaltete Items"
+  },
+  {
+   "name": "Gold Reserves IV",
+   "nameDe": "Goldreserve IV",
+   "category": "Gold",
+   "cells": 200,
+   "minBC": 0,
+   "effect": "Behält beim Tod bis zu 2.000 Gold.",
+   "recommended": "low",
+   "why": "Wird für Advanced Forge I benötigt.",
+   "requires": "Gold Reserves III, 15 freigeschaltete Items"
+  },
+  {
+   "name": "Gold Reserves V",
+   "nameDe": "Goldreserve V",
+   "category": "Gold",
+   "cells": 400,
+   "minBC": 0,
+   "effect": "Behält beim Tod bis zu 2.500 Gold.",
+   "recommended": "low",
+   "why": "Teuer für wenig Effekt; geheime Blaupause im Labyrinth der Ancient Sewers (Homunculus Rune).",
+   "requires": "Gold Reserves IV, 30 Items, Blaupause"
+  },
+  {
+   "name": "Recycling I",
+   "nameDe": "Verwerten I",
+   "category": "Gold",
+   "cells": 25,
+   "minBC": 0,
+   "effect": "Items/Essen am Boden in 7 % ihres Werts als Gold umwandeln.",
+   "recommended": "high",
+   "why": "Jedes überflüssige Item wird zu Gold – billig und dauerhaft nützlich.",
+   "requires": "Health Flask I"
+  },
+  {
+   "name": "Recycling II",
+   "nameDe": "Verwerten II",
+   "category": "Gold",
+   "cells": 120,
+   "minBC": 0,
+   "effect": "Verwerten bringt 15 % des Werts.",
+   "recommended": "high",
+   "why": "Verdoppelt den Recycling-Ertrag; finanziert Schmiede und Shops.",
+   "requires": "Recycling I"
+  },
+  {
+   "name": "Random Melee Weapon",
+   "nameDe": "Zufällige Einsteiger-Nahkampfwaffe",
+   "category": "Start-Ausrüstung",
+   "cells": 65,
+   "minBC": 0,
+   "effect": "Start-Nahkampfwaffe zufällig aus freigeschalteten Waffen.",
+   "recommended": "medium",
+   "why": "Mehr Abwechslung und oft bessere Startwaffe als das Rusty Sword (seit 3.0 schon ab 2 Items).",
+   "requires": "2 freigeschaltete Items"
+  },
+  {
+   "name": "Random Starter Bow",
+   "nameDe": "Zufälliger Einsteigerbogen",
+   "category": "Start-Ausrüstung",
+   "cells": 65,
+   "minBC": 0,
+   "effect": "Start-Fernkampfwaffe zufällig.",
+   "recommended": "medium",
+   "why": "Wie oben, für den Bogenplatz.",
+   "requires": "2 freigeschaltete Items"
+  },
+  {
+   "name": "Random Starter Shield",
+   "nameDe": "Zufälliger Einsteigerschild",
+   "category": "Start-Ausrüstung",
+   "cells": 65,
+   "minBC": 0,
+   "effect": "Startschild zufällig.",
+   "recommended": "medium",
+   "why": "Wie oben, für den Schildplatz.",
+   "requires": "2 freigeschaltete Items"
+  },
+  {
+   "name": "Recycling Tubes",
+   "nameDe": "Wiederverwertungsröhren",
+   "category": "Start-Ausrüstung",
+   "cells": 150,
+   "minBC": 1,
+   "effect": "Startraum mit 4 Sets aus Nahkampf, Fernkampf, Schild und zwei Fertigkeiten zur Wahl.",
+   "recommended": "high",
+   "why": "Bester Start-Upgrade überhaupt: gezielt einen Build ab Minute 1. Blaupause vom Hand of the King auf 1 BC.",
+   "requires": "Blaupause (Hand of the King, 1 BC)"
+  },
+  {
+   "name": "Backpack",
+   "nameDe": "Rucksack",
+   "category": "Komfort",
+   "cells": 100,
+   "minBC": 0,
+   "effect": "Ersatzwaffe im Rucksack tragen.",
+   "recommended": "medium",
+   "why": "Waffe für später aufheben oder situativ tauschen; Grundlage für einige Mutationen.",
+   "requires": "15 freigeschaltete Items"
+  },
+  {
+   "name": "Restock",
+   "nameDe": "Angebotserneuerung",
+   "category": "Komfort",
+   "cells": 300,
+   "minBC": 0,
+   "effect": "Shop-Angebot bis zu 5× neu würfeln (+40 % Preis pro Würfeln).",
+   "recommended": "medium",
+   "why": "Hilft, gezielt Items der Hauptfarbe zu finden.",
+   "requires": "20 freigeschaltete Items"
+  },
+  {
+   "name": "Specialist's Showroom",
+   "nameDe": "Spezialhändler",
+   "category": "Komfort",
+   "cells": 150,
+   "minBC": 0,
+   "effect": "Spezialhändler-Raum in den Gefängnisunterkünften mit Hunter's Grenade, Forgotten Map und Golden-Outfit-Blaupause (hinter Goldtüren).",
+   "recommended": "low",
+   "why": "Hunter's Grenade erzwingt Blaupausen-Drops – nützlich beim Sammeln; Türen kosten viel Gold oder 50 Flüche.",
+   "requires": "20 freigeschaltete Items"
+  },
+  {
+   "name": "Hunter's Mirror",
+   "nameDe": "Spiegel des Jägers",
+   "category": "Komfort",
+   "cells": 150,
+   "minBC": 0,
+   "effect": "Spiegel neben dem Schreiber zeigt einen Gegner/Boss, der eine fehlende Blaupause trägt.",
+   "recommended": "low",
+   "why": "Nur für Komplettierer interessant.",
+   "requires": "Specialist's Showroom"
+  },
+  {
+   "name": "Merchandise Categories",
+   "nameDe": "Warenkategorien",
+   "category": "Komfort",
+   "cells": 300,
+   "minBC": 0,
+   "effect": "In Shops zwischen Brutalität, Taktik und Überleben wählen.",
+   "recommended": "high",
+   "why": "Garantiert Shop-Items der eigenen Farbe – großer Build-Vorteil. Geheime Blaupause im Graveyard (Architect's Key).",
+   "requires": "30 freigeschaltete Items, Blaupause"
+  },
+  {
+   "name": "Advanced Forge I",
+   "nameDe": "Erweiterte Schmiede I",
+   "category": "Forge",
+   "cells": 200,
+   "minBC": 0,
+   "effect": "Items in der Gewöhnlichen Schmiede zweimal statt einmal aufwerten.",
+   "recommended": "high",
+   "why": "Macht aus Basis-Funden ++-Items; stark für jeden Build. Blaupause: 6. Sieg über Conjunctivius.",
+   "requires": "Gold Reserves IV, 40 freigeschaltete Items, Blaupause"
+  }
+ ],
+ "forge": [
+  {
+   "level": 1,
+   "quality": "+",
+   "cells": 500,
+   "cellsPerStep": 25,
+   "effect": "Bis zu 100 % aller gefundenen Items in +-Qualität (+2 Item-Kraft). 25 Zellen je +5 %.",
+   "capByBC": {
+    "0": "100 %",
+    "1": "100 %",
+    "2": "100 %",
+    "3": "100 %",
+    "4": "100 %",
+    "5": "100 %"
+   }
+  },
+  {
+   "level": 2,
+   "quality": "++",
+   "cells": 3000,
+   "cellsPerStep": 150,
+   "effect": "Chance auf ++-Qualität (+4 Item-Kraft); erst wenn + auf 100 % ist. 150 Zellen je +5 %.",
+   "capByBC": {
+    "0": "50 %",
+    "1": "100 %",
+    "2": "100 %",
+    "3": "100 %",
+    "4": "100 %",
+    "5": "100 %"
+   }
+  },
+  {
+   "level": 3,
+   "quality": "S",
+   "cells": 10000,
+   "cellsPerStep": 500,
+   "effect": "Chance auf S-Qualität (+6 Item-Kraft); erst wenn ++ auf 100 % ist. 500 Zellen je +5 %.",
+   "capByBC": {
+    "0": "nicht möglich",
+    "1": "nicht möglich",
+    "2": "25 %",
+    "3": "50 %",
+    "4": "100 %",
+    "5": "100 %"
+   }
+  }
+ ],
+ "affixes": [
+  {
+   "name": "More Damage",
+   "type": "any",
+   "rating": "good",
+   "note": "+15 % Schaden des Items, ohne Nachteil. Großes Affix."
+  },
+  {
+   "name": "Heavy Damage Rare",
+   "type": "weapon",
+   "rating": "top",
+   "note": "+40 % Schaden, nur auf schweren Waffen. Großes Affix."
+  },
+  {
+   "name": "Heavy Damage",
+   "type": "weapon",
+   "rating": "good",
+   "note": "+20 % Schaden auf schweren Waffen; sehr häufig."
+  },
+  {
+   "name": "Double Damage",
+   "type": "any",
+   "rating": "good",
+   "note": "+100 % Schaden, aber +100 % erlittener Schaden (stapelt sich). Für sichere Spieler/Fernkampf."
+  },
+  {
+   "name": "Quad Damage",
+   "type": "weapon",
+   "rating": "good",
+   "note": "+300 % Schaden bei +300 % erlittenem Schaden – nur mit viel Kontrolle oder Glaskanonen-Build."
+  },
+  {
+   "name": "Leech",
+   "type": "weapon",
+   "rating": "meh",
+   "note": "Heilt 1 % LP pro Nahkampftreffer (0,2 s Sperre), dafür +100 % erlittener Schaden."
+  },
+  {
+   "name": "Super critical",
+   "type": "weapon",
+   "rating": "good",
+   "note": "Kritische Treffer +20 % Schaden."
+  },
+  {
+   "name": "Heavy critical",
+   "type": "weapon",
+   "rating": "good",
+   "note": "Kritische Treffer +30 % (schwere Waffen)."
+  },
+  {
+   "name": "Full Life Damage",
+   "type": "weapon",
+   "rating": "meh",
+   "note": "+50 % Schaden bei vollen LP – bricht beim ersten Treffer weg."
+  },
+  {
+   "name": "Back Damage",
+   "type": "weapon",
+   "rating": "meh",
+   "note": "+30 % Schaden bei Treffern in den Rücken."
+  },
+  {
+   "name": "Bleed Damage",
+   "type": "any",
+   "rating": "good",
+   "note": "+60 % Schaden gegen blutende Ziele."
+  },
+  {
+   "name": "Poison Damage",
+   "type": "any",
+   "rating": "good",
+   "note": "+80 % Schaden gegen vergiftete Ziele."
+  },
+  {
+   "name": "Fire Damage",
+   "type": "any",
+   "rating": "good",
+   "note": "+40 % Schaden gegen brennende Ziele."
+  },
+  {
+   "name": "Blue Fire Damage",
+   "type": "any",
+   "rating": "good",
+   "note": "+100 % Schaden gegen Ziele mit brennendem Öl."
+  },
+  {
+   "name": "Ice Damage",
+   "type": "any",
+   "rating": "top",
+   "note": "+175 % Schaden gegen gefrorene Ziele – stark mit Frost-Fertigkeiten."
+  },
+  {
+   "name": "Root Damage",
+   "type": "any",
+   "rating": "good",
+   "note": "+75 % Schaden gegen bewegungsunfähige (gewurzelte) Ziele."
+  },
+  {
+   "name": "Stun Damage",
+   "type": "any",
+   "rating": "good",
+   "note": "+70 % Schaden gegen betäubte Ziele."
+  },
+  {
+   "name": "Shock Damage",
+   "type": "any",
+   "rating": "meh",
+   "note": "+40 % Schaden gegen elektrifizierte Ziele."
+  },
+  {
+   "name": "Slow Damage",
+   "type": "weapon",
+   "rating": "meh",
+   "note": "+30 % Schaden gegen verlangsamte Ziele."
+  },
+  {
+   "name": "Pierce",
+   "type": "any",
+   "rating": "good",
+   "note": "Geschosse durchdringen das erste Ziel."
+  },
+  {
+   "name": "Super Pierce",
+   "type": "any",
+   "rating": "top",
+   "note": "Geschosse durchdringen alle Gegner – ideal gegen Gruppen."
+  },
+  {
+   "name": "Extra Ammo",
+   "type": "weapon",
+   "rating": "good",
+   "note": "+3 Munition für Bögen."
+  },
+  {
+   "name": "Run Speed on Kill",
+   "type": "any",
+   "rating": "good",
+   "note": "+20 % Laufgeschwindigkeit für 5 s nach einem Kill – gut für Zeittüren."
+  },
+  {
+   "name": "Death Freeze",
+   "type": "any",
+   "rating": "good",
+   "note": "Getötete Gegner frieren Umstehende 1,8 s ein."
+  },
+  {
+   "name": "Death Fire",
+   "type": "any",
+   "rating": "meh",
+   "note": "Getötete Gegner hinterlassen 5 s Feuer."
+  },
+  {
+   "name": "Heavy Stun",
+   "type": "weapon",
+   "rating": "good",
+   "note": "Betäubt das Ziel 0,5 s (schwere Waffen)."
+  },
+  {
+   "name": "Counter Attack",
+   "type": "shield",
+   "rating": "top",
+   "note": "+300 % Schaden für 2 s nach einer Parade."
+  },
+  {
+   "name": "Freeze on Parry",
+   "type": "shield",
+   "rating": "good",
+   "note": "Parierte Gegner frieren 3 s ein."
+  },
+  {
+   "name": "Shield Absorb",
+   "type": "shield",
+   "rating": "meh",
+   "note": "+7 % Blockabsorption."
+  },
+  {
+   "name": "Shield Bullet Absorb",
+   "type": "shield",
+   "rating": "good",
+   "note": "Blocken absorbiert insgesamt 95 % von Projektilschaden."
+  },
+  {
+   "name": "Extended Duration",
+   "type": "skill",
+   "rating": "top",
+   "note": "+100 % Wirkungsdauer der Fertigkeit (z. B. Tonic, Corrupted Power)."
+  },
+  {
+   "name": "Lightning AoE",
+   "type": "skill",
+   "rating": "good",
+   "note": "Elektrisiert 8 s lang bis zu 3 Gegner in der Nähe (50 Basis-DPS)."
+  },
+  {
+   "name": "Global Shield on Use",
+   "type": "skill",
+   "rating": "good",
+   "note": "Kurzes Kraftfeld (0,5 s) beim Einsatz – Notfall-Unverwundbarkeit."
+  },
+  {
+   "name": "Deployed Resist",
+   "type": "skill",
+   "rating": "good",
+   "note": "−25 % erlittener Schaden in der Nähe des aufgestellten Turms/der Falle."
+  },
+  {
+   "name": "Deployed Damage",
+   "type": "skill",
+   "rating": "meh",
+   "note": "+10 % Schaden in der Nähe des aufgestellten Turms/der Falle."
+  },
+  {
+   "name": "Triple Jump",
+   "type": "amulet",
+   "rating": "good",
+   "note": "Zusätzlicher Sprung (Amulett) – großer Mobilitätsgewinn."
+  },
+  {
+   "name": "Invisibility",
+   "type": "amulet",
+   "rating": "good",
+   "note": "Nach 5 s ohne Angriff unsichtbar; der erste Angriff macht +150 % Schaden."
+  },
+  {
+   "name": "Secret Hint",
+   "type": "amulet",
+   "rating": "good",
+   "note": "Wandverstecke, Risse und Herausforderungsrunen leuchten kurz auf."
+  },
+  {
+   "name": "Freeze Skin",
+   "type": "amulet",
+   "rating": "good",
+   "note": "Gegner, die dich treffen, frieren 1,5 s ein."
+  },
+  {
+   "name": "Retaliation",
+   "type": "amulet",
+   "rating": "meh",
+   "note": "Erlittener Schaden wird dreifach an den Angreifer zurückgegeben."
+  },
+  {
+   "name": "Bullet Armor",
+   "type": "amulet",
+   "rating": "meh",
+   "note": "Laut Text −75 % Projektilschaden, tatsächlich nur −25 %."
+  }
+ ],
+ "statusEffects": [
+  {
+   "name": "Bleed",
+   "nameDe": "Blutung",
+   "effect": "Schaden über Zeit, kurze Dauer. Max. 5 Stapel; beim 5. Stapel wird der gesamte restliche Blutungsschaden auf einmal ausgelöst. Fast nur durch direkte Waffentreffer.",
+   "synergy": "Bleed-Damage-Affix (+60 %), Mutation Open Wounds, Aspekt Blood Drinker (3 % Heilung pro Treffer), Blood Sword. Immun: Shocker, Automaton."
+  },
+  {
+   "name": "Poison",
+   "nameDe": "Vergiftung",
+   "effect": "Schaden über Zeit ohne Stapel-Limit. Stirbt ein vergifteter Gegner, verteilt er Gift auf Gegner im Umkreis von 5 Feldern (mit reduziertem Schaden).",
+   "synergy": "Poison-Damage-Affix (+80 %), Giftwolken, Aspekt Toxin Lover. Für Spieler tödlich, wenn verflucht."
+  },
+  {
+   "name": "Fire",
+   "nameDe": "Brand",
+   "effect": "Schaden über Zeit ohne Stapel-Limit; Feuerangriffe entzünden oft auch den Boden. Wirkt nicht im Wasser oder Giftbecken und löscht dort bestehende Brände.",
+   "synergy": "Öl davor auftragen (Blue Fire), Fire-Damage-Affix (+40 %), Aspekt Firestarter (+100 %). Löst Einfrieren auf. Immun: Demon, Mama Tick."
+  },
+  {
+   "name": "Oil",
+   "nameDe": "Öl",
+   "effect": "Macht selbst keinen Schaden, verwandelt Feuer in brennendes Öl: +12 % Schaden, längere Dauer und brennt auch im Wasser. Ölexplosionen: 16 Basisschaden.",
+   "synergy": "Oil Grenade, Oiled Sword + jede Feuerquelle; Blue-Fire-Affix (+100 %)."
+  },
+  {
+   "name": "Freeze",
+   "nameDe": "Einfrieren",
+   "effect": "Setzt das Ziel komplett außer Gefecht, bis es Schaden nimmt oder die Zeit abläuft; danach ist es kurz verlangsamt. Feuer taut sofort auf.",
+   "synergy": "Ice-Damage-Affix (+175 %) – ein starker Treffer auf gefrorene Ziele; Aspekt Shatter (100 Basisschaden beim Brechen). Bosse/Elites werden bei Wiederholung resistenter."
+  },
+  {
+   "name": "Slow",
+   "nameDe": "Verlangsamung",
+   "effect": "Halbiert etwa Bewegungs- und Angriffstempo. Bis zu 5 Stapel; beim 5. wird das Ziel eingefroren.",
+   "synergy": "Alle Eis-Items verlangsamen nach dem Auftauen; Ice Shards, Crow's Foot. Immun u. a. Hand of the King, Giant, Dracula."
+  },
+  {
+   "name": "Stun",
+   "nameDe": "Betäubung",
+   "effect": "Kurzzeitige Handlungsunfähigkeit, bricht laufende Angriffe ab. Nicht stapelbar (nur Auffrischung). Breach erzeugt 1,4 s Stun.",
+   "synergy": "Stun-Damage-Affix (+70 %), Heavy-Stun-Affix, Stun Grenade, Cudgel, Mario-Jump-Amulett."
+  },
+  {
+   "name": "Root",
+   "nameDe": "Bewegungsunfähig",
+   "effect": "Ziel kann sich nicht bewegen oder umdrehen, greift aber weiter an.",
+   "synergy": "Root-Damage-Affix (+75 %), Repeater Crossbow (Krits gegen gefesselte Ziele), Root Grenade, Wolf Trap."
+  },
+  {
+   "name": "Electric",
+   "nameDe": "Elektrifiziert",
+   "effect": "Schaden über Zeit, springt mit Blitzen auf Gegner in der Nähe über (reduzierter Schaden). Nur ein Effekt gleichzeitig. Elektrisches Wasser: 18 Basis-DPS für 2 s, und Krits gegen Gegner im Wasser.",
+   "synergy": "Shock-Damage-Affix (+40 %), Aspekt Superconductor (+50 % pro Sprung), Electric Whip, Tesla Coil, Lightning Rods."
+  },
+  {
+   "name": "Curse",
+   "nameDe": "Fluch",
+   "effect": "Jeder Treffer tötet sofort; der Zähler sinkt um 1 pro Kill. Quellen: verfluchte Truhen (10), Goldtüren, Fluch-Gegner, einige 3.5-Waffen.",
+   "synergy": "Demonic Strength (+30 % Schaden +1 %/Fluch), Damned Vigor, Spite Sword (Krits verflucht), Aspekt Damned."
+  },
+  {
+   "name": "Malaise",
+   "nameDe": "Siechtum",
+   "effect": "Nur 5 BC: steigende Leiste in 10 Stufen, die Gegner stärker, schneller und zahlreicher macht; Kills, Phiolen und Hustensaft senken sie.",
+   "synergy": "Schnelles, gründliches Clearen; Phiole entfernt 150 Punkte."
+  },
+  {
+   "name": "Taunted",
+   "nameDe": "Verspottet",
+   "effect": "Durch die Fertigkeit Taunt: Gegner werden wütend und nehmen +75 % Nahkampfschaden.",
+   "synergy": "Nahkampf-Builds, besonders schwere Waffen."
+  },
+  {
+   "name": "Petrified",
+   "nameDe": "Versteinert",
+   "effect": "Medusa's Head versteinert Gegner; sie können nicht handeln, bis sie fallen oder erneut angestoßen werden (Fallschaden).",
+   "synergy": "Kombination mit Fallschaden; immun: Giant, Dracula."
+  },
+  {
+   "name": "Force field",
+   "nameDe": "Kraftfeld",
+   "effect": "Fast vollständige Unverwundbarkeit. Jedes Schild erzeugt nach einem Treffer 0,65 s eines; senkt die Erholung um 65 %.",
+   "synergy": "Rampart, Force Shield, Tonic, Foresight, Global-Shield-on-Use-Affix."
+  },
+  {
+   "name": "Invisibility",
+   "nameDe": "Unsichtbarkeit",
+   "effect": "Gegner verlieren dich als Ziel; endet bei Schaden. Bosse sind unbeeindruckt.",
+   "synergy": "Aspekt Assassin (erster Angriff tötet Nicht-Bosse), Invisibility-Amulett (+150 % erster Treffer), Smoke Bomb."
+  },
+  {
+   "name": "Damage vulnerability",
+   "nameDe": "Erhöhter Schaden",
+   "effect": "Ziel erleidet prozentual mehr Schaden; mehrere Quellen addieren sich (auch Nachteile wie Double Damage für dich).",
+   "synergy": "Wolf Trap, Hokuto's Bow (Markierung)."
+  }
+ ],
+ "glossary": [
+  {
+   "term": "Run",
+   "explanation": "Ein Durchgang von den Gefängnisunterkünften bis zum Tod oder Sieg. Fast alles außer Freischaltungen wird danach zurückgesetzt."
+  },
+  {
+   "term": "Zellen (Cells)",
+   "explanation": "Permanente Währung für Freischaltungen beim Sammler und die Legendäre Schmiede; gehen beim Tod verloren, wenn nicht ausgegeben."
+  },
+  {
+   "term": "Blaupause (Blueprint)",
+   "explanation": "Bauplan für Items, Mutationen, Upgrades oder Outfits; muss lebend zum Sammler gebracht werden."
+  },
+  {
+   "term": "Sammler (The Collector)",
+   "explanation": "NPC in den Passagen, der Blaupausen gegen Zellen freischaltet."
+  },
+  {
+   "term": "BC / BSC",
+   "explanation": "Boss (Stem) Cell – Boss-Stammzelle. 0–5 BC sind die Schwierigkeitsstufen Normal, Hard, Very Hard, Expert, Nightmare, Hell."
+  },
+  {
+   "term": "Pergament der Macht (Scroll of Power)",
+   "explanation": "+1 auf einen Stat nach Wahl. Zweifarbige Pergamente bieten nur zwei Stats."
+  },
+  {
+   "term": "Pergamentfragment",
+   "explanation": "Ab 3 BC: 4 Stück = 1 Pergament der Macht."
+  },
+  {
+   "term": "Brutalität / Taktik / Überleben",
+   "explanation": "Die drei Stats (Rot/Lila/Grün). Bestimmen Schaden passender Items und die maximalen LP."
+  },
+  {
+   "term": "Farblos (Colorless)",
+   "explanation": "Items, die mit deinem höchsten Stat skalieren – z. B. aus verfluchten Truhen oder legendär."
+  },
+  {
+   "term": "Legendär (L)",
+   "explanation": "Farblose Item-Variante mit +6 Item-Kraft und festem Legendär-Affix; zwei gleichen Typs tragbar."
+  },
+  {
+   "term": "Item-Stufe & Qualität",
+   "explanation": "Römische Zahl (vom Biom abhängig) plus +, ++, S oder L; beides ergibt die Item-Kraft (Schaden, Affix-Slots)."
+  },
+  {
+   "term": "Affix (Modifikator)",
+   "explanation": "Zufällige Zusatz-Eigenschaft eines Items; in der Gewöhnlichen Schmiede neu würfelbar."
+  },
+  {
+   "term": "Legendäre Schmiede",
+   "explanation": "Beim Schmied nach Boss-Biomen: Zellen permanent in höhere Qualitäts-Chancen investieren."
+  },
+  {
+   "term": "Gewöhnliche Schmiede (Minor Forge)",
+   "explanation": "Lehrling des Schmieds in jeder Passage: Items für Gold aufwerten oder Affixe neu würfeln."
+  },
+  {
+   "term": "Verfluchte Truhe (Cursed Chest)",
+   "explanation": "Truhe mit Pergament, Edelstein und farblosem Item – verflucht dich aber für 10 Kills."
+  },
+  {
+   "term": "Fluch (Curse)",
+   "explanation": "Jeder Treffer tötet sofort, bis du genügend Gegner getötet hast."
+  },
+  {
+   "term": "Siechtum (Malaise)",
+   "explanation": "5-BC-Mechanik: Infektionsleiste, die mit der Zeit steigt und Gegner verstärkt."
+  },
+  {
+   "term": "Aspekt",
+   "explanation": "Optionaler, starker Perk vom Doktor im Startbereich; verhindert neue Boss-Zellen und Flawless-Belohnungen."
+  },
+  {
+   "term": "Mutation",
+   "explanation": "Passiver Bonus von Guillain in den Passagen; max. 3 pro Run."
+  },
+  {
+   "term": "Rune",
+   "explanation": "Permanente Fähigkeit (z. B. Ranken, Teleport, Wandklettern), die neue Wege öffnet."
+  },
+  {
+   "term": "Elite",
+   "explanation": "Stärkerer Gegner mit Namensschild und Aura; droppt Items +2 Stufen (meist Amulette), 6 % Legendär-Chance."
+  },
+  {
+   "term": "Starred enemy",
+   "explanation": "Gegner mit gelbem Stern über dem Kopf – trägt ein Pergament oder ein Legendär-Item."
+  },
+  {
+   "term": "Kill-Streak",
+   "explanation": "Kills ohne erlittenen Schaden; 30 bzw. 60 öffnen Killstreak-Türen."
+  },
+  {
+   "term": "Zeittür (Timed Door)",
+   "explanation": "Bonusraum in einer Passage, der nur innerhalb eines Zeitlimits offen ist."
+  },
+  {
+   "term": "No-Hit-/Flawless-Tür",
+   "explanation": "Nach einem makellosen Bosskampf: garantiert ein Legendär-Item."
+  },
+  {
+   "term": "Speedrun-Tür",
+   "explanation": "Umgangssprachlich für Zeittüren (2/8/15/19:30/26 Minuten)."
+  },
+  {
+   "term": "Breach",
+   "explanation": "Unterbrechung eines gegnerischen Angriffs durch genug Schaden; 1,4 s Betäubung."
+  },
+  {
+   "term": "Erholung (Recovery)",
+   "explanation": "Oranger Teil der Lebensleiste, den man durch schnelles Zurückschlagen zurückholt."
+  },
+  {
+   "term": "Ein-Treffer-Schutz",
+   "explanation": "Ein tödlicher Treffer bei über 25 % LP lässt dich mit 1 LP überleben (45 s Abklingzeit)."
+  },
+  {
+   "term": "Parade (Parry)",
+   "explanation": "Schild im richtigen Moment antippen: kein Schaden, Gegner betäubt, Projektile zurückgeworfen."
+  },
+  {
+   "term": "Zweihandwaffe",
+   "explanation": "Belegt beide Waffenslots, hat zwei aufeinander abgestimmte Angriffe."
+  },
+  {
+   "term": "Passage",
+   "explanation": "Übergangsbereich zwischen Biomen mit Sammler, Guillain, Schmied-Lehrling und ggf. Brunnen."
+  },
+  {
+   "term": "Herausforderungs-Riss (Challenge Rift)",
+   "explanation": "Bodenrune (20 % pro Nicht-Boss-Biom) zu einem Fallen-Parcours mit Truhe: Amulett, Pergament, Edelstein, viele Zellen."
+  },
+  {
+   "term": "Legendär-Altar",
+   "explanation": "Altar mit Legendär-Item; Gegner in der Nähe haben 66 % Schadensreduktion."
+  },
+  {
+   "term": "Wandversteck (Wall secret)",
+   "explanation": "Leuchtende, zerbrechliche Wand- oder Bodenkacheln mit Essen oder Edelsteinen."
+  },
+  {
+   "term": "Bank (The Bank)",
+   "explanation": "Gold-Biom, erreichbar über eine Truhe in einer Passage nach dem ersten Besuch im Throne Room/The Crown."
+  },
+  {
+   "term": "Custom Mode",
+   "explanation": "Frei konfigurierbare Runs; viele Optionen sperren Erfolge."
+  },
+  {
+   "term": "Boss Rush",
+   "explanation": "Modus mit Bossen am Stück (4 Prüfungen + DIY)."
+  },
+  {
+   "term": "Tägliche Herausforderung",
+   "explanation": "Täglicher Punkte-Run mit 4:30 Minuten Limit."
+  },
+  {
+   "term": "Richter Mode",
+   "explanation": "Festes Castlevania-Level, in dem man Richter Belmont spielt."
+  }
+ ],
+ "beginnerTips": [
+  "Kaufe beim Sammler zuerst Medizinphiole I–IV, Recycling I/II und günstige Goldreserven; danach die zufälligen Start-Waffen.",
+  "Bringe Zellen und Blaupausen immer zur nächsten Passage – stirbst du vorher, sind sie verloren.",
+  "Wähle früh eine Hauptfarbe und lege fast alle Pergamente dort hinein. Schaden wächst exponentiell (ca. Verdopplung alle 5 Punkte).",
+  "Trage nach Möglichkeit ein Schild: Parieren negiert Schaden komplett und schützt vor Fernkampf.",
+  "Schlage sofort zurück, wenn du getroffen wurdest – über die Erholung holst du einen Teil der verlorenen LP zurück.",
+  "Rollen weicht fast allem aus, aber nicht Bodenwellen und Explosionen von Kamikaze-Gegnern.",
+  "Öffne Türen durch Rollen oder Schlagen: Gegner dahinter werden betäubt.",
+  "Hol dir die Vine Rune (Promenade) und Teleportation Rune (Toxic Sewers) früh – sie öffnen viele Wege.",
+  "Verfluchte Truhen lohnen sich meist in frühen Biomen (viele schwache Gegner zum Aufheben des Fluchs).",
+  "Der Ein-Treffer-Schutz rettet dich einmal bei über 25 % LP – trinke danach die Phiole, um ihn zurückzusetzen.",
+  "Nutze Aspekte oder den Assist Mode zum Lernen; sie verhindern nur neue Boss-Zellen bzw. Ranglisten-Einträge.",
+  "Wenn du eine neue Waffe testen willst: Trainingsraum (Schlüssel auf der Leiche des Tutorial-Ritters ab dem 4. Run)."
+ ],
+ "advancedTips": [
+  "Dual-Pergamente erscheinen bevorzugt mit deinen niedrigsten Stats – plane Hybrid-Builds deshalb nur bewusst.",
+  "Advanced Forge I + Gewöhnliche Schmiede: frühe Basis-Items auf ++ heben; aufwerten würfelt seit 2.8 die Affixe nicht mehr neu.",
+  "Legendär-Pity: Gegner-Legendärchance steigt um 2 % je Biom ohne Drop, Altarchance um 15 % je Biom ohne Altar.",
+  "No-Hit-Tür: Bosse makellos besiegen garantiert ein Legendär-Item aus deinen freigeschalteten Items.",
+  "Verfluchte Biome (ab 2 BC) geben +1 Item-Stufe und mehr verfluchte Truhen – mit Mimic im verfluchten Cavern sind Items der Stufe XV-S möglich.",
+  "Ab 4 BC teleportieren sich Gegner – achte auf die roten Umrisse und weiche vorher aus.",
+  "Auf 5 BC das Siechtum über Kills klein halten: Elites (25) und Bosse (250) senken es stark; bei 90 % getöteter Gegner ist das Biom gereinigt.",
+  "Breach nutzen: harte Kombo-Finisher und Schilde unterbrechen gegnerische Angriffe; Bosse sind immun.",
+  "Damned Vigor, Ice Armor oder Foresight verhindern den Fluch-Tod – Grundlage für aggressive Fluch-Builds aus Update 3.5.",
+  "Die Tür nach dem Sammler lässt sich zerschlagen: So kann man Zellen für eine große Investition in der Legendären Schmiede sparen – riskant.",
+  "Elektrische Waffen kritten gegen Gegner im Wasser; Eisangriffe in Wasser frieren das ganze Becken an (verlangsamt und fesselt).",
+  "Fester Seed im Custom Mode (nach 4 Runen) eignet sich, um Routen mit vielen verfluchten Truhen oder Rissen zu üben.",
+  "Mehrere Double-/Quad-Damage-Items addieren ihre Schadensnachteile – eine Glaskanone verträgt nur wenige Treffer.",
+  "Restock + Merchandise Categories: gezielt in der Hauptfarbe einkaufen, aber Preise steigen pro Würfeln um 40 %."
+ ],
+ "cellFarming": [
+  "Gründlich clearen: Fast jeder Gegner kann Zellen droppen; ein Biom enthält grob ein Viertel so viele Zellen wie Gegner.",
+  "Höhere Boss-Zellen: Zellen-Drops ab 2 BC ×2, ab 4 BC ×3 – sobald man sicher ist, lohnt höheres BC auch fürs Farmen.",
+  "Zeit- und Killstreak-Türen geben je 20 Zellen plus Items und Edelsteine.",
+  "Herausforderungs-Risse: Truhe mit vielen Zellen (je tiefer das Biom, desto mehr), dazu Amulett, Pergament und Edelstein.",
+  "Späte Biome (ab Clock Tower/High Peak Castle) und Bosse liefern deutlich mehr Zellen als frühe Biome.",
+  "Hand of the King: Zellen beim Erreichen des Throne Rooms plus 40 Boss-Zellen landen nach dem Sieg im Residual-Cells-Beutel des nächsten Runs (ebenso nach Dracula - Final Form und Richter Mode).",
+  "Liposuction-Pickup (0,3 % Drop): 45 s lang +1 Zelle pro Kill.",
+  "Boss Rush: Bosse geben doppelte Zellen, der letzte Boss 150–300 – aber nur in der Legendären Schmiede am Ende verwendbar.",
+  "Custom Mode: Zellen und Freischaltungen zählen auch dort; mit starker Startausrüstung lässt sich gefahrloser farmen (Achtung: manche Optionen sperren nur Erfolge, nicht Zellen).",
+  "Nicht zu gierig werden: lieber Zellen beim Sammler ausgeben als im nächsten Biom alles verlieren (Erfolg „Ohhhhhh! That hurt!“ gibt es fürs Sterben mit 100+ Zellen)."
+ ],
+ "achievementsOrSecrets": [
+  {
+   "name": "Tutorial-Ritter",
+   "how": "Ab dem 4. Run liegt ihre Leiche in den Gefängnisunterkünften: garantierter Rubin (1.500 Gold) und der Schlüssel zum Trainingsraum."
+  },
+  {
+   "name": "Gardener's Keys (Promenade)",
+   "how": "Drei Schlüssel – Ram Rune, Spider- oder Homunculus-Rune, und eine versteckte Blume, die man dreimal niederstampft – öffnen die Explosive-Crossbow-Blaupause."
+  },
+  {
+   "name": "Moonflower Keys",
+   "how": "Je ein geheimer Raum in Ramparts, Graveyard und Forgotten Sepulcher (Gardener's Key nötig). Alle drei öffnen in High Peak Castle die Blaupause der Mutation Acceptance; dafür braucht man 3 BC (Weg Ramparts → Insufferable Crypt)."
+  },
+  {
+   "name": "Bell Tower Key (Clock Tower)",
+   "how": "Die 4 Glocken in aufsteigender Tonhöhe läuten – der Schlüssel öffnet die Punishment-Blaupause."
+  },
+  {
+   "name": "Architect's Key (Graveyard)",
+   "how": "In einem Wandversteck im unterirdischen Teil; öffnet die Blaupausen für Merchandise Categories und Parting Gift."
+  },
+  {
+   "name": "Gold Reserves V",
+   "how": "Blaupause in einem geheimen Labyrinth der Ancient Sewers, nur mit der Homunculus Rune erreichbar."
+  },
+  {
+   "name": "Ancient Sewers – 8 Türen",
+   "how": "Drei Old Service Keys von Gegnern öffnen Türen am Ende des Bioms (u. a. Saphir 1.000 Gold)."
+  },
+  {
+   "name": "High Peak Castle – dritter Schlüssel",
+   "how": "Der dritte Castle Key öffnet einen Raum mit Pergament der Macht, 2 Items und der Boomerang-Blaupause."
+  },
+  {
+   "name": "Stilt Village",
+   "how": "Ein Geheimbereich mit Village Key enthält die Parry-Shield-Blaupause."
+  },
+  {
+   "name": "Recycling Tubes",
+   "how": "Blaupause droppt The Hand of the King auf 1 BC."
+  },
+  {
+   "name": "Advanced Forge I",
+   "how": "Blaupause beim 6. Sieg über Conjunctivius."
+  },
+  {
+   "name": "Cavern Key",
+   "how": "Nach dem ersten Sieg über Hand of the King: großer Tür im Startbereich mit Homunculus Rune – öffnet dauerhaft den Weg zur Cavern."
+  },
+  {
+   "name": "The Bank",
+   "how": "Truhe in einer Passage (nach erstem Throne-Room-/Crown-Besuch): Gold, Mimics (Item +2 Stufen), Gentleman's-Outfit-Blaupause im Plattform-Puzzle hinter dem Green Pass."
+  },
+  {
+   "name": "Mimic",
+   "how": "Nach der ersten Begegnung kann ein Mimic auch außerhalb der Bank einen Händler ersetzen; besiegt droppt er das gekaufte Item verbessert."
+  },
+  {
+   "name": "Herausforderungs-Riss",
+   "how": "Erster Riss enthält die Crow's-Foot-Blaupause; kompletter Parcours = Erfolg „See, that wasn't so hard now, was it?“."
+  },
+  {
+   "name": "Tägliche Herausforderung",
+   "how": "Blaupausen nach 1/5/10 Abschlüssen: Swift Sword, Lacerating Aura, Meat Skewer."
+  },
+  {
+   "name": "Boss Rush",
+   "how": "Peril Glyphs, Taunt und Wish als Prüfungsbelohnungen sowie Statuenteile und Outfits."
+  },
+  {
+   "name": "Richter Mode",
+   "how": "Geheimbereich rechts auf der Karte mit der Alucard's-Sword-Blaupause."
+  },
+  {
+   "name": "Cultist Outfit",
+   "how": "Ohne dieses Outfit kein erster Zugang von Fractured Shrines zu Undying Shores."
+  },
+  {
+   "name": "Outfit-Sammlung",
+   "how": "16 Outfits schalten Sewing Scissors frei, 51 Outfits die Giant Comb."
+  },
+  {
+   "name": "Specialist's Showroom",
+   "how": "Hunter's Grenade (zwingt Gegner, Blaupausen zu droppen), Forgotten Map und Golden Outfit – Goldtüren oder 50 Flüche."
+  },
+  {
+   "name": "Infested Shipwreck – Mysterious Map",
+   "how": "Vier Kartenteile ergeben eine Schatzkarte zum Forked Key, der den Lore-Raum mit dem Abyssal Trident öffnet."
+  },
+  {
+   "name": "Pets streicheln",
+   "how": "In Passagen Interaktion gedrückt halten, um Begleiter zu streicheln (seit 3.0)."
+  }
+ ]
+}

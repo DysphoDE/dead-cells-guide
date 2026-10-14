@@ -1,0 +1,13 @@
+# Arbeitsdateien der Recherche (groß, regenerierbar)
+research/cache/
+__pycache__/
+*.pyc
+
+# Altlasten des abgebrochenen Erstversuchs
+_alt-openai/
+prisoners-guide/
+
+# Lokales
+.claude/
+.DS_Store
+Thumbs.db

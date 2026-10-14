@@ -1,0 +1,2889 @@
+{
+ "meta": {
+  "researchedAt": "2026-10-14",
+  "gameVersion": "3.5 'The End is Near' (35.8 live 2024-08; 35.9 ohne Balance-Änderungen)",
+  "language": "de",
+  "namesLanguage": "en",
+  "method": "Konsens aus Community-Quellen (Steam-Foren/Guides, Videotitel), Tier-Listen-Seiten (schwach gewichtet), Patchnotes 3.0–3.5 und Wiki-Mechanik. Reddit war technisch nicht abrufbar.",
+  "tierNote": "Tiers gelten für hohe BC (3–5), sofern 'why' nichts anderes sagt. Feld 'confidence': hoch = mehrere unabhängige Quellen; mittel = 1–2 Quellen plus Patch-/Mechaniklage; niedrig = redaktionelle Einordnung.",
+  "coverage": {
+   "weapons": 110,
+   "shields": 15,
+   "skills": 59,
+   "mutations": 56,
+   "notRated": []
+  },
+  "sources": [
+   {
+    "title": "Dead Cells Wiki (wiki.gg): Item-/Mutationsseiten inkl. History, Biomes, Curse, Stats, Boss Stem Cells",
+    "url": "https://deadcells.wiki.gg/",
+    "date": "2026-10-14",
+    "kind": "wiki"
+   },
+   {
+    "title": "Offizielle Patchnotes 3.0–3.5 (Motion Twin)",
+    "url": "https://deadcells.com/patchnotes",
+    "date": "2022-08 bis 2024-08 (35.9: 2026-06)",
+    "kind": "patchnotes"
+   },
+   {
+    "title": "Steam: What's your favorite build?",
+    "url": "https://steamcommunity.com/app/588650/discussions/0/3196993316881133865",
+    "date": "2022-01",
+    "kind": "community"
+   },
+   {
+    "title": "Steam: How to abuse and beat 5BC Difficulty, Survival Build",
+    "url": "https://steamcommunity.com/app/588650/discussions/5/3844431603849506591",
+    "date": "2023-06",
+    "kind": "community"
+   },
+   {
+    "title": "Steam: Tips for 5bc?",
+    "url": "https://steamcommunity.com/app/588650/discussions/0/3196992771953380337",
+    "date": "2022-01",
+    "kind": "community"
+   },
+   {
+    "title": "Steam: Just beat the game on 5BC",
+    "url": "https://steamcommunity.com/app/588650/discussions/0/4408466785409709597",
+    "date": "2022-03",
+    "kind": "community"
+   },
+   {
+    "title": "Steam-Guide: A guide to cheesing 5 Boss Cells (V35)",
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3323424572",
+    "date": "2024-09-02",
+    "kind": "guide"
+   },
+   {
+    "title": "Gamersdecide: Best Builds / Melee / Ranged / Skills / Mutations / Routes",
+    "url": "https://gamersdecide.com/articles/dead-cells-best-builds",
+    "date": "2021–2024",
+    "kind": "tierlist (schwach)"
+   },
+   {
+    "title": "Choost Games: Weapon Tier List (Final Update)",
+    "url": "https://choostgames.com/blog/dead-cells-weapon-tier-list/",
+    "date": "2026-04-30",
+    "kind": "tierlist (schwach)"
+   },
+   {
+    "title": "PocketGamer: Weapon Tier List (v3.5.9, nach Grundschaden)",
+    "url": "https://www.pocketgamer.com/dead-cells/weapon-tier-list",
+    "date": "2026-10-08",
+    "kind": "tierlist (schwach)"
+   },
+   {
+    "title": "ScreenRant: 10 Best Weapons",
+    "url": "https://screenrant.com/dead-cells-best-weapons/",
+    "date": "2024-01-05",
+    "kind": "tierlist (schwach)"
+   },
+   {
+    "title": "AllClash: Melee Tier List",
+    "url": "https://www.allclash.com/the-best-weapons-tier-list-in-dead-cells/",
+    "date": "2022-08-06",
+    "kind": "tierlist (schwach)"
+   },
+   {
+    "title": "YouTube VeeDotMe: Mutations Tier List (The Final Update) – nur Titel/Beschreibung",
+    "url": "https://youtu.be/6okDiuQAiUw",
+    "date": "2024-06-10",
+    "kind": "video"
+   }
+  ]
+ },
+ "tiers": {
+  "weapons": [
+   {
+    "name": "Ferryman's Lantern",
+    "tier": "S",
+    "confidence": "hoch",
+    "why": "In fast allen Listen ganz oben: Kills sammeln Seelen, ein voll geladener Soul Shot mit 4+ Seelen kritet und schmilzt Bosse. Gegen Bosse holt der letzte Combo-Treffer Seelen."
+   },
+   {
+    "name": "Death's Scythe",
+    "tier": "S",
+    "confidence": "hoch",
+    "why": "Getötete Gegner explodieren als Geister mit Krit-Schaden relativ zu ihrer Max-HP – räumt Gruppen von selbst ab. Seit 3.4 etwas kleinere Explosion, trotzdem Top."
+   },
+   {
+    "name": "Meat Skewer",
+    "tier": "S",
+    "confidence": "hoch",
+    "why": "Am häufigsten hoch eingestufte Nahkampfwaffe: erster Stich setzt dich hinter den Gegner, der nächste Schlag kritet garantiert – sicher und schnell."
+   },
+   {
+    "name": "Rapier",
+    "tier": "S",
+    "confidence": "hoch",
+    "why": "Kritet direkt nach Rolle oder Parade; mit Front Line Shield oder Armadillopack fast dauerhaft. 3.0 leicht generft, bleibt Liebling vieler Spieler."
+   },
+   {
+    "name": "Giantkiller",
+    "tier": "S",
+    "confidence": "hoch",
+    "why": "Kritet garantiert gegen Elites und Bosse – die zuverlässigste Boss-Waffe; viele tragen sie als Zweitwaffe nur für Bosskämpfe."
+   },
+   {
+    "name": "War Spear",
+    "tier": "S",
+    "confidence": "mittel",
+    "why": "Kritet bei mehreren getroffenen Zielen, große Reichweite; seit 2.4/2.8 stark gebufft und Kern des beliebten 'unkaputtbaren' Survival-Builds auf 5 BC."
+   },
+   {
+    "name": "Scythe Claw",
+    "tier": "S",
+    "confidence": "mittel",
+    "why": "Abwechselnd linke/rechte Klaue = Dauerkrit; mit Kill Rhythm sehr hohe DPS. 3.5 behob einen Bug, der die Legendary-Version schwächte."
+   },
+   {
+    "name": "Assassin's Dagger",
+    "tier": "A",
+    "confidence": "hoch",
+    "why": "Kern des meistgenannten Builds (mit Phaser): Rückenstiche kritten. Ohne Teleport-Skill deutlich schwächer."
+   },
+   {
+    "name": "Balanced Blade",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Schaden steigt mit jedem Treffer bis +90 %, ab 10 Treffern Krits. Profitiert stark vom 3.4-Combo-Rework."
+   },
+   {
+    "name": "Frantic Sword",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Kritet unter 50 % HP oder über 50 % Malaise – auf 5 BC ist die Bedingung oft automatisch erfüllt. Riskant, aber hoher Schaden."
+   },
+   {
+    "name": "Cursed Sword",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Jeder Treffer kritet, aber jeder erlittene Treffer tötet. Nur für sichere Spieler; mit Ice Armor/Foresight als Versicherung spielbar."
+   },
+   {
+    "name": "Sadist's Stiletto",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Kritet gegen blutende oder vergiftete Ziele – mit Open Wounds oder Giftquellen praktisch Dauerkrit. Außerhalb von Status-Builds schwach."
+   },
+   {
+    "name": "Snake Fangs",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Teleportiert zum nächsten Ziel und vergiftet; ab mehr als 5 Giftstapeln Krits. Gegen einzelne Bosse (z. B. Conjunctivius) sehr stark."
+   },
+   {
+    "name": "Symmetrical Lance",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Nach zwei schnellen Kills 6 s lang Krits – in vollen Räumen kaum zu stoppen. Gratis-Fund nach dem ersten Sieg über die Hand of the King."
+   },
+   {
+    "name": "Pure Nail",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Angriffe im Laufen und nach oben, Abprallen auf Gegnern verursacht Krits – sehr mobil."
+   },
+   {
+    "name": "Baseball Bat",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Hämmert betäubte/verwurzelte Ziele mit Krits; Kern der 'Bonk'-Builds. 3.3 wurde ein Endlos-Krit-Exploit entfernt."
+   },
+   {
+    "name": "Toothpick",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Aufgeladener Schlag mit enormem Schaden, danach 6 s gebrochen. Beliebt für Bosse."
+   },
+   {
+    "name": "Vampire Killer",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Ignoriert Schilde, kritet gegen brennende Ziele und lässt Getötete den Boden anzünden – zündet sich selbst die Krit-Bedingung."
+   },
+   {
+    "name": "Alucard's Sword",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Teleportiert auf mittlere Distanz zum Ziel und kritet dabei; sehr sicherer Angriff aus dem Abstand."
+   },
+   {
+    "name": "Hattori's Katana",
+    "tier": "B",
+    "confidence": "mittel",
+    "why": "Früher Spitzenwaffe; 3.2 Krit-Dash-Schaden stark gesenkt, 2.4 Unverwundbarkeit verloren. Mit Predator noch spielbar."
+   },
+   {
+    "name": "Bladed Tonfas",
+    "tier": "B",
+    "confidence": "mittel",
+    "why": "Sprungangriff aktiviert eine Krit-Combo; Einschätzungen gehen weit auseinander (von S bis C)."
+   },
+   {
+    "name": "Nutcracker",
+    "tier": "B",
+    "confidence": "mittel",
+    "why": "Kritet gegen betäubte, gefrorene oder verwurzelte Ziele – im Frost-/Kontroll-Build stark, sonst schwach. Umstritten."
+   },
+   {
+    "name": "Broadsword",
+    "tier": "B",
+    "confidence": "mittel",
+    "why": "Zweiter und dritter Schlag kritten; langsam, aber solide Survival-Waffe."
+   },
+   {
+    "name": "Oiled Sword",
+    "tier": "B",
+    "confidence": "mittel",
+    "why": "Ölt Gegner und kritet nach Treffern auf Brennende – im Feuer-Build stark (S), allein mittelmäßig."
+   },
+   {
+    "name": "Twin Daggers",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Jeder dritte Treffer kritet; einfache, verlässliche Starterwaffe mit 2.4-Buff."
+   },
+   {
+    "name": "Spite Sword",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Kritet nach erlittenem Schaden oder während eines Fluchs; passt zu Vengeance und Fluch-Builds."
+   },
+   {
+    "name": "Tombstone",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Tötet der letzte Schlag, entsteht ein Grabstein, der Gegner in der Nähe verdammt. Mit No Mercy beliebt."
+   },
+   {
+    "name": "Sewing Scissors",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Tötet ein Schlag einen Gegner, sterben alle gleichzeitig getroffenen Ziele mit – gut gegen Gruppen."
+   },
+   {
+    "name": "Oven Axe",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Wiederholter letzter Combo-Schlag kritet; hoher Grundschaden."
+   },
+   {
+    "name": "Flint",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Aufgeladener Schlag kritet und hinterlässt eine Feuerspur."
+   },
+   {
+    "name": "Wrecking Ball",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Seit 3.0 deutlich stärker (mehr DPS, weniger Lock); Wurf und Rückholung treffen doppelt."
+   },
+   {
+    "name": "Maw of the Deep",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Dritter Angriff verwurzelt und lässt bluten, Krits gegen Verwurzelte; seit 3.0 gebufft."
+   },
+   {
+    "name": "Starfury",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Seit 3.3 zwei Sterne pro Treffer mit Krit-Schaden – unterschätzte Hybridwaffe."
+   },
+   {
+    "name": "Gold Digger",
+    "tier": "B",
+    "confidence": "mittel",
+    "why": "Treffer lassen Gold fallen, Krits ab 12.000 Gold. Stark in Gold-Builds, sonst mittelmäßig."
+   },
+   {
+    "name": "Rhythm n' Bouzouki",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Krits bei Treffern im Takt – stark, wenn man den Rhythmus beherrscht."
+   },
+   {
+    "name": "Iron Staff",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Erster Schlag pariert Nahkampf, danach kritet die Combo – Nischenwaffe für Parier-Spieler."
+   },
+   {
+    "name": "Hard Light Sword",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Pistolen-Markierungen erhöhen den Krit-Schaden des Schwerts; 3.0 gebufft."
+   },
+   {
+    "name": "Shrapnel Axes",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Splitter treffen zusätzlich umstehende Gegner; ordentlich gegen Gruppen."
+   },
+   {
+    "name": "Impaler",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Kritet, wenn das Ziel an einer Wand steht – gut in engen Biomen."
+   },
+   {
+    "name": "Blood Sword",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Einfache Blutungsquelle; in Bleed-Builds mit Sadist's Stiletto oder Hemorrhage nützlich."
+   },
+   {
+    "name": "Valmont's Whip",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Ignoriert Schilde, Krit mit der Peitschenspitze; Abstand halten nötig."
+   },
+   {
+    "name": "Misericorde",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Kritet unter 50 % HP; seit 3.5.7 verflucht sie nur bei Nicht-Krits. Gut als Finisher in Fluch-Builds."
+   },
+   {
+    "name": "Bible",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Wurfprojektil nach dem zweiten Treffer mit steigenden Krits; seit 3.4 schwere Waffe."
+   },
+   {
+    "name": "Whip Sword",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Wechsel zwischen Schwert- und Peitschenform gewährt 1,5 s Krits; seit 3.4 durchdringt die Peitsche Schilde."
+   },
+   {
+    "name": "Morning Star",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Kann gehalten und mitgeschwungen werden, Krits mit der Kugel."
+   },
+   {
+    "name": "Crowbar",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Krits gegen Tiere/Monster und nach Türzerstörung (seit 3.4: 15 s). Situativ."
+   },
+   {
+    "name": "Swift Sword",
+    "tier": "C",
+    "confidence": "mittel",
+    "why": "Krits während eines Tempo-Buffs; Kern des Speed-Builds, sonst schwach."
+   },
+   {
+    "name": "Machete and Pistol",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Dritter Angriff schießt mit Krit; solide, aber unauffällig."
+   },
+   {
+    "name": "Hayabusa Boots",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Letzter Tritt mit Flächenschaden und Rückstoß."
+   },
+   {
+    "name": "Hayabusa Gauntlets",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Krits gegen Ziele unter 40 % HP – Finisher, schwacher Opener."
+   },
+   {
+    "name": "Seismic Strike",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Schockwellen verwurzeln – eher Kontrolle als Schaden."
+   },
+   {
+    "name": "Bone",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Wirbelangriff nach zweitem Treffer kritet; Mittelmaß."
+   },
+   {
+    "name": "Panchaku",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Krits gegen Gegner, die dich ansehen; mittelmäßig."
+   },
+   {
+    "name": "Vorpan",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Krits gegen Gegner, die dich ansehen; mittelmäßig."
+   },
+   {
+    "name": "Spartan Sandals",
+    "tier": "C",
+    "confidence": "mittel",
+    "why": "Rückstoß-Tritte, Bonusschaden an Wänden – in mehreren Listen unten."
+   },
+   {
+    "name": "Shovel",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Schleudert Gegner und Bomben zurück; Nische."
+   },
+   {
+    "name": "Torch",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Einfache Brennquelle für Feuer-Builds."
+   },
+   {
+    "name": "Flawless",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Krits nur, wenn 15 s kein Schaden erlitten wurde – auf hohen BC unzuverlässig."
+   },
+   {
+    "name": "Abyssal Trident",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Krit-Ladeangriff mit Timing; umständlich."
+   },
+   {
+    "name": "Queen's Rapier",
+    "tier": "C",
+    "confidence": "mittel",
+    "why": "Reality-Slice trifft doppelt; trotz 3.0-Buff in Listen unten."
+   },
+   {
+    "name": "King Scepter",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Sprung-Kombos mit Krits beim Abprallen; sehr technisch."
+   },
+   {
+    "name": "Giant Comb",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Wirft Gegner hoch, Krits gegen Ziele in der Luft; Nische."
+   },
+   {
+    "name": "Spiked Boots",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Krit nur beim Unterbrechen von Angriffen."
+   },
+   {
+    "name": "Wrenching Whip",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Zieht Gegner heran, jeder dritte Schlag kritet."
+   },
+   {
+    "name": "Flashing Fans",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Krits 8 s nach reflektiertem Projektil – stark situativ."
+   },
+   {
+    "name": "Rusty Sword",
+    "tier": "D",
+    "confidence": "mittel",
+    "why": "Startwaffe ohne Effekt; so schnell wie möglich ersetzen."
+   },
+   {
+    "name": "Hand Hook",
+    "tier": "D",
+    "confidence": "mittel",
+    "why": "Wurf an die Wand mit Krit; in mehreren Listen ganz unten."
+   },
+   {
+    "name": "Tentacle",
+    "tier": "D",
+    "confidence": "mittel",
+    "why": "Zieht dich zum Gegner; schwacher Schaden, in mehreren Listen ganz unten."
+   },
+   {
+    "name": "Dagger of Profit",
+    "tier": "D",
+    "confidence": "mittel",
+    "why": "Krits nur kurz nach Goldaufnahme; zu unzuverlässig."
+   },
+   {
+    "name": "Ice Bow",
+    "tier": "S",
+    "confidence": "mittel",
+    "why": "Friert kurz ein und macht Gegner damit zu Krit-Zielen für Nutcracker, Baseball Bat oder Ice-Damage-Affixe; Kern fast aller Frost-Builds."
+   },
+   {
+    "name": "Ice Crossbow",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Friert ein; der Piercing Shot kritet und holt Bolzen aus gefrorenen Zielen zurück – Frost-Kontrolle mit eigenem Schaden."
+   },
+   {
+    "name": "Heavy Crossbow",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Schrotflinten-Salve auf kurze Distanz, Nachladen sorgt für Krit; sehr hoher Burst."
+   },
+   {
+    "name": "Hokuto's Bow",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Markierung mit Zusatz-DPS, die sich bei Kills ausbreitet; 3.0 generft, bleibt in Taktik-Builds beliebt."
+   },
+   {
+    "name": "Repeater Crossbow",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Dauerfeuer mit Krits auf verwurzelte Ziele, der Quiver of Bolts verwurzelt selbst. Klassiker mit Barbed Tips."
+   },
+   {
+    "name": "Lightning Bolt",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Gehalten kritet der Blitz; mit Frost-Kontrolle stark. Vorsicht: Dauerfeuer schadet dir selbst."
+   },
+   {
+    "name": "Fire Blast",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Flammenstoß mit Krits auf Öl – Herzstück des Öl-/Feuer-Builds."
+   },
+   {
+    "name": "Throwable Objects",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Betäubt jeden getroffenen Gegner und lädt bei Kills nach – perfekter Partner für Baseball Bat und Nutcracker."
+   },
+   {
+    "name": "Electric Whip",
+    "tier": "B",
+    "confidence": "mittel",
+    "why": "Ignoriert Schilde, trifft Nachbarn und schockt. 2.4 Schock-DPS halbiert, wird aber weiter gern gespielt (mit Wings of the Crow)."
+   },
+   {
+    "name": "Infantry Bow",
+    "tier": "B",
+    "confidence": "mittel",
+    "why": "Krits auf kurze Distanz – Fernkampf für Nahkämpfer; mit Point Blank gut."
+   },
+   {
+    "name": "Marksman's Bow",
+    "tier": "B",
+    "confidence": "mittel",
+    "why": "Krits auf lange Distanz; bis 3 BC stark, auf 4–5 BC umstritten (zu langsam)."
+   },
+   {
+    "name": "Alchemic Carbine",
+    "tier": "B",
+    "confidence": "mittel",
+    "why": "Vergiftet dauerhaft, praktisch unbegrenzte Munition; mit Barnacle oder Hokuto's Bow beliebt."
+   },
+   {
+    "name": "Quick Bow",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Krit ab 3 steckenden Pfeilen; Legendary seit 3.5 mit Sharpshooter (Munition bei Krit)."
+   },
+   {
+    "name": "Magic Missiles",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Zielt automatisch – sehr einsteigerfreundlich, seit 2.4 gebufft."
+   },
+   {
+    "name": "Sonic Carbine",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Durchschlägt Gegner, Krits gegen Ziele hinter dem ersten; 3.0 leicht generft."
+   },
+   {
+    "name": "Throwing Knife",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Zielsuchend und lässt bluten – einfache Bleed-Ergänzung."
+   },
+   {
+    "name": "The Boy's Axe",
+    "tier": "B",
+    "confidence": "mittel",
+    "why": "Verwurzelt das Ziel; Partner für Baseball Bat (mehrere Steam-Spieler auf 5 BC). 3.0 Schaden gesenkt, 3.4 wieder mit Ammo kompatibel."
+   },
+   {
+    "name": "Boomerang",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Kehrt automatisch zurück; mit Ammo (3.4) doppelte Würfe."
+   },
+   {
+    "name": "Explosive Crossbow",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Explodierende Bolzen mit Krit-Wunde; solide Flächenwaffe."
+   },
+   {
+    "name": "Pyrotechnics",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Mehrere Feuerprojektile, Krits auf Öl – Alternative im Feuer-Build."
+   },
+   {
+    "name": "Frost Blast",
+    "tier": "B",
+    "confidence": "mittel",
+    "why": "Friert alles vor dir ein, aber kein Schaden auf bereits Gefrorene – reines Kontrollwerkzeug."
+   },
+   {
+    "name": "Medusa's Head",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Versteinert Gegner auf dem Rollweg; 3.4 gebufft, Bewertungen schwanken stark."
+   },
+   {
+    "name": "Laser Glaive",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Springt zwischen Zielen, Krits ab dem zweiten Abprall – gut gegen Gruppen."
+   },
+   {
+    "name": "Cross",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Bumerang-Kreuz mit Krits beim Rückweg."
+   },
+   {
+    "name": "Multiple-nocks Bow",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Drei Pfeile gleichzeitig; ohne Krit-Bedingung."
+   },
+   {
+    "name": "Bow and Endless Quiver",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Unbegrenzte Munition, letzter Schuss kritet."
+   },
+   {
+    "name": "Ice Shards",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Verlangsamt, Krits auf Ziele in Wasser/Öl; 2.4 generft."
+   },
+   {
+    "name": "Firebrands",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Setzt Boden und Gegner in Brand – nur als Feuer-Zubringer."
+   },
+   {
+    "name": "Throwing Axe",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Parabelwurf mit Krit im Fall; umständlich zu zielen."
+   },
+   {
+    "name": "Money Shooter",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Feuert Gold mit Krit; teuer, 3.4.2 Legendary-Rückerstattung halbiert."
+   },
+   {
+    "name": "Barrel Launcher",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Fass mit Krit nach Abprallen; Nische."
+   },
+   {
+    "name": "Killing Deck",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Karten mit Krit beim Zurückrufen; mittelmäßig."
+   },
+   {
+    "name": "Gilded Yumi",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Schwere Pfeile, Krit/Betäubung bei Wandtreffern; 3.0 umgebaut."
+   },
+   {
+    "name": "Blowgun",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Gift + Rückenkrits; schwierig einzusetzen."
+   },
+   {
+    "name": "Hemorrhage",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Blutung + Krits auf Blutende/Vergiftete; Ergänzung im Bleed-Build."
+   },
+   {
+    "name": "Nerves of Steel",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Krit bei perfektem Timing; anspruchsvoll."
+   },
+   {
+    "name": "War Javelin",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Durchbohrt Gegner, Teleport zum Speer; Bewertung uneinheitlich."
+   },
+   {
+    "name": "Peril Glyphs",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Combo wird mit fehlender HP länger; riskant."
+   },
+   {
+    "name": "Anathema",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Starkes Explosivgeschoss, verflucht dich bei Treffern – nur für Fluch-Builds."
+   },
+   {
+    "name": "Magic Bow",
+    "tier": "D",
+    "confidence": "niedrig",
+    "why": "Zielsuchende Pfeile; 3.0 generft, kaum empfohlen."
+   },
+   {
+    "name": "Beginner's Bow",
+    "tier": "D",
+    "confidence": "mittel",
+    "why": "Startbogen; früh ersetzen."
+   }
+  ],
+  "shields": [
+   {
+    "name": "Spiked Shield",
+    "tier": "S",
+    "confidence": "hoch",
+    "why": "Hoher Block- und Paradeschaden (Paraden kritten, 3.0 gebufft); von Community und Listen gleichermaßen gelobt."
+   },
+   {
+    "name": "Knockback Shield",
+    "tier": "S",
+    "confidence": "mittel",
+    "why": "Stößt Gegner weg, Wandtreffer verursachen Zusatzschaden (doppelt bei Parade) – an Wänden gegen Bosse sehr stark."
+   },
+   {
+    "name": "Rampart",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Blockt am meisten Schaden und erzeugt nach Parade ein Kraftfeld – sicherster Boss-Schild."
+   },
+   {
+    "name": "Punishment",
+    "tier": "A",
+    "confidence": "niedrig",
+    "why": "Blocks schädigen Gegner in der Nähe, Paraden kritten; 3.5 neues Legendary-Affix (Punish Combo)."
+   },
+   {
+    "name": "Assault Shield",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Blockt während eines Vorwärtssturms – gleichzeitig Mobilität und Schutz."
+   },
+   {
+    "name": "Front Line Shield",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "+50 % Nahkampfschaden für 6 s nach Parade – Paradebeispiel mit Rapier."
+   },
+   {
+    "name": "Alucard's Shield",
+    "tier": "A",
+    "confidence": "niedrig",
+    "why": "Kann selbst angreifen, kritet nach Parade (seit 3.4 die ganze Combo, größere Paradefenster)."
+   },
+   {
+    "name": "Bloodthirsty Shield",
+    "tier": "B",
+    "confidence": "mittel",
+    "why": "Geblockte Angriffe lassen bluten – Zubringer für Sadist's Stiletto/Bleed."
+   },
+   {
+    "name": "Ice Shield",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Paraden frieren Gegner in der Nähe ein – im Frost-Build sehr gut."
+   },
+   {
+    "name": "Force Shield",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Kraftfeld beim Halten, regeneriert sich – anfängerfreundlich."
+   },
+   {
+    "name": "Thunder Shield",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Schock-Schaden beim Blocken, Aktivierung betäubt; 2.4 generft."
+   },
+   {
+    "name": "Parry Shield",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Wirft Projektile verstärkt zurück; als Rucksack-Schild mit Armadillopack beliebt."
+   },
+   {
+    "name": "Cudgel",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Betäubt geblockte Gegner – nur im Stun-Build interessant."
+   },
+   {
+    "name": "Greed Shield",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Paraden erzeugen Gold – für Gold Digger/Money Shooter."
+   },
+   {
+    "name": "Old Wooden Shield",
+    "tier": "D",
+    "confidence": "mittel",
+    "why": "Startschild; nur bis zum ersten Ersatz."
+   }
+  ],
+  "skills": [
+   {
+    "name": "Heavy Turret",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Robustes Geschütz, +15 % Schaden in seiner Nähe; mit Support der Einsteiger-Carry."
+   },
+   {
+    "name": "Double Crossb-o-matic",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Schießt auf zwei Ziele; billig, früh verfügbar, Kern vieler Turret-Builds."
+   },
+   {
+    "name": "Barnacle",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Schießt nach unten, Krits auf vergiftete Gegner – mit Giftquellen sehr stark."
+   },
+   {
+    "name": "Crusher",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Verlangsamt und zerquetscht Gegner im Bereich; 3.0 auf Bossen schwächer."
+   },
+   {
+    "name": "Wolf Trap",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Zwei Fallen verwurzeln und erhöhen den erlittenen Schaden – Krit-Auslöser für Repeater Crossbow, Nutcracker, Baseball Bat."
+   },
+   {
+    "name": "Sinew Slicer",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Frühe, sichere Bleed-Falle für die ersten Biome."
+   },
+   {
+    "name": "Cleaver",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Blutungsfalle; als Bleed-Zubringer nützlich."
+   },
+   {
+    "name": "Scavenged Bombard",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Schwere Kanonenkugeln, geringe Reichweite – starke Boss-Unterstützung."
+   },
+   {
+    "name": "Tesla Coil",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Schock-Turret; mehrfach generft, aber 3.5 Legendary 'Double Use' (zwei Ladungen)."
+   },
+   {
+    "name": "Explosive Decoy",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Unsichtbarkeit + Explosion; seit 2.9 manuell zündbar."
+   },
+   {
+    "name": "Flamethrower Turret",
+    "tier": "C",
+    "confidence": "mittel",
+    "why": "2.4 stark generft; nur noch als Brennquelle im Feuer-Build."
+   },
+   {
+    "name": "Emergency Door",
+    "tier": "D",
+    "confidence": "niedrig",
+    "why": "Ätherische Tür, die beim Zerbrechen betäubt; Spielerei."
+   },
+   {
+    "name": "Night Light",
+    "tier": "D",
+    "confidence": "niedrig",
+    "why": "Nur gegen die Dunkelheit im Forgotten Sepulcher sinnvoll."
+   },
+   {
+    "name": "Ice Armor",
+    "tier": "S",
+    "confidence": "hoch",
+    "why": "Absorbiert einen Treffer und friert Gegner ringsum ein – von mehreren 5-BC-Spielern als Lebensversicherung genannt, auch gegen Fluchtode."
+   },
+   {
+    "name": "Phaser",
+    "tier": "A",
+    "confidence": "hoch",
+    "why": "Teleport hinter das Ziel mit Bonus auf den nächsten Schlag; Kern des Assassin-Builds."
+   },
+   {
+    "name": "Knife Dance",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Messersturm mit starker Blutung ringsum; Standard im Bleed-Build."
+   },
+   {
+    "name": "Corrosive Cloud",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Gift- und Blutungswolke – füttert Snake Fangs, Sadist's Stiletto und Barnacle."
+   },
+   {
+    "name": "Lacerating Aura",
+    "tier": "B",
+    "confidence": "mittel",
+    "why": "Schadensaura um dich; 2.4 und 3.0 generft (Cooldown erst nach Ende)."
+   },
+   {
+    "name": "Corrupted Power",
+    "tier": "B",
+    "confidence": "mittel",
+    "why": "+50 % Schaden für 8 s gegen +30 % erlittenen Schaden – für Boss-Burst."
+   },
+   {
+    "name": "Vampirism",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Opfert Max-HP für Lebensraub und Tempo; in schnellen Nahkampf-Builds gute Heilquelle auf 5 BC."
+   },
+   {
+    "name": "Tonic",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Bonus-HP und Schadensreduktion; 2.4 generft, weiter solide Notfall-Taste."
+   },
+   {
+    "name": "Wings of the Crow",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Schweben mit Schock-Aura; mit Electric Whip beliebt."
+   },
+   {
+    "name": "Diverse Deck",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Farbloser Kartenstapel (Barricade, Catalyst, Electrodynamics, Foresight); Foresight blockt einen Treffer – gut gegen Flüche."
+   },
+   {
+    "name": "Scarecrow's Sickles",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Bumerang-Sicheln mit steigenden Krits; 2.4 gebufft."
+   },
+   {
+    "name": "Lightning Rods",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Blitze zwischen zwei Stäben; 3.5 Legendary 'Double Use'."
+   },
+   {
+    "name": "Leghugger",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Haustier mit Krits auf blutende Ziele, wächst mit; 3.5 Legendary 'Mitosis' (zwei Leghugger)."
+   },
+   {
+    "name": "Maria's Cat",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Katze kratzt Gegner, Reaktivierung für Krit-Wirbel."
+   },
+   {
+    "name": "Bat Volley",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Zehn durchschlagende Fledermäuse mit Krits."
+   },
+   {
+    "name": "Serenade",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Fliegendes Schwert markiert Gegner für Krits."
+   },
+   {
+    "name": "Great Owl of War",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Eule als Begleiter; verschwindet bei Treffern, 2.4 generft."
+   },
+   {
+    "name": "Smoke Bomb",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Unsichtbarkeit + Bonus aufs erste Angriff; skaliert seit 3.0 nicht mehr exponentiell."
+   },
+   {
+    "name": "Grappling Hook",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Zieht Gegner heran mit Bonus und Stun; seit 3.0 schwächere Skalierung."
+   },
+   {
+    "name": "Death Orb",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Langsame, starke Kugel; schwer zu treffen."
+   },
+   {
+    "name": "Rebound Stone",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Abprallender Stein mit Krits; 3.4 gebufft."
+   },
+   {
+    "name": "Collector's Syringe",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Kreisende Spritze, gegen Zellen verstärkbar."
+   },
+   {
+    "name": "Giant Whistle",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "500 Schaden auf den 'gefährlichsten' Gegner."
+   },
+   {
+    "name": "Cocoon",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Rundum-Parade; Cooldown-Reset bei Erfolg."
+   },
+   {
+    "name": "Mushroom Boi!",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Pilz-Begleiter, der Gegner unterbricht."
+   },
+   {
+    "name": "Pollo Power",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Hühnerform mit explosiven Eiern; Spaß-Item."
+   },
+   {
+    "name": "Lightspeed",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Dash durch Gegner und zurück."
+   },
+   {
+    "name": "Wave of Denial",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Stößt Gegner weg, Wandschaden."
+   },
+   {
+    "name": "Tornado",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Wandernder Wirbel mit Flächenschaden."
+   },
+   {
+    "name": "Telluric Shock",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Sprung mit Aufprall-Schaden."
+   },
+   {
+    "name": "Face Flask",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Kleiner Selbstschaden; nur für Frantic-/Spite-Builds (2.7 Recovery entfernt)."
+   },
+   {
+    "name": "Indulgence",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Lichtstrahl, der Fluch-Stapel schneller abbaut – Werkzeug für Fluch-Builds."
+   },
+   {
+    "name": "Taunt",
+    "tier": "D",
+    "confidence": "niedrig",
+    "why": "Ein Gegner nimmt mehr Nahkampfschaden, verfolgt dich aber; Nische."
+   },
+   {
+    "name": "Forgotten Map",
+    "tier": "D",
+    "confidence": "niedrig",
+    "why": "Deckt einmalig die Karte auf."
+   },
+   {
+    "name": "Powerful Grenade",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Große Explosion; zuverlässiger Flächenschaden, beliebter Partner für Symmetrical Lance."
+   },
+   {
+    "name": "Holy Water",
+    "tier": "A",
+    "confidence": "niedrig",
+    "why": "Feuersäule mit schnellem Schaden und Brand – zündet Vampire Killer."
+   },
+   {
+    "name": "Ice Grenade",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Friert eine Gruppe ein – Frost-Kontrolle und Krit-Auslöser."
+   },
+   {
+    "name": "Stun Grenade",
+    "tier": "B",
+    "confidence": "mittel",
+    "why": "4,5 s Betäubung – Krit-Auslöser für Baseball Bat/Nutcracker."
+   },
+   {
+    "name": "Root Grenade",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Verwurzelt und verursacht Schaden über Zeit."
+   },
+   {
+    "name": "Magnetic Grenade",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Zieht Gegner zusammen (2.9 Rework) und explodiert elektrisch."
+   },
+   {
+    "name": "Cluster Grenade",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Zerfällt in sechs Bomben."
+   },
+   {
+    "name": "Infantry Grenade",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Schnell und zuverlässig, aber schwach."
+   },
+   {
+    "name": "Oil Grenade",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Ölt einen Bereich – Grundlage für Fire Blast/Pyrotechnics-Krits."
+   },
+   {
+    "name": "Fire Grenade",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Einfache Brennquelle."
+   },
+   {
+    "name": "Swarm",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Acht Beißer als Helfer; seit 2.9 robuster."
+   },
+   {
+    "name": "Hunter's Grenade",
+    "tier": "D",
+    "confidence": "mittel",
+    "why": "Reines Entwurfs-Werkzeug mit Blueprint Extractor; seit 3.0 ohne Stats."
+   }
+  ],
+  "mutations": [
+   {
+    "name": "Necromancy",
+    "tier": "S",
+    "confidence": "hoch",
+    "why": "Kills geben Erholung, skaliert seit 3.4 mit der Max-HP des Opfers und ohne Obergrenze – die Standard-Heilquelle auf hohen BC."
+   },
+   {
+    "name": "Gastronomy",
+    "tier": "S",
+    "confidence": "hoch",
+    "why": "Essen heilt 65 % mehr, recyceltes Essen gibt Schadensbonus. In vielen Listen und Foren ganz oben – auch auf 5 BC trotz Malaise-Essen."
+   },
+   {
+    "name": "Open Wounds",
+    "tier": "S",
+    "confidence": "hoch",
+    "why": "Nahkampf lässt bluten – meistgenannte Brutalitätsmutation, Basis für Sadist's Stiletto, Hemorrhage, Leghugger und Bleed-Affixe."
+   },
+   {
+    "name": "Support",
+    "tier": "S",
+    "confidence": "mittel",
+    "why": "+35 % Schaden in der Nähe eines eigenen Turrets/einer Falle (3.4-Buff von +10 %) – macht Fallen-Builds früh stark."
+   },
+   {
+    "name": "Instinct of the Master of Arms",
+    "tier": "A",
+    "confidence": "hoch",
+    "why": "Jeder Krit senkt Skill-Cooldowns – in jedem Krit-Build ein Kandidat, farblos."
+   },
+   {
+    "name": "Kill Rhythm",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Waffenwechsel steigert die Angriffsgeschwindigkeit; mit Scythe Claw, Lantern und Bonk-Builds beliebt."
+   },
+   {
+    "name": "Combo",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Seit 3.4 pro Treffer stapelnd und exponentiell; schnelle Waffen profitieren am meisten. Bewertungen schwanken, weil viele Listen vor 3.4 entstanden."
+   },
+   {
+    "name": "Vengeance",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "+60 % Schaden und weniger erlittener Schaden nach Treffern; stark für Brutalität, auf 5 BC umstritten (man muss erst getroffen werden)."
+   },
+   {
+    "name": "Disengagement",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Kraftfeld bei <15 % HP; seit 3.4 nur einmal pro Biom, bleibt aber eine beliebte Lebensversicherung."
+   },
+   {
+    "name": "Berserker",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Nahkampf-Kills stapeln Schadensreduktion bis 90 % plus Stun-Immunität (3.4-Rework)."
+   },
+   {
+    "name": "Killer Instinct",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Nahkampf-Kills senken Skill-Cooldowns – Standard im Assassin- und Feuer-Build."
+   },
+   {
+    "name": "Barbed Tips",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Steckende Pfeile verursachen DPS; Kern der Bogen-/Armbrust-Builds."
+   },
+   {
+    "name": "Armadillopack",
+    "tier": "A",
+    "confidence": "mittel",
+    "why": "Rolle pariert mit dem Rucksack-Schild – kostenlose Paraden für Rapier, Bonk und Survival."
+   },
+   {
+    "name": "Networking",
+    "tier": "A",
+    "confidence": "niedrig",
+    "why": "Fernkampftreffer markieren, markierte Ziele teilen Schaden; seit 3.4 mit allen Fernkampfquellen."
+   },
+   {
+    "name": "Heart of Ice",
+    "tier": "B",
+    "confidence": "mittel",
+    "why": "Treffer auf gefrorene/betäubte/verwurzelte Ziele senken Cooldowns; 2.4 und 3.4 generft, im Kontroll-Build trotzdem gut."
+   },
+   {
+    "name": "Tranquility",
+    "tier": "B",
+    "confidence": "mittel",
+    "why": "+25 % Schaden ohne Gegner in der Nähe; bei Fernkämpfern beliebt, im Nahkampf nutzlos."
+   },
+   {
+    "name": "Melee",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Nahkampf verlangsamt (3.4: 2 Stapel) – mit Frostbite 5er-Stapel = Einfrieren."
+   },
+   {
+    "name": "Extended Healing",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Flask heilt 100 % über 12 s plus Schadensbonus (3.4-Buff)."
+   },
+   {
+    "name": "Emergency Triage",
+    "tier": "B",
+    "confidence": "mittel",
+    "why": "Schnelles Trinken mit kurzem Schutzfeld; Endboss-Klassiker, 3.5 interne Abklingzeit."
+   },
+   {
+    "name": "Soldier's Resistance",
+    "tier": "B",
+    "confidence": "mittel",
+    "why": "Mehr Max-HP; 3.4 generft, bleibt in Tank-Builds beliebt."
+   },
+   {
+    "name": "Counterattack",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Großer Bonus auf den Schlag nach einer Parade."
+   },
+   {
+    "name": "Scheme",
+    "tier": "B",
+    "confidence": "mittel",
+    "why": "Bonus auf den ersten Nahkampfschlag nach einem Skill; im Assassin-Build Pflicht, sonst schwach."
+   },
+   {
+    "name": "Predator",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Unsichtbarkeit nach Nahkampf-Kills; 3.4 leicht generft, mit Katana beliebt."
+   },
+   {
+    "name": "Point Blank",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Bonus für Fernkampf auf kurze Distanz; 3.0 generft."
+   },
+   {
+    "name": "Frostbite",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Schaden pro Verlangsamungs-Stapel, Gefrorene zählen als Maximum (3.4-Rework, farblos)."
+   },
+   {
+    "name": "Tainted Flask",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Schadensbonus nach dem Trinken, Elites füllen Flask auf; 3.4 gebufft."
+   },
+   {
+    "name": "Blind Faith",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Paraden senken Skill-Cooldowns – im Parier-Build stark."
+   },
+   {
+    "name": "What Doesn't Kill Me",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Heilung bei Nahkampf-Paraden."
+   },
+   {
+    "name": "Hunter's Instinct",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Kills ohne Nahkampf senken Cooldowns – für Turret-/Fernkampf-Builds."
+   },
+   {
+    "name": "Crow's Foot",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Rollen legen Krähenfüße (Schaden + Slow)."
+   },
+   {
+    "name": "Tactical Retreat",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Ausweichen in letzter Sekunde verlangsamt Gegner (3.4: 2 Stapel)."
+   },
+   {
+    "name": "Acrobatipack",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Nach Rollen feuert die Rucksack-Fernwaffe mit."
+   },
+   {
+    "name": "No Mercy",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Richtet Gegner unter 15 % HP hin (Bosse 7,5 %)."
+   },
+   {
+    "name": "Ygdar Orus Li Ox",
+    "tier": "B",
+    "confidence": "mittel",
+    "why": "Einmaliger Lebensretter – für Einsteiger und neue BC-Stufen sinnvoll, Profis sparen sich den Slot."
+   },
+   {
+    "name": "Wish",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Macht das nächste Item legendär – stark, wenn man seine Hauptwaffe kennt."
+   },
+   {
+    "name": "Demonic Strength",
+    "tier": "B",
+    "confidence": "niedrig",
+    "why": "Großer Schadensbonus während eines Fluchs – Kern der 3.5-Fluch-Builds."
+   },
+   {
+    "name": "Spite",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Schaden bei Paraden/reflektierten Schüssen."
+   },
+   {
+    "name": "Ranger's Gear",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Bonus auf den nächsten Fernkampfangriff nach Skill-Nutzung."
+   },
+   {
+    "name": "Initiative",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Bonus auf den ersten Schlag gegen ein Ziel."
+   },
+   {
+    "name": "Frenzy",
+    "tier": "C",
+    "confidence": "mittel",
+    "why": "Lebensraub mit Tempo-Buff; im Speed-Build nett, sonst schwach."
+   },
+   {
+    "name": "Adrenaline",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Lebensraub nach Ausweichen in letzter Sekunde; zu situativ."
+   },
+   {
+    "name": "Porcupack",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Rollen durch Gegner greift mit der Rucksack-Waffe an."
+   },
+   {
+    "name": "Ripper",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Nahkampf löst steckende Pfeile mit Schaden – Nische für Hybrid-Builds."
+   },
+   {
+    "name": "Parting Gift",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Bombe bei Kills ohne Nahkampf."
+   },
+   {
+    "name": "Velocity",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Verlängert den Kill-Tempo-Buff – nur im Speed-Build."
+   },
+   {
+    "name": "Recovery",
+    "tier": "C",
+    "confidence": "mittel",
+    "why": "Verdreifacht das Zeitfenster für Erholungstreffer; als Einsteiger-Falle bezeichnet, mit Dead Inside interessant."
+   },
+   {
+    "name": "Dead Inside",
+    "tier": "C",
+    "confidence": "mittel",
+    "why": "+100 % Max-HP, aber keine Heilung außer Erholung (3.4/3.5). Umstritten, auf 5 BC eher riskant."
+   },
+   {
+    "name": "Ammo",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Doppelte Munition, seit 3.4 auch für Boomerang, Hokuto's Bow, The Boy's Axe u. a."
+   },
+   {
+    "name": "Cursed Flask",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Unendlich Flask-Ladungen, aber jeder Schluck verflucht 20-fach – nur für Fluch-Builds."
+   },
+   {
+    "name": "Damned Vigor",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Kurzer Aufschub des Todes, Kill rettet auf 1 HP – Fluch-Spielzeug."
+   },
+   {
+    "name": "Acceptance",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Halbiert nötige Kills für Fluchabbau, Essen verflucht."
+   },
+   {
+    "name": "Alienation",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Heilung beim Aufheben großer Flüche (3.5-Rework)."
+   },
+   {
+    "name": "Gold Plating",
+    "tier": "C",
+    "confidence": "niedrig",
+    "why": "Verliert Gold statt HP; 3.4/3.4.2 deutlich teurer geworden."
+   },
+   {
+    "name": "Midas' Blood",
+    "tier": "D",
+    "confidence": "niedrig",
+    "why": "Gold für verlorene HP; 3.4.2 generft."
+   },
+   {
+    "name": "Get Rich Quick",
+    "tier": "D",
+    "confidence": "niedrig",
+    "why": "Bonus-Gold bei Tempo-Kills; kein Kampfwert."
+   },
+   {
+    "name": "Masochist",
+    "tier": "D",
+    "confidence": "niedrig",
+    "why": "Fallenschaden begrenzt + Tempo; Nische."
+   }
+  ]
+ },
+ "synergies": [
+  {
+   "items": [
+    "Baseball Bat",
+    "Throwable Objects"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Throwable Objects betäubt jedes getroffene Ziel und lädt bei Kills nach; Baseball Bat schlägt betäubte Ziele mit Dauerkrits."
+  },
+  {
+   "items": [
+    "Baseball Bat",
+    "The Boy's Axe"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Die Axt verwurzelt das Ziel (auch viele Bosse), die Bat kritet auf verwurzelte Ziele – mehrfach als 5-BC-Kombi genannt."
+  },
+  {
+   "items": [
+    "Baseball Bat",
+    "Stun Grenade"
+   ],
+   "kind": "weapon+skill",
+   "why": "4,5 s Betäubung = 4,5 s Krit-Fenster für die Bat."
+  },
+  {
+   "items": [
+    "Nutcracker",
+    "Ice Bow"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Ice Bow friert ein, Nutcracker kritet gegen gefrorene, betäubte und verwurzelte Ziele."
+  },
+  {
+   "items": [
+    "Nutcracker",
+    "Wolf Trap"
+   ],
+   "kind": "weapon+skill",
+   "why": "Wolf Trap verwurzelt zwei Gegner und erhöht ihren erlittenen Schaden – Nutcracker kritet dann."
+  },
+  {
+   "items": [
+    "Repeater Crossbow",
+    "Wolf Trap"
+   ],
+   "kind": "weapon+skill",
+   "why": "Repeater Crossbow kritet gegen verwurzelte Ziele; Wolf Trap liefert die Verwurzelung, falls der Quiver of Bolts auf Cooldown ist."
+  },
+  {
+   "items": [
+    "Repeater Crossbow",
+    "Root Grenade"
+   ],
+   "kind": "weapon+skill",
+   "why": "Flächige Verwurzelung macht ganze Gruppen zu Krit-Zielen der Armbrust."
+  },
+  {
+   "items": [
+    "Maw of the Deep",
+    "Root Grenade"
+   ],
+   "kind": "weapon+skill",
+   "why": "Maw kritet gegen Verwurzelte; die Granate verwurzelt schon vor dem dritten Combo-Schlag."
+  },
+  {
+   "items": [
+    "Lightning Bolt",
+    "Ice Grenade"
+   ],
+   "kind": "weapon+skill",
+   "why": "Eingefrorene Gegner stehen still, während der gehaltene Blitz seine Krit-Phase erreicht."
+  },
+  {
+   "items": [
+    "Ice Bow",
+    "Heart of Ice"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Treffer auf gefrorene Ziele aus kurzer Distanz senken Skill-Cooldowns – auch mit Fernkampfwaffen."
+  },
+  {
+   "items": [
+    "Ice Shield",
+    "Heart of Ice"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Paraden frieren Gegner ringsum ein, jeder Folgetreffer senkt die Cooldowns."
+  },
+  {
+   "items": [
+    "Ice Armor",
+    "Frostbite"
+   ],
+   "kind": "skill+mutation",
+   "why": "Gefrorene Ziele zählen für Frostbite als maximal gestapelt – die Eisrüstung friert beim Platzen alles ringsum ein."
+  },
+  {
+   "items": [
+    "Melee",
+    "Frostbite"
+   ],
+   "kind": "mutation+mutation",
+   "why": "Seit 3.4 gibt Melee 2 Verlangsamungs-Stapel pro Treffer; Frostbite verursacht Schaden pro Stapel, der 5. Stapel friert ein."
+  },
+  {
+   "items": [
+    "Tactical Retreat",
+    "Frostbite"
+   ],
+   "kind": "mutation+mutation",
+   "why": "Ausweichen verlangsamt Gegner um 2 Stapel – Frostbite macht daraus Schaden."
+  },
+  {
+   "items": [
+    "Sadist's Stiletto",
+    "Open Wounds"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Open Wounds lässt jeden Nahkampftreffer bluten, die Stiletto kritet gegen Blutende – ab dem zweiten Schlag Dauerkrit."
+  },
+  {
+   "items": [
+    "Sadist's Stiletto",
+    "Bloodthirsty Shield"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Geblockte Angriffe verursachen Blutung, die Parade verteilt sie – Krit-Bedingung für die Stiletto."
+  },
+  {
+   "items": [
+    "Hemorrhage",
+    "Open Wounds"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Hemorrhage kritet gegen blutende oder vergiftete Ziele; Open Wounds sorgt für die Blutung."
+  },
+  {
+   "items": [
+    "Snake Fangs",
+    "Corrosive Cloud"
+   ],
+   "kind": "weapon+skill",
+   "why": "Die Wolke vergiftet ganze Gruppen; Snake Fangs braucht mehr als 5 Giftmarken für Krits und teleportiert zum nächsten Ziel."
+  },
+  {
+   "items": [
+    "Barnacle",
+    "Alchemic Carbine"
+   ],
+   "kind": "skill+weapon",
+   "why": "Die Carbine vergiftet dauerhaft, die Barnacle kritet gegen vergiftete Gegner."
+  },
+  {
+   "items": [
+    "Barnacle",
+    "Corrosive Cloud"
+   ],
+   "kind": "skill+skill",
+   "why": "Giftwolke unter der Barnacle = dauerhafte Krit-Schüsse."
+  },
+  {
+   "items": [
+    "Leghugger",
+    "Open Wounds"
+   ],
+   "kind": "skill+mutation",
+   "why": "Leghugger kritet gegen blutende Ziele – Open Wounds hält die Blutung aufrecht."
+  },
+  {
+   "items": [
+    "Knife Dance",
+    "Sadist's Stiletto"
+   ],
+   "kind": "skill+weapon",
+   "why": "Knife Dance lässt alles ringsum stark bluten – sofortiger Krit-Zugang für die Stiletto."
+  },
+  {
+   "items": [
+    "Diverse Deck",
+    "Snake Fangs"
+   ],
+   "kind": "skill+weapon",
+   "why": "Die Karte Catalyst vergiftet mit jedem Nahkampftreffer und kann alle DoT-Stapel auf einmal auslösen."
+  },
+  {
+   "items": [
+    "Oil Grenade",
+    "Fire Blast"
+   ],
+   "kind": "skill+weapon",
+   "why": "Fire Blast kritet, wenn Öl vorhanden ist – Öl legen, dann flambieren."
+  },
+  {
+   "items": [
+    "Oiled Sword",
+    "Fire Grenade"
+   ],
+   "kind": "weapon+skill",
+   "why": "Oiled Sword ölt Gegner und kritet 10 s nach einem Treffer auf ein brennendes Ziel."
+  },
+  {
+   "items": [
+    "Pyrotechnics",
+    "Oil Grenade"
+   ],
+   "kind": "weapon+skill",
+   "why": "Pyrotechnics kritet auf geölte Ziele."
+  },
+  {
+   "items": [
+    "Vampire Killer",
+    "Holy Water"
+   ],
+   "kind": "weapon+skill",
+   "why": "Holy Water setzt Gegner in Brand, Vampire Killer kritet gegen Brennende und zündet beim Kill selbst den Boden an."
+  },
+  {
+   "items": [
+    "Ice Shards",
+    "Oil Grenade"
+   ],
+   "kind": "weapon+skill",
+   "why": "Ice Shards kritet gegen geölte Ziele oder Ziele im Wasser."
+  },
+  {
+   "items": [
+    "Heavy Turret",
+    "Support"
+   ],
+   "kind": "skill+mutation",
+   "why": "Support gibt +35 % Schaden nahe eines eigenen Turrets, der Heavy Turret selbst +15 % – beide Boni stapeln sich."
+  },
+  {
+   "items": [
+    "Double Crossb-o-matic",
+    "Support"
+   ],
+   "kind": "skill+mutation",
+   "why": "Billigster früher Turret; mit Support sofort spürbar stärker."
+  },
+  {
+   "items": [
+    "Heavy Turret",
+    "Hunter's Instinct"
+   ],
+   "kind": "skill+mutation",
+   "why": "Turret-Kills zählen als Kills ohne Nahkampf und senken die Skill-Cooldowns."
+  },
+  {
+   "items": [
+    "Barnacle",
+    "Networking"
+   ],
+   "kind": "skill+mutation",
+   "why": "Turret-Schüsse sind Fernkampftreffer: markierte Ziele teilen Schaden mit Nachbarn (seit 3.4 alle Fernkampfquellen)."
+  },
+  {
+   "items": [
+    "Crusher",
+    "Wolf Trap"
+   ],
+   "kind": "skill+skill",
+   "why": "Wolf Trap hält Gegner fest, der Crusher verlangsamt und zermalmt sie im Bereich."
+  },
+  {
+   "items": [
+    "Repeater Crossbow",
+    "Barbed Tips"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Viele Bolzen = viele steckende Projektile, jedes verursacht Barbed-Tips-DPS."
+  },
+  {
+   "items": [
+    "Quick Bow",
+    "Barbed Tips"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Quick Bow kritet ab 3 steckenden Pfeilen, Barbed Tips macht aus genau diesen Pfeilen Zusatzschaden."
+  },
+  {
+   "items": [
+    "Hokuto's Bow",
+    "Repeater Crossbow"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Hokuto-Markierung erhöht die DPS gegen das Ziel und springt bei Kills über – der Repeater trägt den Dauerschaden."
+  },
+  {
+   "items": [
+    "Acrobatipack",
+    "Repeater Crossbow"
+   ],
+   "kind": "mutation+weapon",
+   "why": "Nach Rollen feuert die Rucksack-Fernwaffe einen Zusatzschuss mit."
+  },
+  {
+   "items": [
+    "Ripper",
+    "Barbed Tips"
+   ],
+   "kind": "mutation+mutation",
+   "why": "Nahkampf reißt bis zu 6 steckende Pfeile mit hohem Schaden heraus – für Bogen/Nahkampf-Hybride."
+  },
+  {
+   "items": [
+    "Rapier",
+    "Front Line Shield"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Nach einer Parade kritet die Rapier sofort und Front Line Shield gibt 6 s +50 % Nahkampfschaden."
+  },
+  {
+   "items": [
+    "Rapier",
+    "Armadillopack"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Rollen pariert mit dem Rucksack-Schild – jede Rolle schaltet den Rapier-Krit frei."
+  },
+  {
+   "items": [
+    "Spiked Shield",
+    "Counterattack"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Paraden kritten mit dem Spiked Shield, der nächste Schlag erhält den Counterattack-Bonus."
+  },
+  {
+   "items": [
+    "Parry Shield",
+    "Armadillopack"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Im Rucksack reflektiert der Parry Shield bei jeder Rolle Projektile – ohne Waffenslot zu kosten."
+  },
+  {
+   "items": [
+    "Blind Faith",
+    "Ice Shield"
+   ],
+   "kind": "mutation+weapon",
+   "why": "Jede Parade senkt die Skill-Cooldowns und friert zusätzlich ein."
+  },
+  {
+   "items": [
+    "What Doesn't Kill Me",
+    "Rampart"
+   ],
+   "kind": "mutation+weapon",
+   "why": "Rampart erleichtert Paraden, jede Nahkampfparade heilt."
+  },
+  {
+   "items": [
+    "Assassin's Dagger",
+    "Phaser"
+   ],
+   "kind": "weapon+skill",
+   "why": "Phaser teleportiert hinter das Ziel – der Dolch kritet gegen den Rücken; dazu +70 Schaden auf den nächsten Angriff."
+  },
+  {
+   "items": [
+    "Phaser",
+    "Scheme"
+   ],
+   "kind": "skill+mutation",
+   "why": "Scheme gibt dem ersten Nahkampfschlag nach einem Skill einen großen Bonus – nach jedem Phaser."
+  },
+  {
+   "items": [
+    "Meat Skewer",
+    "Killer Instinct"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Schnelle, sichere Kills mit dem Skewer senken laufend die Skill-Cooldowns."
+  },
+  {
+   "items": [
+    "Instinct of the Master of Arms",
+    "Twin Daggers"
+   ],
+   "kind": "mutation+weapon",
+   "why": "Jeder dritte Treffer ist ein Krit – gleichmäßige Cooldown-Senkung."
+  },
+  {
+   "items": [
+    "Scythe Claw",
+    "Kill Rhythm"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Die Klauen wechseln ständig die Hand (Krit nach Nutzung der anderen Klaue) – Kill Rhythm belohnt genau diesen Wechsel mit Angriffstempo."
+  },
+  {
+   "items": [
+    "Ferryman's Lantern",
+    "Kill Rhythm"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Seit 2.3 wird auch der Soul Shot von Kill Rhythm beschleunigt."
+  },
+  {
+   "items": [
+    "War Spear",
+    "Giantkiller"
+   ],
+   "kind": "weapon+weapon",
+   "why": "War Spear räumt Gruppen (Krit bei mehreren Zielen), Giantkiller kritet garantiert gegen Elites und Bosse."
+  },
+  {
+   "items": [
+    "Symmetrical Lance",
+    "Powerful Grenade"
+   ],
+   "kind": "weapon+skill",
+   "why": "Die Granate tötet schwache Gegner im Paket und löst so die Krit-Phase der Lanze (2 schnelle Kills) aus."
+  },
+  {
+   "items": [
+    "Tombstone",
+    "No Mercy"
+   ],
+   "kind": "weapon+mutation",
+   "why": "No Mercy richtet schwache Gegner hin – der letzte Schlag tötet häufiger und erzeugt Grabsteine."
+  },
+  {
+   "items": [
+    "Sewing Scissors",
+    "War Spear"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Beide wollen mehrere Ziele gleichzeitig treffen; die Schere tötet beim Kill alle mitgetroffenen Gegner."
+  },
+  {
+   "items": [
+    "Vampirism",
+    "Frantic Sword"
+   ],
+   "kind": "skill+weapon",
+   "why": "Vampirism opfert Max-HP (du rutschst unter 50 % → Frantic-Krits) und heilt über Nahkampftreffer zurück."
+  },
+  {
+   "items": [
+    "Spite Sword",
+    "Vengeance"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Nach einem erlittenen Treffer: Spite Sword kritet 8 s, Vengeance gibt +60 % Schaden."
+  },
+  {
+   "items": [
+    "Demonic Strength",
+    "Cursed Sword"
+   ],
+   "kind": "mutation+weapon",
+   "why": "Das Cursed Sword hält dich dauerhaft verflucht – Demonic Strength gibt dafür +30 % Schaden plus 2 % pro Stapel."
+  },
+  {
+   "items": [
+    "Spite Sword",
+    "Cursed Flask"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Cursed Flask verflucht dich bei jedem Schluck; Spite Sword kritet, solange du verflucht bist."
+  },
+  {
+   "items": [
+    "Ice Armor",
+    "Cursed Sword"
+   ],
+   "kind": "skill+weapon",
+   "why": "Ice Armor verhindert laut Wiki den Fluchtod beim nächsten Treffer – Versicherung für Fluch-Builds."
+  },
+  {
+   "items": [
+    "Indulgence",
+    "Acceptance"
+   ],
+   "kind": "skill+mutation",
+   "why": "Indulgence-Kills bauen 3 Fluchstapel statt 1 ab, Acceptance halbiert die nötigen Kills."
+  },
+  {
+   "items": [
+    "Swift Sword",
+    "Velocity"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Swift Sword kritet bei aktivem Tempo-Buff, Velocity verdreifacht dessen Dauer."
+  },
+  {
+   "items": [
+    "Gold Digger",
+    "Greed Shield"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Treffer und Paraden spucken Gold aus – ab 12.000 Gold kritet der Gold Digger."
+  },
+  {
+   "items": [
+    "Electric Whip",
+    "Wings of the Crow"
+   ],
+   "kind": "weapon+skill",
+   "why": "Die Peitsche trifft Nachbarn und schockt, die Krähe schockt zusätzlich ringsum – Gruppen und Bosse schmelzen (Steam-Erfahrung gegen Concierge/Hand of the King)."
+  },
+  {
+   "items": [
+    "Electric Whip",
+    "Point Blank"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Die Peitsche ist eine Fernkampfwaffe mit kurzer Reichweite – Point Blank wirkt immer."
+  },
+  {
+   "items": [
+    "Boomerang",
+    "Ammo"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Seit 3.4 verdoppelt Ammo auch Low-Ammo-Waffen wie den Boomerang."
+  }
+ ],
+ "mutationSets": [
+  {
+   "name": "Blutbad",
+   "color": "brutality",
+   "mutations": [
+    "Open Wounds",
+    "Combo",
+    "Instinct of the Master of Arms"
+   ],
+   "forWhat": "Schnelle Bleed-/Krit-Nahkampfwaffen (Sadist's Stiletto, Twin Daggers, Balanced Blade)",
+   "why": "Open Wounds liefert die Blutung (Krit-Bedingung vieler Waffen), Combo belohnt Dauertreffer, jeder Krit verkürzt die Cooldowns."
+  },
+  {
+   "name": "Assassine",
+   "color": "brutality",
+   "mutations": [
+    "Scheme",
+    "Killer Instinct",
+    "Initiative"
+   ],
+   "forWhat": "Assassin's Dagger + Phaser",
+   "why": "Nach jedem Skill großer Bonus auf den ersten Stich, Kills setzen den Phaser schneller zurück, Initiative verstärkt den Eröffnungsschlag."
+  },
+  {
+   "name": "Rache-Brutalo",
+   "color": "brutality",
+   "mutations": [
+    "Vengeance",
+    "Open Wounds",
+    "Necromancy"
+   ],
+   "forWhat": "Aggressive Brutalität auf 0–3 BC",
+   "why": "Vengeance macht erlittene Treffer zu +60 % Schaden, Necromancy holt die HP über Kills zurück."
+  },
+  {
+   "name": "Katana-Schatten",
+   "color": "brutality",
+   "mutations": [
+    "Predator",
+    "Armadillopack",
+    "Killer Instinct"
+   ],
+   "forWhat": "Hattori's Katana / schnelle Nahkampf-Dashes",
+   "why": "Unsichtbarkeit nach Kills, Paraden per Rolle, Cooldowns über Kills."
+  },
+  {
+   "name": "Turret-Basis",
+   "color": "tactics",
+   "mutations": [
+    "Support",
+    "Hunter's Instinct",
+    "Necromancy"
+   ],
+   "forWhat": "Heavy Turret, Double Crossb-o-matic, Barnacle",
+   "why": "Support verstärkt alles nahe der Turrets, Turret-Kills senken die Cooldowns, Necromancy heilt über die vielen Kills."
+  },
+  {
+   "name": "Pfeilhagel",
+   "color": "tactics",
+   "mutations": [
+    "Barbed Tips",
+    "Acrobatipack",
+    "Networking"
+   ],
+   "forWhat": "Repeater Crossbow, Quick Bow, Hokuto's Bow",
+   "why": "Steckende Pfeile machen Schaden, Rollen schießen mit, markierte Ziele teilen Schaden – laut Community-Beiträgen der klassische Taktik-Build."
+  },
+  {
+   "name": "Scharfschütze",
+   "color": "tactics",
+   "mutations": [
+    "Tranquility",
+    "Barbed Tips",
+    "Crow's Foot"
+   ],
+   "forWhat": "Marksman's Bow und andere Distanzwaffen",
+   "why": "Bonus ohne Gegner in der Nähe, Pfeil-DPS, Krähenfüße halten Verfolger auf Abstand."
+  },
+  {
+   "name": "Nahdistanz-Schütze",
+   "color": "tactics",
+   "mutations": [
+    "Point Blank",
+    "Networking",
+    "Hunter's Instinct"
+   ],
+   "forWhat": "Electric Whip, Infantry Bow, Heavy Crossbow",
+   "why": "Kurze Distanz gibt Bonusschaden, Networking verteilt ihn, Kills ohne Nahkampf beschleunigen die Skills."
+  },
+  {
+   "name": "Frost-Kontrolle",
+   "color": "survival",
+   "mutations": [
+    "Heart of Ice",
+    "Frostbite",
+    "Armadillopack"
+   ],
+   "forWhat": "Ice Bow, Ice Grenade, Ice Armor, Nutcracker",
+   "why": "Jeder Treffer auf Eingefrorene senkt Cooldowns, Frostbite schadet gefrorenen Zielen maximal, Rollen parieren."
+  },
+  {
+   "name": "Bonk",
+   "color": "survival",
+   "mutations": [
+    "Armadillopack",
+    "Kill Rhythm",
+    "Instinct of the Master of Arms"
+   ],
+   "forWhat": "Baseball Bat + Throwable Objects/The Boy's Axe",
+   "why": "Rucksack-Schild pariert beim Rollen, Waffenwechsel beschleunigt, Dauerkrits auf Betäubte senken Cooldowns."
+  },
+  {
+   "name": "Unkaputtbar",
+   "color": "survival",
+   "mutations": [
+    "Gastronomy",
+    "Soldier's Resistance",
+    "Necromancy"
+   ],
+   "forWhat": "Survival-Tank für 4–5 BC (War Spear, Giantkiller)",
+   "why": "Maximale Heilung aus Essen und Kills plus mehr Max-HP – mehrere 5-BC-Spieler nennen genau diese Kombination."
+  },
+  {
+   "name": "Parier-Meister",
+   "color": "survival",
+   "mutations": [
+    "Counterattack",
+    "Blind Faith",
+    "What Doesn't Kill Me"
+   ],
+   "forWhat": "Schild-Builds (Spiked Shield, Rampart, Punishment)",
+   "why": "Jede Parade gibt Schaden, Cooldown-Senkung und Heilung."
+  },
+  {
+   "name": "Klauen-Rausch",
+   "color": "survival",
+   "mutations": [
+    "Kill Rhythm",
+    "Berserker",
+    "Necromancy"
+   ],
+   "forWhat": "Scythe Claw, Ferryman's Lantern",
+   "why": "Tempo durch Waffenwechsel, Schadensreduktion und Stun-Immunität durch Kills, Heilung über Kills."
+  },
+  {
+   "name": "Boss-Sicherheit",
+   "color": "colorless",
+   "mutations": [
+    "Disengagement",
+    "Emergency Triage",
+    "Recovery"
+   ],
+   "forWhat": "Letzter Bosskampf auf hohen BC (vor dem Boss tauschen)",
+   "why": "Kraftfeld bei niedriger HP, schnelles geschütztes Trinken, mehr Zeit für Erholungstreffer."
+  },
+  {
+   "name": "Einsteiger-Versicherung",
+   "color": "colorless",
+   "mutations": [
+    "Ygdar Orus Li Ox",
+    "Necromancy",
+    "Instinct of the Master of Arms"
+   ],
+   "forWhat": "Erste Läufe auf neuer BC-Stufe",
+   "why": "Ein zweites Leben, Heilung über Kills, Cooldown-Senkung für jeden Krit-Build."
+  },
+  {
+   "name": "Fluch-Kraft",
+   "color": "colorless",
+   "mutations": [
+    "Demonic Strength",
+    "Cursed Flask",
+    "Damned Vigor"
+   ],
+   "forWhat": "3.5-Fluch-Builds (Cursed Sword, Spite Sword, Misericorde)",
+   "why": "Dauerverflucht für maximalen Schaden, Flask unbegrenzt nutzbar, Damned Vigor als letzte Rettung bei einem Kill."
+  },
+  {
+   "name": "Feuerteufel",
+   "color": "hybrid",
+   "mutations": [
+    "Killer Instinct",
+    "Instinct of the Master of Arms",
+    "Open Wounds"
+   ],
+   "forWhat": "Öl/Feuer mit Oiled Sword, Fire Blast, Oil Grenade",
+   "why": "Viele Krits und Kills halten Öl- und Feuer-Skills ständig verfügbar."
+  },
+  {
+   "name": "Tempo-Läufer",
+   "color": "brutality",
+   "mutations": [
+    "Velocity",
+    "Frenzy",
+    "Combo"
+   ],
+   "forWhat": "Swift Sword / Speedruns",
+   "why": "Tempo-Buff hält länger, heilt im Tempo und Combo belohnt das Durchschlagen ganzer Räume."
+  }
+ ],
+ "routes": [
+  {
+   "id": "einsteiger-klassiker",
+   "name": "Der Klassiker für den ersten Sieg",
+   "goal": "Einsteiger: erster Sieg über die Hand des Königs",
+   "bcMin": 0,
+   "bcMax": 1,
+   "path": [
+    "Prisoners' Quarters",
+    "Promenade of the Condemned",
+    "Ramparts",
+    "Black Bridge",
+    "Stilt Village",
+    "Clock Tower",
+    "Clock Room",
+    "High Peak Castle",
+    "Throne Room"
+   ],
+   "runesNeeded": [
+    "Vine Rune"
+   ],
+   "dlc": [],
+   "why": "Braucht nur die Vine Rune (liegt selbst in der Promenade), alle Biome sind gut lesbar und die Bosse (Concierge, Time Keeper, Hand of the King) haben klar erlernbare Muster. Clock Tower bietet 4 Schriftrollen der Macht.",
+   "tips": [
+    "In der Promenade den Elite-Bogenschützen für die Vine Rune legen – ohne sie geht es dort nicht weiter.",
+    "Concierge: Schild oder Rolle gegen den Sprung, nicht in die Ecke drängen lassen.",
+    "High Peak Castle: die Schlüssel-Elites töten – zwei Castle Keys öffnen den Weg, der dritte gibt Boomerang-Entwurf und eine Schriftrolle.",
+    "Flask nicht horten: lieber früh trinken und Zeit für Erholungstreffer (Rally) nutzen."
+   ],
+   "sources": [
+    "https://deadcells.wiki.gg/wiki/Biomes",
+    "https://deadcells.wiki.gg/wiki/Runes"
+   ]
+  },
+  {
+   "id": "runen-reihenfolge",
+   "name": "Runen in der richtigen Reihenfolge",
+   "goal": "Freischaltung: alle Bewegungsrunen (Vine → Teleportation → Ram → Spider → Homunculus)",
+   "bcMin": 0,
+   "bcMax": 0,
+   "path": [
+    "Prisoners' Quarters",
+    "Toxic Sewers",
+    "Ancient Sewers",
+    "Insufferable Crypt",
+    "Slumbering Sanctuary",
+    "Forgotten Sepulcher",
+    "Clock Room",
+    "High Peak Castle",
+    "Throne Room"
+   ],
+   "runesNeeded": [
+    "Vine Rune",
+    "Teleportation Rune",
+    "Ram Rune"
+   ],
+   "dlc": [],
+   "why": "Die Runen bauen aufeinander auf: Vine (Promenade) öffnet die Toxic Sewers, dort liegt die Teleportation Rune; mit ihr erreicht man das Ossuary (Ram Rune); mit Ram geht es von den Toxic Sewers in die Ancient Sewers → Insufferable Crypt → Slumbering Sanctuary (Spider Rune). Homunculus gibt es nach dem ersten Sieg über die Hand of the King.",
+   "tips": [
+    "Lauf 1: Promenade (Vine). Lauf 2: Toxic Sewers (Teleportation). Lauf 3: Promenade → Ossuary (Ram). Lauf 4: diese Route für die Spider Rune.",
+    "Rune-Räume sind Elite-Kämpfe – vorher Flask auffüllen und Skills bereit halten.",
+    "Explorer's Rune liegt am Ende des Forgotten Sepulcher hinter zwei Elite Dark Trackers – praktisch für alle späteren Läufe."
+   ],
+   "sources": [
+    "https://deadcells.wiki.gg/wiki/Runes",
+    "https://deadcells.wiki.gg/wiki/Biomes"
+   ]
+  },
+  {
+   "id": "max-schriftrollen-cavern",
+   "name": "Maximale Schriftrollen (Cavern-Route)",
+   "goal": "Max. Schriftrollen / stärkster Build für 3–5 BC",
+   "bcMin": 2,
+   "bcMax": 5,
+   "path": [
+    "Prisoners' Quarters",
+    "Toxic Sewers",
+    "Corrupted Prison",
+    "Ancient Sewers",
+    "Insufferable Crypt",
+    "Slumbering Sanctuary",
+    "Cavern",
+    "Guardian's Haven",
+    "High Peak Castle",
+    "Throne Room"
+   ],
+   "runesNeeded": [
+    "Vine Rune",
+    "Spider Rune"
+   ],
+   "dlc": [
+    "Rise of the Giant"
+   ],
+   "why": "Kombiniert die schriftrollenreichsten Biome jeder Stufe: Ancient Sewers (3+1 Macht, 5 Fragmente auf 4/5 BC), Slumbering Sanctuary (inkl. garantierter Fluchkiste) und Cavern (4+1 Macht, 5 Fragmente). Auf 4/5 BC kommen so rund 20 Schriftrollen der Macht, 9 Doppelrollen und ca. 7 Rollen aus Fragmenten zusammen – deutlich mehr als jeder andere Pfad.",
+   "tips": [
+    "Cavern aus der Slumbering Sanctuary braucht 2+ BC und einen ersten Sieg über The Giant; alternativ Graveyard mit Cavern Key.",
+    "Nach Guardian's Haven lieber High Peak Castle statt direkt Throne Room: der Direktweg gibt nur 2 Schriftrollen, High Peak 2 Macht + 2 Doppelrollen + Fragmente.",
+    "Corrupted Prison lohnt nur, wenn du die Fluchkiste sicher abarbeiten kannst – sonst direkt Toxic Sewers → Ancient Sewers (Ram Rune).",
+    "Der Giant ist ein DPS-Check: genug Schaden für Phase 3 mitnehmen, sonst lieber Clock Tower → Clock Room.",
+    "Auf 5 BC geht es nach dem Throne Room weiter ins Astrolab (2 Doppelrollen) und zum Observatory."
+   ],
+   "sources": [
+    "https://deadcells.wiki.gg/wiki/Biomes",
+    "https://deadcells.wiki.gg/wiki/Scrolls",
+    "https://deadcells.wiki.gg/wiki/Cavern",
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=3323424572"
+   ]
+  },
+  {
+   "id": "max-schriftrollen-ohne-dlc",
+   "name": "Viele Schriftrollen ohne DLC",
+   "goal": "Max. Schriftrollen im Basisspiel",
+   "bcMin": 0,
+   "bcMax": 5,
+   "path": [
+    "Prisoners' Quarters",
+    "Toxic Sewers",
+    "Ancient Sewers",
+    "Insufferable Crypt",
+    "Slumbering Sanctuary",
+    "Clock Tower",
+    "Clock Room",
+    "High Peak Castle",
+    "Throne Room"
+   ],
+   "runesNeeded": [
+    "Vine Rune",
+    "Ram Rune"
+   ],
+   "dlc": [],
+   "why": "Ancient Sewers und Clock Tower sind die schriftrollenstärksten Basisspiel-Biome ihrer Stufe (je 3–4 Macht + Extra ab höherer BC). Die Slumbering Sanctuary hat eine garantierte Fluchkiste mit zusätzlicher Rolle.",
+   "tips": [
+    "Forgotten Sepulcher statt Clock Tower ist gleichwertig (3 + 1 in Fluchkiste), aber durch die Dunkelheit riskanter.",
+    "Die drei Old Service Keys in den Ancient Sewers öffnen Belohnungen am Biom-Ende – Schlüsselträger nicht übersehen.",
+    "Auf 3+ BC kannst du statt Toxic Sewers → Ancient Sewers auch Ramparts → Insufferable Crypt nehmen (BC-Tür)."
+   ],
+   "sources": [
+    "https://deadcells.wiki.gg/wiki/Biomes",
+    "https://deadcells.wiki.gg/wiki/Scrolls"
+   ]
+  },
+  {
+   "id": "bc5-sicher",
+   "name": "5 BC: sicher statt gierig",
+   "goal": "BC5 / Hell schaffen (Stabilität vor Maximalwerten)",
+   "bcMin": 4,
+   "bcMax": 5,
+   "path": [
+    "Prisoners' Quarters",
+    "Promenade of the Condemned",
+    "Ramparts",
+    "Black Bridge",
+    "Stilt Village",
+    "Clock Tower",
+    "Clock Room",
+    "High Peak Castle",
+    "Throne Room",
+    "Astrolab",
+    "Observatory"
+   ],
+   "runesNeeded": [
+    "Vine Rune"
+   ],
+   "dlc": [
+    "Rise of the Giant"
+   ],
+   "why": "Auf 5 BC entscheiden Heilung und Malaise. Kurze, offene Biome mit vielen Schriftrollen der Macht (Ramparts 3+1, Stilt Village 3+1, Clock Tower 4+1) sind leichter zu kontrollieren als dunkle oder verwinkelte Biome. Nach der Hand of the King führt der Weg auf 5 BC weiter ins Astrolab und zum Collector.",
+   "tips": [
+    "Ab 4 BC gibt es in Passagen keine Flask-Aufladungen mehr – Heilung kommt aus Essen, Mutationen (Necromancy, Gastronomy) oder Lebensraub.",
+    "Malaise durch zügiges Töten niedrig halten; Essen auf 5 BC ist (bis auf ein sauberes Stück pro Biom) infiziert.",
+    "Fluchkisten nur öffnen, wenn das Biom danach noch genug Gegner zum Abarbeiten hat.",
+    "Astrolab braucht Allen-, Elevator- und zwei Guardian's Keys von Elites – vorher Gesundheit sichern.",
+    "Steam-Spieler nennen Stilt Village die leichteste 4. Stufe und den Concierge den leichtesten ersten Boss; die Derelict Distillery (Fallen + Zeitdruck) meiden viele auf 5 BC."
+   ],
+   "sources": [
+    "https://deadcells.wiki.gg/wiki/Biomes",
+    "https://deadcells.wiki.gg/wiki/Boss_Stem_Cells",
+    "https://deadcells.wiki.gg/wiki/Astrolab",
+    "https://steamcommunity.com/app/588650/discussions/0/3196992771953380337",
+    "https://steamcommunity.com/app/588650/discussions/0/4408466785409709597"
+   ]
+  },
+  {
+   "id": "speedrun-zeittueren",
+   "name": "Zeittüren-Sprint",
+   "goal": "Speedrun: Zeittüren (Promenade 2 Min, Ramparts 8 Min, Black Bridge→Stilt 15 Min) mit Bonus-Items",
+   "bcMin": 0,
+   "bcMax": 5,
+   "path": [
+    "Prisoners' Quarters",
+    "Promenade of the Condemned",
+    "Ramparts",
+    "Black Bridge",
+    "Stilt Village",
+    "Clock Tower",
+    "Clock Room",
+    "High Peak Castle",
+    "Throne Room"
+   ],
+   "runesNeeded": [
+    "Vine Rune"
+   ],
+   "dlc": [],
+   "why": "Zeittüren liegen in den Übergängen nach Promenade (2 Min, Assault-Shield-Entwurf), Ramparts (8 Min) und nach der Black Bridge (15 Min, Root-Grenade-Entwurf). Sie enthalten Gold, 20 Zellen und eine Itemauswahl (auf 4–5 BC in S-Qualität).",
+   "tips": [
+    "Schnelle Lauf-Items (Velocity, Speed-Affixe, Swift Sword/Frenzy) helfen, Gegner auf dem Weg zu ignorieren.",
+    "Die 2-Minuten-Tür gibt es auch nach Toxic Sewers (Frenzy-Entwurf) – gleiche Logik.",
+    "Shops und Schatzräume mit der Standard-Zeiteinstellung ausnutzen: Zeit in Shops/Übergängen zählt nicht.",
+    "Wer Schriftrollen braucht, nimmt sie im Vorbeilaufen mit – Fragment-Sockel auf 3+ BC liegen oft am Weg."
+   ],
+   "sources": [
+    "https://deadcells.wiki.gg/wiki/Time_doors",
+    "https://deadcells.wiki.gg/wiki/Biomes",
+    "https://gamersdecide.com/articles/dead-cells-best-routes"
+   ]
+  },
+  {
+   "id": "zellen-farmen",
+   "name": "Zellen- und Entwurfs-Farm",
+   "goal": "Zellen-Farmen und Entwürfe sammeln (Freischaltungen voranbringen)",
+   "bcMin": 2,
+   "bcMax": 4,
+   "path": [
+    "Prisoners' Quarters",
+    "Promenade of the Condemned",
+    "Ossuary",
+    "Black Bridge",
+    "Slumbering Sanctuary",
+    "Forgotten Sepulcher",
+    "Clock Room",
+    "High Peak Castle",
+    "Throne Room"
+   ],
+   "runesNeeded": [
+    "Vine Rune",
+    "Teleportation Rune",
+    "Spider Rune"
+   ],
+   "dlc": [],
+   "why": "Ab 2 BC droppen Gegner doppelt so viele Zellen (ab 4 BC dreifach). Gründliches Abgrasen vieler Biome mit vielen Gegnern bringt Zellen und Entwurf-Drops; Mutationen wie Tainted Flask erhöhen zudem die Zahl der Elites.",
+   "tips": [
+    "Für reines Zellen-Farmen die höchste BC wählen, die du sicher überlebst – der Multiplikator lohnt sich mehr als Tempo.",
+    "Zeit-, Killstreak- und No-Hit-Türen geben feste 20 Zellen zusätzlich.",
+    "Hunter's Grenade + Blueprint Extractor (Specialist's Showroom) holt gezielt Entwürfe aus Gegnern.",
+    "Eine Lore-Room- oder Biom-spezifische Entwurfsliste mitlaufen lassen und gezielt Biome wechseln."
+   ],
+   "sources": [
+    "https://deadcells.wiki.gg/wiki/Boss_Stem_Cells",
+    "https://deadcells.wiki.gg/wiki/Biomes",
+    "https://youtu.be/iHY19it-L2s"
+   ]
+  },
+  {
+   "id": "bad-seed",
+   "name": "Durch den Garten (The Bad Seed)",
+   "goal": "DLC-Inhalte: Dilapidated Arboretum, Morass, Mama Tick",
+   "bcMin": 0,
+   "bcMax": 5,
+   "path": [
+    "Prisoners' Quarters",
+    "Dilapidated Arboretum",
+    "Morass of the Banished",
+    "Nest",
+    "Stilt Village",
+    "Clock Tower",
+    "Clock Room",
+    "High Peak Castle",
+    "Throne Room"
+   ],
+   "runesNeeded": [
+    "Teleportation Rune"
+   ],
+   "dlc": [
+    "The Bad Seed"
+   ],
+   "why": "Ersetzt Stufe 2–3.5 durch die DLC-Biome; Mama Tick ist ein guter Lernboss für Positionierung. Morass hat eine garantierte Fluchkiste mit Zusatzrolle.",
+   "tips": [
+    "Für das Arboretum braucht es Teleportation Rune plus den Arboretum-Schlüssel aus dem Prisoners' Quarters (nahe dem Ausgang).",
+    "Mama Tick: auf die Tentakel-Angriffe achten, nicht unter dem Auge stehen bleiben.",
+    "Scythe Claw (Mama-Tick-Entwurf) ist eine starke Survival-Waffe für spätere Läufe."
+   ],
+   "sources": [
+    "https://deadcells.wiki.gg/wiki/Biomes",
+    "https://deadcells.wiki.gg/wiki/Dilapidated_Arboretum"
+   ]
+  },
+  {
+   "id": "fatal-falls",
+   "name": "Tempel über den Wolken (Fatal Falls)",
+   "goal": "DLC-Inhalte: Fractured Shrines, Undying Shores, Scarecrow",
+   "bcMin": 0,
+   "bcMax": 5,
+   "path": [
+    "Prisoners' Quarters",
+    "Promenade of the Condemned",
+    "Ramparts",
+    "Black Bridge",
+    "Fractured Shrines",
+    "Undying Shores",
+    "Mausoleum",
+    "High Peak Castle",
+    "Throne Room"
+   ],
+   "runesNeeded": [
+    "Vine Rune"
+   ],
+   "dlc": [
+    "Fatal Falls"
+   ],
+   "why": "Undying Shores hat 4 Schriftrollen der Macht und ist damit eine gute Stufe-5-Alternative; der Scarecrow im Mausoleum ist ein fairer Boss.",
+   "tips": [
+    "Der erste Zugang zu den Undying Shores aus den Fractured Shrines erfordert das Cultist Outfit (ausgerüstet).",
+    "Die Fractured Shrines haben nur 1 Macht-Rolle (+1 in Fluchkiste) – Schriftrollen holst du in den Undying Shores nach."
+   ],
+   "sources": [
+    "https://deadcells.wiki.gg/wiki/Biomes",
+    "https://deadcells.wiki.gg/wiki/Undying_Shores"
+   ]
+  },
+  {
+   "id": "queen",
+   "name": "Zur Königin (The Queen and the Sea)",
+   "goal": "Alternatives Finale: The Queen (BC-Quelle wie die Hand of the King)",
+   "bcMin": 0,
+   "bcMax": 5,
+   "path": [
+    "Prisoners' Quarters",
+    "Toxic Sewers",
+    "Ancient Sewers",
+    "Insufferable Crypt",
+    "Slumbering Sanctuary",
+    "Clock Tower",
+    "Clock Room",
+    "Infested Shipwreck",
+    "Lighthouse",
+    "The Crown"
+   ],
+   "runesNeeded": [
+    "Vine Rune",
+    "Ram Rune"
+   ],
+   "dlc": [
+    "The Queen and the Sea"
+   ],
+   "why": "The Queen gibt wie die Hand of the King eine Boss Stem Cell. Der Shipwreck hat ab 3 BC eine Extra-Rolle; auf 3 BC gibt es nach dem Lighthouse noch eine Flask-Aufladung.",
+   "tips": [
+    "Die Queen bestraft Gier: Parieren lohnt sich gegen ihre Stichserien, Schild mitnehmen.",
+    "Lighthouse ist ein Kletter-Biom mit Servants als Boss – Fernkampf oder Fallen sind dort sehr bequem."
+   ],
+   "sources": [
+    "https://deadcells.wiki.gg/wiki/Biomes",
+    "https://deadcells.wiki.gg/wiki/The_Queen"
+   ]
+  },
+  {
+   "id": "castlevania",
+   "name": "Draculas Schloss (Return to Castlevania)",
+   "goal": "DLC-Inhalte: Castle's Outskirts, Dracula's Castle, Death und Dracula",
+   "bcMin": 0,
+   "bcMax": 5,
+   "path": [
+    "Prisoners' Quarters",
+    "Castle's Outskirts",
+    "Dracula's Castle",
+    "Defiled Necropolis",
+    "Stilt Village",
+    "Clock Tower",
+    "Clock Room",
+    "Dracula's Castle",
+    "Master's Keep"
+   ],
+   "runesNeeded": [],
+   "dlc": [
+    "Return to Castlevania"
+   ],
+   "why": "Seit 3.5 kann man beide Castlevania-Biome in einem Lauf besuchen. Death (Defiled Necropolis) und Dracula (Master's Keep) sind die Bosse; Dracula - Final Form gibt ebenfalls eine Boss Stem Cell.",
+   "tips": [
+    "Der späte Zugang zu Dracula's Castle aus dem Clock Room setzt voraus, dass Death mindestens einmal besiegt wurde.",
+    "Castlevania-Waffen (Vampire Killer, Alucard's Sword, Bible) sind starke Fundstücke auf dieser Route.",
+    "Dracula's Castle (früh) hat 3 Macht + Extra ab 2 BC – gute Rollenausbeute."
+   ],
+   "sources": [
+    "https://deadcells.wiki.gg/wiki/Biomes",
+    "https://deadcells.wiki.gg/wiki/Version_3.5"
+   ]
+  },
+  {
+   "id": "cavern-giant",
+   "name": "Die fünfte Boss-Zelle (The Giant)",
+   "goal": "BC5 freischalten: The Giant mit 4 BC besiegen",
+   "bcMin": 4,
+   "bcMax": 4,
+   "path": [
+    "Prisoners' Quarters",
+    "Toxic Sewers",
+    "Ancient Sewers",
+    "Insufferable Crypt",
+    "Graveyard",
+    "Cavern",
+    "Guardian's Haven",
+    "High Peak Castle",
+    "Throne Room"
+   ],
+   "runesNeeded": [
+    "Vine Rune",
+    "Ram Rune",
+    "Spider Rune",
+    "Homunculus Rune"
+   ],
+   "dlc": [
+    "Rise of the Giant"
+   ],
+   "why": "Die fünfte Boss Stem Cell droppt nur The Giant in Guardian's Haven bei 4 aktiven BC. Der Weg über Graveyard → Cavern braucht beim ersten Mal den Cavern Key (Prisoners' Quarters, Homunculus Rune).",
+   "tips": [
+    "Den Cavern Key gibt es hinter der großen Tür am Start der Prisoners' Quarters – nur mit Homunculus Rune.",
+    "Alternativ (nach erstem Giant-Kill) Slumbering Sanctuary → Cavern über die 2-BC-Tür.",
+    "Für den Giant-Kampf Schaden priorisieren: in Phase 3 entscheidet DPS, nicht Ausweichen allein."
+   ],
+   "sources": [
+    "https://deadcells.wiki.gg/wiki/Boss_Stem_Cells",
+    "https://deadcells.wiki.gg/wiki/Biomes",
+    "https://deadcells.wiki.gg/wiki/Guardian's_Haven"
+   ]
+  },
+  {
+   "id": "fluch-gier",
+   "name": "Fluchkisten-Pfad",
+   "goal": "Extra-Rollen und S-Qualität-Items aus Fluchkisten (risikoreich)",
+   "bcMin": 3,
+   "bcMax": 5,
+   "path": [
+    "Prisoners' Quarters",
+    "Toxic Sewers",
+    "Corrupted Prison",
+    "Ancient Sewers",
+    "Insufferable Crypt",
+    "Slumbering Sanctuary",
+    "Forgotten Sepulcher",
+    "Clock Room",
+    "High Peak Castle",
+    "Throne Room"
+   ],
+   "runesNeeded": [
+    "Vine Rune",
+    "Spider Rune",
+    "Teleportation Rune"
+   ],
+   "dlc": [],
+   "why": "Corrupted Prison, Slumbering Sanctuary und Forgotten Sepulcher haben je eine garantierte Fluchkiste mit Schriftrolle der Macht. Ab 3 BC liefern Fluchkisten farblose Items in S-Qualität.",
+   "tips": [
+    "Fluch (10 Stapel) baut sich durch Kills ab; jeder Treffer tötet sofort – vorher Raum mit vielen schwachen Gegnern suchen.",
+    "Acceptance halbiert die nötigen Kills, verflucht aber beim Essen.",
+    "Im Forgotten Sepulcher lieber erst nach dem Abbau des Fluchs ins Dunkle laufen: Dunkelheit-Schaden tötet zwar nicht sofort, Gegner aber schon."
+   ],
+   "sources": [
+    "https://deadcells.wiki.gg/wiki/Biomes",
+    "https://deadcells.wiki.gg/wiki/Curse",
+    "https://deadcells.wiki.gg/wiki/Boss_Stem_Cells"
+   ]
+  },
+  {
+   "id": "ossuary-schriftrollen",
+   "name": "Schriftrollen über das Ossuary",
+   "goal": "Max. Schriftrollen mit leichteren Gegnern (Alternative zur Kanalisation)",
+   "bcMin": 2,
+   "bcMax": 5,
+   "path": [
+    "Prisoners' Quarters",
+    "Promenade of the Condemned",
+    "Prison Depths",
+    "Ossuary",
+    "Black Bridge",
+    "Slumbering Sanctuary",
+    "Cavern",
+    "Guardian's Haven",
+    "High Peak Castle",
+    "Throne Room"
+   ],
+   "runesNeeded": [
+    "Vine Rune",
+    "Spider Rune"
+   ],
+   "dlc": [
+    "Rise of the Giant"
+   ],
+   "why": "Prison Depths (Fluchkiste mit Rolle) und Ossuary (2 + 1 in Fluchkiste) ersetzen die Kanalisation; mit dem Concierge als erstem Boss und Cavern auf Stufe 5 bleibt die Rollenausbeute hoch. Gamersdecide (Max-Stats-Route) und TrueAchievements (5-BC-Walkthrough) nennen sehr ähnliche Pfade.",
+   "tips": [
+    "Prison Depths erreichst du aus der Promenade nur mit der Spider Rune.",
+    "Die Fluchkisten in Prison Depths und Ossuary nur öffnen, wenn danach genug Gegner folgen.",
+    "Ohne Rise of the Giant: Slumbering Sanctuary → Clock Tower/Forgotten Sepulcher → Clock Room."
+   ],
+   "sources": [
+    "https://deadcells.wiki.gg/wiki/Biomes",
+    "https://gamersdecide.com/articles/dead-cells-best-routes",
+    "https://www.trueachievements.com/game/Dead-Cells/walkthrough/12"
+   ]
+  }
+ ],
+ "generalTips": [
+  {
+   "topic": "Schriftrollen: eine Hauptfarbe",
+   "tip": "Jede Stufe in einer Farbe erhöht den Schaden aller Items dieser Farbe multiplikativ um 15 % (1,15^(n-1)). Gleichmäßiges Verteilen halbiert praktisch deinen Schaden – fast alle erfahrenen Spieler stecken 70–90 % der Rollen in die Farbe ihrer Hauptwaffe."
+  },
+  {
+   "topic": "Schriftrollen: Leben über Überleben",
+   "tip": "Jeder Stat-Punkt gibt auch maximale HP, Überleben deutlich am meisten, Taktik am wenigsten (mit abnehmendem Ertrag). Häufiges Muster auf 4–5 BC: Hauptfarbe voll, aber gelegentlich Überleben nehmen, wenn ein Treffer schon ein Drittel der HP kostet."
+  },
+  {
+   "topic": "Doppel-Schriftrollen",
+   "tip": "Doppelrollen (Assassin's/Minotaur's/Guardian's Scroll) erscheinen bevorzugt mit deinen niedrigsten Stats. Trotzdem fast immer die Hauptfarbe wählen, falls sie dabei ist."
+  },
+  {
+   "topic": "Zweifarbige Items",
+   "tip": "Zweifarbige Waffen skalieren mit dem höheren der beiden Stats. Farblose Items und Sturzangriffe skalieren immer mit deinem höchsten Stat – ein farbloses Item passt daher in jeden Build."
+  },
+  {
+   "topic": "Schriftrollen-Fragmente",
+   "tip": "Ab 3 BC gibt es Scroll Fragments (4 Fragmente = 1 Schriftrolle der Macht), ab 4 BC mehr davon. Biome mit vielen Fragmenten (Ancient Sewers, Insufferable Crypt, Cavern) lohnen sich auf hohen BC doppelt."
+  },
+  {
+   "topic": "Heilung auf hohen BC",
+   "tip": "Ab 2 BC fehlen Heilbrunnen teilweise, ab 4 BC gibt es in Passagen gar keine Flask-Aufladungen mehr. Plane Heilung im Build ein: Necromancy, Gastronomy, Lebensraub-Affixe oder Vampirism sind auf 4–5 BC fast Pflicht."
+  },
+  {
+   "topic": "Erholungstreffer (Rally)",
+   "tip": "Nach einem Treffer kannst du einen Teil der verlorenen HP durch eigene Treffer zurückholen. Sofort zurückschlagen statt wegzurennen – Recovery verdreifacht dieses Zeitfenster."
+  },
+  {
+   "topic": "Essen und Malaise",
+   "tip": "Auf 5 BC ist Essen (außer einem sauberen Stück pro Biom) mit Malaise infiziert. Malaise sinkt durch Kills; Cough Syrup aus dem Essensladen reduziert sie um 30 %. Nicht zu lange in einem Raum trödeln."
+  },
+  {
+   "topic": "Fluchkisten",
+   "tip": "Eine Fluchkiste verflucht dich mit 10 Stapeln (jeder Treffer tötet), gibt aber Schriftrolle, Gold/Edelstein und ab 3 BC ein farbloses Item in S-Qualität. Öffne sie nur, wenn danach genug leichte Gegner kommen; Fernkampf, Fallen und Unverwundbarkeits-Skills machen das Abarbeiten sicher."
+  },
+  {
+   "topic": "Verfluchte Biome",
+   "tip": "Ab 2 BC können Biome verflucht sein (Höchstzahl je BC: 2/3/5/8). Sie bringen Zusatzbelohnungen und +1 Gear-Level, aber gefährlichere Gegner. Es gibt immer mindestens einen nicht verfluchten Ausgang."
+  },
+  {
+   "topic": "Zeittüren",
+   "tip": "Zeittüren: Promenade/Toxic Sewers 2 Min, Ramparts/Ossuary 8 Min, nach Black Bridge 15 Min, Forgotten Sepulcher 26 Min. Sie geben Edelsteine, 20 Zellen und eine Item-Auswahl – auf 4–5 BC garantiert S-Qualität."
+  },
+  {
+   "topic": "Killstreak- und No-Hit-Türen",
+   "tip": "Killstreak-Türen brauchen meist 60 Kills ohne Treffer (Prisoners' Quarters: 30). No-Hit-Türen nach Bossen enthalten ein Legendary-Item – ein fehlerfreier Bosskampf lohnt sich also besonders."
+  },
+  {
+   "topic": "Legendary-Items",
+   "tip": "Legendary-Items haben garantierte Zusatz-Affixe, die normal nicht kombinierbar sind. Die Mutation Wish macht das nächste aufgehobene Item legendär – gut, wenn du schon weißt, welche Waffe du behalten willst."
+  },
+  {
+   "topic": "Gear-Level gezielt erhöhen",
+   "tip": "Shop-Items haben +2 Gear-Level, Elite-Drops +2, Truhen/Fluchkisten +1, Mimics +4 gegenüber Bodenfunden. Höheres Gear-Level = mehr Basisschaden und Affixe; ab 3/4 BC kommen +1/+3 dazu."
+  },
+  {
+   "topic": "Gold: kaufen oder sparen",
+   "tip": "Gold verfällt beim Tod. Gib es aus – vor allem in späten Shops (höheres Gear-Level). Beim Schmied (nach Bossen) lohnt sich Aufwerten/Neuwürfeln der Hauptwaffe meist mehr als ein weiteres Zweititem."
+  },
+  {
+   "topic": "Affixe passend wählen",
+   "tip": "Die stärksten Affixe verstärken deinen Status-Effekt: +175 % gegen Gefrorene, +80 % gegen Vergiftete, +75 % gegen Verwurzelte, +70 % gegen Betäubte, +60 % gegen Blutende. Ein Item mit dem richtigen Affix schlägt oft ein höheres Item ohne Synergie."
+  },
+  {
+   "topic": "Gefährliche Affixe",
+   "tip": "Double Damage/Quad Damage verdoppeln bzw. vervierfachen auch den erlittenen Schaden – auf hohen BC tödlich. Quad Damage Free (ohne Nachteil) ist dagegen ein Top-Fund."
+  },
+  {
+   "topic": "Mutationen wechseln",
+   "tip": "Ein Mutations-Reset kostet anfangs 1.000 Gold und verdoppelt sich bis 8.000. Früh im Lauf sind Kill-/Cooldown-Mutationen gut, später lohnt der Wechsel auf Schadens- oder Heilmutationen, wenn Gold übrig ist."
+  },
+  {
+   "topic": "Cooldown-Mutationen",
+   "tip": "Skill-lastige Builds leben von Cooldown-Reduktion: Instinct of the Master of Arms (Krits), Killer Instinct (Nahkampf-Kills), Hunter's Instinct (Kills ohne Nahkampf), Heart of Ice (Treffer auf gefrorene/betäubte/verwurzelte Ziele), Blind Faith (Paraden). Wähle die, deren Bedingung dein Build ohnehin ständig erfüllt."
+  },
+  {
+   "topic": "Ygdar Orus Li Ox als Versicherung",
+   "tip": "Ygdar Orus Li Ox rettet einmal vor dem Tod, solange du nicht verflucht bist, muss aber als erste Mutation gewählt werden. Für unsichere Läufe/Erstversuche auf neuer BC eine solide Wahl, im eingespielten Build ein verschwendeter Slot."
+  },
+  {
+   "topic": "Parieren lernen",
+   "tip": "Viele Bosse und Elites haben parierbare Angriffe. Ein Schild im zweiten Slot (oder im Rucksack mit Armadillopack) ist auf hohen BC eine der zuverlässigsten Verteidigungen – auch in Builds, die sonst nicht auf Überleben setzen."
+  },
+  {
+   "topic": "Biomwahl nach Build",
+   "tip": "Wähle Biome nicht nur nach Schriftrollen, sondern nach deinem Build: Fallenbuilds mögen enge Räume (Ancient Sewers), Fernkampf offene Flächen (Ramparts, High Peak Castle); dunkle Biome (Forgotten Sepulcher) sind ohne Night Light gefährlich."
+  },
+  {
+   "topic": "Ressourcen nicht verschwenden",
+   "tip": "Vor jedem Bosskampf Skills auf Cooldown bringen lassen und Flask voll machen. Bei den meisten Bossen lohnt es sich, Fallen/Turrets vor dem Kampfbeginn zu platzieren."
+  },
+  {
+   "topic": "Hunter's Grenade für Entwürfe",
+   "tip": "Mit Hunter's Grenade + Blueprint Extractor (Specialist's Showroom) kannst du gezielt Entwürfe aus Gegnern ziehen. Seit 3.0 gibt sie keine Stats mehr – reines Freischalt-Werkzeug."
+  },
+  {
+   "topic": "Speed-Buffs nutzen",
+   "tip": "Kills geben einen kurzen Tempo-Buff. Swift Sword, Frenzy und Get Rich Quick hängen davon ab; Velocity verlängert ihn. Wer aggressiv von Kill zu Kill springt, hält den Buff fast dauerhaft."
+  },
+  {
+   "topic": "Malaise verstehen",
+   "tip": "Malaise (nur 5 BC) steigt umso schneller, je mehr Gegner im Biom noch leben. Kills senken sie, ein zu ~90 % geräumtes Biom stoppt sie. Also aggressiv spielen statt zu warten – und Malaise-Spawns können sogar beim Erreichen der 60-Kill-Tür helfen."
+  },
+  {
+   "topic": "Aspekte nach 5 BC",
+   "tip": "Aspekte (z. B. Damned) verhindern das Erhalten neuer Boss-Zellen und manche Erfolge. Sobald du alle fünf Boss-Zellen hast, sind sie aber 'gratis' und können Builds stark verändern."
+  },
+  {
+   "topic": "Legendary Forge",
+   "tip": "Viele erfahrene Spieler investieren Zellen nach jedem Boss zuerst in die Legendary Forge beim Schmied – sie erhöht die Item-Qualität für den Rest aller Läufe (Obergrenzen steigen mit der BC-Stufe)."
+  },
+  {
+   "topic": "Bosse vorausplanen",
+   "tip": "Habe immer eine verlässliche Krit- oder Kontrollquelle für den nächsten Boss und plane ein bis zwei Biome voraus (z. B. Giantkiller oder Wolf Trap im Rucksack)."
+  },
+  {
+   "topic": "Sichtbarkeit auf 5 BC",
+   "tip": "In den Barrierefreiheits-Optionen Umrisse für Spieler und Gegner aktivieren – auf 5 BC mit vielen Effekten verliert man sonst leicht den Überblick (mehrfach in Steam-Threads empfohlen)."
+  }
+ ]
+}
