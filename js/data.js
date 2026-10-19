@@ -166,6 +166,10 @@ export const depthLabel = (b) => (b.kind === 'arena' ? 'Bossarena' : b.kind === 
 
 // ---------- Profilbezogene Ableitungen ----------
 export const isOwned = (e) => !!e && (e.blueprint?.default || profile.owned[e.key] === true);
+/** Entwurf eingesammelt, aber noch nicht beim Collector freigeschaltet (aus dem Savegame). */
+export const isFound = (e) => !!e && !isOwned(e) && e.key in profile.found;
+/** Restliche Zellen bis zur Freischaltung (falls Kosten bekannt). */
+export const cellsLeft = (e) => (e?.blueprint?.cells != null ? Math.max(0, e.blueprint.cells - (profile.found[e.key] ?? 0)) : null);
 export const isTrackable = (e) => e && (e.kind === 'gear' || e.kind === 'mutation' || e.kind === 'outfit');
 export const dlcOk = (e) => hasDlc(e?.dlc);
 export const bpAvailable = (e) => dlcOk(e) && (e.blueprint?.minBC ?? 0) <= profile.bc;
@@ -201,7 +205,7 @@ export function nextUnlocks(limit = 8, kinds = ['gear', 'mutation']) {
   const usage = new Map();
   for (const b of db.builds) for (const { entity } of buildItems(b)) if (entity) usage.set(entity.key, (usage.get(entity.key) ?? 0) + 1);
   return [...db.gear, ...db.mutations]
-    .filter((e) => kinds.includes(e.kind) && !isOwned(e) && bpAvailable(e))
+    .filter((e) => kinds.includes(e.kind) && !isOwned(e) && !(e.key in profile.found) && bpAvailable(e))
     .map((e) => ({ e, score: tierScore(e) * 3 + Math.min(usage.get(e.key) ?? 0, 4) * 2 + (e.blueprint.dropChance && e.blueprint.dropChance >= 5 ? 1 : 0) + (['lore', 'secret', 'boss'].includes(e.blueprint.sourceType) ? 1 : 0) }))
     .filter((x) => x.score > 0)
     .sort((a, b) => b.score - a.score || a.e.name.localeCompare(b.e.name))

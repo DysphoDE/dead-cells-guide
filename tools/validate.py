@@ -82,6 +82,13 @@ for r in meta.get('routes', []):
         if norm(n) not in biome_keys and n not in biome_keys:
             warnings.append(f'meta.routes/{r.get("id")}: Biom "{n}" unbekannt')
 
+save_ids = load('save-ids').get('ids', {})
+known_keys = {f'gear:{i["id"]}' for i in gear} | {f'mutation:{i["id"]}' for i in muts} | {f'outfit:{i["id"]}' for i in outfits} | {f'rune:{r["id"]}' for r in world.get('runes', [])}
+for iid, v in save_ids.items():
+    for k in (v if isinstance(v, list) else [v]):
+        if k.split(':')[0] in ('gear', 'mutation', 'outfit', 'rune') and k not in known_keys:
+            errors.append(f'save-ids: {iid} → unbekannter Eintrag {k}')
+
 for w in warnings:
     print('WARNUNG:', w)
 for e in errors:

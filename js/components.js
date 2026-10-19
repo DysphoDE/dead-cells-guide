@@ -1,6 +1,6 @@
 // Wiederverwendbare UI-Bausteine (geben html``-Fragmente zurück).
 import { html, raw } from './util.js';
-import { COLOR_LABEL, TYPE_LABEL, SOURCE_LABEL, findByName, isOwned, isTrackable, bpAvailable, biome, buildItems, buildReadiness, buildFitsBc, buildDlcOk, L } from './data.js';
+import { COLOR_LABEL, TYPE_LABEL, SOURCE_LABEL, findByName, isOwned, isFound, cellsLeft, isTrackable, bpAvailable, biome, buildItems, buildReadiness, buildFitsBc, buildDlcOk, L } from './data.js';
 import { profile } from './store.js';
 
 export const CHECK = raw('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
@@ -36,6 +36,13 @@ export const dlcTag = (dlc) => (dlc ? (Array.isArray(dlc) ? dlc : [dlc]).map((d)
 export const bcTag = (bc, suffix = '+') => html`<span class="tag bc" title="Boss Cells">${bc}${suffix} BC</span>`;
 export const tierBadge = (tier, title = '') => (tier ? html`<span class="tier ${tier}" title="${title || `Tier ${tier}`}">${tier}</span>` : '');
 export const difficulty = (n = 1) => html`<span class="diff" title="Schwierigkeit ${n}/3">${[1, 2, 3].map((i) => html`<i class="${i <= n ? 'on' : ''}"></i>`)}</span>`;
+
+/** Hinweis „Entwurf schon im Gepäck“ inkl. restlicher Zellen. */
+export const foundTag = (e) => {
+  if (!isFound(e)) return '';
+  const left = cellsLeft(e);
+  return html`<span class="tag found" title="Entwurf eingesammelt, beim Collector noch nicht freigeschaltet">Entwurf da${left != null ? ` · noch ${left} Zellen` : ''}</span>`;
+};
 
 export const ownToggle = (e) => {
   if (!isTrackable(e)) return '';

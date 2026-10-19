@@ -1,7 +1,7 @@
 import { html, matches, $, pct } from '../util.js';
-import { db, depthLabel, isOwned, bpAvailable, dlcOk, nextUnlocks, biome, SOURCE_LABEL, TYPE_LABEL, L } from '../data.js';
+import { db, depthLabel, isFound, cellsLeft, tierScore, isOwned, bpAvailable, dlcOk, nextUnlocks, biome, SOURCE_LABEL, TYPE_LABEL, L } from '../data.js';
 import { profile, update } from '../store.js';
-import { pageHead, empty, icon, tick, blueprintSummary, ring, bcTag, tierBadge } from '../components.js';
+import { pageHead, empty, icon, tick, blueprintSummary, ring, bcTag, tierBadge, foundTag } from '../components.js';
 import { toast } from '../ui.js';
 
 export const title = () => 'Freischaltungen';
@@ -14,13 +14,13 @@ const pool = () => ({ gear: db.gear, mutation: db.mutations, outfit: db.outfits 
 function filtered() {
   return pool().filter((e) =>
     !e.blueprint.default &&
-    (state.status === 'all' || (state.status === 'owned') === isOwned(e)) &&
+    (state.status === 'all' || (state.status === 'found' ? isFound(e) : (state.status === 'owned') === isOwned(e))) &&
     (state.source === 'all' || e.blueprint.sourceType === state.source) &&
     (!state.availableOnly || bpAvailable(e)) &&
     matches(state.q, e.name, e.nameDe, e.blueprint.text, e.blueprint.from, e.blueprint.biomes));
 }
 
-const row = (e) => html`<div class="track-row ${isOwned(e) ? 'owned' : ''}">${tick(e)}${icon(e, 'sm')}<span class="meta"><a href="${e.url}">${L(e)}</a><small title="${blueprintSummary(e)}">${blueprintSummary(e)}</small></span>${!bpAvailable(e) ? bcTag(e.blueprint.minBC) : ''}${e.blueprint.cells ? html`<span class="tag" title="Zellen-Kosten" style="color:var(--cell)">${e.blueprint.cells}</span>` : ''}</div>`;
+const row = (e) => html`<div class="track-row ${isOwned(e) ? 'owned' : ''}">${tick(e)}${icon(e, 'sm')}<span class="meta"><a href="${e.url}">${L(e)}</a><small title="${blueprintSummary(e)}">${blueprintSummary(e)}</small></span>${foundTag(e) || (!bpAvailable(e) ? bcTag(e.blueprint.minBC) : '')}${!isFound(e) && e.blueprint.cells ? html`<span class="tag" title="Zellen-Kosten" style="color:var(--cell)">${e.blueprint.cells}</span>` : ''}</div>`;
 
 function listView(items) {
   if (!items.length) return empty(state.status === 'missing' ? 'Nichts mehr offen in dieser Auswahl. Stark!' : 'Nichts gefunden.');
@@ -59,7 +59,7 @@ function body() {
   <div class="tabs" role="tablist">${KINDS.map(([k, v]) => html`<button role="tab" data-kind="${k}" aria-selected="${state.kind === k}">${v}</button>`)}</div>
   <div class="toolbar">
     <input class="input" id="u-q" type="search" placeholder="Name, Gegner oder Biom …" value="${state.q}" aria-label="Freischaltungen durchsuchen">
-    <select class="select" id="u-status" aria-label="Status"><option value="missing" ${state.status === 'missing' ? 'selected' : ''}>Fehlt mir</option><option value="owned" ${state.status === 'owned' ? 'selected' : ''}>Habe ich</option><option value="all" ${state.status === 'all' ? 'selected' : ''}>Alle</option></select>
+    <select class="select" id="u-status" aria-label="Status"><option value="missing" ${state.status === 'missing' ? 'selected' : ''}>Fehlt mir</option><option value="found" ${state.status === 'found' ? 'selected' : ''}>Entwurf da, nicht freigeschaltet</option><option value="owned" ${state.status === 'owned' ? 'selected' : ''}>Habe ich</option><option value="all" ${state.status === 'all' ? 'selected' : ''}>Alle</option></select>
     <select class="select" id="u-source" aria-label="Quelle"><option value="all">Alle Quellen</option>${sources.map((s) => html`<option value="${s}" ${state.source === s ? 'selected' : ''}>${SOURCE_LABEL[s] ?? s}</option>`)}</select>
   </div>
   <div class="toolbar">
@@ -72,11 +72,22 @@ function body() {
   ${listView(items)}`;
 }
 
+function pack() {
+  const list = [...db.gear, ...db.mutations, ...db.outfits].filter(isFound)
+    .sort((a, b) => tierScore(b) - tierScore(a) || (cellsLeft(a) ?? 999) - (cellsLeft(b) ?? 999));
+  if (!list.length) return '';
+  const total = list.reduce((s, e) => s + (cellsLeft(e) ?? 0), 0);
+  return html`<section class="section" style="margin-top:28px"><div class="section-head"><div><h2>Entwürfe im Gepäck</h2><p>${list.length} Entwürfe hast du schon eingesammelt – beim Collector fehlen noch insgesamt <b style="color:var(--cell)">${total}</b> Zellen. Die besten zuerst.</p></div></div>
+    <div class="track-list">${list.map((e) => html`<div class="track-row">${tick(e)}${icon(e, 'sm')}<span class="meta"><a href="${e.url}">${L(e)}</a><small>${e.kind === 'mutation' ? 'Mutation' : e.kind === 'outfit' ? 'Outfit' : TYPE_LABEL[e.type]}${profile.found[e.key] ? ` · ${profile.found[e.key]} Zellen investiert` : ''}</small></span>${tierBadge(e.tier)}${cellsLeft(e) != null ? html`<span class="tag" style="color:var(--cell)" title="Restliche Zellen">${cellsLeft(e)}</span>` : ''}</div>`)}</div></section>`;
+}
+
 export function render() {
   const next = nextUnlocks(6);
   return html`
-  ${pageHead('Deine Sammlung', 'Freischaltungen', 'Hake ab, was du im Spiel schon freigeschaltet hast. Alle Empfehlungen auf der Seite richten sich danach. Gespeichert wird nur lokal in deinem Browser – über das Zahnrad oben kannst du exportieren.', html`<button class="btn sm" data-export>Exportieren</button><button class="btn sm" data-import>Importieren</button>`)}
+  ${pageHead('Deine Sammlung', 'Freischaltungen', 'Lies dein Savegame ein oder hake von Hand ab, was du im Spiel schon freigeschaltet hast. Alle Empfehlungen auf der Seite richten sich danach. Gespeichert wird nur lokal in deinem Browser.', html`<button class="btn sm primary" data-save-import>Savegame importieren</button><button class="btn sm ghost" data-export title="Fortschritt als JSON sichern">Backup speichern</button><button class="btn sm ghost" data-import title="Gesichertes JSON laden">Backup laden</button>`)}
+  ${profile.importedAt ? html`<p class="small muted" style="margin:-12px 0 18px">Zuletzt aus dem Savegame übernommen: ${new Date(profile.importedAt).toLocaleString('de-DE')}</p>` : ''}
   ${progress()}
+  ${pack()}
   ${next.length ? html`<section class="section" style="margin-top:28px"><div class="section-head"><div><h2>Nächste Ziele</h2><p>Starke, häufig gespielte Entwürfe, die du bei ${profile.bc} BC bekommen kannst.</p></div></div>
     <div class="grid auto">${next.map((e) => html`<a class="card item-card ${e.colors[0]}" href="${e.url}">${icon(e)}<span class="meta"><h3>${L(e)}</h3><small title="${blueprintSummary(e)}">${blueprintSummary(e)}</small></span><span class="side">${tierBadge(e.tier)}<span class="tag">${e.kind === 'mutation' ? 'Mutation' : TYPE_LABEL[e.type]}</span></span></a>`)}</div></section>` : ''}
   <section class="section" id="u-body">${body()}</section>`;

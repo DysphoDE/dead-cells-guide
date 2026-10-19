@@ -40,6 +40,11 @@ export function render() {
     <a class="stat" href="#/world?tab=runes">${ring(pct(runesOwned, db.runes.length), `${runesOwned}`, 'var(--tactics)')}<span><b>${runesOwned}<span class="dim" style="font-size:18px"> / ${db.runes.length}</span></b><small>Runen gefunden</small></span></a>
   </div>
 
+  ${!profile.importedAt ? html`<div class="import-cta" style="margin-top:14px">
+    <div style="flex:1"><b style="font:700 19px var(--font-display)">Spielst du auf dem PC?</b><p>Lies dein Savegame ein – dann kennt der Guide sofort alle deine Freischaltungen, Runen und Boss Cells. Die Datei bleibt in deinem Browser.</p></div>
+    <button class="btn primary" data-save-import>Savegame importieren</button>
+  </div>` : ''}
+
   <section class="section">
     <div class="section-head"><div><h2>Für deinen nächsten Run</h2><p>Passend zu ${profile.bc} BC – mit dem, was du schon hast, zuerst.</p></div><a class="link-btn" href="#/builds">Alle ${db.builds.length} Builds →</a></div>
     ${picks.length ? html`<div class="grid cols-3">${picks.map(buildCard)}</div>` : html`<div class="empty">Noch keine Builds geladen.</div>`}

@@ -3,6 +3,7 @@ import { db, loadAll, TYPE_LABEL, isOwned, L } from './data.js';
 import { profile, update, subscribe, DLCS, exportProfile, importProfile, resetProfile } from './store.js';
 import { icon } from './components.js';
 import { toast, openDialog, closeDialog } from './ui.js';
+import { openImport } from './import.js';
 import * as views from './views/index.js';
 
 // ---------- Navigation ----------
@@ -113,6 +114,10 @@ function profileDialog() {
         <div class="stack" style="gap:10px">${DLCS.map((x) => html`<label class="switch"><input type="checkbox" data-dlc="${x.id}" ${profile.dlcs.includes(x.id) ? 'checked' : ''}><span class="track"></span>${x.id}${x.note ? html` <span class="dim small">(${x.note})</span>` : ''}</label>`)}</div>
         <p class="small muted" style="margin-top:10px">Builds, Items, Biome und Routen aus abgewählten DLCs werden ausgeblendet oder als gesperrt markiert.</p>
       </section>
+      <section><div class="field-label" style="margin-bottom:10px">Savegame</div>
+        <p class="small muted" style="margin-bottom:10px">Freischaltungen, Runen und Boss Cells direkt aus deiner user_0.dat übernehmen.${profile.importedAt ? ` Zuletzt importiert: ${new Date(profile.importedAt).toLocaleString('de-DE')}.` : ''}</p>
+        <button class="btn sm primary" data-save-import>Savegame importieren</button>
+      </section>
       <section><div class="field-label" style="margin-bottom:10px">Fortschritt sichern</div>
         <p class="small muted" style="margin-bottom:10px">Dein Fortschritt wird nur lokal in diesem Browser gespeichert. Exportiere ihn, um ihn auf ein anderes Gerät mitzunehmen.</p>
         <div class="row"><button class="btn sm" data-export>Exportieren</button><button class="btn sm" data-import>Importieren</button><button class="btn sm ghost" data-reset style="margin-left:auto;color:var(--brutality)">Zurücksetzen</button></div>
@@ -185,9 +190,11 @@ function bindGlobal() {
   });
 
   document.addEventListener('click', (ev) => {
-    const t = ev.target.closest('[data-bc],[data-lang],[data-own],[data-export],[data-import],[data-reset]');
+    const t = ev.target.closest('[data-bc],[data-lang],[data-own],[data-export],[data-import],[data-reset],[data-save-import]');
     if (!t) return;
-    if (t.dataset.bc !== undefined) {
+    if (t.dataset.saveImport !== undefined) {
+      openImport();
+    } else if (t.dataset.bc !== undefined) {
       const bc = +t.dataset.bc;
       if (bc === profile.bc) return;
       update((p) => { p.bc = bc; });
@@ -200,7 +207,7 @@ function bindGlobal() {
     } else if (t.dataset.own) {
       const key = t.dataset.own;
       const on = !profile.owned[key];
-      update((p) => { if (on) p.owned[key] = true; else delete p.owned[key]; });
+      update((p) => { if (on) { p.owned[key] = true; delete p.found[key]; } else delete p.owned[key]; });
       const e = db.byKey.get(key);
       if (on && e) toast(`${L(e)} freigeschaltet.`);
     } else if (t.dataset.export !== undefined) {

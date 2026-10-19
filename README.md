@@ -7,6 +7,7 @@ Inoffizieller, deutschsprachiger Begleiter für **Dead Cells** (Stand 3.5 „The
 - **Routenplaner** – interaktive Biom-Karte mit empfohlenen Routen, Schriftrollen, Zeittüren, Runen und Entwürfen auf dem Weg
 - **Waffen & Skills, Mutationen, Tierlisten** – mit Krit-Bedingung, Werten, Entwurf-Fundort und Partnern
 - **Biome, Bosse, Runen, Boss Cells** – Ausgänge, Tipps, Boss-Taktiken, was sich auf jeder BC-Stufe ändert
+- **Savegame-Import** – `user_0.dat` (PC/Steam) im Browser einlesen: Freischaltungen, eingesammelte Entwürfe inkl. investierter Zellen, Runen, Boss-Cell-Stufe, Collector-Upgrades
 - **Freischaltungen** – persönlicher Tracker inkl. „Entwurf-Atlas“ (was fehlt mir in welchem Biom?), Outfits, Export/Import
 - **Wissen** – Collector-Upgrades, Affixe, Statuseffekte, Glossar, Tipps
 
@@ -27,6 +28,7 @@ Dann <http://localhost:8000> öffnen. (Direkt per `file://` geht es nicht, weil 
 | `index.html`, `css/`, `js/` | App (ES-Module, Hash-Router, eine Datei pro Ansicht in `js/views/`) |
 | `data/*.json` | Datenbasis: `gear`, `mutations`, `outfits`, `world`, `builds`, `meta`, `mechanics`, `names-de` |
 | `assets/` | Icons und Bilder (aus dem Dead Cells Wiki), Schriften (selbst gehostet) |
+| `js/savegame.js` | Savegame-Leser (zlib + hxbit-Muster); Zuordnung interner IDs in `data/save-ids.json` (`tools/build_save_ids.py`) |
 | `tools/` | Python-Skripte, mit denen die Daten aus der Wiki-API gebaut wurden, plus `validate.py` |
 
 `python tools/validate.py` prüft die Daten auf Konsistenz (läuft auch vor jedem Deployment).

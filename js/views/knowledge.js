@@ -1,6 +1,7 @@
-import { html } from '../util.js';
+import { html, norm } from '../util.js';
 import { db, L } from '../data.js';
 import { pageHead, empty } from '../components.js';
+import { profile } from '../store.js';
 
 export const title = () => 'Wissen & Mechaniken';
 
@@ -19,8 +20,8 @@ export function render() {
     add(`s-${s.id}`, s.title, html`${s.summary ? html`<p style="color:var(--text-2);margin-bottom:12px">${s.summary}</p>` : ''}<ul class="bullets">${(s.points ?? []).map((p) => html`<li>${p}</li>`)}</ul>${s.wiki ? html`<p class="small" style="margin-top:10px"><a href="${s.wiki}" target="_blank" rel="noopener">Mehr im Wiki ↗</a></p>` : ''}`);
   }
   add('collector', 'Collector-Upgrades', m.collector?.length && html`<p class="muted small" style="margin-bottom:12px">Wofür sich deine Zellen lohnen – Empfehlung von oben nach unten.</p>
-    <div class="table-wrap"><table class="table"><thead><tr><th>Upgrade</th><th>Kosten</th><th>Effekt</th><th>Wert</th></tr></thead><tbody>
-    ${[...m.collector].sort((a, b) => ['high', 'medium', 'low'].indexOf(a.recommended) - ['high', 'medium', 'low'].indexOf(b.recommended)).map((c) => html`<tr><td>${L(c)}${c.category ? html`<br><span class="dim small">${c.category}</span>` : ''}</td><td style="white-space:nowrap;color:var(--cell)">${c.cells ?? '–'}${c.minBC ? html`<br><span class="dim small">ab ${c.minBC} BC</span>` : ''}</td><td>${c.effect}${c.why ? html`<br><span class="dim small">${c.why}</span>` : ''}</td><td>${c.recommended ? html`<span class="rating ${c.recommended}">${RATING_LABEL[c.recommended] ?? c.recommended}</span>` : ''}</td></tr>`)}
+    <div class="table-wrap"><table class="table"><thead><tr><th>Upgrade</th><th>Kosten</th><th>Effekt</th><th>Wert</th>${Object.keys(profile.collector).length ? html`<th>Du</th>` : ''}</tr></thead><tbody>
+    ${[...m.collector].sort((a, b) => ['high', 'medium', 'low'].indexOf(a.recommended) - ['high', 'medium', 'low'].indexOf(b.recommended)).map((c) => html`<tr><td>${L(c)}${c.category ? html`<br><span class="dim small">${c.category}</span>` : ''}</td><td style="white-space:nowrap;color:var(--cell)">${c.cells ?? '–'}${c.minBC ? html`<br><span class="dim small">ab ${c.minBC} BC</span>` : ''}</td><td>${c.effect}${c.why ? html`<br><span class="dim small">${c.why}</span>` : ''}</td><td>${c.recommended ? html`<span class="rating ${c.recommended}">${RATING_LABEL[c.recommended] ?? c.recommended}</span>` : ''}</td>${Object.keys(profile.collector).length ? html`<td>${profile.collector[norm(c.name)] ? html`<span class="tag ok" title="Laut Savegame gekauft">✓</span>` : html`<span class="dim">–</span>`}</td>` : ''}</tr>`)}
     </tbody></table></div>`);
   add('forge', 'Schmiede (Forge)', m.forge?.length && html`<div class="table-wrap"><table class="table"><thead><tr><th>Stufe</th><th>Zellen</th><th>Effekt</th></tr></thead><tbody>${m.forge.map((f) => html`<tr><td>${f.level}</td><td style="color:var(--cell)">${f.cells ?? '–'}</td><td>${f.effect}</td></tr>`)}</tbody></table></div>`);
   add('status', 'Statuseffekte', m.statusEffects?.length && html`<div class="grid cols-2">${m.statusEffects.map((s) => html`<div class="panel tight"><b>${s.nameDe ?? s.name}</b>${s.nameDe && s.nameDe !== s.name ? html` <span class="dim small">(${L(s)})</span>` : ''}<p class="small" style="color:var(--text-2);margin-top:6px">${s.effect}</p>${s.synergy ? html`<p class="small muted" style="margin-top:6px">↳ ${s.synergy}</p>` : ''}</div>`)}</div>`);

@@ -16,6 +16,10 @@ const defaults = () => ({
   bc: 0,
   dlcs: DLCS.map((d) => d.id),
   owned: {},        // "gear:rusty-sword": true
+  found: {},        // Entwurf im Besitz, noch nicht freigeschaltet: "gear:punishment": investierte Zellen
+  collector: {},    // Collector-Upgrades aus dem Savegame (normalisierter Name): true
+  aspects: [],      // freigeschaltete Aspekte (englische Namen)
+  importedAt: null, // Zeitpunkt des letzten Savegame-Imports
   runes: {},        // "vine-rune": true
   favorites: [],    // Build-IDs
   workshop: { weapons: [null, null], skills: [null, null], mutations: [null, null, null] },
@@ -43,6 +47,10 @@ function sanitize(p) {
     bc: Number.isInteger(p.bc) && p.bc >= 0 && p.bc <= 5 ? p.bc : 0,
     dlcs: Array.isArray(p.dlcs) ? p.dlcs.filter((x) => DLCS.some((d) => d.id === x)) : d.dlcs,
     owned: bools(p.owned),
+    found: Object.fromEntries(Object.entries(obj(p.found)).filter(([, v]) => Number.isFinite(v) && v >= 0)),
+    collector: bools(p.collector),
+    aspects: Array.isArray(p.aspects) ? p.aspects.filter((x) => typeof x === 'string') : [],
+    importedAt: typeof p.importedAt === 'string' ? p.importedAt : null,
     runes: bools(p.runes),
     favorites: Array.isArray(p.favorites) ? p.favorites.filter((x) => typeof x === 'string') : [],
     workshop: {

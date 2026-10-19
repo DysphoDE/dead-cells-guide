@@ -2,7 +2,7 @@
 import { html } from '../util.js';
 import { db, TYPE_LABEL, buildItems, bpAvailable, L, altName } from '../data.js';
 import { profile } from '../store.js';
-import { icon, colorTags, dlcTag, tierBadge, ownToggle, blueprintFacts, kv, itemLink, empty } from '../components.js';
+import { icon, colorTags, dlcTag, tierBadge, foundTag, ownToggle, blueprintFacts, kv, itemLink, empty } from '../components.js';
 import { partnersFor, applies, benefits, EFFECTS } from '../synergy.js';
 
 const find = (ctx) => (ctx.path === 'mutation' ? db.mutations : db.gear).find((x) => x.id === ctx.param);
@@ -39,7 +39,7 @@ export function render(ctx) {
       <h1 style="margin-top:10px">${L(e)}</h1>
       ${altName(e) ? html`<p class="sub">${profile.prefs.names === 'de' ? 'Englisch' : 'Im deutschen Spiel'}: ${altName(e)}</p>` : ''}
       <p class="lead">${isMut ? e.effect : e.description}</p>
-      <div class="row">${ownToggle(e)}${!bpAvailable(e) ? html`<span class="tag warn">Bei ${profile.bc} BC / deinen DLCs nicht erhältlich</span>` : ''}${e.wiki ? html`<a class="btn sm ghost" href="${e.wiki}" target="_blank" rel="noopener">Im Wiki ↗</a>` : ''}</div>
+      <div class="row">${ownToggle(e)}${foundTag(e)}${!bpAvailable(e) ? html`<span class="tag warn">Bei ${profile.bc} BC / deinen DLCs nicht erhältlich</span>` : ''}${e.wiki ? html`<a class="btn sm ghost" href="${e.wiki}" target="_blank" rel="noopener">Im Wiki ↗</a>` : ''}</div>
     </div>
   </section>
 
