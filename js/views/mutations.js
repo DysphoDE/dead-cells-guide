@@ -23,15 +23,27 @@ function list() {
 }
 
 function sets() {
-  if (!db.mutationSets.length) return empty('Noch keine Kombis hinterlegt.');
-  return html`<div class="grid auto">${db.mutationSets.map((s) => html`<article class="card ${s.color}">
+  const fromBuilds = db.builds.filter((b) => b.core.mutations.length === 3)
+    .sort((a, b) => tierScore(b) - tierScore(a) || a.name.localeCompare(b.name));
+  if (!db.mutationSets.length && !fromBuilds.length) return empty('Noch keine Kombis hinterlegt.');
+  return html`
+  ${db.mutationSets.length ? html`<div class="section-head"><div><h2 style="font-size:24px">Klassische Dreier-Kombis</h2><p>Bewährte Sets, die zu vielen Builds passen.</p></div></div>
+  <div class="grid auto">${db.mutationSets.map((s) => html`<article class="card ${s.color}">
     <div class="row" style="gap:6px">${colorTag(s.color)}</div>
     <h3>${L(s)}</h3>
     <div class="stack" style="gap:6px">${s.mutations.map((n) => itemLink(n))}</div>
     ${s.forWhat ? html`<p><b style="color:var(--text)">Wofür:</b> ${s.forWhat}</p>` : ''}
     <p>${s.why}</p>
-    <div class="card-foot"><a class="link-btn" href="#/workshop?${s.mutations.map((n) => `add=${encodeURIComponent(n)}`)[0]}" data-set="${s.mutations.join('|')}">In der Werkstatt öffnen →</a></div>
-  </article>`)}</div>`;
+    <div class="card-foot"><a class="link-btn" href="#/workshop" data-set="${s.mutations.join('|')}">In der Werkstatt öffnen →</a></div>
+  </article>`)}</div>` : ''}
+  ${fromBuilds.length ? html`<div class="section-head" style="margin-top:34px"><div><h2 style="font-size:24px">Mutationen aus den Builds (${fromBuilds.length})</h2><p>Jedes Build-Set mit Begründung pro Mutation – und was du vor dem Boss tauschst.</p></div></div>
+  <div class="grid auto">${fromBuilds.map((b) => html`<article class="card ${b.color}">
+    <div class="row" style="gap:6px">${tierBadge(b.tier)}${colorTag(b.color)}<span class="tag">${b.archetype}</span></div>
+    <h3><a href="${b.url}" style="color:var(--text)">${L(b)}</a></h3>
+    <div class="stack" style="gap:8px">${b.core.mutations.map((n) => html`<div>${itemLink(n)}${b.mutationWhy?.[n] ? html`<p class="small" style="margin-top:4px">${b.mutationWhy[n]}</p>` : ''}</div>`)}</div>
+    ${b.bossMutations?.length ? html`<p class="small"><b style="color:var(--text)">Vor Bossen:</b> ${b.bossMutations.map((n) => L(findByName(n) ?? { name: n })).join(', ')}</p>` : ''}
+    <div class="card-foot"><a class="link-btn" href="${b.url}">Zum Build →</a><span class="spacer"></span><a class="link-btn" href="#/workshop?build=${b.id}">Werkstatt</a></div>
+  </article>`)}</div>` : ''}`;
 }
 
 export function render() {

@@ -53,6 +53,11 @@ export function render(ctx) {
             ${slotBlock('Waffen', b.alternatives.weapons)}${slotBlock('Skills', b.alternatives.skills)}${slotBlock('Mutationen', b.alternatives.mutations)}
           </div>` : ''}
       </section>
+      ${b.mutationWhy ? html`<section class="panel">
+        <h3>Die Mutationen im Detail</h3>
+        <div class="stack" style="gap:12px;margin-top:12px">${b.core.mutations.map((n) => html`<div class="row" style="flex-wrap:nowrap;align-items:flex-start;gap:12px">${itemLink(n)}<span class="small" style="color:var(--text-2);flex:1;padding-top:6px">${b.mutationWhy[n] ?? ''}</span></div>`)}</div>
+        ${b.bossMutations?.length ? html`<div class="note" style="margin-top:16px"><b>Vor dem Boss tauschen:</b> <span class="row" style="gap:6px;margin:8px 0">${b.bossMutations.map((n) => itemLink(n))}</span>${b.bossMutationsWhy ?? ''}</div>` : ''}
+      </section>` : ''}
       ${b.whyItWorks ? html`<section class="panel"><h3>Warum es funktioniert</h3><p class="muted" style="color:var(--text-2)">${b.whyItWorks}</p></section>` : ''}
       ${b.howToPlay?.length ? html`<section class="panel"><h3>So spielst du ihn</h3><ol class="steps" style="margin-top:12px">${b.howToPlay.map((s) => html`<li><span>${s}</span></li>`)}</ol></section>` : ''}
       <div class="grid cols-2">

@@ -6,6 +6,29 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import meta_builds, meta_tiers, meta_synergies, meta_routes, meta_tips  # noqa: E402
+import importlib
+
+CHECK_ONLY = "--check" in sys.argv
+
+# Zusätzliche Build-Module (tools/meta_builds_more_*.py): je BUILDS (neue Builds), PATCHES (Ergänzungen
+# bestehender Builds, id -> Felder) und optional SRC (weitere Quellen-Kürzel).
+EXTRA = [importlib.import_module(f.stem) for f in sorted(Path(__file__).resolve().parent.glob("meta_builds_more_*.py"))]
+ALL_SRC = dict(meta_builds.SRC)
+ALL_BUILDS = list(meta_builds.BUILDS)
+for mod in EXTRA:
+    ALL_SRC.update(getattr(mod, "SRC", {}))
+    ALL_BUILDS.extend(getattr(mod, "BUILDS", []))
+_by_id = {b["id"]: b for b in ALL_BUILDS}
+for mod in EXTRA:
+    for bid, patch in getattr(mod, "PATCHES", {}).items():
+        if bid not in _by_id:
+            print(f"PATCH {mod.__name__}: unbekannter Build {bid!r}"); sys.exit(1)
+        tgt = _by_id[bid]
+        for k, v in patch.items():
+            if k in ("core", "alternatives"):
+                tgt[k] = {**tgt[k], **v}
+            else:
+                tgt[k] = v
 
 TODAY = "2026-10-14"
 
@@ -57,10 +80,24 @@ WEAP = {"melee weapon", "ranged weapon", "shield"}
 SKILL = {"deployable", "power", "grenade"}
 
 # ---------- Builds ----------
+TWO_HANDED = {i["name"] for i in json.loads((ROOT / "data/gear.json").read_text(encoding="utf-8"))["items"] if i.get("twoHanded")}
 builds = []
 used_src = set()
-for b in meta_builds.BUILDS:
+_ids = [b["id"] for b in ALL_BUILDS]
+for dup in {x for x in _ids if _ids.count(x) > 1}:
+    errors.append(f"build {dup}: ID doppelt")
+for b in ALL_BUILDS:
     w = f"build {b['id']}"
+    cw, cs, cm = b["core"]["weapons"], b["core"]["skills"], b["core"]["mutations"]
+    if len(cm) != 3: errors.append(f"{w}: genau 3 Kern-Mutationen nötig, hat {len(cm)}")
+    if len(cs) != 2: errors.append(f"{w}: genau 2 Kern-Skills nötig, hat {len(cs)}")
+    if not (len(cw) == 2 or (len(cw) == 1 and cw[0] in TWO_HANDED)):
+        errors.append(f"{w}: 2 Kern-Waffen nötig (oder 1 Zweihänder), hat {cw}")
+    for n in b.get("mutationWhy", {}):
+        if n not in cm: errors.append(f"{w}: mutationWhy für {n!r}, ist keine Kern-Mutation")
+    for n in cm:
+        if n not in b.get("mutationWhy", {}): errors.append(f"{w}: mutationWhy fehlt für {n!r}")
+    for n in b.get("bossMutations", []): chk_mut(n, w + " bossMutations")
     for part in ("core", "alternatives"):
         for n in b[part]["weapons"]: chk_item(n, w, WEAP)
         for n in b[part]["skills"]: chk_item(n, w, SKILL)
@@ -75,15 +112,16 @@ for b in meta_builds.BUILDS:
         if d not in DLCS: errors.append(f"{w}: DLC {d!r}")
     srcs = []
     for s in b["sources"]:
-        if s not in meta_builds.SRC: errors.append(f"{w}: Quelle {s!r} fehlt")
+        if s not in ALL_SRC: errors.append(f"{w}: Quelle {s!r} fehlt")
         else:
-            srcs.append(meta_builds.SRC[s]); used_src.add(meta_builds.SRC[s])
+            srcs.append(ALL_SRC[s]); used_src.add(ALL_SRC[s])
     out = dict(b); out["sources"] = srcs
     assert out["color"] in ("brutality", "tactics", "survival", "colorless", "hybrid")
     assert out["tier"] in ("S", "A", "B") and out["phase"] in ("early", "mid", "late", "any")
     builds.append({k: out[k] for k in ["id", "name", "tagline", "color", "secondaryColor", "archetype", "difficulty", "bcMin", "bcMax",
                                         "phase", "tier", "dlc", "core", "alternatives", "statFocus", "affixes", "whyItWorks",
-                                        "howToPlay", "strengths", "weaknesses", "sources"]})
+                                        "howToPlay", "strengths", "weaknesses", "sources"]}
+                  | {k: out[k] for k in ("mutationWhy", "bossMutations", "bossMutationsWhy") if out.get(k)})
 
 # ---------- Tiers ----------
 def tierlist(rows, kinds, where, is_mut=False):
@@ -125,6 +163,8 @@ for r in meta_routes.ROUTES:
 
 if errors:
     print("\n".join(errors)); sys.exit(1)
+if CHECK_ONLY:
+    print(f"OK (--check): {len(builds)} Builds, nichts geschrieben"); sys.exit(0)
 
 SOURCES_META = [
     {"title": "Dead Cells Wiki (wiki.gg): Item-/Mutationsseiten inkl. History, Biomes, Curse, Stats, Boss Stem Cells", "url": "https://deadcells.wiki.gg/", "date": TODAY, "kind": "wiki"},

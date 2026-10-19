@@ -310,6 +310,7 @@ a.card:hover, button.card:hover { transform: translateY(-2px); border-color: var
 .card-foot { margin-top: auto; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding-top: 12px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--muted); }
 
 .build-card .loadout-strip { display: flex; gap: 6px; flex-wrap: wrap; }
+.build-card .loadout-strip .strip-sep { width: 1px; align-self: stretch; margin: 2px 4px; background: var(--line-2); }
 .build-card .loadout-strip .not-owned { opacity: .62; filter: grayscale(.7); }
 .build-card .tags-row { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
 .build-card .ready { margin-left: auto; }

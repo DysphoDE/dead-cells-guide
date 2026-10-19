@@ -98,11 +98,12 @@ export function itemCard(e, { sub } = {}) {
 export function buildCard(b) {
   const r = buildReadiness(b);
   const fits = buildFitsBc(b) && buildDlcOk(b);
-  const core = buildItems(b).slice(0, 6);
+  const core = buildItems(b);
+  const nGear = b.core.weapons.length + b.core.skills.length;
   return html`<a class="card build-card ${b.color}" href="${b.url}">
     <div class="tags-row">${tierBadge(b.tier, `Build-Tier ${b.tier}`)}${colorTag(b.color)}${b.secondaryColor ? colorTag(b.secondaryColor) : ''}<span class="tag">${b.archetype}</span></div>
     <div><h3>${L(b)}</h3><p style="margin-top:6px">${b.tagline}</p></div>
-    <div class="loadout-strip">${core.map(({ name, entity }) => html`<span title="${name}${entity && isTrackable(entity) && !isOwned(entity) ? ' (fehlt dir)' : ''}" class="${entity && isTrackable(entity) && !isOwned(entity) ? 'not-owned' : ''}">${icon(entity ?? { name }, 'sm')}</span>`)}</div>
+    <div class="loadout-strip">${core.map(({ name, entity }, i) => html`${i === nGear ? html`<span class="strip-sep" aria-hidden="true"></span>` : ''}<span title="${name}${entity && isTrackable(entity) && !isOwned(entity) ? ' (fehlt dir)' : ''}" class="${entity && isTrackable(entity) && !isOwned(entity) ? 'not-owned' : ''}">${icon(entity ?? { name }, 'sm')}</span>`)}</div>
     <div class="card-foot">${difficulty(b.difficulty)}<span>${b.bcMin}–${b.bcMax} BC</span>${b.dlc?.length ? html`<span class="tag dlc">DLC</span>` : ''}
       <span class="ready">${!fits ? html`<span class="tag lock">passt nicht zu deiner BC/DLC</span>` : r.total && r.owned === r.total ? html`<span class="tag ok">Alles freigeschaltet</span>` : html`<span class="tag">${r.owned}/${r.total} freigeschaltet</span>`}</span></div>
   </a>`;
