@@ -6,6 +6,16 @@ export const title = () => 'Mutationen';
 
 const state = { color: 'all', tier: 'all', own: 'all', q: '', tab: 'all' };
 
+function row(m) {
+  return html`<tr>
+    <td><a class="mut-name" href="${m.url}">${icon(m, 'sm', { showOwned: true })}<span>${L(m)}</span></a></td>
+    <td>${colorTag(m.colors[0])}${m.dlc ? html` <span class="tag dlc">${m.dlc}</span>` : ''}</td>
+    <td class="num">${tierBadge(m.tier)}</td>
+    <td>${m.effect}</td>
+    <td class="col-src">${blueprintSummary(m)}</td>
+  </tr>`;
+}
+
 function card(m) {
   return html`<a class="card ${m.colors[0]}" href="${m.url}" style="gap:10px">
     <div class="row" style="flex-wrap:nowrap;gap:12px">${icon(m, '', { showOwned: true })}<div style="flex:1;min-width:0"><h3 style="font-size:20px">${L(m)}</h3><div class="row" style="gap:6px;margin-top:4px">${colorTag(m.colors[0])}${m.dlc ? html`<span class="tag dlc">${m.dlc}</span>` : ''}</div></div>${tierBadge(m.tier)}</div>
@@ -19,7 +29,7 @@ function list() {
     .filter((m) => dlcOk(m) && (state.color === 'all' || m.colors[0] === state.color) && (state.tier === 'all' || m.tier === state.tier) &&
       (state.own === 'all' || (state.own === 'owned') === isOwned(m)) && matches(state.q, m.name, m.nameDe, m.effect, m.notes, m.tags))
     .sort((a, b) => tierScore(b) - tierScore(a) || a.name.localeCompare(b.name));
-  return html`<p class="result-count">${l.length} Mutationen</p>${l.length ? html`<div class="grid auto">${l.map(card)}</div>` : empty('Keine Mutation passt zu diesen Filtern.')}`;
+  return html`<p class="result-count">${l.length} Mutationen</p>${l.length ? html`<div class="table-wrap"><table class="table mut-list"><thead><tr><th>Mutation</th><th>Farbe</th><th>Tier</th><th>Wirkung</th><th class="col-src">Entwurf</th></tr></thead><tbody>${l.map(row)}</tbody></table></div>` : empty('Keine Mutation passt zu diesen Filtern.')}`;
 }
 
 function sets() {
@@ -29,8 +39,8 @@ function sets() {
   return html`
   ${db.mutationSets.length ? html`<div class="section-head"><div><h2 style="font-size:24px">Klassische Dreier-Kombis</h2><p>Bewährte Sets, die zu vielen Builds passen.</p></div></div>
   <div class="grid auto">${db.mutationSets.map((s) => html`<article class="card ${s.color}">
-    <div class="row" style="gap:6px">${colorTag(s.color)}</div>
     <h3>${L(s)}</h3>
+    <div class="row" style="gap:6px">${colorTag(s.color)}</div>
     <div class="stack" style="gap:6px">${s.mutations.map((n) => itemLink(n))}</div>
     ${s.forWhat ? html`<p><b style="color:var(--text)">Wofür:</b> ${s.forWhat}</p>` : ''}
     <p>${s.why}</p>
@@ -38,8 +48,8 @@ function sets() {
   </article>`)}</div>` : ''}
   ${fromBuilds.length ? html`<div class="section-head" style="margin-top:34px"><div><h2 style="font-size:24px">Mutationen aus den Builds (${fromBuilds.length})</h2><p>Jedes Build-Set mit Begründung pro Mutation – und was du vor dem Boss tauschst.</p></div></div>
   <div class="grid auto">${fromBuilds.map((b) => html`<article class="card ${b.color}">
-    <div class="row" style="gap:6px">${tierBadge(b.tier)}${colorTag(b.color)}<span class="tag">${b.archetype}</span></div>
     <h3><a href="${b.url}" style="color:var(--text)">${L(b)}</a></h3>
+    <div class="row" style="gap:6px">${tierBadge(b.tier)}${colorTag(b.color)}<span class="tag">${b.archetype}</span></div>
     <div class="stack" style="gap:8px">${b.core.mutations.map((n) => html`<div>${itemLink(n)}${b.mutationWhy?.[n] ? html`<p class="small" style="margin-top:4px">${b.mutationWhy[n]}</p>` : ''}</div>`)}</div>
     ${b.bossMutations?.length ? html`<p class="small"><b style="color:var(--text)">Vor Bossen:</b> ${b.bossMutations.map((n) => L(findByName(n) ?? { name: n })).join(', ')}</p>` : ''}
     <div class="card-foot"><a class="link-btn" href="${b.url}">Zum Build →</a><span class="spacer"></span><a class="link-btn" href="#/workshop?build=${b.id}">Werkstatt</a></div>

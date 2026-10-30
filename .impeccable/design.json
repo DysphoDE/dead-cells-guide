@@ -1,0 +1,815 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-30T19:50:29+00:00",
+  "title": "Design System: Prisoner's Guide",
+  "extensions": {
+    "colorMeta": {
+      "desk": {
+        "role": "neutral",
+        "displayName": "Desk",
+        "canonical": "#18181a",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#242425",
+          "#3f3f41",
+          "#5d5d60",
+          "#808082",
+          "#a4a4a7",
+          "#cacacc",
+          "#eeeef0"
+        ],
+        "cssVar": "--desk"
+      },
+      "desk-raised": {
+        "role": "neutral",
+        "displayName": "Desk Raised",
+        "canonical": "#222225",
+        "tonalRamp": [
+          "#0b0b0d",
+          "#242426",
+          "#3f3f42",
+          "#5d5d60",
+          "#808083",
+          "#a4a4a7",
+          "#cacacd",
+          "#eeeef1"
+        ],
+        "cssVar": "--desk-2"
+      },
+      "desk-line": {
+        "role": "neutral",
+        "displayName": "Desk Line",
+        "canonical": "#36363a",
+        "tonalRamp": [
+          "#0b0b0d",
+          "#242427",
+          "#3f3f43",
+          "#5d5d61",
+          "#808084",
+          "#a4a4a8",
+          "#cacace",
+          "#eeeef2"
+        ],
+        "cssVar": "--desk-line"
+      },
+      "desk-text": {
+        "role": "neutral",
+        "displayName": "Desk Text",
+        "canonical": "#ebe9e4",
+        "tonalRamp": [
+          "#0c0b09",
+          "#252421",
+          "#41403c",
+          "#5f5d59",
+          "#82807c",
+          "#a6a4a0",
+          "#cccac7",
+          "#f0eeeb"
+        ],
+        "cssVar": "--desk-text"
+      },
+      "desk-muted": {
+        "role": "neutral",
+        "displayName": "Desk Muted",
+        "canonical": "#a6a6a1",
+        "tonalRamp": [
+          "#0b0b09",
+          "#242421",
+          "#40403c",
+          "#5e5e5a",
+          "#80807c",
+          "#a5a5a0",
+          "#cbcbc7",
+          "#efefeb"
+        ],
+        "cssVar": "--desk-muted"
+      },
+      "strip": {
+        "role": "neutral",
+        "displayName": "Strip",
+        "canonical": "#0e0e0f",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#242425",
+          "#404041",
+          "#5d5d5f",
+          "#808081",
+          "#a4a4a6",
+          "#cacacb",
+          "#eeeeef"
+        ],
+        "cssVar": "--strip"
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ],
+        "cssVar": "--paper"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#121212",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ],
+        "cssVar": "--ink"
+      },
+      "ink-secondary": {
+        "role": "neutral",
+        "displayName": "Ink Secondary",
+        "canonical": "#34363a",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#232427",
+          "#3e4043",
+          "#5c5e62",
+          "#7e8085",
+          "#a2a5a9",
+          "#c8cace",
+          "#edeef2"
+        ],
+        "cssVar": "--text-2"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "canonical": "#5c5f65",
+        "tonalRamp": [
+          "#0a0b0e",
+          "#222428",
+          "#3d4045",
+          "#5b5e63",
+          "#7d8086",
+          "#a2a5aa",
+          "#c8cad0",
+          "#eceef3"
+        ],
+        "cssVar": "--muted"
+      },
+      "dim": {
+        "role": "neutral",
+        "displayName": "Dim",
+        "canonical": "#6c6f75",
+        "tonalRamp": [
+          "#0a0b0e",
+          "#222428",
+          "#3d4044",
+          "#5b5e63",
+          "#7d8086",
+          "#a2a5aa",
+          "#c8cad0",
+          "#eceef3"
+        ],
+        "cssVar": "--dim"
+      },
+      "rule-hair": {
+        "role": "neutral",
+        "displayName": "Hair Rule",
+        "canonical": "#e1e0db",
+        "tonalRamp": [
+          "#0c0b09",
+          "#252421",
+          "#40403c",
+          "#5e5e5a",
+          "#81807c",
+          "#a5a5a0",
+          "#cbcac7",
+          "#efeeeb"
+        ],
+        "cssVar": "--line"
+      },
+      "rule-soft": {
+        "role": "neutral",
+        "displayName": "Soft Rule",
+        "canonical": "#c4c3bd",
+        "tonalRamp": [
+          "#0c0b09",
+          "#252421",
+          "#41403c",
+          "#5f5e59",
+          "#81807b",
+          "#a5a5a0",
+          "#cbcbc6",
+          "#efefea"
+        ],
+        "cssVar": "--line-2"
+      },
+      "plate": {
+        "role": "neutral",
+        "displayName": "Plate",
+        "canonical": "#f4f3ef",
+        "tonalRamp": [
+          "#0c0b09",
+          "#252422",
+          "#40403d",
+          "#5e5e5a",
+          "#81807d",
+          "#a5a4a1",
+          "#cbcac7",
+          "#efeeec"
+        ],
+        "cssVar": "--panel"
+      },
+      "plate-2": {
+        "role": "neutral",
+        "displayName": "Plate 2",
+        "canonical": "#ecebe6",
+        "tonalRamp": [
+          "#0c0b09",
+          "#252421",
+          "#40403c",
+          "#5e5e5a",
+          "#81807c",
+          "#a5a5a1",
+          "#cbcac7",
+          "#efeeeb"
+        ],
+        "cssVar": "--panel-2"
+      },
+      "plate-3": {
+        "role": "neutral",
+        "displayName": "Plate 3",
+        "canonical": "#e0dfd9",
+        "tonalRamp": [
+          "#0c0b09",
+          "#252421",
+          "#40403c",
+          "#5f5e59",
+          "#81807b",
+          "#a5a5a0",
+          "#cbcbc6",
+          "#efeeea"
+        ],
+        "cssVar": "--panel-3"
+      },
+      "table-zebra": {
+        "role": "neutral",
+        "displayName": "Table Zebra",
+        "canonical": "#faf9f6",
+        "tonalRamp": [
+          "#0c0b0a",
+          "#242422",
+          "#40403e",
+          "#5e5d5b",
+          "#81807e",
+          "#a5a4a2",
+          "#cbcac8",
+          "#efeeec"
+        ]
+      },
+      "chapter-ochre": {
+        "role": "primary",
+        "displayName": "Chapter Ochre",
+        "canonical": "#e9a21a",
+        "tonalRamp": [
+          "#0f0a05",
+          "#2e220f",
+          "#523b18",
+          "#7a5619",
+          "#a7751f",
+          "#d1993d",
+          "#f2c179",
+          "#ffe8b4"
+        ],
+        "cssVar": "--ch1"
+      },
+      "chapter-ochre-ink": {
+        "role": "primary",
+        "displayName": "Chapter Ochre Ink",
+        "canonical": "#855600",
+        "tonalRamp": [
+          "#140800",
+          "#341f01",
+          "#573807",
+          "#7f530c",
+          "#a07843",
+          "#bd9f7a",
+          "#dcc7ad",
+          "#faecdc"
+        ],
+        "cssVar": "--ch1-ink"
+      },
+      "chapter-ochre-tint": {
+        "role": "primary",
+        "displayName": "Chapter Ochre Tint",
+        "canonical": "#fcf1d9",
+        "tonalRamp": [
+          "#0c0b0a",
+          "#252422",
+          "#41403d",
+          "#605d57",
+          "#848076",
+          "#aaa497",
+          "#d1cabb",
+          "#f5eede"
+        ],
+        "cssVar": "--ch1-tint"
+      },
+      "chapter-teal": {
+        "role": "primary",
+        "displayName": "Chapter Teal",
+        "canonical": "#0f8b8d",
+        "tonalRamp": [
+          "#000e0f",
+          "#042a2b",
+          "#0c494a",
+          "#0f6b6c",
+          "#2c9192",
+          "#71b2b3",
+          "#a8d5d5",
+          "#d7f5f6"
+        ],
+        "cssVar": "--ch2"
+      },
+      "chapter-teal-ink": {
+        "role": "primary",
+        "displayName": "Chapter Teal Ink",
+        "canonical": "#0a6668",
+        "tonalRamp": [
+          "#000f0f",
+          "#032a2b",
+          "#0f494a",
+          "#206a6b",
+          "#538b8d",
+          "#86adae",
+          "#b7d0d1",
+          "#e2f2f2"
+        ],
+        "cssVar": "--ch2-ink"
+      },
+      "chapter-teal-tint": {
+        "role": "primary",
+        "displayName": "Chapter Teal Tint",
+        "canonical": "#e0f1f1",
+        "tonalRamp": [
+          "#060d0d",
+          "#1c2626",
+          "#374242",
+          "#536161",
+          "#758484",
+          "#9aa8a8",
+          "#c1cdcd",
+          "#e6f1f1"
+        ],
+        "cssVar": "--ch2-tint"
+      },
+      "chapter-blue": {
+        "role": "primary",
+        "displayName": "Chapter Blue",
+        "canonical": "#1677c9",
+        "tonalRamp": [
+          "#000b1d",
+          "#042543",
+          "#0e4170",
+          "#1460a2",
+          "#3684ce",
+          "#73a9e2",
+          "#a8cff8",
+          "#d8f2ff"
+        ],
+        "cssVar": "--ch3"
+      },
+      "chapter-blue-ink": {
+        "role": "primary",
+        "displayName": "Chapter Blue Ink",
+        "canonical": "#11599a",
+        "tonalRamp": [
+          "#000b1e",
+          "#042544",
+          "#11416f",
+          "#24609b",
+          "#5384b8",
+          "#85a8cf",
+          "#b6cde7",
+          "#e2f0ff"
+        ],
+        "cssVar": "--ch3-ink"
+      },
+      "chapter-blue-tint": {
+        "role": "primary",
+        "displayName": "Chapter Blue Tint",
+        "canonical": "#e2edf8",
+        "tonalRamp": [
+          "#070c10",
+          "#1f252b",
+          "#394148",
+          "#565f67",
+          "#78818b",
+          "#9da6af",
+          "#c3ccd4",
+          "#e8eff7"
+        ],
+        "cssVar": "--ch3-tint"
+      },
+      "scaling-brutality": {
+        "role": "secondary",
+        "displayName": "Scaling Red (Brutality)",
+        "canonical": "#cf3428",
+        "tonalRamp": [
+          "#1d0101",
+          "#450d08",
+          "#721d15",
+          "#a52a20",
+          "#d54b3d",
+          "#eb8374",
+          "#ffb4a8",
+          "#ffe0d7"
+        ],
+        "cssVar": "--brutality"
+      },
+      "scaling-tactics": {
+        "role": "secondary",
+        "displayName": "Scaling Violet (Tactics)",
+        "canonical": "#7445cf",
+        "tonalRamp": [
+          "#0e0323",
+          "#28154e",
+          "#462a7f",
+          "#673fb6",
+          "#8866db",
+          "#a994eb",
+          "#cdc0fe",
+          "#f0e8ff"
+        ],
+        "cssVar": "--tactics"
+      },
+      "scaling-survival": {
+        "role": "secondary",
+        "displayName": "Scaling Green (Survival)",
+        "canonical": "#24803e",
+        "tonalRamp": [
+          "#001003",
+          "#082c12",
+          "#164c24",
+          "#226f37",
+          "#4a9359",
+          "#80b488",
+          "#b2d5b6",
+          "#def6e1"
+        ],
+        "cssVar": "--survival"
+      },
+      "scaling-colorless": {
+        "role": "secondary",
+        "displayName": "Scaling Stone (Colorless)",
+        "canonical": "#8c877d",
+        "tonalRamp": [
+          "#0d0b06",
+          "#27241d",
+          "#433f38",
+          "#625d54",
+          "#848076",
+          "#a9a49b",
+          "#cecac2",
+          "#f2eee7"
+        ],
+        "cssVar": "--colorless"
+      },
+      "tier-s": {
+        "role": "neutral",
+        "displayName": "Tier S Ink",
+        "canonical": "#121212",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ],
+        "cssVar": "--tier-s"
+      },
+      "tier-a": {
+        "role": "neutral",
+        "displayName": "Tier A Grey",
+        "canonical": "#4a4a4c",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#242425",
+          "#3f3f41",
+          "#5d5d5f",
+          "#808082",
+          "#a4a4a6",
+          "#cacacc",
+          "#eeeef0"
+        ],
+        "cssVar": "--tier-a"
+      },
+      "tier-b": {
+        "role": "neutral",
+        "displayName": "Tier B Grey",
+        "canonical": "#6e6e70",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#242425",
+          "#3f3f41",
+          "#5d5d5f",
+          "#808082",
+          "#a4a4a6",
+          "#cacacc",
+          "#eeeef0"
+        ],
+        "cssVar": "--tier-b"
+      },
+      "tier-c": {
+        "role": "neutral",
+        "displayName": "Tier C Pale",
+        "canonical": "#cfcfca",
+        "tonalRamp": [
+          "#0b0b09",
+          "#242421",
+          "#40403c",
+          "#5e5e5a",
+          "#80807c",
+          "#a5a5a1",
+          "#cbcbc7",
+          "#efefeb"
+        ],
+        "cssVar": "--tier-c"
+      },
+      "tier-d": {
+        "role": "neutral",
+        "displayName": "Tier D Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ],
+        "cssVar": "--tier-d"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page and detail titles, uppercase."
+      },
+      "display-opener": {
+        "displayName": "Display Opener",
+        "purpose": "Overview opener title only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section heads set on the 3px ink rule."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Entry, panel and plate titles (21 to 27px)."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Reading column in Inter."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Intro paragraphs, max 66ch, ink-secondary."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Running head, field labels, tags, buttons, counts; uppercase, tracked."
+      },
+      "table-head": {
+        "displayName": "Table Head",
+        "purpose": "White on ink header rows."
+      }
+    },
+    "chapterTheming": {
+      "mechanism": "body[data-ch=\"1|2|3\"] resolves --ch, --ch-ink, --ch-tint, --ch-on",
+      "onColor": {
+        "1": "#121212",
+        "2": "#ffffff",
+        "3": "#ffffff"
+      }
+    },
+    "shadows": [
+      {
+        "name": "sheet-on-desk",
+        "value": "0 30px 60px -30px rgba(0,0,0,.8), 0 1px 0 rgba(255,255,255,.04)",
+        "purpose": "The paper sheet lying on the desk; removed below 980px."
+      },
+      {
+        "name": "overlay",
+        "value": "0 18px 40px -16px rgba(0,0,0,.55), 0 2px 6px rgba(0,0,0,.18)",
+        "purpose": "Dialogs, search results, toast, mobile drawer."
+      },
+      {
+        "name": "node-lift",
+        "value": "0 4px 10px -4px rgba(0,0,0,.35)",
+        "purpose": "Route-map node hover only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "All eased movement: page turn, dialog rise, thumb-tab extension, drawer, meters."
+      },
+      {
+        "name": "state",
+        "value": ".15s",
+        "purpose": "Colour, border and background state changes."
+      },
+      {
+        "name": "page-turn",
+        "value": ".5s, translateX(18px) fade-in",
+        "purpose": "Sheet content on route change."
+      },
+      {
+        "name": "rise",
+        "value": ".3s, translateY(10px) fade-in",
+        "purpose": "Dialogs and search box opening."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "durations collapse to .01ms",
+        "purpose": "prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "1280px"
+      },
+      {
+        "name": "desktop",
+        "value": "1180px"
+      },
+      {
+        "name": "drawer",
+        "value": "980px"
+      },
+      {
+        "name": "phone",
+        "value": "720px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Button",
+      "kind": "button",
+      "refersTo": "button",
+      "description": "Default action: paper with a 2px ink stroke, inverts to ink on hover.",
+      "html": "<button class=\"ds-btn\"><svg viewBox=\"0 0 24 24\" width=\"17\" height=\"17\" aria-hidden=\"true\"><path d=\"m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Merken</button>",
+      "css": ":host{--desk:#18181a;--paper:#fff;--ink:#121212;--text-2:#34363a;--muted:#5c5f65;--dim:#6c6f75;--line:#e1e0db;--line-2:#c4c3bd;--panel:#f4f3ef;--panel-2:#ecebe6;--panel-3:#e0dfd9;--ch:#e9a21a;--ch-ink:#855600;--ch-tint:#fcf1d9;--ch-on:#121212;--brutality:#cf3428;--tactics:#7445cf;--survival:#24803e;--tier-s:#121212;--tier-a:#4a4a4c;--tier-b:#6e6e70;--tier-c:#cfcfca;--tier-d:#fff;--font-display:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;--font-body:Inter,system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1)} .ds-btn{display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 18px;border-radius:2px;border:2px solid var(--ink);background:var(--paper);color:var(--ink);font:700 17px var(--font-display);letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:background .15s,color .15s,border-color .15s} .ds-btn:hover{background:var(--ink);color:#fff} .ds-btn:active{transform:translateY(1px)} .ds-btn:focus-visible{outline:2px solid var(--ink);outline-offset:2px}"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main action: solid ink, takes the open chapter colour on hover.",
+      "html": "<button class=\"ds-btn ds-btn-primary\">In der Werkstatt öffnen</button>",
+      "css": ":host{--desk:#18181a;--paper:#fff;--ink:#121212;--text-2:#34363a;--muted:#5c5f65;--dim:#6c6f75;--line:#e1e0db;--line-2:#c4c3bd;--panel:#f4f3ef;--panel-2:#ecebe6;--panel-3:#e0dfd9;--ch:#e9a21a;--ch-ink:#855600;--ch-tint:#fcf1d9;--ch-on:#121212;--brutality:#cf3428;--tactics:#7445cf;--survival:#24803e;--tier-s:#121212;--tier-a:#4a4a4c;--tier-b:#6e6e70;--tier-c:#cfcfca;--tier-d:#fff;--font-display:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;--font-body:Inter,system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1)} .ds-btn{display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 18px;border-radius:2px;border:2px solid var(--ink);background:var(--paper);color:var(--ink);font:700 17px var(--font-display);letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:background .15s,color .15s,border-color .15s} .ds-btn:hover{background:var(--ink);color:#fff} .ds-btn:active{transform:translateY(1px)} .ds-btn:focus-visible{outline:2px solid var(--ink);outline-offset:2px} .ds-btn-primary{background:var(--ink);color:#fff} .ds-btn-primary:hover{background:var(--ch);border-color:var(--ch);color:var(--ch-on)}"
+    },
+    {
+      "name": "Filter Chips",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Square toggles; pressed = solid ink; scaling colour only as a 10px square.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip\" aria-pressed=\"true\">Alle</button><button class=\"ds-chip\" aria-pressed=\"false\"><i style=\"background:var(--brutality)\"></i>Brutalität</button><button class=\"ds-chip\" aria-pressed=\"false\"><i style=\"background:var(--tactics)\"></i>Taktik</button><button class=\"ds-chip\" aria-pressed=\"false\"><i style=\"background:var(--survival)\"></i>Überleben</button></div>",
+      "css": ":host{--desk:#18181a;--paper:#fff;--ink:#121212;--text-2:#34363a;--muted:#5c5f65;--dim:#6c6f75;--line:#e1e0db;--line-2:#c4c3bd;--panel:#f4f3ef;--panel-2:#ecebe6;--panel-3:#e0dfd9;--ch:#e9a21a;--ch-ink:#855600;--ch-tint:#fcf1d9;--ch-on:#121212;--brutality:#cf3428;--tactics:#7445cf;--survival:#24803e;--tier-s:#121212;--tier-a:#4a4a4c;--tier-b:#6e6e70;--tier-c:#cfcfca;--tier-d:#fff;--font-display:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;--font-body:Inter,system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1)} .ds-chips{display:flex;flex-wrap:wrap;gap:6px} .ds-chip{display:inline-flex;align-items:center;gap:8px;height:34px;padding:0 12px;border-radius:2px;border:1px solid var(--line-2);background:var(--paper);color:var(--text-2);font:500 14px var(--font-body);cursor:pointer;transition:border-color .15s,background .15s,color .15s} .ds-chip i{width:10px;height:10px} .ds-chip:hover{border-color:var(--ink);color:var(--ink)} .ds-chip:focus-visible{outline:2px solid var(--ink);outline-offset:2px} .ds-chip[aria-pressed=\"true\"]{background:var(--ink);border-color:var(--ink);color:#fff}"
+    },
+    {
+      "name": "Tags and Tier Badges",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Marks that sit below a title: tier on the ink ramp, scaling square, BC in ink, DLC keyline, locked struck.",
+      "html": "<div class=\"ds-tags\"><span class=\"ds-tier\" style=\"--tc:var(--tier-s);--to:#fff\">S</span><span class=\"ds-tier\" style=\"--tc:var(--tier-a);--to:#fff\">A</span><span class=\"ds-tier\" style=\"--tc:var(--tier-c);--to:var(--ink)\">C</span><span class=\"ds-tag ds-scale\"><i></i>Brutalität</span><span class=\"ds-tag\">Krit-Nahkampf</span><span class=\"ds-tag ds-bc\">3+ BC</span><span class=\"ds-tag ds-dlc\">DLC</span><span class=\"ds-tag ds-lock\">gesperrt</span></div>",
+      "css": ":host{--desk:#18181a;--paper:#fff;--ink:#121212;--text-2:#34363a;--muted:#5c5f65;--dim:#6c6f75;--line:#e1e0db;--line-2:#c4c3bd;--panel:#f4f3ef;--panel-2:#ecebe6;--panel-3:#e0dfd9;--ch:#e9a21a;--ch-ink:#855600;--ch-tint:#fcf1d9;--ch-on:#121212;--brutality:#cf3428;--tactics:#7445cf;--survival:#24803e;--tier-s:#121212;--tier-a:#4a4a4c;--tier-b:#6e6e70;--tier-c:#cfcfca;--tier-d:#fff;--font-display:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;--font-body:Inter,system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1)} .ds-tags{display:flex;flex-wrap:wrap;gap:8px;align-items:center} .ds-tag{display:inline-flex;align-items:center;gap:6px;padding:2px 7px;font:700 13.5px/1.35 var(--font-display);letter-spacing:.05em;text-transform:uppercase;background:var(--panel-2);color:var(--ink)} .ds-scale{background:transparent;padding-left:0} .ds-scale i{width:10px;height:10px;background:var(--brutality)} .ds-bc{background:var(--ink);color:#fff} .ds-dlc{background:transparent;box-shadow:inset 0 0 0 1px var(--ink)} .ds-lock{background:transparent;color:var(--muted);text-decoration:line-through;padding-left:0} .ds-tier{display:inline-grid;place-items:center;min-width:28px;height:28px;padding:0 6px;font:800 18px var(--font-display);background:var(--tc);color:var(--to);box-shadow:inset 0 0 0 1.5px var(--ink)}"
+    },
+    {
+      "name": "Search Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Paper field, soft stroke; focus = ink stroke plus a chapter-colour halo.",
+      "html": "<input class=\"ds-input\" type=\"search\" placeholder=\"Waffe, Mutation, Biom suchen …\">",
+      "css": ":host{--desk:#18181a;--paper:#fff;--ink:#121212;--text-2:#34363a;--muted:#5c5f65;--dim:#6c6f75;--line:#e1e0db;--line-2:#c4c3bd;--panel:#f4f3ef;--panel-2:#ecebe6;--panel-3:#e0dfd9;--ch:#e9a21a;--ch-ink:#855600;--ch-tint:#fcf1d9;--ch-on:#121212;--brutality:#cf3428;--tactics:#7445cf;--survival:#24803e;--tier-s:#121212;--tier-a:#4a4a4c;--tier-b:#6e6e70;--tier-c:#cfcfca;--tier-d:#fff;--font-display:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;--font-body:Inter,system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1)} .ds-input{height:42px;width:280px;padding:0 12px;border-radius:2px;border:1.5px solid var(--line-2);background:var(--paper);color:var(--ink);font:15px var(--font-body);caret-color:var(--ch-ink)} .ds-input::placeholder{color:var(--dim)} .ds-input:hover{border-color:var(--muted)} .ds-input:focus,.ds-input:focus-visible{border-color:var(--ink);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--ch) 40%,transparent)}"
+    },
+    {
+      "name": "Contents Rail",
+      "kind": "nav",
+      "description": "Chapter-grouped contents on the desk; active section number fills with its chapter colour.",
+      "html": "<nav class=\"ds-rail\"><div class=\"ds-grp\"><b>1</b>Run vorbereiten</div><a href=\"#\"><span>1.1</span>Übersicht</a><a href=\"#\" class=\"on\"><span>1.2</span>Builds</a><a href=\"#\"><span>1.3</span>Was passt zusammen?</a></nav>",
+      "css": ":host{--desk:#18181a;--paper:#fff;--ink:#121212;--text-2:#34363a;--muted:#5c5f65;--dim:#6c6f75;--line:#e1e0db;--line-2:#c4c3bd;--panel:#f4f3ef;--panel-2:#ecebe6;--panel-3:#e0dfd9;--ch:#e9a21a;--ch-ink:#855600;--ch-tint:#fcf1d9;--ch-on:#121212;--brutality:#cf3428;--tactics:#7445cf;--survival:#24803e;--tier-s:#121212;--tier-a:#4a4a4c;--tier-b:#6e6e70;--tier-c:#cfcfca;--tier-d:#fff;--font-display:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;--font-body:Inter,system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1)} .ds-rail{display:grid;gap:2px;width:230px;padding:16px;background:var(--desk);color:#ebe9e4;font-family:var(--font-body)} .ds-grp{display:flex;align-items:center;gap:10px;font:800 16px var(--font-display);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px} .ds-grp b{display:grid;place-items:center;width:24px;height:24px;background:var(--ch);color:var(--ink);letter-spacing:0} .ds-rail a{display:flex;align-items:center;gap:10px;padding:5px 6px;color:#a6a6a1;font-size:14.5px;text-decoration:none;transition:color .15s} .ds-rail a span{font:700 14px/22px var(--font-display);min-width:28px;padding:0 3px;opacity:.8} .ds-rail a:hover{color:#fff} .ds-rail a:focus-visible{outline:2px solid #ebe9e4;outline-offset:2px} .ds-rail a.on{color:#fff;font-weight:600} .ds-rail a.on span{background:var(--ch);color:var(--ink);opacity:1;text-align:center}"
+    },
+    {
+      "name": "Entry",
+      "kind": "card",
+      "description": "Not a card: an open entry under a 3px ink rule; hover turns the rule to the chapter colour.",
+      "html": "<a class=\"ds-entry\" href=\"#\"><h3>Assassine aus dem Nichts</h3><p>Teleportieren, Rückenstich, nächstes Ziel.</p><div class=\"ds-foot\">0–5 BC · 1/7 freigeschaltet</div></a>",
+      "css": ":host{--desk:#18181a;--paper:#fff;--ink:#121212;--text-2:#34363a;--muted:#5c5f65;--dim:#6c6f75;--line:#e1e0db;--line-2:#c4c3bd;--panel:#f4f3ef;--panel-2:#ecebe6;--panel-3:#e0dfd9;--ch:#e9a21a;--ch-ink:#855600;--ch-tint:#fcf1d9;--ch-on:#121212;--brutality:#cf3428;--tactics:#7445cf;--survival:#24803e;--tier-s:#121212;--tier-a:#4a4a4c;--tier-b:#6e6e70;--tier-c:#cfcfca;--tier-d:#fff;--font-display:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;--font-body:Inter,system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1)} .ds-entry{display:flex;flex-direction:column;gap:12px;width:320px;padding:14px 0 0;border-top:3px solid var(--ink);color:var(--ink);text-decoration:none;transition:border-color .2s} .ds-entry h3{margin:0;font:800 27px/1 var(--font-display);text-transform:uppercase} .ds-entry p{margin:0;color:var(--text-2);font:15px/1.6 var(--font-body)} .ds-foot{padding-top:10px;border-top:1px solid var(--line);font:700 14px var(--font-display);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)} .ds-entry:hover{border-top-color:var(--ch)} .ds-entry:hover h3{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px} .ds-entry:focus-visible{outline:2px solid var(--ink);outline-offset:2px}"
+    },
+    {
+      "name": "Sprite Plates and State Marks",
+      "kind": "custom",
+      "refersTo": "sprite-plate",
+      "description": "Pale square plate with 3px scaling bar; owned = black check stamp, missing = dashed outline.",
+      "html": "<div class=\"ds-plates\"><span class=\"ds-ico\" style=\"--c:var(--brutality)\"><b class=\"ds-own\"></b></span><span class=\"ds-ico\" style=\"--c:var(--tactics)\"></span><span class=\"ds-ico ds-miss\" style=\"--c:var(--survival)\"></span></div>",
+      "css": ":host{--desk:#18181a;--paper:#fff;--ink:#121212;--text-2:#34363a;--muted:#5c5f65;--dim:#6c6f75;--line:#e1e0db;--line-2:#c4c3bd;--panel:#f4f3ef;--panel-2:#ecebe6;--panel-3:#e0dfd9;--ch:#e9a21a;--ch-ink:#855600;--ch-tint:#fcf1d9;--ch-on:#121212;--brutality:#cf3428;--tactics:#7445cf;--survival:#24803e;--tier-s:#121212;--tier-a:#4a4a4c;--tier-b:#6e6e70;--tier-c:#cfcfca;--tier-d:#fff;--font-display:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;--font-body:Inter,system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1)} .ds-plates{display:flex;gap:14px} .ds-ico{position:relative;width:44px;height:44px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line)} .ds-ico::after{content:\"\";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--c)} .ds-miss{background:var(--paper);outline:1.5px dashed var(--line-2);outline-offset:-1px} .ds-own{position:absolute;right:-5px;top:-5px;width:16px;height:16px;border-radius:50%;background:var(--ink)} .ds-own::after{content:\"\";position:absolute;left:4px;top:4px;width:7px;height:4px;border:solid #fff;border-width:0 0 2px 2px;transform:rotate(-45deg)}"
+    },
+    {
+      "name": "Data Table",
+      "kind": "custom",
+      "refersTo": "table-head",
+      "description": "Ink header row, tabular figures, hairline rows, closing ink rule.",
+      "html": "<table class=\"ds-table\"><thead><tr><th>Stufe</th><th>Zellen</th><th>Wirkung</th></tr></thead><tbody><tr><td>1</td><td>50</td><td>+1 Qualität</td></tr><tr><td>2</td><td>100</td><td>+2 Qualität</td></tr></tbody></table>",
+      "css": ":host{--desk:#18181a;--paper:#fff;--ink:#121212;--text-2:#34363a;--muted:#5c5f65;--dim:#6c6f75;--line:#e1e0db;--line-2:#c4c3bd;--panel:#f4f3ef;--panel-2:#ecebe6;--panel-3:#e0dfd9;--ch:#e9a21a;--ch-ink:#855600;--ch-tint:#fcf1d9;--ch-on:#121212;--brutality:#cf3428;--tactics:#7445cf;--survival:#24803e;--tier-s:#121212;--tier-a:#4a4a4c;--tier-b:#6e6e70;--tier-c:#cfcfca;--tier-d:#fff;--font-display:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;--font-body:Inter,system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1)} .ds-table{border-collapse:collapse;width:420px;font:15px var(--font-body);font-variant-numeric:tabular-nums} .ds-table th{text-align:left;font:700 15px var(--font-display);color:#fff;background:var(--ink);text-transform:uppercase;letter-spacing:.08em;padding:7px 12px} .ds-table td{padding:10px 12px;border-bottom:1px solid var(--line-2);color:var(--text-2)} .ds-table tr:nth-child(even) td{background:#faf9f6} .ds-table td:first-child{color:var(--ink);font-weight:600} .ds-table tr:last-child td{border-bottom:1px solid var(--ink)}"
+    },
+    {
+      "name": "Tick",
+      "kind": "button",
+      "description": "Unlock tracker toggle: ink-stroked square, filled ink with a white check when owned.",
+      "html": "<span class=\"ds-row\"><button class=\"ds-tick\" aria-pressed=\"true\" aria-label=\"freigeschaltet\"><svg viewBox=\"0 0 24 24\" width=\"17\" height=\"17\" aria-hidden=\"true\"><path d=\"m5 12.5 4.5 4.5L19 7.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button><button class=\"ds-tick\" aria-pressed=\"false\" aria-label=\"nicht freigeschaltet\"><svg viewBox=\"0 0 24 24\" width=\"17\" height=\"17\" aria-hidden=\"true\"><path d=\"m5 12.5 4.5 4.5L19 7.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button></span>",
+      "css": ":host{--desk:#18181a;--paper:#fff;--ink:#121212;--text-2:#34363a;--muted:#5c5f65;--dim:#6c6f75;--line:#e1e0db;--line-2:#c4c3bd;--panel:#f4f3ef;--panel-2:#ecebe6;--panel-3:#e0dfd9;--ch:#e9a21a;--ch-ink:#855600;--ch-tint:#fcf1d9;--ch-on:#121212;--brutality:#cf3428;--tactics:#7445cf;--survival:#24803e;--tier-s:#121212;--tier-a:#4a4a4c;--tier-b:#6e6e70;--tier-c:#cfcfca;--tier-d:#fff;--font-display:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;--font-body:Inter,system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1)} .ds-row{display:flex;gap:10px} .ds-tick{width:30px;height:30px;border:2px solid var(--ink);background:var(--paper);display:grid;place-items:center;color:transparent;cursor:pointer;transition:background .15s,color .15s} .ds-tick:hover{color:var(--line-2)} .ds-tick:focus-visible{outline:2px solid var(--ink);outline-offset:2px} .ds-tick[aria-pressed=\"true\"]{background:var(--ink);color:#fff}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Solution Book",
+    "overview": "The guide is a printed strategy guide laid open on a dark desk. A single white sheet sits on a near-black desk under a black top strip. The contents rail sits on the desk to the left, and coloured thumb tabs stand out from the sheet's right fore-edge. On the sheet, everything is set like print: a running head with the chapter number and section, heavy condensed uppercase titles, a calm Inter reading column, black-headed tables with tabular figures, and loadout plates with numbered callouts. The page is dense where data is dense and quiet everywhere else.\n\nStructure comes from rules, not from boxes. Every section opens under a 3px ink rule, and entries are separated by hairlines. No section sits inside a tinted or bordered container. Colour does three jobs and nothing else: it marks the chapter you are in, marks an item's scaling colour as a small square, and fills the sprite plates the game art sits on. State is printed as a mark. A check stamp, a dashed outline, hatching with a strike, or a heavy bottom rule each say something a hue never has to.\n\nThe build rejects the game-database default of dark panels, card grids and neon accents. Game sprites are the only imagery, always on pale plates with pixelated rendering.",
+    "keyCharacteristics": [
+      "White sheet (paper) on a near-black desk; all reading happens on paper.",
+      "3px ink rules open sections and entries; hairlines separate rows.",
+      "Barlow Condensed 800 uppercase for titles, labels and table heads; Inter for prose.",
+      "Three chapter colours, each confined to its own chapter.",
+      "State as mark, not hue; tiers on a monochrome ink ramp.",
+      "Scaling colours only as square chips and the 3px sprite-plate bar.",
+      "Near-square print corners (2px); circles only for numbered callouts and stamps."
+    ],
+    "rules": [
+      {
+        "name": "The Chapter Ownership Rule",
+        "body": "Ochre, teal and blue belong only to their chapters, through `--ch*`. Boss Cells, cells and progress data are ink. No chapter hue is ever used as a generic accent, warning colour or status colour.",
+        "section": "colors"
+      },
+      {
+        "name": "The Chip-and-Bar Rule",
+        "body": "Brutality, Tactics and Survival colours appear only as a 10px square chip (in tags and filter chips) and as the 3px bar along the bottom of a sprite plate. They never colour text, rules, backgrounds or headings.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink Ramp Rule",
+        "body": "Tier badges use a monochrome ink ramp: S solid ink, A and B mid-greys with white type, C pale grey, D paper. All five carry a 1.5px ink keyline. Tiers never borrow a hue.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tag-Below Rule",
+        "body": "Nothing small sits above a heading. Tags, tier badges, BC marks and DLC marks go on a row below the title and lede. A label may stand alone as a heading over a list (field label, slot label), but it is never a kicker over a larger title.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Rule",
+        "body": "Every figure that can line up in a column, row or ledger uses tabular numerals.",
+        "section": "typography"
+      },
+      {
+        "name": "The Open Page Rule",
+        "body": "There are no tinted panels and no nested boxes. A section is open paper under a 3px ink rule. Entries are an ink top rule plus content. Sub-columns inside a section are divided by vertical hairlines, never boxed. Pale plate fills are reserved for sprites, tags, meters, table zebra and the route map's graph paper.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do open every section and entry with a 3px ink rule over open paper, and separate rows with 1px hairlines.",
+      "Do set titles, labels, table heads and buttons in Barlow Condensed uppercase, and prose in Inter at 16px/1.6 with ledes capped at 66ch.",
+      "Do route chapter colour through `--ch`, `--ch-ink`, `--ch-tint` and `--ch-on` so it follows the open chapter.",
+      "Do show state as a mark: black check stamp for owned, dashed outline for missing, hatching plus strike for locked, heavy bottom rule for boss.",
+      "Do put tags, tier badges, BC and DLC marks on a row below the title.",
+      "Do keep sprites on plate-coloured squares, pixelated, with the 3px scaling bar.",
+      "Do use tabular figures for every number in a column, ledger or selector."
+    ],
+    "donts": [
+      "Don't wrap sections or entries in tinted panels or bordered boxes, and don't nest boxes inside sections.",
+      "Don't place a small label, kicker or tag above a heading.",
+      "Don't use ochre, teal or blue outside their own chapter, including for warnings, Boss Cells or cell figures; those are ink.",
+      "Don't colour tier badges; keep the S-to-D ink ramp.",
+      "Don't use Brutality, Tactics or Survival colours for text, rules, headings or fills beyond the square chip and the 3px plate bar.",
+      "Don't use emoji, Unicode pictographs or text glyphs as icons; draw them into the IC set.",
+      "Don't add glows, neon accents or dark panels on the paper; shadows belong only to the sheet and floating overlays.",
+      "Don't round corners beyond 2px, except the circular callout and stamp marks."
+    ]
+  }
+}
