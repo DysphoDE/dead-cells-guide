@@ -8,6 +8,7 @@ import { partnersFor, applies, benefits, EFFECTS } from '../synergy.js';
 const find = (ctx) => (ctx.path === 'mutation' ? db.mutations : db.gear).find((x) => x.id === ctx.param);
 export const title = (ctx) => L(find(ctx)) || 'Eintrag';
 
+const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return u; } };
 const SOURCE_TAG = { community: 'Community', set: 'Mutations-Kombi', mechanic: 'Mechanik' };
 
 export function render(ctx) {
@@ -50,7 +51,7 @@ export function render(ctx) {
       <section class="panel">
         <h3>Passt gut zu</h3>
         <p class="muted small" style="margin-bottom:12px">Community-Kombos zuerst, danach Partner, die mechanisch passen (Zustand erzeugen → Krit auslösen).</p>
-        ${partners.length ? html`<div class="stack" style="gap:10px">${partners.map((p) => html`<div class="row" style="flex-wrap:nowrap;align-items:flex-start;gap:12px">${itemLink(p.e)}<span class="small" style="color:var(--text-2);flex:1;padding-top:6px">${p.why} <span class="dim">· ${SOURCE_TAG[p.source]}</span></span></div>`)}</div>` : html`<p class="muted">Keine besonderen Partner bekannt – ein solides Allround-Item.</p>`}
+        ${partners.length ? html`<div class="stack" style="gap:10px">${partners.map((p) => html`<div class="row" style="flex-wrap:nowrap;align-items:flex-start;gap:12px">${itemLink(p.e)}<span class="small" style="color:var(--text-2);flex:1;padding-top:6px">${p.why} <span class="dim">· ${SOURCE_TAG[p.source]}${p.refs?.length ? html`: ${p.refs.map((u, i) => html`${i ? ', ' : ''}<a href="${u}" target="_blank" rel="noopener">${host(u)}</a>`)}` : ''}</span></span></div>`)}</div>` : html`<p class="muted">Keine besonderen Partner bekannt – ein solides Allround-Item.</p>`}
         <a class="btn sm" style="margin-top:16px" href="#/workshop?add=${encodeURIComponent(e.name)}">In der Werkstatt ausprobieren</a>
       </section>
       ${usedIn.length ? html`<section class="panel"><h3>In diesen Builds</h3><div class="stack" style="gap:8px;margin-top:10px">${usedIn.map((b) => html`<a href="${b.url}" class="row" style="justify-content:space-between;color:var(--text)"><b>${L(b)}</b><span class="row" style="gap:6px">${tierBadge(b.tier)}<span class="tag">${b.archetype}</span></span></a>`)}</div></section>` : ''}

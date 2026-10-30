@@ -3,6 +3,7 @@ import { db, COLOR_LABEL, TIERS, isOwned, dlcOk, tierScore, findByName, L } from
 import { icon, pageHead, empty, tierBadge, colorTag, itemLink, blueprintSummary } from '../components.js';
 
 export const title = () => 'Mutationen';
+const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return u; } };
 
 const state = { color: 'all', tier: 'all', own: 'all', q: '', tab: 'all' };
 
@@ -44,6 +45,7 @@ function sets() {
     <div class="stack" style="gap:6px">${s.mutations.map((n) => itemLink(n))}</div>
     ${s.forWhat ? html`<p><b style="color:var(--text)">Wofür:</b> ${s.forWhat}</p>` : ''}
     <p>${s.why}</p>
+    ${s.sources?.length ? html`<p class="small muted">Quelle: ${s.sources.map((u, i) => html`${i ? ', ' : ''}<a href="${u}" target="_blank" rel="noopener">${host(u)}</a>`)}</p>` : ''}
     <div class="card-foot"><a class="link-btn" href="#/workshop" data-set="${s.mutations.join('|')}">In der Werkstatt öffnen →</a></div>
   </article>`)}</div>` : ''}
   ${fromBuilds.length ? html`<div class="section-head" style="margin-top:34px"><div><h2 style="font-size:24px">Mutationen aus den Builds (${fromBuilds.length})</h2><p>Jedes Build-Set mit Begründung pro Mutation – und was du vor dem Boss tauschst.</p></div></div>

@@ -2064,6 +2064,1912 @@
    ],
    "kind": "weapon+mutation",
    "why": "Seit 3.4 verdoppelt Ammo auch Low-Ammo-Waffen wie den Boomerang."
+  },
+  {
+   "items": [
+    "Spite Sword",
+    "Face Flask"
+   ],
+   "kind": "weapon+skill",
+   "why": "Face Flask fügt dir selbst einen kleinen Treffer zu und erfüllt damit die Krit-Bedingung des Spite Sword (Schaden in den letzten 8 s), ohne dass ein Gegner dich treffen muss.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/5/3806155532867852024",
+    "https://youtu.be/BcNDU6klfg0",
+    "https://youtu.be/i1jBoIK_P3o",
+    "https://gamersdecide.com/articles/dead-cells-best-brutality-weapons"
+   ]
+  },
+  {
+   "items": [
+    "Face Flask",
+    "Vengeance"
+   ],
+   "kind": "skill+mutation",
+   "why": "Der Selbsttreffer der Face Flask zählt als erlittener Schaden und startet Vengeance: 8 s lang +60 % Schaden und kurz weniger erlittener Schaden – auf Knopfdruck statt durch einen echten Treffer.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/5/3806155532867852024",
+    "https://youtu.be/-gsV1xB9qUE",
+    "https://youtu.be/BcNDU6klfg0",
+    "https://gamersdecide.com/articles/dead-cells-best-skills-1"
+   ]
+  },
+  {
+   "items": [
+    "Spite Sword",
+    "Bloodthirsty Shield"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Ein geblockter Angriff verursacht trotzdem etwas Schaden und schaltet so die Krits des Spite Sword frei; der Schild lässt Angreifer zusätzlich bluten.",
+   "sources": [
+    "https://gameplay.tips/guides/6703-dead-cells.html"
+   ]
+  },
+  {
+   "items": [
+    "Spite Sword",
+    "Tonic"
+   ],
+   "kind": "weapon+skill",
+   "why": "Tonic gibt Bonusleben und senkt 9 s lang den erlittenen Schaden – so kannst du dir die Treffer, die das Spite Sword für seine Krits braucht, leisten.",
+   "sources": [
+    "https://youtu.be/Q26PUf6rOWY"
+   ]
+  },
+  {
+   "items": [
+    "Spite Sword",
+    "Corrupted Power"
+   ],
+   "kind": "weapon+skill",
+   "why": "Corrupted Power gibt +50 % Schaden, lässt dich aber mehr Schaden nehmen; jeder Treffer, den du dabei kassierst, hält gleichzeitig die Krits des Spite Sword am Laufen.",
+   "sources": [
+    "https://youtu.be/i1jBoIK_P3o"
+   ]
+  },
+  {
+   "items": [
+    "Rusty Sword",
+    "Vengeance"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Das Rusty Sword hat keinen eigenen Effekt; Vengeance (am einfachsten per Face Flask ausgelöst) liefert den Schadensbonus, mit dem selbst die Startwaffe auf 5 BC trägt.",
+   "sources": [
+    "https://youtu.be/Whck5wAWtvw"
+   ]
+  },
+  {
+   "items": [
+    "Crowbar",
+    "Emergency Door"
+   ],
+   "kind": "weapon+skill",
+   "why": "Die Crowbar kritet 15 s lang nach dem Zerstören einer Tür; Emergency Door setzt dir jederzeit eine Tür hin, die du sofort aufbrechen kannst.",
+   "sources": [
+    "https://youtu.be/FEYXJdYz7UQ",
+    "https://youtu.be/OVbEP49dovY",
+    "https://youtu.be/0DrhVajLPgs"
+   ]
+  },
+  {
+   "items": [
+    "Impaler",
+    "Assault Shield"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Der Impaler kritet nur gegen Ziele direkt an einer Wand; der Sturmangriff des Assault Shield schiebt Gegner genau dorthin.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/2592234299574067208",
+    "https://steamcommunity.com/app/588650/discussions/0/1696043806567451519/",
+    "https://steamcommunity.com/app/588650/discussions/0/1369506198755771787/?l=english&ctp=2"
+   ]
+  },
+  {
+   "items": [
+    "Impaler",
+    "Spartan Sandals"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Die Tritte der Spartan Sandals schleudern Gegner gegen Wände (mit Zusatzschaden), wo der Impaler dann kritet.",
+   "sources": [
+    "https://youtu.be/RRGNd22atQY",
+    "https://steamcommunity.com/app/588650/discussions/0/2592234299557409357/"
+   ]
+  },
+  {
+   "items": [
+    "Wrenching Whip",
+    "Infantry Bow"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Die Wrenching Whip zieht Gegner zu dir heran; der Infantry Bow kritet auf kurze Distanz – die Peitsche liefert die Krit-Bedingung des Bogens.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/2592234299547095970/",
+    "https://steamcommunity.com/app/588650/discussions/0/1621724915794188479",
+    "https://steamcommunity.com/app/588650/discussions/0/1696043806567451519/"
+   ]
+  },
+  {
+   "items": [
+    "Wrenching Whip",
+    "Magnetic Grenade"
+   ],
+   "kind": "weapon+skill",
+   "why": "Die Magnetic Grenade sammelt Gegner auf einem Punkt; die Peitsche erreicht dann mehrere auf einmal und holt sie für den kritischen dritten Schlag heran.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/2592234299547095970/"
+   ]
+  },
+  {
+   "items": [
+    "Infantry Bow",
+    "Grappling Hook"
+   ],
+   "kind": "weapon+skill",
+   "why": "Der Hook zieht das Ziel direkt vor dich – auf Nahdistanz kritet der Infantry Bow, und der nächste Treffer bekommt zusätzlich +40 % und betäubt.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-builds-1",
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2923529616",
+    "https://youtu.be/iBl4JzCzugc"
+   ]
+  },
+  {
+   "items": [
+    "Vorpan",
+    "Grappling Hook"
+   ],
+   "kind": "weapon+skill",
+   "why": "Die Vorpan kritet nur gegen Gegner, die dir zugewandt sind; der Hook zieht das Ziel frontal zu dir und betäubt es beim nächsten Treffer.",
+   "sources": [
+    "https://youtu.be/6zb95ghtLBw",
+    "https://youtu.be/qidMyIhG220"
+   ]
+  },
+  {
+   "items": [
+    "Vorpan",
+    "Front Line Shield"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Die Vorpan will den Gegner von vorn; mit dem Schild parierst du genau diese Frontalangriffe und bekommst danach +50 % Nahkampfschaden.",
+   "sources": [
+    "https://youtu.be/qidMyIhG220"
+   ]
+  },
+  {
+   "items": [
+    "Grappling Hook",
+    "Phaser"
+   ],
+   "kind": "skill+skill",
+   "why": "Beide Skills bringen dich ans Ziel und verstärken den nächsten Angriff: Der Hook zieht heran und betäubt, Phaser setzt dich in den Rücken. Die Boni stapeln sich nicht, ergeben aber zwei schnelle Burst-Fenster.",
+   "sources": [
+    "https://youtu.be/RG0DY7RuTUU",
+    "https://steamcommunity.com/app/588650/discussions/5/1734336452550113038",
+    "https://steamcommunity.com/app/588650/discussions/0/1457328846185276812/"
+   ]
+  },
+  {
+   "items": [
+    "Hattori's Katana",
+    "Grappling Hook"
+   ],
+   "kind": "weapon+skill",
+   "why": "Der Hook zieht den Gegner heran und betäubt ihn kurz – Zeit genug, um den kritischen Durchsprint der Katana sicher anzusetzen.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-melee-weapons"
+   ]
+  },
+  {
+   "items": [
+    "Hattori's Katana",
+    "Predator"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Ein Nahkampf-Kill macht dich kurz unsichtbar – in dieser Pause lädst du den kritischen Durchsprint der Katana gefahrlos auf.",
+   "sources": [
+    "https://youtu.be/-rPc-L3dT2c",
+    "https://gamersdecide.com/articles/dead-cells-best-brutality-weapons",
+    "https://steamcommunity.com/app/588650/discussions/0/3196993316881133865"
+   ]
+  },
+  {
+   "items": [
+    "Hattori's Katana",
+    "Combo"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Die schnelle Dreier-Kombo der Katana baut Combo-Stapel zügig auf, die dann auch den kritischen Durchsprint verstärken.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-brutality-weapons"
+   ]
+  },
+  {
+   "items": [
+    "Hayabusa Boots",
+    "Hayabusa Gauntlets"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Die Boots verteilen Flächenschaden und stoßen Gruppen zurück, die Gauntlets kriten gegen Ziele unter 40 % Leben – erst anschlagen, dann schnell abräumen.",
+   "sources": [
+    "https://youtu.be/Sp_gVnl1Yww",
+    "https://youtu.be/XEa21zFafTI",
+    "https://youtu.be/O3OJeau3Q30"
+   ]
+  },
+  {
+   "items": [
+    "Hayabusa Gauntlets",
+    "Phaser"
+   ],
+   "kind": "weapon+skill",
+   "why": "Phaser setzt dich hinter das Ziel und verstärkt den ersten Schlag; die schnellen Faustschläge drücken es danach rasch unter 40 % Leben, ab wo sie kriten.",
+   "sources": [
+    "https://youtu.be/IwnHzGWgXp8"
+   ]
+  },
+  {
+   "items": [
+    "Spiked Boots",
+    "Bladed Tonfas"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Zwei aggressive Nahkampf-Waffen: Die Tonfas springen ins Ziel und kriten danach in der Kombo, die Spiked Boots kriten, wenn ihr Tritt einen gegnerischen Angriff unterbricht.",
+   "sources": [
+    "https://youtu.be/yh6Y3YsQMlo"
+   ]
+  },
+  {
+   "items": [
+    "Abyssal Trident",
+    "Combo"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Die durchgehende Stoß-Kombo des Dreizacks trifft ohne Pause und hält die Combo-Stapel oben, die dann auf die kritischen Ladestöße wirken.",
+   "sources": [
+    "https://youtu.be/-YQ9SC6hNEE"
+   ]
+  },
+  {
+   "items": [
+    "Abyssal Trident",
+    "Instinct of the Master of Arms"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Ladestoß und abschließender Stoß des Dreizacks kriten regelmäßig; jeder Krit senkt über Instinct die Skill-Abklingzeiten.",
+   "sources": [
+    "https://youtu.be/-YQ9SC6hNEE"
+   ]
+  },
+  {
+   "items": [
+    "Balanced Blade",
+    "Combo"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Beide belohnen ununterbrochene Trefferserien: Die Klinge steigert ihren Schaden pro Treffer und kritet ab dem 10., Combo legt pro Treffer einen weiteren Schadensstapel drauf.",
+   "sources": [
+    "https://youtu.be/ERiPMOFptKI"
+   ]
+  },
+  {
+   "items": [
+    "Panchaku",
+    "Instinct of the Master of Arms"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Die lange, sehr schnelle Panchaku-Kombo kritet gegen jeden zugewandten Gegner – viele Krits in kurzer Zeit senken die Skill-Abklingzeiten fortlaufend.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-mutations"
+   ]
+  },
+  {
+   "items": [
+    "Meat Skewer",
+    "Combo"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Der Meat Skewer schlägt schnell zu und kritet nach jedem Durchstoß; Combo stapelt mit jedem dieser Treffer weiteren Schaden.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-mutations",
+    "https://gamersdecide.com/articles/dead-cells-best-melee-weapons-2"
+   ]
+  },
+  {
+   "items": [
+    "Meat Skewer",
+    "Assassin's Dagger"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Der Durchstoß des Meat Skewer setzt dich in den Rücken des Gegners – genau dort, wo der Assassin's Dagger kritet.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-melee-weapons-2"
+   ]
+  },
+  {
+   "items": [
+    "Assassin's Dagger",
+    "Scheme"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Nach jedem Skill-Einsatz verursacht der nächste Nahkampfangriff Bonusschaden – der erste Rückenstich des Dolchs nach Phaser fällt dadurch besonders hart aus.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-builds",
+    "https://gamersdecide.com/articles/dead-cells-best-builds-1",
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2923529616"
+   ]
+  },
+  {
+   "items": [
+    "Blood Sword",
+    "Sadist's Stiletto"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Das Blood Sword lässt bei jedem Treffer bluten, das Sadist's Stiletto kritet gegen blutende Ziele.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/1621724915794188479"
+   ]
+  },
+  {
+   "items": [
+    "Cleaver",
+    "Wolf Trap"
+   ],
+   "kind": "skill+skill",
+   "why": "Die Wolf Trap hält Gegner fest, während sie auf dem Sägeblatt-Bett des Cleaver stehen – sie bluten dauerhaft, statt einfach drüberzulaufen.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/2592234299574067208",
+    "https://steamcommunity.com/app/588650/discussions/0/2592234299557409357/"
+   ]
+  },
+  {
+   "items": [
+    "Torch",
+    "Oil Grenade"
+   ],
+   "kind": "weapon+skill",
+   "why": "Die Fackel setzt Gegner in Brand; geölte Ziele erleiden deutlich mehr Feuerschaden.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/2592234299557409357/"
+   ]
+  },
+  {
+   "items": [
+    "Fire Grenade",
+    "Oil Grenade"
+   ],
+   "kind": "skill+skill",
+   "why": "Erst Öl verteilen, dann anzünden: Die Feuergranate brennt auf geölten Gegnern viel stärker.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/2592234299569800543/",
+    "https://steamcommunity.com/app/588650/discussions/0/1354868867726943858/"
+   ]
+  },
+  {
+   "items": [
+    "Oiled Sword",
+    "Firebrands"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Firebrands zünden Gegner und Boden an, das Oiled Sword ölt sie ein und kritet 10 s lang, nachdem es ein brennendes Ziel getroffen hat.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-builds"
+   ]
+  },
+  {
+   "items": [
+    "Oiled Sword",
+    "Flamethrower Turret"
+   ],
+   "kind": "weapon+skill",
+   "why": "Der Flammenwerfer-Turret hält Gegner dauerhaft brennend – damit bleibt die Krit-Bedingung des Oiled Sword ständig erfüllt, und das Öl verstärkt das Feuer.",
+   "sources": [
+    "https://gameplay.tips/guides/6703-dead-cells.html",
+    "https://gamersdecide.com/articles/dead-cells-best-builds"
+   ]
+  },
+  {
+   "items": [
+    "Pure Nail",
+    "Killer Instinct"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Kills mit der Pure Nail (vor allem per kritischem Abprall-Angriff) zählen als Nahkampf-Kills und verkürzen über Killer Instinct die Skill-Abklingzeiten.",
+   "sources": [
+    "https://youtu.be/GGwAa_DJ7Gc"
+   ]
+  },
+  {
+   "items": [
+    "Pure Nail",
+    "Knife Dance"
+   ],
+   "kind": "weapon+skill",
+   "why": "Knife Dance lässt alles ringsum bluten und räumt Gruppen ab; die Nahkampf-Kills der Pure Nail laden den Skill über Killer Instinct schnell wieder auf.",
+   "sources": [
+    "https://youtu.be/GGwAa_DJ7Gc"
+   ]
+  },
+  {
+   "items": [
+    "Dagger of Profit",
+    "Gold Digger"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Gold Digger lässt bei jedem Treffer Gold fallen; das Aufsammeln schaltet für 3 s die Krits des Dagger of Profit frei.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-melee-weapons-2"
+   ]
+  },
+  {
+   "items": [
+    "Frantic Sword",
+    "Disengagement"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Das Frantic Sword kritet unter 50 % Leben; Disengagement fängt dich mit einem Kraftfeld auf, wenn du dabei zu tief fällst.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-melee-weapons-2"
+   ]
+  },
+  {
+   "items": [
+    "Frantic Sword",
+    "Berserker"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Berserker senkt pro Nahkampf-Kill den erlittenen Schaden – so überlebst du länger im Bereich unter 50 % Leben, in dem das Frantic Sword kritet.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-melee-weapons-2"
+   ]
+  },
+  {
+   "items": [
+    "Swift Sword",
+    "Frenzy"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Beide hängen am Tempo-Buff: Das Swift Sword kritet, solange er aktiv ist, Frenzy heilt dich in dieser Zeit mit jedem Nahkampftreffer.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-builds-1",
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2923529616"
+   ]
+  },
+  {
+   "items": [
+    "Cursed Sword",
+    "Diverse Deck"
+   ],
+   "kind": "weapon+skill",
+   "why": "Die vierte Karte des Diverse Deck (Foresight) blockt nach acht Kills einen Treffer – beim Cursed Sword, wo jeder Treffer tödlich ist, ein Lebensretter.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-melee-weapons"
+   ]
+  },
+  {
+   "items": [
+    "Rapier",
+    "Counterattack"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Das Rapier kritet direkt nach einer Parade, und Counterattack verstärkt genau diesen ersten Angriff nach der Parade.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-builds"
+   ]
+  },
+  {
+   "items": [
+    "Flashing Fans",
+    "Infantry Bow"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Beide Waffen belohnen das Spiel auf kurze Distanz: Der Infantry Bow kritet gegen nahe Ziele, die Fächer werfen gegnerische Geschosse zurück und schalten danach 8 s lang Krits frei. So deckt das Paar Nahkämpfer und Fernkämpfer ab.",
+   "sources": [
+    "https://www.youtube.com/watch?v=AU164KJ9Kuw",
+    "https://steamcommunity.com/app/588650/discussions/0/3196993316880981361/#c3196993316881323653"
+   ]
+  },
+  {
+   "items": [
+    "Hard Light Sword",
+    "Grappling Hook"
+   ],
+   "kind": "weapon+skill",
+   "why": "Die Hard Light Gun markiert Gegner, das Schwert kritet gegen markierte Ziele. Der Grappling Hook zieht das markierte Ziel heran, sodass der Krit-Schlag sofort sitzt, und der nächste Treffer bekommt zusätzlich +40 % und betäubt.",
+   "sources": [
+    "https://note.com/seirensen0815/n/n6a3db61b6f99"
+   ]
+  },
+  {
+   "items": [
+    "Hard Light Sword",
+    "Giantkiller"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Das Hard Light Sword belegt beide Waffenplätze; der Giantkiller liegt im Rucksack und wird für Bosse und Elites gewechselt, gegen die er dauerhaft kritet. Das Schwert-Paar räumt die normalen Gegner.",
+   "sources": [
+    "https://www.youtube.com/watch?v=TkFYOs4dHHo"
+   ]
+  },
+  {
+   "items": [
+    "Spartan Sandals",
+    "Grappling Hook"
+   ],
+   "kind": "weapon+skill",
+   "why": "Der Grappling Hook zieht einen Gegner heran und betäubt ihn kurz; danach tritt man ihn mit den Sandalen dreimal gegen die nächste Wand, wo jeder Aufprall Zusatzschaden macht.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3196993316881133865/#c3196993316892579301"
+   ]
+  },
+  {
+   "items": [
+    "Spartan Sandals",
+    "Scheme"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Scheme gibt dem ersten Nahkampftreffer nach einem Skill +200 Schaden; mit Grappling Hook oder Teleport vorneweg wird der erste Tritt der Sandalen zum schweren Eröffnungstreffer.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3196993316881133865/#c3196993316892579301"
+   ]
+  },
+  {
+   "items": [
+    "Valmont's Whip",
+    "Spartan Sandals"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Valmont's Whip kritet nur mit der Peitschenspitze auf Maximalreichweite. Die Sandalen treten Gegner genau auf diese Distanz weg, danach folgt der Krit-Hieb mit der Peitsche.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-melee-weapons-2"
+   ]
+  },
+  {
+   "items": [
+    "Valmont's Whip",
+    "Ice Bow"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Eingefrorene Gegner bleiben stehen, sodass man in Ruhe die Maximaldistanz für den Spitzen-Krit der Peitsche einnehmen kann. Gegen Bosse mit großer Trefferfläche wird der Krit noch leichter.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-melee-weapons-2"
+   ]
+  },
+  {
+   "items": [
+    "Starfury",
+    "Networking"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Die fallenden Sterne der Starfury zählen als Fernkampftreffer und markieren damit für Networking. Markierte Gegner teilen sich den Schaden, und die Sterne treffen bevorzugt weitere Ziele in der Nähe.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-builds"
+   ]
+  },
+  {
+   "items": [
+    "Starfury",
+    "Point Blank"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Die Sterne der Starfury gelten als Fernkampf und erhalten den Nahdistanz-Bonus von Point Blank (+30 %), weil man mit dem Schwert ohnehin direkt am Gegner steht.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-builds"
+   ]
+  },
+  {
+   "items": [
+    "Starfury",
+    "Alchemic Carbine"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Taktik-Spaß-Build: Die Alchemic Carbine vergiftet Gruppen aus der Distanz, die Sterne der Starfury treffen zusätzlich Ziele außer Reichweite. Laut Quelle ab 3 BC zu schwach im Nahkampf.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3759977302534965606/"
+   ]
+  },
+  {
+   "items": [
+    "Assassin's Dagger",
+    "Smoke Bomb"
+   ],
+   "kind": "weapon+skill",
+   "why": "Die Smoke Bomb macht 8 s unsichtbar, Gegner verlieren dich aus den Augen. Man läuft hinter das Ziel, wo der Assassin's Dagger kritet, und der erste Treffer aus der Unsichtbarkeit bekommt zusätzlich +50 %.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/5/3362524231623492342/#c3387294407394634922"
+   ]
+  },
+  {
+   "items": [
+    "Smoke Bomb",
+    "Predator"
+   ],
+   "kind": "skill+mutation",
+   "why": "Beide machen unsichtbar: Predator nach jedem Nahkampf-Kill, die Smoke Bomb auf Knopfdruck. Predator überbrückt so die Abklingzeit der Bombe. Seit 3.4 ist Predator kürzer (1 s, max. 2,8 s).",
+   "sources": [
+    "https://gameplay.tips/guides/6703-dead-cells.html"
+   ]
+  },
+  {
+   "items": [
+    "Phaser",
+    "Smoke Bomb"
+   ],
+   "kind": "skill+skill",
+   "why": "Phaser teleportiert hinter den Gegner, die Smoke Bomb lässt dich danach unsichtbar aus der Gruppe verschwinden. Zusammen ergibt das den Assassinen-Stil aus Rückenangriff und Rückzug.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/5/3362524231623492342/#c3387294407394634922"
+   ]
+  },
+  {
+   "items": [
+    "Phaser",
+    "Killer Instinct"
+   ],
+   "kind": "skill+mutation",
+   "why": "Killer Instinct verkürzt bei jedem Nahkampf-Kill die Skill-Abklingzeiten um 0,4 s. Der Phaser mit seiner kurzen Abklingzeit ist dadurch fast dauernd bereit.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/5/3362524231623492342/#c3387294407394634922"
+   ]
+  },
+  {
+   "items": [
+    "Infantry Bow",
+    "Point Blank"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Der Infantry Bow kritet auf kurze Distanz, Point Blank gibt Fernkampfangriffen auf kurze Distanz +30 %. Beide Boni greifen in genau derselben Situation.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/5/3362524231623492342/#c3362524231624687718",
+    "https://gamersdecide.com/articles/dead-cells-best-ranged-weapons",
+    "https://steamcommunity.com/app/588650/discussions/0/3879344844058693551/#c3881596897262248831"
+   ]
+  },
+  {
+   "items": [
+    "Infantry Bow",
+    "Quick Bow"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Zwei Bögen für Taktik: Der Quick Bow spickt Ziele aus der Distanz und kritet ab drei steckenden Pfeilen, der Infantry Bow übernimmt, sobald Gegner herankommen.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/1698293255121137579/#c1698293255121307393"
+   ]
+  },
+  {
+   "items": [
+    "Sadist's Stiletto",
+    "Throwing Knife"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Das zielsuchende Throwing Knife lässt Gegner aus der Distanz bluten, das Sadist's Stiletto kritet gegen blutende Ziele. Der Bleed-Klassiker.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-builds-1"
+   ]
+  },
+  {
+   "items": [
+    "Throwing Knife",
+    "Knife Dance"
+   ],
+   "kind": "weapon+skill",
+   "why": "Beide verteilen Blutung: Knife Dance schlagartig rundum, das Throwing Knife gezielt nach. Zusammen bauen sie schnell hohe Blutungsstapel auf.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3879344844058693551/#c3881596897259257749"
+   ]
+  },
+  {
+   "items": [
+    "Firebrands",
+    "Throwing Knife"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Doppelter Fernkampf-DoT: Firebrands setzt Gegner und Boden in Brand, das Throwing Knife legt Blutung. Beide wirken weiter, während man ausweicht.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3879344844058693551/#c3881596897259257749"
+   ]
+  },
+  {
+   "items": [
+    "Throwing Knife",
+    "Ripper"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Wurfmesser bleiben im Gegner stecken; Ripper reißt sie beim nächsten Nahkampftreffer (oder Sturzangriff) heraus, verursacht je 118 Schaden und gibt die Munition zurück.",
+   "sources": [
+    "https://gameplay.tips/guides/6703-dead-cells.html"
+   ]
+  },
+  {
+   "items": [
+    "Flamethrower Turret",
+    "Oil Grenade"
+   ],
+   "kind": "skill+skill",
+   "why": "Die Oil Grenade überzieht Gegner und Boden mit Öl, das Flamethrower Turret entzündet alles in Reichweite. Brennendes Öl macht ein Vielfaches des normalen Feuerschadens.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-skills-1",
+    "https://gamersdecide.com/articles/dead-cells-best-builds"
+   ]
+  },
+  {
+   "items": [
+    "Hokuto's Bow",
+    "Sinew Slicer"
+   ],
+   "kind": "weapon+skill",
+   "why": "Zwei Sinew Slicer halten Gegner im Dauerfeuer, Hokuto's Bow markiert das Hauptziel für Zusatzschaden. Man selbst bleibt auf Abstand.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/1698293255121137579/#c3111404628292223709"
+   ]
+  },
+  {
+   "items": [
+    "Sinew Slicer",
+    "Double Crossb-o-matic"
+   ],
+   "kind": "skill+skill",
+   "why": "Doppel-Geschütz für Taktik: Der Sinew Slicer lässt bluten, die Double Crossb-o-matic schießt mit einem Bonus gegen Blutende (Affix) hinterher.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/1679189548074467170/#c1679189548074591614"
+   ]
+  },
+  {
+   "items": [
+    "Corrupted Power",
+    "Recovery"
+   ],
+   "kind": "skill+mutation",
+   "why": "Unter Corrupted Power nimmst du 30 % mehr Schaden, machst aber 50 % mehr. Recovery verdreifacht das Zeitfenster, in dem du verlorene HP durch eigene Treffer zurückholst; mit dem Schadensbonus geht das schnell.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-skills-1"
+   ]
+  },
+  {
+   "items": [
+    "Snake Fangs",
+    "Lacerating Aura"
+   ],
+   "kind": "weapon+skill",
+   "why": "Snake Fangs teleportiert dich zum nächsten Gegner, also mitten in die Gruppe. Dort trifft die Lacerating Aura alles direkt um dich herum.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3196993316881133865/#c3196993316891375279"
+   ]
+  },
+  {
+   "items": [
+    "Snake Fangs",
+    "Knife Dance"
+   ],
+   "kind": "weapon+skill",
+   "why": "Nach dem Teleport von Snake Fangs steht man im Pulk; Knife Dance lässt dort sofort alles bluten.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3196993316881133865/#c3196993316891375279"
+   ]
+  },
+  {
+   "items": [
+    "Snake Fangs",
+    "The Boy's Axe"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Die Boy's Axe bleibt im Ziel stecken und verwurzelt es, Snake Fangs teleportiert von Ziel zu Ziel und stapelt Gift bis zur Krit-Schwelle. Beim Zurückrufen trifft die Axt noch einmal hart.",
+   "sources": [
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2631135482"
+   ]
+  },
+  {
+   "items": [
+    "Firebrands",
+    "Oil Grenade"
+   ],
+   "kind": "weapon+skill",
+   "why": "Die Oil Grenade überzieht Gegner und Boden mit Öl, Firebrands entzündet es. Brennendes Öl verursacht ein Vielfaches des normalen Feuerschadens.",
+   "sources": [
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=1537535975"
+   ]
+  },
+  {
+   "items": [
+    "Fire Blast",
+    "Flamethrower Turret"
+   ],
+   "kind": "weapon+skill",
+   "why": "Das Flamethrower Turret brennt wie ein zweiter, beidseitiger Fire Blast weiter, während du selbst zielst. Die Krits beider Feuerwaffen hängen aber weiter an Öl.",
+   "sources": [
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=1537535975"
+   ]
+  },
+  {
+   "items": [
+    "Pyrotechnics",
+    "Flamethrower Turret"
+   ],
+   "kind": "weapon+skill",
+   "why": "Pyrotechnics beschießt aus großer Distanz, das Flamethrower Turret hält nahe Gegner in Brand. So deckt das Paar Fern- und Nahbereich ab. Für Krits braucht Pyrotechnics zusätzlich Öl.",
+   "sources": [
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=1537535975"
+   ]
+  },
+  {
+   "items": [
+    "Assassin's Dagger",
+    "Throwing Knife"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Der Assassin's Dagger kritet bei Rückentreffern, kann aber keine Flieger erreichen. Das zielsuchende Throwing Knife holt sie herunter und legt nebenbei Blutung.",
+   "sources": [
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=3310947780"
+   ]
+  },
+  {
+   "items": [
+    "Sinew Slicer",
+    "Support"
+   ],
+   "kind": "skill+mutation",
+   "why": "Support gibt +35 % Schaden, solange du nahe an einem aufgestellten Geschütz oder einer Falle stehst. Der Sinew Slicer arbeitet nur in deiner Nähe und hält diesen Bonus so automatisch aktiv.",
+   "sources": [
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=3310947780"
+   ]
+  },
+  {
+   "items": [
+    "Velocity",
+    "Frenzy"
+   ],
+   "kind": "mutation+mutation",
+   "why": "Velocity hält den Tempo-Buff aus Kill-Serien dreimal so lange, und Frenzy heilt bei Melee-Treffern nur, solange dieser Buff aktiv ist. Zusammen ergibt das dauerhafte Lebensentzug, etwa mit Swift Sword.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-builds-1",
+    "https://kosgames.com/dead-cells-best-10-builds-38611/"
+   ]
+  },
+  {
+   "items": [
+    "Necromancy",
+    "Gastronomy"
+   ],
+   "kind": "mutation+mutation",
+   "why": "Zwei Heilquellen ohne Flasche: Necromancy heilt pro Kill, Gastronomy verstärkt Essen. In Biomen mit vielen Gegnern hält das die Lebensleiste ohne Flaschen oben.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/4699035289200373224",
+    "https://steamcommunity.com/app/588650/discussions/5/3844431603849506591"
+   ]
+  },
+  {
+   "items": [
+    "Soldier's Resistance",
+    "Disengagement"
+   ],
+   "kind": "mutation+mutation",
+   "why": "Mehr Max-HP und ein Notfall-Kraftfeld unter 15 % HP decken zusammen die gefährlichsten Boss-Combos auf 5 BC ab. Seit 3.4 gilt das Kraftfeld nur einmal pro Biom, und Soldier's Resistance wurde generft.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/5/3844431603849506591"
+   ]
+  },
+  {
+   "items": [
+    "Alienation",
+    "Acceptance"
+   ],
+   "kind": "mutation+mutation",
+   "why": "Mit Acceptance verflucht jedes Essen, und beim Aufheben dieser Flüche heilt Alienation. Laut Wiki senkt das Paar außerdem die Fluchdauer insgesamt um 25 %. Umstritten: Ein anderer Spieler hält das Paar für widersinnig.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/5047948127390152505"
+   ]
+  },
+  {
+   "items": [
+    "Vengeance",
+    "Instinct of the Master of Arms"
+   ],
+   "kind": "mutation+mutation",
+   "why": "Beim Blocken mit dem Spite Sword löst jeder kassierte Treffer Vengeance aus. Die folgenden Krits verkürzen über Instinct of the Master of Arms die Skill-Abklingzeiten.",
+   "sources": [
+    "https://gameplay.tips/guides/6703-dead-cells.html"
+   ]
+  },
+  {
+   "items": [
+    "Predator",
+    "Armadillopack"
+   ],
+   "kind": "mutation+mutation",
+   "why": "Predator macht dich nach einem Nahkampf-Kill kurz unsichtbar. Mit Armadillopack pariert der Schild im Rucksack beim Rollen automatisch, wenn die Tarnung endet. Predator wurde in 3.4 generft (Dauer max. 2,8 s).",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3196993316881133865"
+   ]
+  },
+  {
+   "items": [
+    "Open Wounds",
+    "Scheme"
+   ],
+   "kind": "mutation+mutation",
+   "why": "Scheme verstärkt den ersten Nahkampfschlag nach einem Skill, und Open Wounds hängt an jeden Nahkampftreffer zusätzliche Blutung. Beide belohnen schnelle Melee-Treffer zwischen den Skills.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3196993316881133865"
+   ]
+  },
+  {
+   "items": [
+    "Barbed Tips",
+    "Tranquility"
+   ],
+   "kind": "mutation+mutation",
+   "why": "Tranquility gibt +25 % Schaden, solange kein Gegner in der Nähe ist. Barbed Tips macht jedes steckende Projektil zur Dauerschaden-Quelle, die davon mitprofitiert. Beide passen zu Throwing Knife und Marksman's Bow.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3196993316881133865"
+   ]
+  },
+  {
+   "items": [
+    "Gastronomy",
+    "Soldier's Resistance"
+   ],
+   "kind": "mutation+mutation",
+   "why": "Mehr Max-HP macht jedes Prozent Heilung durch Essen wertvoller, und Gastronomy verstärkt genau diese Heilung. Das ist der Kern vieler Survival-Läufe; Soldier's Resistance wurde in 3.4 generft.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3196993316881133865"
+   ]
+  },
+  {
+   "items": [
+    "Open Wounds",
+    "Vengeance"
+   ],
+   "kind": "mutation+mutation",
+   "why": "Open Wounds macht jeden Melee-Treffer stärker. Vengeance gibt nach einem kassierten Treffer +60 % Schaden, mit dem du die Blutung schnell nachlegst.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3196993316881133865"
+   ]
+  },
+  {
+   "items": [
+    "Melee",
+    "Open Wounds"
+   ],
+   "kind": "mutation+mutation",
+   "why": "Beide lösen bei jedem Nahkampftreffer aus: Melee verlangsamt den Gegner, Open Wounds legt Blutung nach. Je schneller die Waffe, desto mehr Stapel von beidem.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3196993316881133865"
+   ]
+  },
+  {
+   "items": [
+    "Alucard's Sword",
+    "Alucard's Shield"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Zusammen ausgerüstet ändern beide ihr Moveset: Der Schild schlägt nach einem Schwertangriff kritisch zu, und einzelne Schwerthiebe lösen selbst eine Parade aus. Angriff und Deckung laufen so in einer Kombo.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3784751116683523192/",
+    "https://www.youtube.com/watch?v=msu1S1SJXDU",
+    "https://www.youtube.com/watch?v=n6EakjhlFjk"
+   ]
+  },
+  {
+   "items": [
+    "Death's Scythe",
+    "Dead Inside"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Dead Inside verdoppelt die Max-HP, verbietet aber Heilung. Die Geister der Sense explodieren selbstständig auf Gegnern in der Nähe und räumen Gruppen, bevor sie den großen, nicht heilbaren HP-Puffer aufzehren.",
+   "sources": [
+    "https://www.youtube.com/watch?v=CrlhaCNIB_E"
+   ]
+  },
+  {
+   "items": [
+    "Medusa's Head",
+    "Death Orb"
+   ],
+   "kind": "weapon+skill",
+   "why": "Medusa's Head versteinert getroffene Gegner. Die langsam fliegende Death Orb trifft die stillstehenden Ziele dann sicher mit vollem Schaden.",
+   "sources": [
+    "https://www.youtube.com/watch?v=ZIE-2VUrHw0"
+   ]
+  },
+  {
+   "items": [
+    "Broadsword",
+    "Frost Blast"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Frost Blast friert alle Gegner im Kegel sofort ein und verschafft dem sehr langsamen Broadsword die Zeit für seine immer kritischen Schläge 2 und 3.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/5/1621724915803736912/",
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2923529616"
+   ]
+  },
+  {
+   "items": [
+    "Oven Axe",
+    "Toothpick"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Der Toothpick stößt zurück und betäubt; in diesem Fenster wiederholt die Oven Axe ihren letzten Kombo-Schlag, der kritisch trifft.",
+   "sources": [
+    "https://www.youtube.com/watch?v=bi8-0Gy-B7g"
+   ]
+  },
+  {
+   "items": [
+    "Flawless",
+    "Ice Shards"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Ice Shards verlangsamt Gegner auf Distanz und hält sie vom Leib. So bleibt die Krit-Bedingung von Flawless (15 s ohne erlittenen Schaden) länger erfüllt.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3196993316881133865/"
+   ]
+  },
+  {
+   "items": [
+    "Flawless",
+    "Heart of Ice"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Nahkampftreffer auf verlangsamte oder eingefrorene Gegner senken mit Heart of Ice die Skill-Abklingzeiten. Seit 3.4 ist die Mutation schwächer (max. 2 s).",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3196993316881133865/"
+   ]
+  },
+  {
+   "items": [
+    "Shovel",
+    "The Boy's Axe"
+   ],
+   "kind": "weapon+weapon",
+   "why": "The Boy's Axe verwurzelt Ziele aus der Distanz, die Schaufel schlägt sie und schleudert Bomben zurück. Fernkontrolle und Nahkampf ergänzen sich.",
+   "sources": [
+    "https://www.youtube.com/watch?v=sX76AAozPm0"
+   ]
+  },
+  {
+   "items": [
+    "Shovel",
+    "Cluster Grenade"
+   ],
+   "kind": "weapon+skill",
+   "why": "Die Cluster Grenade zerfällt in sechs Bomben und räumt Gruppen. Die Schaufel hält Gegner per Rückstoß auf Abstand, während die Bomben wirken.",
+   "sources": [
+    "https://www.youtube.com/watch?v=sX76AAozPm0"
+   ]
+  },
+  {
+   "items": [
+    "Heavy Crossbow",
+    "Kill Rhythm"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Bei der zweihändigen Heavy Crossbow wechselst du ständig zwischen Schuss und Reload. Kill Rhythm beschleunigt genau diesen Wechsel, und der Krit-Schuss nach dem Nachladen kommt schneller.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-crossbows"
+   ]
+  },
+  {
+   "items": [
+    "Heavy Crossbow",
+    "Point Blank"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Die Heavy Crossbow verschießt eine Bolzensalve, die nur aus kurzer Distanz voll trifft. Point Blank gibt genau dort +30 % Fernkampfschaden.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-crossbows"
+   ]
+  },
+  {
+   "items": [
+    "Heavy Crossbow",
+    "Armadillopack"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Zweihänder belegen beide Waffenslots, für einen Schild ist kein Platz. Mit Armadillopack pariert der Schild im Rucksack bei jeder Rolle.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-crossbows"
+   ]
+  },
+  {
+   "items": [
+    "Explosive Crossbow",
+    "Armadillopack"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Auch die Explosive Crossbow ist zweihändig. Armadillopack bringt die Parade über den Rucksack-Schild zurück, ohne Waffenslot.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-crossbows"
+   ]
+  },
+  {
+   "items": [
+    "Ice Crossbow",
+    "Kill Rhythm"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Die Ice Crossbow kritet mit ihrer Zweitfunktion Piercing Shot. Kill Rhythm beschleunigt den Wechsel zwischen Einfrier-Schuss und Piercing Shot.",
+   "sources": [
+    "https://www.youtube.com/watch?v=MAL7EDMAI70",
+    "https://www.youtube.com/watch?v=DM_9SLoa3FQ"
+   ]
+  },
+  {
+   "items": [
+    "Ice Crossbow",
+    "Acrobatipack"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Nach jeder Rolle feuert der nächste Fernkampfangriff zusätzlich ein Projektil der Rucksack-Fernwaffe ab. Das gibt der langsamen Ice Crossbow Zusatzschaden beim Ausweichen.",
+   "sources": [
+    "https://www.youtube.com/watch?v=-tJ2h1hXhfg"
+   ]
+  },
+  {
+   "items": [
+    "Ice Crossbow",
+    "Ice Armor"
+   ],
+   "kind": "weapon+skill",
+   "why": "Ice Armor fängt Treffer ab und friert beim Platzen Gegner ringsum ein. In gefrorenen Zielen holt der Piercing Shot der Ice Crossbow steckende Bolzen zurück.",
+   "sources": [
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=1572588813"
+   ]
+  },
+  {
+   "items": [
+    "Gilded Yumi",
+    "Knockback Shield"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Beide stoßen Gegner zurück. Gilded Yumi kritet und betäubt, wenn das Ziel gegen eine Wand prallt, und der Knockback Shield verursacht dort +80 Wandschaden.",
+   "sources": [
+    "https://www.youtube.com/watch?v=84wH70PU-tc"
+   ]
+  },
+  {
+   "items": [
+    "Balanced Blade",
+    "Assault Shield"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Der Assault Shield stürmt geblockt an Gegner heran. Danach baut die Balanced Blade aus der Nähe ihre Trefferserie für Bonusschaden und Krits auf.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3196993316881133865/"
+   ]
+  },
+  {
+   "items": [
+    "Spiked Shield",
+    "Thunder Shield"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Ein reiner Block-Build: Der Spiked Shield kritet bei Paraden, der Thunder Shield erzeugt beim Blocken elektrischen Schaden vor dir. So verursachst du auch beim Abwehren Schaden.",
+   "sources": [
+    "https://www.youtube.com/watch?v=NN6D8XIVLkA"
+   ]
+  },
+  {
+   "items": [
+    "Giant Whistle",
+    "Heart of Ice"
+   ],
+   "kind": "skill+mutation",
+   "why": "Ein Survival-Build mit Fokus auf Abklingzeiten: Treffer auf verlangsamte oder eingefrorene Ziele senken die Cooldowns, und die Whistle (500 Schaden auf den gefährlichsten Gegner) ist öfter bereit. Seit 3.4 senkt Heart of Ice weniger.",
+   "sources": [
+    "https://www.youtube.com/watch?v=F1Vri0F6gJA"
+   ]
+  },
+  {
+   "items": [
+    "Giant Whistle",
+    "Instinct of the Master of Arms"
+   ],
+   "kind": "skill+mutation",
+   "why": "Jeder Krit verkürzt die laufenden Skill-Cooldowns, die Whistle steht so öfter zur Verfügung.",
+   "sources": [
+    "https://www.youtube.com/watch?v=F1Vri0F6gJA"
+   ]
+  },
+  {
+   "items": [
+    "Giant Whistle",
+    "Corrupted Power"
+   ],
+   "kind": "skill+skill",
+   "why": "Corrupted Power gibt 8 s lang +50 % Schaden und wirkt laut Spielertest auf den Treffer der Whistle, aber nicht auf Granaten, Turrets oder Begleiter.",
+   "sources": [
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2027382951"
+   ]
+  },
+  {
+   "items": [
+    "Telluric Shock",
+    "Corrupted Power"
+   ],
+   "kind": "skill+skill",
+   "why": "Erst Corrupted Power zünden (+50 % Schaden für 8 s), dann den Aufprall von Telluric Shock in eine Gruppe setzen. Laut Spielertest profitiert der Skill-Schaden davon, Wandschaden nicht.",
+   "sources": [
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2027382951"
+   ]
+  },
+  {
+   "items": [
+    "Death Orb",
+    "Corrupted Power"
+   ],
+   "kind": "skill+skill",
+   "why": "Die Death Orb richtet hohen Einzelschaden an. Im 8-s-Fenster von Corrupted Power steigt er laut Spielertest um +50 %.",
+   "sources": [
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2027382951"
+   ]
+  },
+  {
+   "items": [
+    "Collector's Syringe",
+    "Corrupted Power"
+   ],
+   "kind": "skill+skill",
+   "why": "Die kreisende Spritze trifft dauerhaft. Laut Spielertest erhöht Corrupted Power auch ihren Schaden, besonders lohnend bei voll aufgeladener Spritze.",
+   "sources": [
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2027382951"
+   ]
+  },
+  {
+   "items": [
+    "Tonic",
+    "Ice Armor"
+   ],
+   "kind": "skill+skill",
+   "why": "Zwei Schutz-Skills für Fluch-Builds mit 1 HP: Tonic gibt Bonusleben und Schadensreduktion, Ice Armor fängt den nächsten Treffer ab.",
+   "sources": [
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=3323424572"
+   ]
+  },
+  {
+   "items": [
+    "Frost Blast",
+    "Nutcracker"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Frost Blast friert ganze Gruppen ein, und Nutcracker kritet gegen eingefrorene Ziele. Mit +175 %-Affixen gegen Gefrorene fallen Gegner mit einem Schlag.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/5/552359478871230327/",
+    "https://www.reddit.com/r/deadcells/comments/wbi413/wiki_synergies_page/ii82ymu/"
+   ]
+  },
+  {
+   "items": [
+    "Frost Blast",
+    "Frostbite"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Für Frostbite zählen eingefrorene Gegner als volle 5 Verlangsamungs-Stapel. Frost Blast friert ganze Gruppen ein, und schwache Gegner sterben dann allein am Frostbite-Schaden.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/5/552359478871230327/"
+   ]
+  },
+  {
+   "items": [
+    "Frost Blast",
+    "Maria's Cat"
+   ],
+   "kind": "weapon+skill",
+   "why": "Frost Blast friert Gegner ein, und Maria's Cat greift sie zusätzlich an. Achtung: Die Katze kann eingefrorene Ziele auftauen, bevor der Krit-Schlag sitzt.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/5/552359478871230327/"
+   ]
+  },
+  {
+   "items": [
+    "Tombstone",
+    "Punishment"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Ein Survival-Build gegen Gruppen: Punishment verteilt geblockten Schaden auf Gegner ringsum, Tombstone räumt mit dem Grabstein-Schlag ganze Pakete ab.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3879344844058693551/"
+   ]
+  },
+  {
+   "items": [
+    "Tombstone",
+    "Telluric Shock"
+   ],
+   "kind": "weapon+skill",
+   "why": "Telluric Shock trifft beim Aufprall alles im Umkreis und ergänzt den Flächenschaden von Tombstone, wenn sich Gegner um dich sammeln.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3879344844058693551/"
+   ]
+  },
+  {
+   "items": [
+    "Punishment",
+    "Blind Faith"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Jede Parade mit Punishment senkt dank Blind Faith die Skill-Abklingzeiten. Der Schild bleibt dabei die Schadensquelle für die Gegner ringsum.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3879344844058693551/"
+   ]
+  },
+  {
+   "items": [
+    "Tonic",
+    "Vampirism"
+   ],
+   "kind": "skill+skill",
+   "why": "Vampirism opfert Max-HP und heilt über Nahkampftreffer zurück. Tonic gibt einen Anteil des fehlenden Lebens als Bonusleben, mit niedriger HP also besonders viel. Die genauen Werte von Tonic wurden seit 2020 geändert.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/2570942392176949579/"
+   ]
+  },
+  {
+   "items": [
+    "Heavy Crossbow",
+    "Death Orb"
+   ],
+   "kind": "weapon+skill",
+   "why": "Ein schwerer Burst-Build: Die Heavy Crossbow feuert ihre Salve aus kurzer Distanz, und die Death Orb legt verheerenden Einzelschaden nach.",
+   "sources": [
+    "https://www.youtube.com/watch?v=LegibWVgF_E"
+   ]
+  },
+  {
+   "items": [
+    "Throwing Axe",
+    "Ammo"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Die Throwing Axe hat nur begrenzt Wurfäxte. Ammo verdoppelt den Vorrat, sodass du länger aus der Distanz kritische Würfe im Fall landen kannst.",
+   "sources": [
+    "https://www.youtube.com/watch?v=K91zQN0BvF8"
+   ]
+  },
+  {
+   "items": [
+    "Thunder Shield",
+    "Corrupted Power"
+   ],
+   "kind": "weapon+skill",
+   "why": "Der Thunder Shield erzeugt beim Blocken Blitzschaden. Laut Spielertest erhält dieser Schaden auch den Bonus von Corrupted Power, das ist bei Schilden nicht selbstverständlich.",
+   "sources": [
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2027382951"
+   ]
+  },
+  {
+   "items": [
+    "Hokuto's Bow",
+    "Tesla Coil"
+   ],
+   "kind": "weapon+skill",
+   "why": "Hokuto's Bow markiert Gegner, und die Markierung verursacht Zusatzschaden, solange das Ziel weiter getroffen wird. Die Tesla Coil trifft nahe Gegner ununterbrochen und hält diesen Bonus ohne eigenes Zutun am Laufen.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/7091547412715208434/"
+   ]
+  },
+  {
+   "items": [
+    "Tesla Coil",
+    "Sinew Slicer"
+   ],
+   "kind": "skill+skill",
+   "why": "Doppel-Geschütz für Taktik: Die Tesla Coil schockt Gruppen in ihrem Umkreis, der Sinew Slicer legt Blutung. Ab 4 BC lockt man teleportierende Gegner gezielt zwischen beide Geschütze.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/4356746316584962041/",
+    "https://steamcommunity.com/app/588650/discussions/0/7091547412715208434/",
+    "https://steamcommunity.com/app/588650/discussions/0/3879344844058693551/"
+   ]
+  },
+  {
+   "items": [
+    "Electric Whip",
+    "Tesla Coil"
+   ],
+   "kind": "weapon+skill",
+   "why": "Beide verursachen elektrischen Schock und treffen mehrere Ziele zugleich. Gegen den Giant erwischen Peitsche und Spule mehrere Körperteile auf einmal.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/2969519680682644229/",
+    "https://youtu.be/qcQE88SmjQ0",
+    "https://steamcommunity.com/app/588650/discussions/0/2989791584236353165/"
+   ]
+  },
+  {
+   "items": [
+    "Quick Bow",
+    "Tesla Coil"
+   ],
+   "kind": "weapon+skill",
+   "why": "Die Tesla Coil hält nahe Gegner unter Dauerbeschuss, während der Quick Bow aus Distanz Pfeile stapelt und ab drei steckenden Pfeilen kritet. Gilt als einfacher Taktik-Einstieg.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/5/5239403117939432409/"
+   ]
+  },
+  {
+   "items": [
+    "Electric Whip",
+    "Lightning Bolt"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Reiner Blitz-Build: Die Peitsche schockt mehrere Gegner auf mittlere Distanz, der Lightning Bolt kritet als gehaltener Dauerstrahl aus der Ferne. Beide legen Schock, sodass der Schaden beim Waffenwechsel nicht abreißt.",
+   "sources": [
+    "https://youtu.be/qcQE88SmjQ0",
+    "https://youtu.be/DBNNYpkLYPY"
+   ]
+  },
+  {
+   "items": [
+    "Electric Whip",
+    "Hokuto's Bow"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Die Electric Whip trifft sehr schnell und mehrfach. Jeder Treffer auf ein mit Hokuto's Bow markiertes Ziel löst den Bonusschaden der Markierung aus.",
+   "sources": [
+    "https://youtu.be/3adClO1vyvU"
+   ]
+  },
+  {
+   "items": [
+    "Lightning Bolt",
+    "Acrobatipack"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Liegt der Lightning Bolt im Rucksack, feuert Acrobatipack nach jeder Rolle beim nächsten Fernkampfangriff einen Blitz mit. So kommt zusätzlicher Schockschaden ohne Waffenwechsel.",
+   "sources": [
+    "https://youtu.be/DBNNYpkLYPY",
+    "https://steamcommunity.com/app/588650/discussions/0/3759977302534965606/"
+   ]
+  },
+  {
+   "items": [
+    "Lightning Bolt",
+    "Wolf Trap"
+   ],
+   "kind": "weapon+skill",
+   "why": "Wolf Trap hält Gegner fest, sodass sie im gehaltenen Dauerstrahl des Lightning Bolt bleiben. Erst dieser Strahl kritet, und festgehaltene Gegner nehmen zusätzlich Fallenschaden.",
+   "sources": [
+    "https://youtu.be/qv8A8lyWn0s"
+   ]
+  },
+  {
+   "items": [
+    "Alchemic Carbine",
+    "Hokuto's Bow"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Klassisches Gift-Duo: Die Carbine hält Gegner mit Dauerfeuer und Giftwolke unter Treffern, und jeder Treffer auf ein von Hokuto's Bow markiertes Ziel löst Bonusschaden aus. Hokuto oft auch im Rucksack mit Acrobatipack. Seit 3.0 ist die Markierung etwas schwächer.",
+   "sources": [
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2923529616",
+    "https://steamcommunity.com/app/588650/discussions/0/3419934180313195533/",
+    "https://youtu.be/B33WEZ08gYU"
+   ]
+  },
+  {
+   "items": [
+    "Alchemic Carbine",
+    "Acrobatipack"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Mit der Carbine im Rucksack verschießt jeder Fernkampfangriff nach einer Rolle zusätzlich einen Giftschuss. So vergiftet man Bosse nebenbei, ohne die Hauptwaffe zu wechseln.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3820784984094936779/",
+    "https://steamcommunity.com/app/588650/discussions/0/3419934180313195533/"
+   ]
+  },
+  {
+   "items": [
+    "Alchemic Carbine",
+    "Magic Missiles"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Die Carbine vergiftet, und die zielsuchenden Magic Missiles treffen mit einem Affix für Zusatzschaden gegen vergiftete Ziele sicher, auch gegen bewegliche Bosse.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/1679189548065281761/"
+   ]
+  },
+  {
+   "items": [
+    "Alchemic Carbine",
+    "Double Crossb-o-matic"
+   ],
+   "kind": "weapon+skill",
+   "why": "Die Carbine vergiftet das Ziel, das Double Crossb-o-matic beschießt es mit einem Affix für Bonusschaden gegen vergiftete Gegner. Gift und Geschütz-Dauerfeuer tragen so gemeinsam den Bossschaden.",
+   "sources": [
+    "https://youtu.be/RtfVZETGd3k"
+   ]
+  },
+  {
+   "items": [
+    "Hokuto's Bow",
+    "Barbed Tips"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Barbed Tips macht steckende Projektile zu Dauerschaden, und Hokuto's Bow markiert das Ziel. Viele kleine Schadensticks lösen den Markierungsbonus immer wieder aus. Kern des klassischen Taktik-Bogenbuilds.",
+   "sources": [
+    "https://youtu.be/6mRCHcxTfAY",
+    "https://steamcommunity.com/app/588650/discussions/0/7091547412715208434/"
+   ]
+  },
+  {
+   "items": [
+    "Hokuto's Bow",
+    "Acrobatipack"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Im Rucksack markiert Hokuto's Bow über Acrobatipack nach jeder Rolle automatisch das Ziel. Der Hauptwaffen-Slot bleibt so frei für eine schnelle Waffe, die den Markierungsbonus auslöst.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/7091547412715208434/",
+    "https://steamcommunity.com/app/588650/discussions/0/3419934180313195533/"
+   ]
+  },
+  {
+   "items": [
+    "Cross",
+    "Hokuto's Bow"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Das Cross rotiert an Ort und Stelle und trifft dabei sehr oft, auf dem Rückweg sogar kritisch. Jeder dieser Treffer löst auf einem markierten Ziel den Hokuto-Bonus aus.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3800527434453286285/"
+   ]
+  },
+  {
+   "items": [
+    "Magic Missiles",
+    "Hokuto's Bow"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Magic Missiles zielen von selbst und treffen das markierte Ziel zuverlässig mit vielen kleinen Geschossen. Jeder Treffer löst den Hokuto-Bonus aus.",
+   "sources": [
+    "https://youtu.be/obcIgyBr35E"
+   ]
+  },
+  {
+   "items": [
+    "Hokuto's Bow",
+    "Wings of the Crow"
+   ],
+   "kind": "weapon+skill",
+   "why": "Wings of the Crow trifft drei Sekunden lang alles um dich herum mit elektrischem Schaden. Auf markierten Gegnern löst jeder dieser Treffer den Hokuto-Bonus aus, während du schwebst und ausweichst.",
+   "sources": [
+    "https://youtu.be/YoJanskAdK0"
+   ]
+  },
+  {
+   "items": [
+    "Snake Fangs",
+    "Barnacle"
+   ],
+   "kind": "weapon+skill",
+   "why": "Snake Fangs teleportiert zum Ziel und vergiftet es. Barnacle kritet gegen vergiftete Gegner, also gegen alles, was die Fangs berührt haben.",
+   "sources": [
+    "https://youtu.be/m4FkDDRwaL8"
+   ]
+  },
+  {
+   "items": [
+    "Blowgun",
+    "Barnacle"
+   ],
+   "kind": "weapon+skill",
+   "why": "Das Blowgun vergiftet aus der Distanz, und Barnacle kritet gegen vergiftete Ziele. So entsteht ein reiner Gift-Build in Taktik.",
+   "sources": [
+    "https://youtu.be/HO_wrtovg1E"
+   ]
+  },
+  {
+   "items": [
+    "Blowgun",
+    "Explosive Decoy"
+   ],
+   "kind": "weapon+skill",
+   "why": "Der Köder zieht die Aufmerksamkeit auf sich, sodass du hinter den Gegner rollen und mit dem Blowgun kritische Rückentreffer landen kannst. Dessen Gift aktiviert zugleich Decoy-Affixe gegen vergiftete Ziele.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/2263565217514290503/?ctp=2"
+   ]
+  },
+  {
+   "items": [
+    "Blowgun",
+    "Infantry Bow"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Das Blowgun vergiftet, der Infantry Bow kritet auf kurze Distanz und bekommt mit dem Affix gegen vergiftete Ziele weiteren Zusatzschaden. Das Paar gilt als starke Antwort auf den Hand of the King.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3820784984094936779/"
+   ]
+  },
+  {
+   "items": [
+    "Boomerang",
+    "Cross"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Zwei zurückkehrende Wurfwaffen: Während das Cross rotiert und auf dem Rückweg kritet, fliegt schon der Bumerang. Beide treffen auf Hin- und Rückweg, sodass fast keine Leerlaufzeit entsteht.",
+   "sources": [
+    "https://youtu.be/fW3IvhqK6eI"
+   ]
+  },
+  {
+   "items": [
+    "Boomerang",
+    "Ice Shards"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Ice Shards verlangsamt Gegner, sodass sie länger in der Flugbahn des Bumerangs bleiben und auf Hin- und Rückweg getroffen werden.",
+   "sources": [
+    "https://youtu.be/1iSpO1poZVo"
+   ]
+  },
+  {
+   "items": [
+    "Meat Skewer",
+    "Explosive Decoy"
+   ],
+   "kind": "weapon+skill",
+   "why": "Der Köder bindet den Gegner, und der Meat Skewer sticht durch ihn hindurch und setzt dich hinter ihn. Der nächste Angriff kritet ungestört.",
+   "sources": [
+    "https://youtu.be/ShhOlBqiFIc"
+   ]
+  },
+  {
+   "items": [
+    "Great Owl of War",
+    "Mushroom Boi!"
+   ],
+   "kind": "skill+skill",
+   "why": "Die Eule verschwindet, sobald du Schaden nimmst. Mushroom Boi! rammt und unterbricht Gegner und hält sie so von dir fern, damit die Eule länger Schaden macht.",
+   "sources": [
+    "https://youtu.be/G7LGvnm7ypw"
+   ]
+  },
+  {
+   "items": [
+    "Magnetic Grenade",
+    "Pollo Power"
+   ],
+   "kind": "skill+skill",
+   "why": "Die Magnetic Grenade zieht auch die explosiven Eier von Pollo Power zusammen, sodass sie gebündelt auf der Gegnergruppe hochgehen. Zuerst die Granate werfen, denn Pollo Power sperrt danach andere Items.",
+   "sources": [
+    "https://youtu.be/f2D-cCDTKjg"
+   ]
+  },
+  {
+   "items": [
+    "War Spear",
+    "Magnetic Grenade"
+   ],
+   "kind": "weapon+skill",
+   "why": "Der War Spear kritet, wenn ein Angriff mehrere Gegner zugleich trifft. Die Magnetic Grenade zieht Gegner auf einen Haufen und erzwingt genau das.",
+   "sources": [
+    "https://youtu.be/3MsYrQDamWg"
+   ]
+  },
+  {
+   "items": [
+    "Marksman's Bow",
+    "War Javelin"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Der Marksman's Bow kritet nur auf große Distanz. Den War Javelin wirft man voraus und teleportiert sich bei Bedarf zu ihm, um schnell wieder Abstand zu gewinnen; oft liegt er im Acrobatipack-Rucksack.",
+   "sources": [
+    "https://youtu.be/JVA1kT2Bm84",
+    "https://steamcommunity.com/app/588650/discussions/0/3419934180313195533/"
+   ]
+  },
+  {
+   "items": [
+    "Marksman's Bow",
+    "Wave of Denial"
+   ],
+   "kind": "weapon+skill",
+   "why": "Wave of Denial stößt alle nahen Gegner weg, gegen Wände mit Zusatzschaden. So stellt sie die Distanz wieder her, die der Marksman's Bow für kritische Treffer braucht.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3419934180313195533/"
+   ]
+  },
+  {
+   "items": [
+    "Marksman's Bow",
+    "Infantry Bow"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Zwei Bögen mit gegensätzlicher Krit-Bedingung: Der Marksman's Bow kritet auf große Distanz, der Infantry Bow auf kurze. Damit kritet man in jeder Lage.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/7091547412715208434/",
+    "https://steamcommunity.com/app/588650/discussions/0/3879344844058693551/"
+   ]
+  },
+  {
+   "items": [
+    "Marksman's Bow",
+    "Wolf Trap"
+   ],
+   "kind": "weapon+skill",
+   "why": "Wolf Trap hält Gegner fest, die dadurch nicht an dich herankommen. Der Marksman's Bow bleibt so auf der Distanz, auf der er kritet, und festgehaltene Ziele nehmen zusätzlich Fallenschaden.",
+   "sources": [
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2923529616"
+   ]
+  },
+  {
+   "items": [
+    "Marksman's Bow",
+    "Quick Bow"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Der Marksman's Bow säubert Biome aus großer Distanz, ist aber gegen nahe oder flinke Bosse wie den Hand of the King schwach. Der Quick Bow liefert dort den nötigen Dauerschaden.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3419934180313195533/"
+   ]
+  },
+  {
+   "items": [
+    "Marksman's Bow",
+    "Sonic Carbine"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Die Sonic Carbine feuert im Dauerfeuer durchdringende Schüsse, die hinter dem ersten Gegner kritisch treffen. Sie deckt die mittlere Distanz und Bosse ab, wo der Marksman's Bow schwächelt.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3419934180313195533/"
+   ]
+  },
+  {
+   "items": [
+    "Money Shooter",
+    "Midas' Blood"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Midas' Blood wandelt verlorene Lebenspunkte in Gold um, und der Money Shooter verschießt pro Schuss 150 Gold. Erlittener Schaden wird so zu Munition. Midas' Blood wurde in 3.4 generft.",
+   "sources": [
+    "https://youtu.be/lJMUeVtHNZc"
+   ]
+  },
+  {
+   "items": [
+    "Money Shooter",
+    "Get Rich Quick"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Get Rich Quick verdoppelt das Gold aus Kills während eines Tempo-Buffs. Mehr Gold bedeutet mehr Schuss für den Money Shooter, dessen Schüsse alle kritisch sind.",
+   "sources": [
+    "https://youtu.be/F6GOQrQ7PWg"
+   ]
+  },
+  {
+   "items": [
+    "Multiple-nocks Bow",
+    "Quick Bow"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Der Quick Bow kritet, sobald mindestens drei Pfeile im Ziel stecken. Der Multiple-nocks Bow verschießt genau drei Pfeile auf einmal und schaltet diese Bedingung mit einem Schuss frei.",
+   "sources": [
+    "https://youtu.be/-y8DX2_skTk"
+   ]
+  },
+  {
+   "items": [
+    "Multiple-nocks Bow",
+    "Barbed Tips"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Jeder steckende Pfeil verursacht mit Barbed Tips Dauerschaden. Der Multiple-nocks Bow setzt pro Schuss gleich drei Pfeile.",
+   "sources": [
+    "https://youtu.be/zkK4U-C8zB8"
+   ]
+  },
+  {
+   "items": [
+    "War Javelin",
+    "Acrobatipack"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Im Rucksack wirft Acrobatipack nach jeder Rolle einen War Javelin mit, der alle Gegner auf seiner Bahn durchbohrt. Nahe Wänden verursacht er zusätzlichen Schaden.",
+   "sources": [
+    "https://youtu.be/9nwPsid-AQc",
+    "https://steamcommunity.com/app/588650/discussions/0/3419934180313195533/",
+    "https://steamcommunity.com/app/588650/discussions/0/3759977302534965606/"
+   ]
+  },
+  {
+   "items": [
+    "Gilded Yumi",
+    "Acrobatipack"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Im Rucksack schießt Acrobatipack nach jeder Rolle einen Yumi-Pfeil mit, der Gegner wegstößt und kritet, wenn sie gegen Wand oder Gegner prallen. Laut Quelle sehr spaßig, ab 3 BC aber wenig effizient.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3759977302534965606/"
+   ]
+  },
+  {
+   "items": [
+    "Heavy Turret",
+    "Sinew Slicer"
+   ],
+   "kind": "skill+skill",
+   "why": "Doppel-Geschütz: Der Sinew Slicer legt Blutung, die Heavy Turret schießt hart und gibt +15 % Schaden in ihrer Nähe. Mit Support kommen nahe Geschützen weitere +35 % hinzu.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3419934180313195533/",
+    "https://steamcommunity.com/app/588650/discussions/0/3800526843210377610/"
+   ]
+  },
+  {
+   "items": [
+    "Infantry Bow",
+    "Heavy Turret"
+   ],
+   "kind": "weapon+skill",
+   "why": "Der Infantry Bow kritet auf kurze Distanz, man kämpft also ohnehin nah am Geschehen und damit nah an der Heavy Turret. Deren Nahbereichs-Bonus (+15 %) wirkt so fast dauerhaft.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3419934180313195533/"
+   ]
+  },
+  {
+   "items": [
+    "Double Crossb-o-matic",
+    "Scavenged Bombard"
+   ],
+   "kind": "skill+skill",
+   "why": "Doppel-Geschütz für Biome und Bosse: Das Crossb-o-matic beschießt zwei Ziele gleichzeitig, die Scavenged Bombard ergänzt langsame, aber schwere Kanonenkugeln.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3419934180313195533/"
+   ]
+  },
+  {
+   "items": [
+    "Tesla Coil",
+    "Wings of the Crow"
+   ],
+   "kind": "skill+skill",
+   "why": "Zwei elektrische Flächen-Skills: Die Tesla Coil schockt stationär, und Wings of the Crow lässt dich schweben und dabei alles um dich herum treffen. Gegen den Giant decken beide mehrere Körperteile gleichzeitig ab.",
+   "sources": [
+    "https://youtu.be/sLRNNYuQJUc",
+    "https://youtu.be/qcQE88SmjQ0"
+   ]
+  },
+  {
+   "items": [
+    "Magic Bow",
+    "Wish"
+   ],
+   "kind": "weapon+mutation",
+   "why": "Wish macht das nächste aufgenommene Item legendär, und der legendäre Magic Bow hat fest das Affix 'Double Bullets'. Doppelt so viele zielsuchende Pfeile verdoppeln praktisch den Salvenschaden.",
+   "sources": [
+    "https://youtu.be/qelkmclMfNo"
+   ]
+  },
+  {
+   "items": [
+    "Magic Bow",
+    "Throwable Objects"
+   ],
+   "kind": "weapon+weapon",
+   "why": "Throwable Objects betäubt getroffene Gegner. Stehende Ziele bekommen die ganze Salve des Magic Bow ab, und jeder weitere Pfeil auf dasselbe Ziel macht mehr Schaden (bis +35 %).",
+   "sources": [
+    "https://youtu.be/1L7qg_m92y4"
+   ]
+  },
+  {
+   "items": [
+    "Heavy Turret",
+    "Tornado"
+   ],
+   "kind": "skill+skill",
+   "why": "Reiner Distanz-Taktik-Ansatz: Der Tornado wandert durch Gegnergruppen und trifft alles darin, während die Heavy Turret Dauerschaden liefert. Du selbst bleibst auf Abstand.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3211505894103848013/",
+    "https://steamcommunity.com/app/588650/discussions/0/3211505894114622844/"
+   ]
+  },
+  {
+   "items": [
+    "Bow and Endless Quiver",
+    "Heavy Turret"
+   ],
+   "kind": "weapon+skill",
+   "why": "Der Bogen hat unbegrenzte Munition und schießt ohne Pause aus der Distanz, während die Heavy Turret Gegner bindet und beschießt. Einfacher Full-Tactics-Fernkampf.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3211505894114622844/"
+   ]
   }
  ],
  "mutationSets": [
@@ -2264,6 +4170,231 @@
    ],
    "forWhat": "Swift Sword / Speedruns",
    "why": "Tempo-Buff hält länger, heilt im Tempo und Combo belohnt das Durchschlagen ganzer Räume."
+  },
+  {
+   "name": "Schlemmer mit Netz",
+   "color": "survival",
+   "mutations": [
+    "Necromancy",
+    "Gastronomy",
+    "Ygdar Orus Li Ox"
+   ],
+   "forWhat": "Überlebens-Runs auf niedrigen bis mittleren BC, besonders für Einsteiger",
+   "why": "Necromancy heilt bei jedem Kill, Gastronomy macht Essen deutlich stärker, und Ygdar Orus Li Ox fängt den ersten tödlichen Fehler ab. Gegen einzelne Bosse wie im Lighthouse bringen die beiden Heil-Mutationen wenig, weil dort kaum Kills und Essen anfallen.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/4699035289200373224"
+   ],
+   "evidence": "Steam 'Let's talk about Lighthouse', 2024-10-17: OP 'I almost always go with Necromancy, Gastronomy and the extra life'; Antwort gbors 2024-10-20 nennt sie im Lighthouse fast nutzlos."
+  },
+  {
+   "name": "Malaise-Ausdauer",
+   "color": "survival",
+   "mutations": [
+    "Necromancy",
+    "Gastronomy",
+    "Disengagement"
+   ],
+   "forWhat": "5-BC-Survival in den Biomen (Scissors, Flint, Baseball Bat)",
+   "why": "Viele Kills unter Malaise speisen Necromancy, Gastronomy holt aus jedem Essen mehr heraus, und Disengagement verhindert den plötzlichen Tod aus vollem Leben. Seit 3.4 greift Disengagement nur einmal pro Biom; Necromancy heilt seitdem ohne 50-%-Grenze und mehr bei zähen Gegnern.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/5/3844431603849506591"
+   ],
+   "evidence": "Steam-Guide-Thread 2023-06-02 (Abolish DEI), Punkt 2: 'Abuse necromancy + malaise. Your other biome mutations should be gastronomy and disengagement.' Vor 3.4, gegen History geprüft."
+  },
+  {
+   "name": "Boss-Bollwerk",
+   "color": "hybrid",
+   "mutations": [
+    "Soldier's Resistance",
+    "Disengagement",
+    "Vengeance"
+   ],
+   "forWhat": "Bosskämpfe auf 5 BC, vor allem Survival",
+   "why": "Soldier's Resistance erhöht das Lebenspolster, Disengagement schützt beim Absturz unter 15 % HP, und Vengeance wandelt jeden kassierten Treffer in Schaden und Schadensreduktion um. Soldier's Resistance wurde in 3.4 generft (Basis 5 %, Maximum 40 % erst bei mehr Stats).",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/5/3844431603849506591"
+   ],
+   "evidence": "Steam 2023-06-02, Punkt 7 (Boss-Mutationen): '1) Soldier's Resistance (+40% health), 2) Disengagement, 3) Crow's Foot/Vengeance/Recovery'. Vor 3.4."
+  },
+  {
+   "name": "Goldener Panzer",
+   "color": "survival",
+   "mutations": [
+    "Soldier's Resistance",
+    "Disengagement",
+    "Gold Plating"
+   ],
+   "forWhat": "Bosskämpfe auf 5 BC mit großem Goldvorrat",
+   "why": "Gold Plating zahlt Treffer mit Gold statt Leben, die anderen beiden sichern das Lebenspolster ab. Seit 3.4 kostet Gold Plating 550 Gold pro verhindertem Prozent HP und ist damit viel teurer als zur Zeit der Quelle; lohnt nur mit sehr viel Gold spät im Run.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/5/3844431603849506591"
+   ],
+   "evidence": "Steam 2023-06-02, Punkt 8: 'replace #3 with GOLD PLATING' (zu SR + Disengagement). Vor 3.4; Gold Plating seitdem stark verteuert."
+  },
+  {
+   "name": "Parier-Heiler",
+   "color": "survival",
+   "mutations": [
+    "Gastronomy",
+    "What Doesn't Kill Me",
+    "Alienation"
+   ],
+   "forWhat": "Survival-Runs, die vor allem Heilung brauchen (Schild-Spielweise)",
+   "why": "Drei Heilquellen aus verschiedenen Richtungen: Essen (Gastronomy), Melee-Paraden (What Doesn't Kill Me) und aufgehobene Flüche (Alienation). Alienations Heilmechanik wurde mehrfach umgebaut; sie heilt heute nach dem Aufheben eines Fluchs mit mindestens 5 Stapeln.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/2997674644672018404"
+   ],
+   "evidence": "Steam 'What is the point in healing mutations…', SaiColors 2021-02-18: 'If you need healing just pick Gastronomy, What Doesn't Kill Me, Alienation.'"
+  },
+  {
+   "name": "Gnadenloser Aderlass",
+   "color": "brutality",
+   "mutations": [
+    "Open Wounds",
+    "Combo",
+    "No Mercy"
+   ],
+   "forWhat": "Schnelle Blutungswaffen wie Sadist's Stiletto",
+   "why": "Open Wounds legt mit jedem Melee-Treffer Blutung nach, Combo steigert den Schaden pro Treffer in Folge, und No Mercy tötet angeschlagene Gegner unter 15 % HP sofort. Schnelle Mehrfachtreffer bedienen alle drei.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-builds"
+   ],
+   "evidence": "Gamersdecide Top 10 Builds (Martin P., Stand 2024-01), #9 'The Toxic Blade': Sadist's Stiletto + Bloodthirsty Shield, Mutationen Open Wounds, Combo, No Mercy. Nach dem Combo-Umbau 3.4 aktualisiert."
+  },
+  {
+   "name": "Stachelschild-Held",
+   "color": "survival",
+   "mutations": [
+    "Counterattack",
+    "Blind Faith",
+    "Spite"
+   ],
+   "forWhat": "Schild als Hauptwaffe, z. B. Spiked Shield",
+   "why": "Spite gibt jeder Parade Zusatzschaden, Counterattack verstärkt den Angriff danach, und Blind Faith verkürzt mit jeder Parade die Skill-Abklingzeiten. Die ganze Spielweise dreht sich ums Parieren.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-builds"
+   ],
+   "evidence": "Gamersdecide Top 10 Builds (Stand 2024-01), #3 'The Shield Hero': Spiked Shield, Mutationen Counterattack, Blind Faith, Spite."
+  },
+  {
+   "name": "Sternenschauer",
+   "color": "hybrid",
+   "mutations": [
+    "Networking",
+    "Point Blank",
+    "Melee"
+   ],
+   "forWhat": "Starfury mit Knockback Shield",
+   "why": "Starfury trifft viele Gegner mit Fernkampfschaden: Networking verteilt ihn weiter, Point Blank belohnt die kurze Distanz. Melee verlangsamt Gegner, die man mit dem Schild auf Abstand hält.",
+   "sources": [
+    "https://gamersdecide.com/articles/dead-cells-best-builds"
+   ],
+   "evidence": "Gamersdecide Top 10 Builds (Stand 2024-01), #1 'The Fury of the Stars': Starfury + Knockback Shield, Mutationen Networking, Point Blank, Melee. Nach Starfury-Buff 3.3."
+  },
+  {
+   "name": "Mantel und Dolch",
+   "color": "hybrid",
+   "mutations": [
+    "Scheme",
+    "Ripper",
+    "Instinct of the Master of Arms"
+   ],
+   "forWhat": "Assassin's Dagger mit Bogen oder Throwing Knife",
+   "why": "Nach einem Skill trifft der nächste Dolchstich dank Scheme hart. Ripper reißt dabei die steckenden Pfeile oder Messer heraus, und Instinct of the Master of Arms verkürzt mit jedem Krit die Abklingzeiten. Älterer Guide (2020); alle drei Mutationen wurden seitdem nur gebufft oder nicht verändert.",
+   "sources": [
+    "https://gameplay.tips/guides/6703-dead-cells.html"
+   ],
+   "evidence": "gameplay.tips 'Comprehensive Build Guide' 2020-02-23, Build 'Cloak and Dagger': Assassin's Dagger + Hokuto's Bow/Throwing Knives/Quick Bow, Mutationen 'Scheme, Ripper, IotMoA'."
+  },
+  {
+   "name": "Doppelschild",
+   "color": "survival",
+   "mutations": [
+    "Blind Faith",
+    "Spite",
+    "What Doesn't Kill Me"
+   ],
+   "forWhat": "Zwei Schilde (z. B. Spiked Shield + Rampart)",
+   "why": "Jede Parade löst alle drei aus: Spite macht Schaden, What Doesn't Kill Me heilt bei Melee-Paraden, und Blind Faith senkt die Abklingzeiten.",
+   "sources": [
+    "https://gameplay.tips/guides/6703-dead-cells.html"
+   ],
+   "evidence": "gameplay.tips 2020-02-23, Build 'Dual Shield': Mutationen 'Blind Faith, Spite, What Doesn't Kill You' (gemeint ist What Doesn't Kill Me). Mechanik unverändert (WDKM 2.4 gebufft)."
+  },
+  {
+   "name": "Schild und Kette",
+   "color": "hybrid",
+   "mutations": [
+    "Blind Faith",
+    "Counterattack",
+    "Combo"
+   ],
+   "forWhat": "Nahkampfwaffe mit Schild und Granaten, Einstieg bis 1 BC",
+   "why": "Paraden laden über Blind Faith die Granaten schneller auf, Counterattack verstärkt den Schlag danach, und Combo belohnt die anschließende Trefferserie. Combo stapelt seit 3.4 pro Treffer statt pro Kill; die Idee bleibt gleich.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/1679189548074467170"
+   ],
+   "evidence": "Steam 'Tips for 1 BC please', 2019-04-23: 'If you choose to go with the first option [melee, shield, grenades], I highly recommend mutations: Blind Faith, Counterattack, and Combo.' Vor 3.4."
+  },
+  {
+   "name": "Geschütz-Jäger",
+   "color": "tactics",
+   "mutations": [
+    "Hunter's Instinct",
+    "Support",
+    "Ripper"
+   ],
+   "forWhat": "Bogen oder Wurfwaffe plus Nahkampfwaffe und zwei Geschütze",
+   "why": "Neben den aufgestellten Geschützen gibt Support +35 % Schaden (seit 3.4). Kills mit der Fernkampfwaffe senken über Hunter's Instinct die Geschütz-Abklingzeiten, und Ripper reißt per Nahkampftreffer steckende Pfeile als Schaden und Munition heraus.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/1679189548074467170"
+   ],
+   "evidence": "Steam 2019-04-23, gleicher Post: 'For the 2nd option [melee, range, turrets], I recommend mutations: Hunter's Instinct, Support, and Ripper/Combo.'"
+  },
+  {
+   "name": "Schlangenbiss",
+   "color": "brutality",
+   "mutations": [
+    "Open Wounds",
+    "Melee",
+    "Instinct of the Master of Arms"
+   ],
+   "forWhat": "Snake Fangs und andere schnelle Krit-Waffen",
+   "why": "Viele schnelle Treffer stapeln Blutung über Open Wounds und Verlangsamung über Melee. Jeder Krit verkürzt über Instinct of the Master of Arms die Skill-Abklingzeiten.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3196993316881133865"
+   ],
+   "evidence": "Steam 'What's your favorite build?', DrunkHobo 2022-01-16: 'Snake fangs with open wounds, melee mutation and master of arms.'"
+  },
+  {
+   "name": "Blutige Vergeltung",
+   "color": "brutality",
+   "mutations": [
+    "Open Wounds",
+    "Melee",
+    "Vengeance"
+   ],
+   "forWhat": "Impaler, Assassin's Dagger und andere Brutality-Nahkampfwaffen",
+   "why": "Open Wounds und Melee machen jeden Treffer stärker und bremsen den Gegner. Vengeance verwandelt erlittene Treffer in einen Schadensschub mit kurzer Schadensreduktion.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3196993316881133865"
+   ],
+   "evidence": "Steam 'What's your favorite build?', gbors 2022-01-16 (Brutality: Impaler + Assassin's Dagger): 'M: Open wounds, Melee, Vengeance'. Ähnlich Leviathan 2022-01-18 in längerer Liste."
+  },
+  {
+   "name": "Grüne Grundausstattung",
+   "color": "survival",
+   "mutations": [
+    "Gastronomy",
+    "Soldier's Resistance",
+    "Recovery"
+   ],
+   "forWhat": "War Spear, Ice Bow und Giantkiller auf Survival",
+   "why": "Mehr Max-HP (Soldier's Resistance), stärkeres Essen (Gastronomy) und ein dreimal so langes Fenster, um verlorene HP zurückzuschlagen (Recovery). Soldier's Resistance wurde in 3.4 generft.",
+   "sources": [
+    "https://steamcommunity.com/app/588650/discussions/0/3196993316881133865"
+   ],
+   "evidence": "Steam 'What's your favorite build?', Gunjuice 2022-01-16 (War Spear, Ice Bow, Giantkiller): 'Mutations: 1. Gastronomy 2. Soldier's Resistance 3. what you like, I like Recovery or Open Wounds'."
   }
  ],
  "routes": [
