@@ -1,0 +1,149 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "primary font: inter",
+        "createdAt": "2026-10-30T19:38:00.236Z",
+        "reason": "Read-mode body face; incumbent self-hosted asset; new-work sanctions workhorse faces for Read surfaces"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "css/style.css"
+        ],
+        "createdAt": "2026-10-30T19:38:07.332Z",
+        "reason": "only hit is .ico::after, the scaling-colour mark on sprite plates per direction contract"
+      },
+      {
+        "rule": "codex-grid-background",
+        "value": "*",
+        "files": [
+          "css/style.css"
+        ],
+        "createdAt": "2026-10-30T19:38:07.337Z",
+        "reason": "only hit is .route-graph-wrap, an actual biome map surface"
+      },
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "css/style.css"
+        ],
+        "createdAt": "2026-10-30T19:38:07.342Z",
+        "reason": "only hit is the boot loading bar"
+      },
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "css/style.css"
+        ],
+        "createdAt": "2026-10-30T19:38:07.347Z",
+        "reason": "only hit is hatching on locked route nodes: state as mark per direction contract"
+      },
+      {
+        "rule": "codex-grid-background",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-30T19:38:07.352Z",
+        "reason": "only hit is .route-graph-wrap, an actual biome map surface"
+      },
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-30T19:38:07.357Z",
+        "reason": "only hit is the boot loading bar"
+      },
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-30T19:38:07.362Z",
+        "reason": "only hit is hatching on locked route nodes: state as mark per direction contract"
+      },
+      {
+        "rule": "overused-font",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-30T19:38:20.094Z",
+        "reason": "Inter is the Read-mode body face; incumbent self-hosted asset"
+      },
+      {
+        "rule": "undersized-ui-text",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/*.html"
+        ],
+        "createdAt": "2026-10-30T19:39:10.860Z",
+        "reason": "decision-round sketches: throwaway first-viewport mocks, never shipped"
+      },
+      {
+        "rule": "overused-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/*.html"
+        ],
+        "createdAt": "2026-10-30T19:39:10.864Z",
+        "reason": "decision-round sketches: throwaway first-viewport mocks, never shipped"
+      },
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/*.html"
+        ],
+        "createdAt": "2026-10-30T19:39:10.869Z",
+        "reason": "decision-round sketches: throwaway first-viewport mocks, never shipped"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/*.html"
+        ],
+        "createdAt": "2026-10-30T19:39:10.874Z",
+        "reason": "decision-round sketches: throwaway first-viewport mocks, never shipped"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/*.html"
+        ],
+        "createdAt": "2026-10-30T19:51:47.437Z",
+        "reason": "decision-round sketches: throwaway mocks predating DESIGN.md, never shipped"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/*.html"
+        ],
+        "createdAt": "2026-10-30T19:51:47.442Z",
+        "reason": "decision-round sketches: throwaway mocks predating DESIGN.md, never shipped"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/*.html"
+        ],
+        "createdAt": "2026-10-30T19:51:47.448Z",
+        "reason": "decision-round sketches: throwaway mocks predating DESIGN.md, never shipped"
+      }
+    ]
+  }
+}

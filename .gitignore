@@ -11,3 +11,9 @@ prisoners-guide/
 .claude/
 .DS_Store
 Thumbs.db
+
+# Impeccable: lokale Arbeitsdateien (Screenshots, Entwurfsskizzen, Cache)
+.impeccable/review/
+.impeccable/mocks/
+.impeccable/questions/
+.impeccable/hook.cache.json

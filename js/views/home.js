@@ -1,7 +1,8 @@
 import { html, pct } from '../util.js';
 import { db, isOwned, rankBuilds, buildFitsBc, buildDlcOk, buildReadiness, nextUnlocks, biome, L } from '../data.js';
 import { profile, hasDlc } from '../store.js';
-import { buildCard, icon, ring, blueprintSummary, tierBadge, bcTag } from '../components.js';
+import { buildCard, icon, blueprintSummary, tierBadge, IC } from '../components.js';
+import { CHAPTERS } from '../chapters.js';
 
 export const title = () => 'Übersicht';
 
@@ -23,25 +24,31 @@ export function render() {
   const route = db.routes.find((r) => (r.bcMin ?? 0) <= profile.bc && profile.bc <= (r.bcMax ?? 5) && hasDlc(r.dlc ?? []));
   const tip = tipOfTheDay();
 
+  const ledger = [
+    ['#/bc', 'Boss Cells', html`${profile.bc}`, level?.title ?? 'Boss-Cell-Stufe', pct(profile.bc, 5)],
+    ['#/unlocks', 'Freigeschaltet', html`${owned}<span> / ${trackable.length}</span>`, 'Waffen, Skills & Mutationen', pct(owned, trackable.length)],
+    ['#/builds', 'Sofort spielbar', html`${ready}<span> / ${fitting.length}</span>`, 'Builds mit allem, was du hast', pct(ready, fitting.length)],
+    ['#/world?tab=runes', 'Runen', html`${runesOwned}<span> / ${db.runes.length}</span>`, 'Gefunden', pct(runesOwned, db.runes.length)],
+  ];
+
   return html`
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="eyebrow">Dein Begleiter für die Insel</div>
-      <h1>Stirb klüger.<br><em>Lauf weiter.</em></h1>
-      <p>Builds, die wirklich tragen. Routen mit allen Schriftrollen. Jeder Entwurf mit Fundort – abgestimmt auf deine Boss Cells und das, was du schon freigeschaltet hast.</p>
-      <div class="row"><a class="btn primary" href="#/builds">Build finden</a><a class="btn" href="#/routes">Route planen</a><a class="btn ghost" href="#/workshop">Was passt zusammen?</a></div>
+  <section class="opener">
+    <figure class="opener-plate"><img src="assets/hero.jpg" alt="Pixel-Art aus Dead Cells: Burgruinen der Insel im Abendrot" width="1920" height="624"></figure>
+    <div class="opener-text">
+      <h1>Stirb klüger. Lauf weiter.</h1>
+      <div>
+        <p>Builds, die wirklich tragen. Routen mit allen Schriftrollen. Jeder Entwurf mit Fundort – abgestimmt auf deine Boss Cells und das, was du schon freigeschaltet hast.</p>
+        <div class="row"><a class="btn primary" href="#/builds">Build finden</a><a class="btn" href="#/routes">Route planen</a><a class="btn ghost" href="#/workshop">Was passt zusammen?</a></div>
+      </div>
     </div>
   </section>
 
-  <div class="stat-strip">
-    <a class="stat" href="#/bc">${ring(pct(profile.bc, 5), `${profile.bc}`, 'var(--cell)')}<span><b>${profile.bc} BC</b><small>${level?.title ?? 'Boss-Cell-Stufe'}</small></span></a>
-    <a class="stat" href="#/unlocks">${ring(pct(owned, trackable.length), `${pct(owned, trackable.length)}%`)}<span><b>${owned}<span class="dim" style="font-size:18px"> / ${trackable.length}</span></b><small>Waffen, Skills &amp; Mutationen</small></span></a>
-    <a class="stat" href="#/builds">${ring(pct(ready, fitting.length), `${ready}`, 'var(--survival)')}<span><b>${ready}<span class="dim" style="font-size:18px"> / ${fitting.length}</span></b><small>Builds sofort spielbar</small></span></a>
-    <a class="stat" href="#/world?tab=runes">${ring(pct(runesOwned, db.runes.length), `${runesOwned}`, 'var(--tactics)')}<span><b>${runesOwned}<span class="dim" style="font-size:18px"> / ${db.runes.length}</span></b><small>Runen gefunden</small></span></a>
-  </div>
+  <section class="ledger" aria-label="Dein Spielstand">
+    ${ledger.map(([href, k, v, sub, p]) => html`<a href="${href}"><span class="ledger-k">${k}</span><b class="ledger-v">${v}</b><small>${sub}</small><span class="meter" aria-hidden="true"><i style="--p:${p}%"></i></span></a>`)}
+  </section>
 
-  ${!profile.importedAt ? html`<div class="import-cta" style="margin-top:14px">
-    <div style="flex:1"><b style="font:700 19px var(--font-display)">Spielst du auf dem PC?</b><p>Lies dein Savegame ein – dann kennt der Guide sofort alle deine Freischaltungen, Runen und Boss Cells. Die Datei bleibt in deinem Browser.</p></div>
+  ${!profile.importedAt ? html`<div class="import-cta">
+    <div><h3>Spielst du auf dem PC?</h3><p>Lies dein Savegame ein – dann kennt der Guide sofort alle deine Freischaltungen, Runen und Boss Cells. Die Datei bleibt in deinem Browser.</p></div>
     <button class="btn primary" data-save-import>Savegame importieren</button>
   </div>` : ''}
 
@@ -50,38 +57,31 @@ export function render() {
     ${picks.length ? html`<div class="grid cols-3">${picks.map(buildCard)}</div>` : html`<div class="empty">Noch keine Builds geladen.</div>`}
   </section>
 
-  <section class="section grid cols-2">
-    <div class="panel">
-      <div class="eyebrow">Als Nächstes freischalten</div>
-      <h3>Diese Entwürfe lohnen sich jetzt</h3>
-      <p class="muted small" style="margin-bottom:12px">Starke Items, die du bei ${profile.bc} BC bekommen kannst und noch nicht hast.</p>
-      ${next.length ? html`<ul class="clean stack" style="gap:8px">${next.map((e) => html`<li><a class="row" href="${e.url}" style="gap:12px;color:var(--text);flex-wrap:nowrap">${icon(e, 'sm')}<span style="flex:1;min-width:0"><b>${L(e)}</b><small class="muted" style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${blueprintSummary(e)}</small></span>${tierBadge(e.tier)}</a></li>`)}</ul>` : html`<p class="muted">Alles Wichtige freigeschaltet – stark!</p>`}
-      <a class="link-btn" href="#/unlocks" style="display:inline-block;margin-top:14px">Zum Freischalt-Tracker →</a>
+  <section class="section split">
+    <div>
+      <div class="section-head"><div><h2>Diese Entwürfe lohnen sich jetzt</h2><p>Starke Items, die du bei ${profile.bc} BC bekommen kannst und noch nicht hast.</p></div></div>
+      ${next.length ? html`<ol class="clean index-list">${next.map((e) => html`<li><a href="${e.url}">${icon(e, 'sm')}<span class="meta"><b>${L(e)}</b><small>${blueprintSummary(e)}</small></span>${tierBadge(e.tier)}</a></li>`)}</ol>` : html`<p class="muted">Alles Wichtige freigeschaltet – stark!</p>`}
+      <a class="link-btn" href="#/unlocks">Zum Freischalt-Tracker →</a>
     </div>
     <div class="stack">
       ${level ? html`<div class="panel">
-        <div class="bc-hero"><div class="bc-orb">${profile.bc}</div><div><div class="eyebrow">Deine Stufe</div><h3>${level.title}</h3>
+        <div class="bc-hero"><div class="bc-orb" aria-label="${profile.bc} Boss Cells">${profile.bc}</div><div><h3>${level.title}</h3>
         <ul class="bullets small">${(level.changes ?? []).slice(0, 3).map((c) => html`<li>${c}</li>`)}</ul>
-        <a class="link-btn" href="#/bc" style="display:inline-block;margin-top:10px">Alles zu Boss Cells →</a></div></div>
+        <a class="link-btn" href="#/bc">Alles zu Boss Cells →</a></div></div>
       </div>` : ''}
       ${route ? html`<div class="panel">
-        <div class="eyebrow">Routen-Empfehlung</div><h3>${L(route)}</h3><p class="muted small" style="margin-bottom:12px">${route.why}</p>
-        <div class="path-strip">${route.path.map((n, i) => { const b = biome(n); return html`${i ? html`<span class="arrow">→</span>` : ''}<span class="step ${b?.kind === 'arena' ? 'boss' : ''}">${b?.name ?? n}</span>`; })}</div>
-        <a class="link-btn" href="#/routes?r=${route.id}" style="display:inline-block;margin-top:12px">Im Routenplaner öffnen →</a>
+        <h3>${L(route)}</h3><p class="muted small">${route.why}</p>
+        <div class="path-strip">${route.path.map((n, i) => { const b = biome(n); return html`<span class="hop">${i ? html`<span class="arrow" aria-hidden="true">→</span>` : ''}<span class="step ${b?.kind === 'arena' ? 'boss' : ''}">${b?.name ?? n}</span></span>`; })}</div>
+        <a class="link-btn" href="#/routes?r=${route.id}">Im Routenplaner öffnen →</a>
       </div>` : ''}
-      ${tip ? html`<div class="panel"><div class="eyebrow">Profi-Tipp</div><h3>${tip.topic}</h3><p class="muted">${tip.tip}</p></div>` : ''}
+      ${tip ? html`<aside class="tipbox"><h3><span class="tip-mark" aria-hidden="true">${IC.alert}</span>${tip.topic}</h3><p>${tip.tip}</p></aside>` : ''}
     </div>
   </section>
 
   <section class="section">
-    <div class="section-head"><div><h2>Alles auf einen Blick</h2></div></div>
-    <div class="grid cols-4">
-      ${[
-        ['#/tiers', 'Tierlisten', 'Waffen, Skills, Schilde und Mutationen nach Stärke.'],
-        ['#/mutations', 'Mutationen', 'Alle Mutationen plus bewährte 3er-Kombis.'],
-        ['#/world', 'Biome & Bosse', 'Jedes Biom mit Ausgängen, Schriftrollen und Boss-Tipps.'],
-        ['#/knowledge', 'Wissen', 'Collector-Upgrades, Affixe, Statuseffekte, Glossar.'],
-      ].map(([href, t, d]) => html`<a class="card" href="${href}"><h3>${t}</h3><p>${d}</p><span class="link-btn" style="margin-top:auto">Öffnen →</span></a>`)}
+    <div class="section-head"><div><h2>Inhalt</h2></div></div>
+    <div class="contents">
+      ${CHAPTERS.map((c) => html`<div class="contents-ch" data-ch="${c.n}"><h3><span>${c.n}</span>${c.title}</h3><ol class="clean">${c.sections.map(([path, label, blurb], i) => html`<li><a href="#/${path}"><b>${c.n}.${i + 1}</b><span><span class="c-label">${label}</span><small>${blurb}</small></span></a></li>`)}</ol></div>`)}
     </div>
   </section>`;
 }

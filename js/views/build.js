@@ -1,13 +1,21 @@
 import { html } from '../util.js';
-import { db, buildReadiness, buildFitsBc, buildDlcOk, findByName, COLOR_LABEL, L } from '../data.js';
+import { db, buildReadiness, buildFitsBc, buildDlcOk, findByName, COLOR_LABEL, L, isTrackable, isOwned } from '../data.js';
 import { profile, update } from '../store.js';
-import { itemLink, tierBadge, colorTag, difficulty, dlcTag, blueprintSummary, icon, empty } from '../components.js';
+import { itemLink, tierBadge, colorTag, difficulty, dlcTag, blueprintSummary, icon, empty, kv, IC } from '../components.js';
 import { toast } from '../ui.js';
 
 const get = (id) => db.builds.find((b) => b.id === id);
 export const title = (ctx) => get(ctx.param)?.name ?? 'Build';
 
 const slotBlock = (label, names) => (names?.length ? html`<div class="slot"><span class="slot-label">${label}</span><div class="stack" style="gap:6px">${names.map((n) => itemLink(n))}</div></div>` : '');
+/** Nummerierte Loadout-Tafel: großes Sprite, Ziffer, Name und Fundstatus. */
+function loadoutSlot(kind, name) {
+  const e = findByName(name);
+  const missing = e && isTrackable(e) && !isOwned(e);
+  const inner = html`${icon(e ?? { name }, 'lg', { showOwned: true })}<span class="ls-meta"><b>${e ? L(e) : name}</b><small>${kind}${e?.colors ? html` · ${e.colors.map((c) => COLOR_LABEL[c]).join(' / ')}` : ''}</small>${missing ? html`<span class="ls-state">fehlt dir noch</span>` : ''}</span>`;
+  return html`<li class="${missing ? 'missing' : ''}">${e ? html`<a href="${e.url}">${inner}</a>` : html`<span>${inner}</span>`}</li>`;
+}
+
 const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return u; } };
 
 export function render(ctx) {
@@ -23,16 +31,14 @@ export function render(ctx) {
   <section class="detail-hero ${b.color}">
     <div class="row" style="gap:6px;align-self:start">${b.core.weapons.slice(0, 2).map((n) => icon(findByName(n) ?? { name: n }, 'lg'))}</div>
     <div>
-      <div class="row" style="gap:6px">${tierBadge(b.tier, `Build-Tier ${b.tier}`)}${colorTag(b.color)}${b.secondaryColor ? colorTag(b.secondaryColor) : ''}<span class="tag">${b.archetype}</span>${dlcTag(b.dlc)}</div>
-      <h1 style="margin-top:10px">${L(b)}</h1>
+      <h1>${L(b)}</h1>
       <p class="lead">${b.tagline}</p>
       <div class="row">
-        <span class="tag bc">${b.bcMin}–${b.bcMax} BC</span>
-        <span class="tag">Schwierigkeit ${difficulty(b.difficulty)}</span>
+        ${tierBadge(b.tier, `Build-Tier ${b.tier}`)}${colorTag(b.color)}${b.secondaryColor ? colorTag(b.secondaryColor) : ''}<span class="tag">${b.archetype}</span>${dlcTag(b.dlc)}
         ${!fits ? html`<span class="tag warn">Nicht für ${profile.bc} BC empfohlen</span>` : ''}
         ${!buildDlcOk(b) ? html`<span class="tag warn">Benötigt nicht aktivierte DLCs</span>` : ''}
         <span class="spacer"></span>
-        <button class="btn sm" data-fav aria-pressed="${fav}">${fav ? '★ Favorit' : '☆ Merken'}</button>
+        <button class="btn sm" data-fav aria-pressed="${fav}">${fav ? html`${IC.starOn} Favorit` : html`${IC.star} Merken`}</button>
         <a class="btn sm" href="#/workshop?build=${b.id}">In der Werkstatt öffnen</a>
       </div>
     </div>
@@ -42,11 +48,7 @@ export function render(ctx) {
     <div class="stack">
       <section class="panel">
         <h3>Loadout</h3>
-        <div class="slot-grid" style="margin-top:12px">
-          ${slotBlock('Waffen', b.core.weapons)}
-          ${slotBlock('Skills', b.core.skills)}
-          ${slotBlock('Mutationen', b.core.mutations)}
-        </div>
+        <ol class="clean loadout-plate">${[['Waffe', b.core.weapons], ['Skill', b.core.skills], ['Mutation', b.core.mutations]].flatMap(([kind, names]) => names.map((n) => loadoutSlot(kind, n)))}</ol>
         ${Object.values(b.alternatives).some((x) => x?.length) ? html`
           <h3 style="margin-top:22px;font-size:18px">Gute Alternativen</h3>
           <div class="slot-grid" style="margin-top:10px">
@@ -55,14 +57,16 @@ export function render(ctx) {
       </section>
       ${b.mutationWhy ? html`<section class="panel">
         <h3>Die Mutationen im Detail</h3>
-        <div class="stack" style="gap:12px;margin-top:12px">${b.core.mutations.map((n) => html`<div class="row" style="flex-wrap:nowrap;align-items:flex-start;gap:12px">${itemLink(n)}<span class="small" style="color:var(--text-2);flex:1;padding-top:6px">${b.mutationWhy[n] ?? ''}</span></div>`)}</div>
-        ${b.bossMutations?.length ? html`<div class="note" style="margin-top:16px"><b>Vor dem Boss tauschen:</b> <span class="row" style="gap:6px;margin:8px 0">${b.bossMutations.map((n) => itemLink(n))}</span>${b.bossMutationsWhy ?? ''}</div>` : ''}
+        <div class="table-wrap"><table class="table mut-table"><thead><tr><th>Mutation</th><th>Wirkung im Build</th></tr></thead><tbody>
+          ${b.core.mutations.map((n) => html`<tr><td>${itemLink(n)}</td><td>${b.mutationWhy[n] ?? ''}</td></tr>`)}
+          ${b.bossMutations?.length ? html`<tr class="boss-row"><td><span class="field-label">Vor dem Boss tauschen</span><span class="stack" style="gap:6px;margin-top:6px">${b.bossMutations.map((n) => itemLink(n))}</span></td><td>${b.bossMutationsWhy ?? ''}</td></tr>` : ''}
+        </tbody></table></div>
       </section>` : ''}
       ${b.whyItWorks ? html`<section class="panel"><h3>Warum es funktioniert</h3><p class="muted" style="color:var(--text-2)">${b.whyItWorks}</p></section>` : ''}
       ${b.howToPlay?.length ? html`<section class="panel"><h3>So spielst du ihn</h3><ol class="steps" style="margin-top:12px">${b.howToPlay.map((s) => html`<li><span>${s}</span></li>`)}</ol></section>` : ''}
       <div class="grid cols-2">
-        ${b.strengths?.length ? html`<section class="panel"><h3 style="color:var(--survival)">Stärken</h3><ul class="bullets">${b.strengths.map((s) => html`<li>${s}</li>`)}</ul></section>` : ''}
-        ${b.weaknesses?.length ? html`<section class="panel"><h3 style="color:var(--brutality)">Schwächen</h3><ul class="bullets">${b.weaknesses.map((s) => html`<li>${s}</li>`)}</ul></section>` : ''}
+        ${b.strengths?.length ? html`<section class="panel"><h3>Stärken</h3><ul class="bullets">${b.strengths.map((s) => html`<li>${s}</li>`)}</ul></section>` : ''}
+        ${b.weaknesses?.length ? html`<section class="panel"><h3>Schwächen</h3><ul class="bullets">${b.weaknesses.map((s) => html`<li>${s}</li>`)}</ul></section>` : ''}
       </div>
     </div>
 
@@ -73,12 +77,17 @@ export function render(ctx) {
         <div class="progress"><i style="--p:${r.total ? (r.owned / r.total) * 100 : 100}%"></i></div>
         ${r.missing.length ? html`<div class="stack" style="gap:10px;margin-top:16px">${r.missing.map((e) => html`<a href="${e.url}" class="row" style="flex-wrap:nowrap;gap:10px;color:var(--text)">${icon(e, 'sm')}<span style="min-width:0"><b>${L(e)}</b><small class="muted" style="display:block">${blueprintSummary(e)}</small></span></a>`)}</div>` : html`<p class="muted small" style="margin-top:12px">Du hast alles für diesen Build. Viel Spaß!</p>`}
       </section>
-      ${b.statFocus || b.affixes?.length ? html`<section class="panel">
-        <h3>Schriftrollen &amp; Affixe</h3>
-        ${b.statFocus ? html`<p class="small" style="color:var(--text-2)">${b.statFocus}</p>` : ''}
-        ${b.affixes?.length ? html`<div class="field-label" style="margin:14px 0 8px">Gesuchte Affixe</div><ul class="bullets small">${b.affixes.map((a) => html`<li>${a}</li>`)}</ul>` : ''}
-      </section>` : ''}
-      ${b.sources?.length ? html`<section class="panel tight"><div class="field-label" style="margin-bottom:8px">Quellen</div><ul class="clean stack small" style="gap:4px">${b.sources.map((s) => html`<li><a href="${s}" target="_blank" rel="noopener">${host(s)} ↗</a></li>`)}</ul></section>` : ''}
+      <section class="panel">
+        <h3>Steckbrief</h3>
+        ${kv([
+          ['Tier', html`${tierBadge(b.tier, `Build-Tier ${b.tier}`)}`],
+          ['Boss Cells', `${b.bcMin}–${b.bcMax} BC`],
+          ['Schwierigkeit', html`${difficulty(b.difficulty)} ${b.difficulty}/3`],
+          ...(b.statFocus ? [['Schriftrollen', b.statFocus]] : []),
+          ...(b.affixes?.length ? [['Affixe', html`<ul class="bullets small">${b.affixes.map((a) => html`<li>${a}</li>`)}</ul>`]] : []),
+        ])}
+      </section>
+      ${b.sources?.length ? html`<section class="panel tight"><div class="field-label" style="margin-bottom:8px">Quellen</div><ul class="clean stack small" style="gap:4px">${b.sources.map((s) => html`<li><a href="${s}" target="_blank" rel="noopener">${host(s)} ${IC.ext}</a></li>`)}</ul></section>` : ''}
       ${related.length ? html`<section class="panel tight"><div class="field-label" style="margin-bottom:8px">Ähnliche Builds</div><ul class="clean stack" style="gap:6px">${related.map((x) => html`<li><a href="${x.url}">${L(x)}</a> <span class="dim small">· ${COLOR_LABEL[x.color] ?? ''}</span></li>`)}</ul></section>` : ''}
     </aside>
   </div>`;

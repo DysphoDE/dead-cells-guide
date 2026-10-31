@@ -54,17 +54,17 @@ function pairs() {
 /** Partner für ein Item: recherchierte Kombos zuerst, dann Mechanik-Treffer. */
 export function partnersFor(e, limit = 14) {
   const out = new Map();
-  const add = (partner, why, source) => {
+  const add = (partner, why, source, refs = []) => {
     if (!partner || partner.key === e.key || out.has(partner.key)) return;
-    out.set(partner.key, { e: partner, why, source });
+    out.set(partner.key, { e: partner, why, source, refs });
   };
   for (const s of db.synergies) {
     if (!(s.items ?? []).some((n) => norm(n) === norm(e.name))) continue;
-    for (const n of s.items) if (norm(n) !== norm(e.name)) add(findByName(n), s.why, 'community');
+    for (const n of s.items) if (norm(n) !== norm(e.name)) add(findByName(n), s.why, 'community', s.sources ?? []);
   }
   for (const set of db.mutationSets) {
     if (!(set.mutations ?? []).some((n) => norm(n) === norm(e.name))) continue;
-    for (const n of set.mutations) if (norm(n) !== norm(e.name)) add(findByName(n), `Teil der Kombi „${L(set)}“: ${set.forWhat ?? set.why ?? ''}`, 'set');
+    for (const n of set.mutations) if (norm(n) !== norm(e.name)) add(findByName(n), `Teil der Kombi „${L(set)}“: ${set.forWhat ?? set.why ?? ''}`, 'set', set.sources ?? []);
   }
   const myBenefits = benefits(e);
   const myApplies = applies(e);

@@ -1,57 +1,41 @@
 import { $, $$, html, debounce, download, matches } from './util.js';
 import { db, loadAll, TYPE_LABEL, isOwned, L } from './data.js';
 import { profile, update, subscribe, DLCS, exportProfile, importProfile, resetProfile } from './store.js';
-import { icon } from './components.js';
+import { icon, IC } from './components.js';
 import { toast, openDialog, closeDialog } from './ui.js';
 import { openImport } from './import.js';
 import * as views from './views/index.js';
+import { CHAPTERS, SECTIONS, PARENT, sectionFor } from './chapters.js';
 
 // ---------- Navigation ----------
-const I = {
-  home: '<path d="M3 11.5 12 4l9 7.5M5.5 9.5V20h13V9.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>',
-  builds: '<path d="M5 19 19 5m-4 0h4v4M5 5l5 5m4 4 5 5m-4 0h4v-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
-  workshop: '<path d="M14.5 6.5a4 4 0 0 0-5.3 5.3L4 17l3 3 5.2-5.2a4 4 0 0 0 5.3-5.3l-2.3 2.3-2.3-.7-.7-2.3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>',
-  arsenal: '<path d="M14 4h6v6L9 21l-6-6zM12 12l-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>',
-  mutations: '<path d="M12 3c2 3 5 4.5 5 8.5a5 5 0 0 1-10 0C7 7.5 10 6 12 3zM12 14v7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>',
-  tiers: '<path d="M4 6h16M4 12h11M4 18h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
-  routes: '<circle cx="5" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="19" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M7 6h7a3 3 0 0 1 0 6H10a3 3 0 0 0 0 6h7" fill="none" stroke="currentColor" stroke-width="1.8"/>',
-  world: '<path d="M3 20h18M5 20V9l4-3 4 3v11M13 20v-7l3-2 3 2v7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>',
-  bc: '<circle cx="12" cy="12" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="2.6" fill="currentColor"/>',
-  unlocks: '<rect x="4" y="4" width="16" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m8 12 3 3 5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
-  outfits: '<path d="M8 4 4 7l2 4 2-1v10h8V10l2 1 2-4-4-3c-.5 1.7-2 3-4 3S8.5 5.7 8 4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>',
-  knowledge: '<path d="M5 4h10a4 4 0 0 1 4 4v12H9a4 4 0 0 1-4-4zM5 16a4 4 0 0 1 4-4h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>',
-};
-
-const NAV = [
-  ['Run vorbereiten'],
-  ['', 'Übersicht', 'home'],
-  ['builds', 'Builds', 'builds'],
-  ['workshop', 'Was passt zusammen?', 'workshop'],
-  ['routes', 'Routenplaner', 'routes'],
-  ['Nachschlagen'],
-  ['arsenal', 'Waffen & Skills', 'arsenal'],
-  ['mutations', 'Mutationen', 'mutations'],
-  ['tiers', 'Tierlisten', 'tiers'],
-  ['world', 'Biome & Bosse', 'world'],
-  ['bc', 'Boss Cells', 'bc'],
-  ['knowledge', 'Wissen & Mechaniken', 'knowledge'],
-  ['Fortschritt'],
-  ['unlocks', 'Freischaltungen', 'unlocks'],
-  ['outfits', 'Outfits', 'outfits'],
-];
-
-// Welche Nav-Einträge gelten für Detailseiten als aktiv
-const PARENT = { build: 'builds', item: 'arsenal', mutation: 'mutations', biome: 'world', boss: 'world', about: 'knowledge' };
-
 function renderNav(active) {
   const owned = [...db.gear, ...db.mutations].filter(isOwned).length;
-  $('#nav').innerHTML = NAV.map(([path, label, ic]) => {
-    if (label === undefined) return `<div class="nav-group">${path}</div>`;
-    const isActive = active === path;
-    const count = path === 'unlocks' ? `<span class="count">${owned}</span>` : '';
-    return `<a href="#/${path}" class="${isActive ? 'active' : ''}" ${isActive ? 'aria-current="page"' : ''}><svg viewBox="0 0 24 24" aria-hidden="true">${I[ic]}</svg>${label}${count}</a>`;
-  }).join('');
+  $('#nav').innerHTML = CHAPTERS.map((c) => `<div class="nav-chapter" data-ch="${c.n}"><div class="nav-group"><span class="ch-no">${c.n}</span>${c.title}</div>${
+    c.sections.map(([path, label], i) => {
+      const isActive = active === path;
+      const count = path === 'unlocks' ? `<span class="count">${owned}</span>` : '';
+      return `<a href="#/${path}" class="${isActive ? 'active' : ''}" ${isActive ? 'aria-current="page"' : ''}><span class="no">${c.n}.${i + 1}</span><span class="label">${label}</span>${count}</a>`;
+    }).join('')}</div>`).join('');
 }
+
+/** Kolumnentitel, Daumenregister und Blättern für den aktuellen Abschnitt. */
+function renderFrame(ctx, pageTitle) {
+  const sec = sectionFor(ctx.path);
+  const ch = sec?.ch ?? CHAPTERS[0];
+  document.body.dataset.ch = ch.n;
+  const isDetail = !!PARENT[ctx.path];
+  $('#running-head').innerHTML = sec
+    ? `<span class="rh-ch"><b>${ch.n}</b>${ch.title}</span><span class="rh-sec">${sec.no} ${isDetail ? `<a href="#/${sec.path}">${sec.label}</a> › ${esc(pageTitle)}` : sec.label}</span>`
+    : `<span class="rh-ch">${esc(pageTitle)}</span>`;
+  $('#thumbs').innerHTML = CHAPTERS.map((c) => `<a href="#/${c.sections[0][0]}" data-ch="${c.n}" ${c === ch ? 'aria-current="true"' : ''} title="Kapitel ${c.n}: ${c.title}"><span>${c.n} · ${c.title}</span></a>`).join('');
+  const i = sec ? SECTIONS.indexOf(sec) : -1;
+  const prev = !isDetail && i > 0 ? SECTIONS[i - 1] : null;
+  const next = !isDetail && i >= 0 && i < SECTIONS.length - 1 ? SECTIONS[i + 1] : null;
+  const turn = (s, dir) => `<a class="turn ${dir}" href="#/${s.path}" rel="${dir}"><small>${dir === 'prev' ? '← Zurück' : 'Weiter →'}</small><span><b>${s.no}</b> ${s.label}</span></a>`;
+  $('#page-turn').innerHTML = (prev ? turn(prev, 'prev') : '<span></span>') + (next ? turn(next, 'next') : '');
+}
+
+const esc = (t) => String(t).replace(/[<>&"]/g, (m) => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;' })[m]);
 
 function renderLang() {
   const cur = profile.prefs.names;
@@ -86,10 +70,13 @@ function route({ keepScroll = false } = {}) {
   main.innerHTML = String(view.render(ctx));
   view.mount?.(main, ctx);
 
+  const pageTitle = view.title?.(ctx) ?? 'Übersicht';
   renderNav(PARENT[ctx.path] ?? ctx.path);
+  renderFrame(ctx, pageTitle);
   renderBc();
   renderLang();
-  document.title = `${view.title?.(ctx) ?? 'Übersicht'} · Prisoner's Guide`;
+  document.title = `${pageTitle} · Prisoner's Guide`;
+  if (!keepScroll) turnPage();
 
   if (keepScroll) {
     window.scrollTo(0, scrollY);
@@ -100,12 +87,20 @@ function route({ keepScroll = false } = {}) {
   closeMenu();
 }
 
+// Blättern: die neue Seite schiebt sich vom Vorderschnitt herein (einmal pro Seitenwechsel)
+function turnPage() {
+  const sheet = $('.sheet');
+  sheet.classList.remove('turning');
+  void sheet.offsetWidth;
+  sheet.classList.add('turning');
+}
+
 function rerender() { route({ keepScroll: true }); }
 
 function profileDialog() {
   const d = openDialog(html`
-    <div class="dialog-head"><div><div class="eyebrow">Dein Profil</div><h2 id="dialog-title">Einstellungen &amp; Daten</h2></div>
-      <button class="icon-btn" data-close aria-label="Schließen">✕</button></div>
+    <div class="dialog-head"><h2 id="dialog-title">Profil, Einstellungen &amp; Daten</h2>
+      <button class="icon-btn" data-close aria-label="Schließen">${IC.close}</button></div>
     <div class="stack">
       <section><div class="field-label" style="margin-bottom:10px">Spielnamen</div>
         <div class="tabs" style="margin:0"><button data-lang="en" aria-selected="${profile.prefs.names === 'en'}">Englisch (wie im Wiki)</button><button data-lang="de" aria-selected="${profile.prefs.names === 'de'}">Deutsch (wie im Spiel)</button></div>
