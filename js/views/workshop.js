@@ -1,7 +1,7 @@
 import { html, matches, $ } from '../util.js';
 import { db, findByName, isOwned, dlcOk, COLOR_LABEL, tierScore, L } from '../data.js';
 import { profile, update } from '../store.js';
-import { icon, itemLink, pageHead, tierBadge, colorTag } from '../components.js';
+import { icon, itemLink, pageHead, tierBadge, colorTag, IC } from '../components.js';
 import { analyze, suggest, describeType } from '../synergy.js';
 import { openDialog, closeDialog } from '../ui.js';
 
@@ -39,7 +39,7 @@ function slotButton(kind, i) {
       ${e ? icon(e, '', { showOwned: true }) : html`<span class="ico"><span class="fallback">+</span></span>`}
       <span class="meta"><small class="slot-label">${SLOT_LABEL[kind][i]}</small><b>${e ? L(e) : 'Auswählen …'}</b>${e ? html`<small>${describeType(e)} · ${e.colors.map((c) => COLOR_LABEL[c]).join(' / ')}</small>` : ''}</span>
     </button>
-    ${e ? html`<a class="icon-btn" href="${e.url}" aria-label="${L(e)} ansehen" title="Details" style="width:32px;height:32px">↗</a><button class="icon-btn" data-clear="${kind}:${i}" aria-label="${L(e)} entfernen" title="Entfernen" style="width:32px;height:32px">✕</button>` : ''}
+    ${e ? html`<a class="icon-btn" href="${e.url}" aria-label="${L(e)} ansehen" title="Details" style="width:32px;height:32px">${IC.ext}</a><button class="icon-btn" data-clear="${kind}:${i}" aria-label="${L(e)} entfernen" title="Entfernen" style="width:32px;height:32px">${IC.close}</button>` : ''}
   </div>`;
 }
 
@@ -57,7 +57,7 @@ function analysisPanel() {
       <div class="row" style="justify-content:space-between"><h3 style="margin:0">Synergie</h3>${a.color ? colorTag(a.color) : ''}</div>
       <div class="score" style="margin:12px 0 4px"><div class="score-bar"><i style="--p:${a.score}%"></i></div><b style="font:800 26px var(--font-display);min-width:52px;text-align:right">${a.score}</b></div>
       <p class="dim small">Grobe Heuristik aus Farbe, Krit-Bedingungen und recherchierten Kombos – kein exakter Schadensrechner.</p>
-      <div style="margin-top:10px">${a.insights.map((x) => html`<div class="insight ${x.type}"><span class="ic">${x.type === 'good' ? '✓' : x.type === 'warn' ? '!' : 'i'}</span><span><b>${x.title}</b><br>${x.text}</span></div>`)}</div>
+      <div style="margin-top:10px">${a.insights.map((x) => html`<div class="insight ${x.type}"><span class="ic">${x.type === 'good' ? IC.check : x.type === 'warn' ? IC.alert : IC.info}</span><span><b>${x.title}</b><br>${x.text}</span></div>`)}</div>
     </div>
     ${emptyKinds.length ? html`<div class="panel"><h3>Vorschläge für freie Plätze</h3>
       ${emptyKinds.map((k) => {
@@ -104,7 +104,7 @@ function picker(kind, i) {
     return ordered.map((e) => html`<button data-pick="${e.name}">${icon(e, 'sm', { showOwned: true })}<span style="flex:1;min-width:0"><b>${L(e)}</b>${sugg.includes(e) && !q ? html` <span class="tag ok" style="margin-left:4px">passt</span>` : ''}<small>${describeType(e)} · ${e.colors.map((c) => COLOR_LABEL[c]).join(' / ')}</small></span>${tierBadge(e.tier)}</button>`);
   };
   const d = openDialog(html`
-    <div class="dialog-head"><div><div class="eyebrow">${SLOT_LABEL[kind][i]}</div><h2 id="dialog-title">Auswählen</h2></div><button class="icon-btn" data-close aria-label="Schließen">✕</button></div>
+    <div class="dialog-head"><h2 id="dialog-title">${SLOT_LABEL[kind][i]} auswählen</h2><button class="icon-btn" data-close aria-label="Schließen">${IC.close}</button></div>
     <div class="row"><input class="input" id="pick-q" type="search" placeholder="Suchen …" style="flex:1" autocomplete="off"><label class="switch"><input type="checkbox" id="pick-own"><span class="track"></span>Nur freigeschaltet</label></div>
     <div class="picker-list" id="pick-list">${listHtml()}</div>`);
   const list = $('#pick-list', d);

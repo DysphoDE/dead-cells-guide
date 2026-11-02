@@ -33,27 +33,41 @@ for mod in EXTRA:
 TODAY = "2026-10-14"
 
 # ---------- kanonische Namen ----------
-items_raw = json.loads((ROOT / "research/cache/gear/cargo_items.json").read_text(encoding="utf-8"))["cargoquery"]
-ITEM_TYPE = {}
-for x in items_raw:
-    t = x["title"]
-    name = t["_pageName"] if t["Name"] in ("Barricade", "Whip Sword, sword form") else t["Name"]
-    if t["Name"] in ("Transformation", "Balanced Blade/fr", "Map Part", "Health Flask"):
-        continue
-    if t.get("RemovedContent") not in ("", "0", None):
-        continue
-    ITEM_TYPE[name] = t["Type"]
-DLC_MAP = {"tqats": "The Queen and the Sea", "RTC": "Return to Castlevania", "rotg": "Rise of the Giant", "RotG": "Rise of the Giant",
-           "ff": "Fatal Falls", "tbs": "The Bad Seed", "": None}
-ITEM_DLC = {}
-for x in items_raw:
-    t = x["title"]
-    name = t["_pageName"] if t["Name"] in ("Barricade", "Whip Sword, sword form") else t["Name"]
-    ITEM_DLC[name] = DLC_MAP.get(t["DLCExclusive"])
-ITEM_DLC["Toothpick"] = None  # kein DLC-Exklusiv laut Wiki-Hauptseite (Cargo-Feld inkonsistent)
+# Quelle: gecachte Wiki-Cargo-Daten (research/cache). Fehlt der Cache (er ist gitignored),
+# dienen die daraus erzeugten data/gear.json und data/mutations.json als Ersatz.
+CACHE_ITEMS = ROOT / "research/cache/gear/cargo_items.json"
+CACHE_MUTS = ROOT / "research/cache/mutations/api_4021ccef5a60d5e5.json"
+if CACHE_ITEMS.exists() and CACHE_MUTS.exists():
+    items_raw = json.loads((ROOT / "research/cache/gear/cargo_items.json").read_text(encoding="utf-8"))["cargoquery"]
+    ITEM_TYPE = {}
+    for x in items_raw:
+        t = x["title"]
+        name = t["_pageName"] if t["Name"] in ("Barricade", "Whip Sword, sword form") else t["Name"]
+        if t["Name"] in ("Transformation", "Balanced Blade/fr", "Map Part", "Health Flask"):
+            continue
+        if t.get("RemovedContent") not in ("", "0", None):
+            continue
+        ITEM_TYPE[name] = t["Type"]
+    DLC_MAP = {"tqats": "The Queen and the Sea", "RTC": "Return to Castlevania", "rotg": "Rise of the Giant", "RotG": "Rise of the Giant",
+               "ff": "Fatal Falls", "tbs": "The Bad Seed", "": None}
+    ITEM_DLC = {}
+    for x in items_raw:
+        t = x["title"]
+        name = t["_pageName"] if t["Name"] in ("Barricade", "Whip Sword, sword form") else t["Name"]
+        ITEM_DLC[name] = DLC_MAP.get(t["DLCExclusive"])
+    ITEM_DLC["Toothpick"] = None  # kein DLC-Exklusiv laut Wiki-Hauptseite (Cargo-Feld inkonsistent)
 
-muts_raw = json.loads((ROOT / "research/cache/mutations/api_4021ccef5a60d5e5.json").read_text(encoding="utf-8"))["data"]["cargoquery"]
-MUTS = {m["title"]["Name"] for m in muts_raw if not m["title"].get("RemoveVersion")}
+    muts_raw = json.loads((ROOT / "research/cache/mutations/api_4021ccef5a60d5e5.json").read_text(encoding="utf-8"))["data"]["cargoquery"]
+    MUTS = {m["title"]["Name"] for m in muts_raw if not m["title"].get("RemoveVersion")}
+else:
+    TYPE_FROM_DATA = {"melee": "melee weapon", "ranged": "ranged weapon", "shield": "shield",
+                      "trap": "deployable", "power": "power", "grenade": "grenade"}
+    _gear = json.loads((ROOT / "data/gear.json").read_text(encoding="utf-8"))["items"]
+    ITEM_TYPE = {g["name"]: TYPE_FROM_DATA[g["type"]] for g in _gear}
+    ITEM_DLC = {g["name"]: g.get("dlc") for g in _gear}
+    MUTS = {m["name"] for m in json.loads((ROOT / "data/mutations.json").read_text(encoding="utf-8"))["mutations"]}
+    ITEM_DLC["Toothpick"] = None  # wie oben: kein DLC-Exklusiv laut Wiki-Hauptseite
+
 BIOMES = {"Prisoners' Quarters", "Promenade of the Condemned", "Toxic Sewers", "Dilapidated Arboretum", "Castle's Outskirts",
           "Prison Depths", "Corrupted Prison", "Ramparts", "Ancient Sewers", "Ossuary", "Morass of the Banished", "Dracula's Castle",
           "Black Bridge", "Insufferable Crypt", "Nest", "Defiled Necropolis", "Stilt Village", "Slumbering Sanctuary", "Graveyard",
@@ -152,6 +166,40 @@ for m in meta_synergies.MUTATION_SETS:
     for n in m["mutations"]: chk_mut(n, f"mutset {m['name']}")
     msets.append(m)
 
+# Zusätzliche Kombi-Module (tools/meta_synergies_more_*.py): SYNERGIES und MUTATION_SETS als Dicts,
+# jeder Eintrag mit "sources" = Liste von Community-URLs (Wiki allein zählt nicht).
+def chk_sources(srcs, where):
+    if not srcs or not all(isinstance(u, str) and u.startswith("http") for u in srcs):
+        errors.append(f"{where}: 'sources' braucht mindestens eine URL"); return
+    if all("wiki.gg" in u or "fandom.com" in u for u in srcs):
+        errors.append(f"{where}: nur Wiki-Quellen – Community-Quelle fehlt")
+
+pair_key = lambda items: tuple(sorted(n.lower() for n in items))
+seen_pairs = {pair_key(x["items"]): f"meta_synergies" for x in syn}
+seen_sets = {m["name"].lower() for m in msets}
+seen_trios = {tuple(sorted(m["mutations"])) for m in msets}
+for f in sorted(Path(__file__).resolve().parent.glob("meta_synergies_more_*.py")):
+    mod = importlib.import_module(f.stem)
+    for x in getattr(mod, "SYNERGIES", []):
+        where = f"{f.stem}: synergy {x.get('items')}"
+        if len(x.get("items", [])) < 2: errors.append(f"{where}: mindestens 2 Items"); continue
+        for n in x["items"]: chk_any(n, where)
+        if not x.get("why"): errors.append(f"{where}: 'why' fehlt")
+        chk_sources(x.get("sources"), where)
+        k = pair_key(x["items"])
+        if k in seen_pairs: errors.append(f"{where}: doppelt (schon in {seen_pairs[k]})"); continue
+        seen_pairs[k] = f.stem
+        syn.append({"items": x["items"], "kind": x["kind"], "why": x["why"], "sources": x["sources"]})
+    for m in getattr(mod, "MUTATION_SETS", []):
+        where = f"{f.stem}: mutset {m.get('name')}"
+        if len(m.get("mutations", [])) != 3: errors.append(f"{where}: genau 3 Mutationen"); continue
+        for n in m["mutations"]: chk_mut(n, where)
+        chk_sources(m.get("sources"), where)
+        if m["name"].lower() in seen_sets: errors.append(f"{where}: Name doppelt")
+        if tuple(sorted(m["mutations"])) in seen_trios: errors.append(f"{where}: gleiches Trio existiert schon")
+        seen_sets.add(m["name"].lower()); seen_trios.add(tuple(sorted(m["mutations"])))
+        msets.append(m)
+
 # ---------- Routen ----------
 for r in meta_routes.ROUTES:
     for b in r["path"]:
@@ -164,7 +212,7 @@ for r in meta_routes.ROUTES:
 if errors:
     print("\n".join(errors)); sys.exit(1)
 if CHECK_ONLY:
-    print(f"OK (--check): {len(builds)} Builds, nichts geschrieben"); sys.exit(0)
+    print(f"OK (--check): {len(builds)} Builds, {len(syn)} Synergien, {len(msets)} Mutations-Sets, nichts geschrieben"); sys.exit(0)
 
 SOURCES_META = [
     {"title": "Dead Cells Wiki (wiki.gg): Item-/Mutationsseiten inkl. History, Biomes, Curse, Stats, Boss Stem Cells", "url": "https://deadcells.wiki.gg/", "date": TODAY, "kind": "wiki"},

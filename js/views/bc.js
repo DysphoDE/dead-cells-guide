@@ -14,12 +14,12 @@ export function render() {
   <div class="stack">
     ${levels.map((l) => {
       const active = l.bc === profile.bc;
-      return html`<section class="panel" style="${active ? 'border-color:rgba(95,212,255,.55);box-shadow:0 0 0 1px rgba(95,212,255,.25),0 0 40px -18px var(--cell)' : ''}">
+      return html`<section class="panel" style="${active ? 'border-top-color:var(--ch)' : ''}">
         <div class="bc-hero">
           <button class="bc-orb" data-bc="${l.bc}" style="${active ? '' : 'filter:grayscale(.75) brightness(.7);'}border:0" title="${l.bc} BC einstellen">${l.bc}</button>
           <div>
-            <div class="row" style="gap:8px">${active ? html`<span class="tag bc">Deine Stufe</span>` : ''}</div>
-            <h3 style="font-size:28px;margin-top:4px">${l.title}</h3>
+            <h3 style="font-size:28px">${l.title}</h3>
+            ${active ? html`<div class="row" style="gap:8px;margin-top:6px"><span class="tag bc">Deine Stufe</span></div>` : ''}
             ${l.howToGet ? html`<p class="small muted" style="margin-top:4px"><b style="color:var(--text-2)">Freischalten:</b> ${l.howToGet}</p>` : ''}
           </div>
         </div>

@@ -5,6 +5,21 @@ import { profile } from './store.js';
 
 export const CHECK = raw('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
 
+const svg = (d, fill = 'none') => raw(`<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="${d}" fill="${fill}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`);
+const STAR = 'm12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z';
+/** Eigene Symbole, eine Strichstärke. */
+export const IC = {
+  close: svg('M6 6l12 12M18 6 6 18'),
+  ext: svg('M14 4h6v6M20 4l-9 9M18 14v6H4V6h6'),
+  clock: svg('M12 7v5l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z'),
+  edit: svg('M4 20h4L19 9l-4-4L4 16zM13 7l4 4'),
+  check: svg('m5 12.5 4.5 4.5L19 7.5'),
+  alert: svg('M12 6v8M12 18v.5'),
+  info: svg('M12 11v7M12 6v.5'),
+  star: svg(STAR),
+  starOn: svg(STAR, 'currentColor'),
+};
+
 export const colorClass = (e) => {
   const c = (e?.colors ?? []).filter((x) => x !== 'colorless');
   return c.length > 1 ? 'multi' : c[0] ?? 'colorless';
@@ -58,7 +73,7 @@ export const tick = (e) => {
 };
 
 export function pageHead(eyebrow, title, text, actions = '') {
-  return html`<header class="page-head"><div><div class="eyebrow">${eyebrow}</div><h1>${title}</h1>${text ? html`<p>${text}</p>` : ''}</div>${actions ? html`<div class="row">${actions}</div>` : ''}</header>`;
+  return html`<header class="page-head"><div><h1>${title}</h1>${text ? html`<p>${text}</p>` : ''}</div>${actions ? html`<div class="row">${actions}</div>` : ''}</header>`;
 }
 
 export const empty = (text) => html`<div class="empty">${text}</div>`;
@@ -101,8 +116,8 @@ export function buildCard(b) {
   const core = buildItems(b);
   const nGear = b.core.weapons.length + b.core.skills.length;
   return html`<a class="card build-card ${b.color}" href="${b.url}">
-    <div class="tags-row">${tierBadge(b.tier, `Build-Tier ${b.tier}`)}${colorTag(b.color)}${b.secondaryColor ? colorTag(b.secondaryColor) : ''}<span class="tag">${b.archetype}</span></div>
     <div><h3>${L(b)}</h3><p style="margin-top:6px">${b.tagline}</p></div>
+    <div class="tags-row">${tierBadge(b.tier, `Build-Tier ${b.tier}`)}${colorTag(b.color)}${b.secondaryColor ? colorTag(b.secondaryColor) : ''}<span class="tag">${b.archetype}</span></div>
     <div class="loadout-strip">${core.map(({ name, entity }, i) => html`${i === nGear ? html`<span class="strip-sep" aria-hidden="true"></span>` : ''}<span title="${name}${entity && isTrackable(entity) && !isOwned(entity) ? ' (fehlt dir)' : ''}" class="${entity && isTrackable(entity) && !isOwned(entity) ? 'not-owned' : ''}">${icon(entity ?? { name }, 'sm')}</span>`)}</div>
     <div class="card-foot">${difficulty(b.difficulty)}<span>${b.bcMin}–${b.bcMax} BC</span>${b.dlc?.length ? html`<span class="tag dlc">DLC</span>` : ''}
       <span class="ready">${!fits ? html`<span class="tag lock">passt nicht zu deiner BC/DLC</span>` : r.total && r.owned === r.total ? html`<span class="tag ok">Alles freigeschaltet</span>` : html`<span class="tag">${r.owned}/${r.total} freigeschaltet</span>`}</span></div>

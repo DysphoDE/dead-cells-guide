@@ -1,7 +1,7 @@
 import { html } from '../util.js';
 import { db, depthLabel, biome as getBiome, isOwned, bpAvailable, L, altName } from '../data.js';
 import { profile, hasDlc } from '../store.js';
-import { empty, bcTag, dlcTag, icon, tick, blueprintSummary } from '../components.js';
+import { empty, bcTag, dlcTag, icon, tick, blueprintSummary, IC } from '../components.js';
 
 export const title = (ctx) => L(getBiome(ctx.param)) || 'Biom';
 
@@ -20,14 +20,14 @@ export function render(ctx) {
 
   return html`
   <a class="back" href="#/world">← Biome &amp; Bosse</a>
-  <section class="detail-hero" style="${b.image ? `background:linear-gradient(90deg, var(--panel) 30%, rgba(20,25,34,.75)), url('${b.image}') right center / cover no-repeat` : ''}">
-    <div class="ico xl"><span class="fallback" style="font-size:30px">${b.depth ?? (b.kind === 'arena' ? '☠' : '?')}</span></div>
+  <section class="detail-hero">
+    <div class="ico xl"><span class="fallback" style="font-size:30px">${b.depth ?? (b.kind === 'arena' ? 'Boss' : '?')}</span></div>
     <div>
-      <div class="row" style="gap:6px"><span class="tag ${b.kind === 'arena' ? 'warn' : ''}">${depthLabel(b)}</span>${(b.minBC ?? 0) > 0 ? bcTag(b.minBC) : ''}${dlcTag(b.dlc)}</div>
-      <h1 style="margin-top:10px">${L(b)}</h1>
+      <h1>${L(b)}</h1>
       ${altName(b) ? html`<p class="sub">${profile.prefs.names === 'de' ? 'Englisch' : 'Im deutschen Spiel'}: ${altName(b)}</p>` : ''}
       <p class="lead">${b.description}</p>
-      <div class="row">${b.scrolls?.power != null ? html`<span class="tag">${b.scrolls.power} Schriftrollen der Macht</span>` : ''}${b.scrolls?.dual ? html`<span class="tag">${b.scrolls.dual} Doppel-Rollen</span>` : ''}${b.scrolls?.cursedChest ? html`<span class="tag warn">Verfluchte Truhe möglich</span>` : ''}${b.timedDoor ? html`<span class="tag" title="${b.timedDoor.notes ?? ''}">⏱ Zeittür ${b.timedDoor.minutes} min</span>` : ''}${b.wiki ? html`<a class="btn sm ghost" href="${b.wiki}" target="_blank" rel="noopener">Im Wiki ↗</a>` : ''}</div>
+      <div class="row" style="gap:8px"><span class="tag ${b.kind === 'arena' ? 'warn' : ''}">${depthLabel(b)}</span>${(b.minBC ?? 0) > 0 ? bcTag(b.minBC) : ''}${dlcTag(b.dlc)}</div>
+      <div class="row">${b.scrolls?.power != null ? html`<span class="tag">${b.scrolls.power} Schriftrollen der Macht</span>` : ''}${b.scrolls?.dual ? html`<span class="tag">${b.scrolls.dual} Doppel-Rollen</span>` : ''}${b.scrolls?.cursedChest ? html`<span class="tag warn">Verfluchte Truhe möglich</span>` : ''}${b.timedDoor ? html`<span class="tag" title="${b.timedDoor.notes ?? ''}">${IC.clock} Zeittür ${b.timedDoor.minutes} min</span>` : ''}${b.wiki ? html`<a class="btn sm ghost" href="${b.wiki}" target="_blank" rel="noopener">Im Wiki ${IC.ext}</a>` : ''}</div>
     </div>
   </section>
 

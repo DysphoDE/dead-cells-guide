@@ -1,7 +1,7 @@
 import { html, $, matches } from '../util.js';
 import { db, depthLabel, biome, L } from '../data.js';
 import { profile, hasDlc, update } from '../store.js';
-import { pageHead, empty, bcTag, dlcTag, CHECK } from '../components.js';
+import { pageHead, empty, bcTag, dlcTag, CHECK, IC } from '../components.js';
 
 export const title = () => 'Biome & Bosse';
 
@@ -15,10 +15,10 @@ function biomeCard(b) {
   return html`<a class="card biome-card" href="${b.url}">
     <div class="thumb" style="${b.image ? `background-image:url('${b.image}')` : ''}"></div>
     <div class="body">
-      <div class="row" style="gap:6px"><span class="tag ${b.kind === 'arena' ? 'warn' : ''}">${depthLabel(b)}</span>${(b.minBC ?? 0) > 0 ? bcTag(b.minBC) : ''}${dlcTag(b.dlc)}</div>
       <h3>${L(b)}</h3>
+      <div class="row" style="gap:6px"><span class="tag ${b.kind === 'arena' ? 'warn' : ''}">${depthLabel(b)}</span>${(b.minBC ?? 0) > 0 ? bcTag(b.minBC) : ''}${dlcTag(b.dlc)}</div>
       <p class="small" style="color:var(--text-2)">${b.description}</p>
-      <div class="row small muted" style="gap:14px">${b.difficulty ? diffBar(b.difficulty) : ''}${b.scrolls?.power != null ? html`<span>${b.scrolls.power} Rollen</span>` : ''}${b.timedDoor ? html`<span>⏱ ${b.timedDoor.minutes} min</span>` : ''}${bps ? html`<span>${bps} Entwürfe</span>` : ''}</div>
+      <div class="row small muted" style="gap:14px">${b.difficulty ? diffBar(b.difficulty) : ''}${b.scrolls?.power != null ? html`<span>${b.scrolls.power} Rollen</span>` : ''}${b.timedDoor ? html`<span>${IC.clock} ${b.timedDoor.minutes} min</span>` : ''}${bps ? html`<span>${bps} Entwürfe</span>` : ''}</div>
     </div>
   </a>`;
 }
@@ -28,8 +28,8 @@ function bossCard(b) {
   return html`<a class="card biome-card" href="${b.url}">
     <div class="thumb" style="${b.image ? `background-image:url('${b.image}');background-size:contain;background-color:#120e18` : ''}"></div>
     <div class="body">
-      <div class="row" style="gap:6px">${arena ? html`<span class="tag">${arena.depth != null ? `Ebene ${arena.depth}` : 'Boss'}</span>` : ''}${(b.minBC ?? 0) > 0 ? bcTag(b.minBC) : ''}${dlcTag(b.dlc)}</div>
       <h3>${L(b)}</h3>
+      <div class="row" style="gap:6px">${arena ? html`<span class="tag">${arena.depth != null ? `Ebene ${arena.depth}` : 'Boss'}</span>` : ''}${(b.minBC ?? 0) > 0 ? bcTag(b.minBC) : ''}${dlcTag(b.dlc)}</div>
       <p class="small" style="color:var(--text-2)">${b.description}</p>
       ${arena ? html`<p class="small dim">Arena: ${L(arena)}</p>` : ''}
     </div>

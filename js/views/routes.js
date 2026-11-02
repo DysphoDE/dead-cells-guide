@@ -1,7 +1,7 @@
 import { html, $, $$ } from '../util.js';
 import { db, biome, isOwned, bpAvailable, depthLabel, L } from '../data.js';
 import { profile, hasDlc } from '../store.js';
-import { pageHead, empty, icon, blueprintSummary } from '../components.js';
+import { pageHead, empty, icon, blueprintSummary, IC } from '../components.js';
 
 export const title = () => 'Routenplaner';
 
@@ -48,7 +48,7 @@ function graph() {
       ${list.map((b) => {
         const inPath = path.includes(b.id);
         const cls = [b.kind === 'arena' ? 'boss' : '', inPath ? 'in-path' : '', b.id === last ? 'current' : '', nextIds.has(b.id) ? 'next' : '', (b.minBC ?? 0) > profile.bc ? 'locked' : '', !inPath && !nextIds.has(b.id) ? 'dimmed' : ''].join(' ');
-        const badges = [b.scrolls?.power ? html`<span title="Schriftrollen der Macht">${b.scrolls.power}× Rolle</span>` : '', b.timedDoor ? html`<span title="Zeittür">⏱ ${b.timedDoor.minutes}′</span>` : '', (b.minBC ?? 0) > 0 ? html`<span class="bcb">${b.minBC} BC</span>` : '', b.runeHere ? html`<span class="rune" title="${b.runeHere}">Rune</span>` : ''];
+        const badges = [b.scrolls?.power ? html`<span title="Schriftrollen der Macht">${b.scrolls.power}× Rolle</span>` : '', b.timedDoor ? html`<span title="Zeittür">${IC.clock} ${b.timedDoor.minutes}′</span>` : '', (b.minBC ?? 0) > 0 ? html`<span class="bcb">${b.minBC} BC</span>` : '', b.runeHere ? html`<span class="rune" title="${b.runeHere}">Rune</span>` : ''];
         return html`<button class="node ${cls}" data-node="${b.id}" title="${L(b)}">${L(b)}<small>${b.kind === 'arena' ? 'Bossarena' : b.kind === 'secret' ? 'Geheimbiom' : (b.dlc ?? 'Basisspiel')}</small><span class="badges">${badges}</span></button>`;
       })}</div>`)}
   </div></div>`;
@@ -97,8 +97,8 @@ function summary() {
   for (const id of ids) for (const e of db.blueprintsByBiome.get(id) ?? []) if (e.kind !== 'outfit' && !isOwned(e) && bpAvailable(e) && !bps.includes(e)) bps.push(e);
   const route = routeList().find((r) => r.id === state.routeId);
   return html`<div class="panel">
-    ${route ? html`<div class="eyebrow">${route.goal}</div><h3>${L(route)}</h3><p style="color:var(--text-2)">${route.why}</p>` : html`<div class="eyebrow">Eigene Route</div><h3>Dein Weg</h3><p class="muted small">Klicke auf ein leuchtendes Biom, um weiterzugehen. Klick auf ein Biom im Pfad springt dorthin zurück.</p>`}
-    <div class="path-strip" style="margin:14px 0">${list.map((b, i) => html`${i ? html`<span class="arrow">→</span>` : ''}<a class="step ${b.kind === 'arena' ? 'boss' : ''}" href="${b.url}">${L(b)}</a>`)}</div>
+    ${route ? html`<h3>${L(route)}</h3><p class="route-goal">Ziel: ${route.goal}</p><p style="color:var(--text-2)">${route.why}</p>` : html`<h3>Eigene Route</h3><p class="muted small">Klicke auf ein markiertes Biom, um weiterzugehen. Klick auf ein Biom im Pfad springt dorthin zurück.</p>`}
+    <div class="path-strip" style="margin:14px 0">${list.map((b, i) => html`<span class="hop">${i ? html`<span class="arrow" aria-hidden="true">→</span>` : ''}<a class="step ${b.kind === 'arena' ? 'boss' : ''}" href="${b.url}">${L(b)}</a></span>`)}</div>
     <div class="grid cols-4" style="gap:10px">
       <div class="panel tight"><div class="field-label">Schriftrollen</div><b style="font:800 26px var(--font-display)">${scrolls}</b> <span class="dim small">der Macht (Basis)</span></div>
       <div class="panel tight"><div class="field-label">Zeittüren</div><b style="font:800 26px var(--font-display)">${doors.length}</b> <span class="dim small">${doors.map((d) => `${L(d)} ${d.timedDoor.minutes}′`).join(', ')}</span></div>
@@ -124,11 +124,11 @@ export function render(ctx) {
     <div class="row"><label class="switch"><input type="checkbox" id="r-runes" ${state.respectRunes ? 'checked' : ''}><span class="track"></span>Nur mit meinen Runen</label>
     <a class="btn sm ghost" href="#/world?tab=runes">Runen verwalten</a></div></div>
   <div class="chips scroll-x" style="margin-bottom:18px">
-    <button class="chip" data-route="" aria-pressed="${!state.routeId}">✎ Eigene Route</button>
+    <button class="chip" data-route="" aria-pressed="${!state.routeId}">${IC.edit} Eigene Route</button>
     ${routes.map((r) => html`<button class="chip" data-route="${r.id}" aria-pressed="${state.routeId === r.id}" style="${routeFits(r) ? '' : 'opacity:.5'}" title="${r.goal}${routeFits(r) ? '' : ' – passt nicht zu deiner BC/DLC'}">${L(r)}</button>`)}
   </div>
   <div id="r-sum">${summary()}</div>
-  <div class="section-head" style="margin:26px 0 10px"><div><h2 style="font-size:24px">Biom-Karte</h2><p>Leuchtend = nächster möglicher Schritt · gestrichelt = gesperrt</p></div>
+  <div class="section-head" style="margin:26px 0 10px"><div><h2 style="font-size:24px">Biom-Karte</h2><p>Getönt mit gestricheltem Rahmen = nächster möglicher Schritt · schraffiert = gesperrt</p></div>
     <div class="row"><button class="btn sm" id="r-back" ${state.path.length < 2 ? 'disabled' : ''}>← Schritt zurück</button><button class="btn sm ghost" id="r-reset">Neu starten</button></div></div>
   <div id="r-graph-host">${graph()}</div>`;
 }

@@ -4,7 +4,7 @@ import { db, L, isOwned } from './data.js';
 import { profile, update } from './store.js';
 import { readSavegame } from './savegame.js';
 import { openDialog, closeDialog, toast } from './ui.js';
-import { icon } from './components.js';
+import { icon, IC } from './components.js';
 
 let idMap = null;
 const loadMap = async () => (idMap ??= await fetch('data/save-ids.json', { cache: 'no-cache' }).then((r) => r.json()));
@@ -15,7 +15,7 @@ const PATHS = [
   ['Andere PC-Versionen', 'Ordner „save“ im Installationsverzeichnis des Spiels'],
 ];
 
-const head = (sub) => html`<div class="dialog-head"><div><div class="eyebrow">Savegame-Import</div><h2 id="dialog-title">${sub}</h2></div><button class="icon-btn" data-close aria-label="Schließen">✕</button></div>`;
+const head = (sub) => html`<div class="dialog-head"><h2 id="dialog-title">Savegame-Import: ${sub}</h2><button class="icon-btn" data-close aria-label="Schließen">${IC.close}</button></div>`;
 
 export function openImport() {
   const d = openDialog(html`${head('Spielstand einlesen')}
